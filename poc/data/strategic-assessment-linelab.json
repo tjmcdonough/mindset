@@ -1,0 +1,324 @@
+{
+  "org_id": "linelab_001",
+  "assessment_date": "2026-02-13",
+  "assessor": "strategic-assessment-agent",
+  "version": 1,
+
+  "demand_scorecard": {
+    "problem_urgency": {
+      "score": 82,
+      "rationale": "Manufacturing scale-up decisions involve $10M-$500M+ capital commitments made on inadequate tools. Existing DES takes weeks, spreadsheets miss dynamics, consultants charge $200-500k. The pain is real and quantifiable. Deducted points because the urgency is event-driven (funding rounds, new programs) rather than continuous — companies only feel the pain at scale-up moments."
+    },
+    "market_size_opportunity": {
+      "score": 78,
+      "rationale": "Direct DES replacement market is $1.7B growing ~9.6% CAGR. Adjacent digital twin market is $13.6B at 41% CAGR. Realistic SAM for LineLab (discrete manufacturing scale-up planning) is likely $200-500M near-term, with significant expansion potential into digital twin and ongoing factory optimization. Strong but not massive — this is a specialized tool, not a horizontal platform."
+    },
+    "competitive_differentiation": {
+      "score": 91,
+      "rationale": "Genuinely unique methodology — analytical modeling via extended queueing theory + mathematical optimization vs Monte Carlo DES. No direct competitor offers this approach. A Dec 2025 academic review of 9 simulation tools doesn't mention analytical alternatives. The moat is methodological (hard to replicate) not feature-based (easy to copy). MIT provenance adds credibility. This is LineLab's strongest dimension."
+    },
+    "icp_clarity": {
+      "score": 75,
+      "rationale": "Good understanding of personas (manufacturing engineers, ops leaders, program managers) and verticals (aerospace, green tech, semiconductors). However, the ICP is still broad — spanning growth-stage startups to Boeing-scale enterprises across 6+ industries. Crossing the chasm requires narrowing to ONE beachhead. The breadth of current customers (Boeing, Hadrian, Running Tide, MIT) suggests opportunistic selling rather than focused targeting."
+    },
+    "willingness_to_pay": {
+      "score": 72,
+      "rationale": "Enterprise customers (Boeing, Hadrian, GKN Aerospace) are paying — this is proven. Competitor pricing ($10k-$150k/yr) sets clear benchmarks. Reported 4.9x ROI and $6M/yr savings justify premium pricing. However, actual pricing, ACV, and revenue are unknown. No public pricing page. Unclear whether current customers are paying full enterprise rates or early-adopter/pilot pricing."
+    },
+    "timing_market_readiness": {
+      "score": 85,
+      "rationale": "Excellent timing: (1) Autodesk acquiring FlexSim validates the market, (2) CHIPS Act driving $50B+ in semiconductor fab investment, (3) aerospace and defense scale-up programs accelerating, (4) digital twin mega-trend creating demand for analytical production models, (5) AI in manufacturing raising expectations for faster, smarter decision tools. The market is moving toward LineLab's strengths."
+    },
+    "composite_score": 80.5,
+    "composite_method": "simple_average"
+  },
+
+  "swot": {
+    "strengths": [
+      "Genuinely differentiated technology — analytical modeling vs Monte Carlo DES, with no direct competitor",
+      "MIT provenance and peer-reviewed academic validation (Winter Simulation Conference 2023)",
+      "Marquee enterprise customer logos: Boeing, Hadrian, GKN Aerospace, Sidewalk Labs (Alphabet)",
+      "Quantified customer outcomes: 4.9x ROI, 32% cost avoidance, $6M/yr savings, 0.64% accuracy",
+      "Speed advantage: minutes vs weeks for production system modeling",
+      "Built-in optimization of thousands of variables — DES tools only give point answers",
+      "Thought leadership positioning via Solving for Scale Summit (co-founded with MIT)",
+      "Spreadsheet-to-model workflow lowers adoption barrier vs DES tools"
+    ],
+    "weaknesses": [
+      "Tiny team (estimated 2-10) — limited capacity for sales, support, and product development simultaneously",
+      "No self-serve trial or freemium tier — entirely dependent on demo-first enterprise sales",
+      "Desktop software (Windows/macOS) — not cloud SaaS, creating friction in enterprise procurement and IT compliance",
+      "Unknown funding status — may be resource-constrained for the GTM investment needed to cross the chasm",
+      "Broad ICP across 6+ industries — no focused beachhead segment yet",
+      "Low brand awareness — academic review of 9 simulation tools doesn't mention LineLab or analytical alternatives",
+      "No visible pricing — makes it hard for pragmatic buyers to self-qualify",
+      "Small LinkedIn following (58) suggests limited marketing reach",
+      "Distributed US/Germany team adds coordination complexity"
+    ],
+    "opportunities": [
+      "CHIPS Act driving $50B+ in US semiconductor fab investment — massive demand for production planning tools",
+      "Autodesk's FlexSim acquisition commoditizes DES, making LineLab's analytical differentiation more valuable",
+      "Digital twin market ($13.6B, 41% CAGR) — position LineLab as the analytical brain of digital twin implementations",
+      "Spreadsheet users are a larger, easier-to-convert market than DES users — upgrade path from Excel",
+      "AI/LLM integration could further differentiate: natural language model setup, automated scenario generation",
+      "Channel partnerships with manufacturing consultancies (McKinsey, BCG, Roland Berger) for distribution",
+      "Academic pipeline: university adoption creates future enterprise champions",
+      "Climate/green tech manufacturing boom — new factories being planned for batteries, hydrogen, carbon capture",
+      "Defense industrial base modernization creating demand for production planning tools"
+    ],
+    "threats": [
+      "Autodesk/Siemens could bundle simulation into broader platforms at minimal marginal cost — commoditization risk",
+      "DES incumbents adding optimization layers on top of existing simulation engines",
+      "AI/ML approaches could make DES faster, eroding LineLab's speed advantage",
+      "Small team may not sustain enterprise sales cycles (6-12 months) while also developing product",
+      "If funding is limited, may not have runway to execute the GTM investment needed for chasm-crossing",
+      "Category awareness is near-zero — significant market education required before selling",
+      "Enterprise procurement processes may resist a small, unknown vendor for critical production decisions",
+      "Key-person risk: MIT-developed core technology likely concentrated in 1-2 individuals"
+    ]
+  },
+
+  "verdict": {
+    "decision": "GO",
+    "confidence": "high",
+    "reasoning": "LineLab has the three things that matter most at the crossing-the-chasm stage: (1) a genuinely differentiated technology that incumbents cannot easily replicate — the analytical modeling methodology is a structural moat, not a feature advantage; (2) proven enterprise traction with marquee logos (Boeing, Hadrian, GKN Aerospace) and quantified outcomes that make the ROI case unambiguous; and (3) strong market timing with CHIPS Act, digital twin growth, and manufacturing AI trends all creating tailwinds. The primary risk is execution capacity — a small team attempting enterprise sales across too many verticals without sufficient funding or focus. However, this is a strategy problem, not a product or market problem. The fix is well-understood: pick a beachhead, build a repeatable playbook, and scale from there. The founder's self-awareness ('debugging our scale-up strategy') is itself a positive signal — they know the product works and the challenge is GTM, not PMF.",
+    "conditions": [
+      "Must narrow to a single beachhead segment within 30 days — aerospace scale-up programs recommended",
+      "Must clarify funding/runway situation — crossing the chasm requires sustained GTM investment",
+      "Must build repeatable sales playbook before attempting to scale across verticals",
+      "Should evaluate cloud/SaaS delivery model to reduce enterprise procurement friction"
+    ]
+  },
+
+  "positioning": {
+    "value_proposition": "LineLab replaces weeks of simulation and guesswork with analytically optimal production system designs — in minutes. Built on MIT mathematics, proven at Boeing and Hadrian, it's the only tool that models, optimizes, and fully explains factory cost and throughput simultaneously.",
+    "messaging_pillars": [
+      {
+        "pillar": "Minutes, Not Weeks",
+        "message": "Build production system models from spreadsheet data and get optimized results analytically — no Monte Carlo simulation, no weeks of iteration.",
+        "proof_point": "Customers report model creation and optimization in minutes vs weeks for DES tools."
+      },
+      {
+        "pillar": "Optimize, Don't Simulate",
+        "message": "Simultaneously optimize thousands of variables — capacity, staffing, inventory, throughput — to find the best configuration, not just a feasible one.",
+        "proof_point": "Built-in mathematical optimization replaces the trial-and-error of running hundreds of simulation scenarios."
+      },
+      {
+        "pillar": "Transparent Cost Drivers",
+        "message": "Every result shows exactly where cost comes from, which variables matter most, and what levers you have to reduce it. No black boxes.",
+        "proof_point": "32% cost avoidance achieved through finding hidden cost drivers invisible in other tools."
+      },
+      {
+        "pillar": "Enterprise-Proven",
+        "message": "MIT science, peer-reviewed methodology, and results validated at Boeing, Hadrian, and GKN Aerospace.",
+        "proof_point": "4.9x ROI, $6M/yr savings, 0.64% accuracy vs actual production data."
+      }
+    ],
+    "differentiation_summary": "LineLab's moat is methodological, not feature-based. While DES vendors compete on visualization and ease-of-use within the simulation paradigm, LineLab operates outside that paradigm entirely. Extended queueing theory + mathematical optimization is a fundamentally different approach that delivers speed (minutes vs weeks), determinism (no Monte Carlo uncertainty), and optimization (thousands of variables simultaneously). No DES vendor can replicate this without rebuilding their core technology.",
+    "competitive_positioning": "Position as 'the analytical alternative to simulation' — not a better simulation tool, but a different and better way to answer the same questions. Primary competitive displacement: (1) Excel/spreadsheet models → upgrade to dynamic modeling, (2) DES tools → complement or replace for system-level planning, (3) consulting engagements → in-house capability at a fraction of the cost."
+  },
+
+  "channels": {
+    "growth_motion": "enterprise-sales-led-with-content-marketing-flywheel",
+    "recommended_channels": [
+      {
+        "channel": "Direct Enterprise Sales (Outbound)",
+        "priority": "primary",
+        "rationale": "High-ACV enterprise product requires relationship-driven sales. Target aerospace production program managers at companies with active scale-up programs. Use Boeing/Hadrian/GKN as references.",
+        "tactics": [
+          "Build target account list of aerospace companies with announced production scale-up programs",
+          "Personalized outreach referencing specific production challenges (e.g., 'You're scaling [program X] — here's how Hadrian approached the same challenge')",
+          "Offer 'production system audit' as a low-commitment entry point — model their system and show insights",
+          "Leverage MIT network for warm introductions"
+        ]
+      },
+      {
+        "channel": "Thought Leadership & Content Marketing",
+        "priority": "primary",
+        "rationale": "Category creation requires education. Most buyers don't know analytical modeling is an alternative to simulation. Content builds awareness and inbound demand.",
+        "tactics": [
+          "Publish case studies with quantified outcomes (anonymized if needed) for each beachhead vertical",
+          "Write 'Why Simulation is Wrong for Scale-Up Planning' — contrarian content that challenges the DES orthodoxy",
+          "Expand Solving for Scale Summit into a regular content brand (newsletter, webinar series, podcast)",
+          "Guest articles in IndustryWeek, Manufacturing Engineering, and aerospace trade publications",
+          "LinkedIn content from founder — technical insights, not corporate marketing"
+        ]
+      },
+      {
+        "channel": "Industry Events & Conferences",
+        "priority": "secondary",
+        "rationale": "Aerospace conferences (Paris Air Show already attended), IMTS, and defense manufacturing events concentrate the ICP. High-quality leads from in-person demos.",
+        "tactics": [
+          "Prioritize events where beachhead customers congregate — AIAA, AeroDef, NBAA",
+          "Offer live 'model your factory in 15 minutes' demos at booths",
+          "Present at Winter Simulation Conference annually to maintain academic credibility"
+        ]
+      },
+      {
+        "channel": "Channel Partnerships",
+        "priority": "secondary",
+        "rationale": "Manufacturing consulting firms (McKinsey manufacturing, BCG operations, Roland Berger) advise on the exact decisions LineLab supports. They're a force multiplier for a small team.",
+        "tactics": [
+          "Identify 2-3 consulting firms active in aerospace production planning",
+          "Offer certified partner program — consultants use LineLab as their modeling engine",
+          "Co-sell on production planning engagements"
+        ]
+      },
+      {
+        "channel": "Academic Pipeline",
+        "priority": "tertiary",
+        "rationale": "University adoption creates future enterprise champions. MIT already uses LineLab. Expand to other top manufacturing engineering programs.",
+        "tactics": [
+          "Free academic licenses for top 10 manufacturing engineering programs",
+          "Guest lectures and workshop partnerships",
+          "Student project competitions using LineLab"
+        ]
+      }
+    ],
+    "channels_to_avoid": [
+      {
+        "channel": "Product Hunt / Startup communities",
+        "reason": "Enterprise manufacturing software has zero audience overlap with startup/consumer product communities"
+      },
+      {
+        "channel": "Paid social ads (Facebook/Instagram)",
+        "reason": "ICP doesn't discover manufacturing planning tools via social media ads. LinkedIn ads could work but CAC would be high for enterprise ACV."
+      },
+      {
+        "channel": "Self-serve PLG (product-led growth)",
+        "reason": "Not yet — the product requires domain context to set up effectively. PLG could be a future motion after the sales playbook is proven, possibly via a cloud version with templates."
+      }
+    ]
+  },
+
+  "roadmap_30_days": {
+    "priority_1_beachhead_focus": {
+      "action": "Select and commit to aerospace production scale-up as the beachhead segment",
+      "why": "Strongest existing traction (Boeing, GKN Aerospace, Paris Air Show). High willingness to pay. Long sales cycles but large deal sizes. Reference-able customers already in place.",
+      "deliverables": [
+        "Document the aerospace beachhead decision and share with entire team",
+        "Build aerospace-specific case study template with Boeing/GKN results (anonymized if needed)",
+        "Create target account list: 20-30 aerospace companies with active production scale-up programs",
+        "Develop aerospace-specific demo script highlighting relevant use cases"
+      ],
+      "timeline": "Week 1-2"
+    },
+    "priority_2_sales_playbook": {
+      "action": "Document and standardize the current sales process into a repeatable playbook",
+      "why": "Crossing the chasm requires repeatable GTM — you can't scale what isn't documented. Capture what's worked with existing customers before it's only in founders' heads.",
+      "deliverables": [
+        "Map current sales process: lead → demo → evaluation → close (stages, timelines, conversion rates)",
+        "Document top 3 objections and proven responses",
+        "Create standard evaluation/POC framework: what LineLab models, what data is needed, timeline, success criteria",
+        "Build ROI calculator (even a spreadsheet) for sales conversations"
+      ],
+      "timeline": "Week 2-3"
+    },
+    "priority_3_content_engine": {
+      "action": "Launch minimum viable content marketing for aerospace vertical",
+      "why": "Category creation requires education. Need to build 'analytical modeling' awareness before outbound sales hits full stride.",
+      "deliverables": [
+        "Publish 1 aerospace-focused case study on website",
+        "Write 1 LinkedIn article: 'Why We Built LineLab — and Why Simulation Wasn't Enough'",
+        "Create a 1-page 'LineLab vs Simulation' comparison sheet for sales conversations",
+        "Draft Solving for Scale newsletter #1 targeting aerospace production leaders"
+      ],
+      "timeline": "Week 2-4"
+    },
+    "priority_4_pipeline_building": {
+      "action": "Begin targeted outbound to aerospace beachhead accounts",
+      "why": "Pipeline is the lifeblood of crossing the chasm. Need 5-10 active conversations in the beachhead within 60 days.",
+      "deliverables": [
+        "Identify 10 specific contacts at target aerospace accounts",
+        "Send personalized outreach (email/LinkedIn) referencing their specific production challenges",
+        "Leverage MIT and existing customer networks for warm introductions",
+        "Book 3-5 demos by end of month"
+      ],
+      "timeline": "Week 3-4"
+    },
+    "quick_wins": [
+      "Add an ROI calculator or self-qualification tool to the website — pragmatic buyers need to see the business case before requesting a demo",
+      "Add named testimonial quotes (with permission) to case studies — anonymous logos are good, named individuals are better",
+      "Create a 'LineLab in 2 Minutes' video for the homepage — show the speed advantage visually",
+      "Set up basic analytics on the website to track demo request conversion funnel",
+      "Update LinkedIn company page with consistent posting cadence (2x/week minimum)"
+    ]
+  },
+
+  "risk_flags": {
+    "red_flags": [
+      {
+        "flag": "Unknown funding and runway",
+        "detail": "No Crunchbase presence, no funding announcements. Crossing the chasm requires sustained GTM investment (typically 12-18 months of enterprise sales cycles). If bootstrapped with limited runway, the company may not survive the sales cycle durations required for enterprise aerospace deals.",
+        "mitigation": "Clarify funding status immediately. If bootstrapped, prioritize shorter-cycle mid-market deals alongside enterprise targets. Consider raising a seed/Series A specifically for GTM."
+      },
+      {
+        "flag": "Team size vs ambition mismatch",
+        "detail": "Estimated 2-10 people attempting to sell to Boeing-scale enterprises while maintaining a desktop software product across Windows and macOS. Enterprise sales requires dedicated sales, pre-sales engineering, customer success, and marketing — likely more capacity than currently available.",
+        "mitigation": "Ruthlessly prioritize. One beachhead, one sales motion, one persona. Consider fractional sales leadership or GTM advisor. Avoid spreading across multiple verticals until the first one is repeatable."
+      },
+      {
+        "flag": "Desktop software delivery model",
+        "detail": "Enterprise IT increasingly mandates cloud/SaaS procurement. A desktop application creates friction in security reviews, deployment, updates, and collaboration. This could be a deal-breaker for some enterprise buyers.",
+        "mitigation": "Begin planning cloud/SaaS version or at minimum a hosted evaluation environment. In the short term, position desktop delivery as a security advantage ('your data never leaves your network')."
+      }
+    ],
+    "yellow_flags": [
+      {
+        "flag": "No focused beachhead segment",
+        "detail": "Current customers span aerospace (Boeing, GKN), manufacturing (Hadrian), climate tech (Running Tide), tech (Sidewalk Labs/Alphabet), and academia (MIT, U of Queensland). This breadth suggests opportunistic selling rather than focused targeting — the classic early-market pattern that must change to cross the chasm.",
+        "mitigation": "Commit to aerospace as the beachhead within 2 weeks. Say no to opportunities outside the beachhead unless they're referrals from existing customers."
+      },
+      {
+        "flag": "Low category awareness",
+        "detail": "A December 2025 academic review of 9 simulation tools makes no mention of analytical alternatives. The market doesn't know LineLab's category exists. This means every sale requires category education before product selling — lengthening already-long enterprise sales cycles.",
+        "mitigation": "Invest in category creation content. Don't sell LineLab — sell the idea that analytical modeling is superior to simulation for production planning. Once the category is understood, LineLab is the obvious choice."
+      },
+      {
+        "flag": "Unknown pricing and revenue metrics",
+        "detail": "No visibility into ACV, pipeline, win rates, sales cycle length, CAC, LTV, or revenue. Without these metrics, it's impossible to assess GTM health or model growth trajectories.",
+        "mitigation": "Instrument the sales process immediately. Track every metric even if the numbers are small. This data is essential for fundraising, hiring, and strategy decisions."
+      },
+      {
+        "flag": "Single-channel dependency (enterprise sales)",
+        "detail": "Currently entirely dependent on demo-request enterprise sales. No self-serve, no PLG, no channel partners. If the sales pipeline stalls, there's no backup demand generation engine.",
+        "mitigation": "Build content marketing flywheel in parallel with outbound sales. Even a simple newsletter and regular LinkedIn posting creates compounding inbound over time."
+      },
+      {
+        "flag": "Key-person / IP concentration risk",
+        "detail": "MIT-developed core technology likely concentrated in 1-2 individuals (Scott Nill and possibly one co-founder). If either leaves or is unable to work, the technology moat is at risk.",
+        "mitigation": "Document the core algorithms and methodology. Ensure IP is assigned to the company, not individuals. Consider hiring a second technical lead who can maintain the analytical engine."
+      },
+      {
+        "flag": "No visible customer expansion/retention data",
+        "detail": "Marquee logos are impressive but it's unknown whether these are one-time engagements, expanding accounts, or active recurring customers. Enterprise value depends on land-and-expand, not one-time deals.",
+        "mitigation": "Track and report NRR (net revenue retention). Prioritize expanding within existing accounts — it's cheaper than acquiring new logos."
+      }
+    ]
+  },
+
+  "data_gaps": [
+    "Pricing model and ACV (annual contract value)",
+    "Revenue (ARR/MRR) and growth rate",
+    "Team size, composition, and key hires planned",
+    "Funding status, runway, and fundraising plans",
+    "Sales pipeline size and velocity",
+    "Win/loss rates and average sales cycle length",
+    "Customer retention and expansion metrics (NRR)",
+    "Product usage data and engagement metrics",
+    "CAC (customer acquisition cost) and LTV",
+    "Competitive win/loss analysis — who do they lose deals to and why?",
+    "Customer NPS or satisfaction scores",
+    "Product roadmap and cloud/SaaS migration timeline"
+  ],
+
+  "meta": {
+    "sources_analyzed": [
+      "company-seed-linelab.json",
+      "market-intel-linelab.json",
+      "growth-voice-linelab.json"
+    ],
+    "confidence": "medium-high — strong product and market data, but critical business metrics (revenue, pricing, funding, team) are unknown",
+    "next_steps": "Fill data gaps via founder interview. Prioritize: pricing, revenue, funding/runway, team size, and pipeline metrics."
+  }
+}

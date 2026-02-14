@@ -1,0 +1,161 @@
+{
+  "org_id": "linelab_001",
+  "last_updated": "2026-02-13T08:15:00Z",
+  "overall_stage": "early-traction-crossing-chasm",
+  "confidence_score": 42,
+  "confidence_delta": null,
+  "interrogation_impact": "Interrogation questions sent but NOT yet answered. 12 critical/high-priority questions outstanding. All monetization, traction, pipeline, and team data is inferred from public sources only. Confidence score deliberately low to reflect this — expect +20-30 points once founder responds.",
+  "working": {
+    "items": [
+      {
+        "category": "validation",
+        "title": "Enterprise customers that would impress any investor",
+        "detail": "Boeing, Hadrian, GKN Aerospace, MIT, Sidewalk Labs (Alphabet), Running Tide. These aren't pilot logos — they're quantified outcomes: 4.9x ROI, 32% cost avoidance, $6M/yr savings, 0.64% accuracy vs actuals.",
+        "evidence": "Customer logos and case study results published on linelab.io; Winter Simulation Conference 2023 peer-reviewed paper",
+        "confidence": "high"
+      },
+      {
+        "category": "positioning",
+        "title": "Genuinely differentiated technology — not a better mousetrap, a different animal",
+        "detail": "Extended queueing theory + mathematical optimization is methodologically distinct from all DES competitors. No direct competitor offers analytical modeling as a simulation alternative. A Dec 2025 academic review of 9 simulation tools doesn't even mention the category — LineLab owns white space.",
+        "evidence": "Market intel: 7 DES competitors profiled, none use analytical approach. Springer systematic review (Dec 2025) covers 9 tools, zero analytical alternatives mentioned.",
+        "confidence": "high"
+      },
+      {
+        "category": "positioning",
+        "title": "Massive, growing TAM with tailwinds",
+        "detail": "DES market $1.7B growing 7-10% CAGR. Adjacent digital twin market $13.6B at 41% CAGR. Autodesk acquired FlexSim (Nov 2023) validating the space. CHIPS Act, green tech, and eVTOL driving new factory investment.",
+        "evidence": "Market intel: 360iResearch, Grand View Research, MarketsAndMarkets data; Autodesk/FlexSim acquisition",
+        "confidence": "high"
+      },
+      {
+        "category": "credibility",
+        "title": "Academic and thought leadership moat",
+        "detail": "MIT pedigree, WSC 2023 publication, co-founded Solving for Scale Summit with MIT, Paris Air Show 2023 presence. Founder Scott Nill is an MIT PhD and Advanced Manufacturing program lecturer. This credibility is nearly impossible for competitors to replicate.",
+        "evidence": "linelab.io insights section, HandWiki, Winter Simulation Conference proceedings, LinkedIn",
+        "confidence": "high"
+      },
+      {
+        "category": "messaging",
+        "title": "Brand voice and positioning are defined and sharp",
+        "detail": "Growth Voice document complete: Applied Scientist archetype, 4 value prop pillars (Minutes Not Weeks, Optimize Don't Simulate, Transparent Cost Drivers, Enterprise Scale Proven), audience-specific tone variations, forbidden patterns. Messaging is calibrated for crossing-the-chasm stage.",
+        "evidence": "Growth Voice outputs completed with high confidence",
+        "confidence": "high"
+      },
+      {
+        "category": "product",
+        "title": "Product-market fit with early adopters is proven",
+        "detail": "Founder explicitly says they're 'crossing the chasm' — which means early adopter validation is done. The product works, enterprises pay for it, and outcomes are quantified. This is NOT a product problem.",
+        "evidence": "Founder statement + enterprise customer logos with quantified ROI",
+        "confidence": "high"
+      }
+    ],
+    "summary": "LineLab has what most startups would kill for: enterprise logos (Boeing, Hadrian, GKN), quantified outcomes (4.9x ROI, $6M/yr savings), a genuinely differentiated technology with no direct analytical competitors, and MIT-grade academic credibility. The product is validated. The technology is defensible. The market is large and growing. This is NOT a product problem or a validation problem — it's a scale-up execution problem."
+  },
+  "needs_work": {
+    "items": [
+      {
+        "category": "knowledge_gap",
+        "title": "⚠️ No interrogation answers yet — flying partially blind",
+        "detail": "12 critical/high-priority questions sent to founder but not yet answered. We're missing: pricing model & ACV, funding status & runway, deal origination channels, buying process details, team size & composition, customer count & ARR, retention/expansion signals, pipeline size & velocity, lost deal reasons, PLG stance, beachhead preference, marketing spend.",
+        "severity": "critical",
+        "action_to_resolve": "Founder must answer the interrogation questions. Every recommendation below is provisional until we have this data. Confidence score is 42 (vs potential 65-75 with answers)."
+      },
+      {
+        "category": "gtm",
+        "title": "No visible beachhead strategy — serving too many verticals",
+        "detail": "Current customers span aerospace (Boeing, GKN), advanced manufacturing (Hadrian), climate tech (Running Tide), urban tech (Sidewalk Labs), and academia (MIT, UQ). Classic chasm trap: impressive logos across 5+ verticals, but no dominant position in any one.",
+        "severity": "critical",
+        "action_to_resolve": "Pick ONE vertical to own in the next 12 months. Aerospace is the strongest candidate given Boeing + GKN + Paris Air Show presence. Build the whole product for that segment: templates, case studies, industry-specific language, reference customers who sell for you."
+      },
+      {
+        "category": "gtm",
+        "title": "Sales motion is opaque — unknown deal origination and pipeline",
+        "detail": "We don't know how any deal started (MIT network? Inbound? Conference?), how many active deals exist, deal cycle length, or why deals are lost. If every customer came through MIT connections, the 'crossing the chasm' problem is really a channel dependency problem.",
+        "severity": "critical",
+        "action_to_resolve": "BLOCKED on interrogation answers (cp_003, cp_008, cp_009). Cannot diagnose the GTM bottleneck without this data."
+      },
+      {
+        "category": "monetization",
+        "title": "Pricing model and ACV unknown",
+        "detail": "No public pricing. Competitor range is $6K-$150K/yr. We don't know if LineLab charges annual license, per-seat, usage-based, or project-based. This fundamentally changes every growth recommendation.",
+        "severity": "critical",
+        "action_to_resolve": "BLOCKED on interrogation answer (cp_001). Pricing architecture determines whether the bottleneck is sales efficiency, market sizing, or packaging."
+      },
+      {
+        "category": "resources",
+        "title": "Team size and funding unknown — can't assess execution capacity",
+        "detail": "Estimated 2-10 people, funding stage unknown. A 3-person bootstrapped team needs a completely different playbook than a 10-person funded team. We don't know if there's dedicated sales/GTM headcount.",
+        "severity": "high",
+        "action_to_resolve": "BLOCKED on interrogation answers (cp_002, cp_005). Cannot recommend hiring, marketing spend, or sales motion without this."
+      },
+      {
+        "category": "traction",
+        "title": "Retention and expansion signals unknown",
+        "detail": "Are Boeing and Hadrian expanding usage, or were they one-off project engagements? If customers aren't expanding, the real problem might be retention/value-realisation, not acquisition.",
+        "severity": "high",
+        "action_to_resolve": "BLOCKED on interrogation answer (cp_007). Net revenue retention is the #1 signal for whether to invest in acquisition or activation."
+      },
+      {
+        "category": "acquisition",
+        "title": "Demo-request-only funnel may filter out pragmatist majority",
+        "detail": "No self-serve trial, no freemium tier, no pricing page. The 'request a demo' model works for visionary early adopters but creates friction for pragmatic mainstream buyers who want to evaluate before committing to a sales conversation.",
+        "severity": "high",
+        "action_to_resolve": "BLOCKED on interrogation answer (cp_010). Need to understand founder's stance on PLG vs pure enterprise sales before recommending."
+      },
+      {
+        "category": "awareness",
+        "title": "Category awareness is near-zero — market doesn't know analytical modeling exists",
+        "detail": "A Dec 2025 systematic academic review of 9 simulation tools doesn't mention analytical alternatives. LineLab owns white space, but that also means heavy market education is needed. Pragmatists don't buy products in categories they don't know exist.",
+        "severity": "high",
+        "action_to_resolve": "Category creation through thought leadership: Solving for Scale Summit, content marketing, industry analyst briefings, comparison content ('LineLab vs FlexSim'). The elevator pitch needs to meet buyers in THEIR frame ('faster than simulation') not LineLab's frame ('queueing theory')."
+      }
+    ],
+    "summary": "The honest diagnosis: we're missing too much founder-side data to give high-confidence recommendations. 6 of 8 items above are BLOCKED on interrogation answers. What we CAN see from the outside: LineLab appears to be in the classic chasm trap — impressive early adopter logos across multiple verticals, but no dominant position in any one segment, and a sales motion that's unclear. The biggest strategic question we can't answer yet: is this a channel dependency problem (all deals from MIT network), a market education problem (buyers don't know the category exists), or a sales execution problem (pipeline exists but doesn't convert)?"
+  },
+  "next_steps": {
+    "items": [
+      {
+        "priority": 1,
+        "title": "Answer the 12 interrogation questions — this unlocks everything",
+        "detail": "The interrogation covers pricing, funding, deal origination, team size, ARR, retention, pipeline, lost deals, PLG stance, beachhead preference, and marketing spend. Every recommendation below is provisional without this data. 30 minutes of honest answers will double our diagnostic confidence.",
+        "type": "validation",
+        "estimated_effort": "30-45 min",
+        "unlocks": "Confidence score jump from 42 to ~65-75. Unlocks specific GTM, pricing, and hiring recommendations. Unblocks 6 of 8 'needs work' items."
+      },
+      {
+        "priority": 2,
+        "title": "Pick your beachhead — we recommend aerospace",
+        "detail": "You have Boeing + GKN Aerospace + Paris Air Show presence. Aerospace has massive scale-up costs, long lead times, high willingness to pay, and reference-ability. The Crossing the Chasm playbook is clear: dominate one segment, build 3-5 referenceable customers who actively refer, then expand via 'bowling pins' (aerospace → defense → space → eVTOL).",
+        "type": "strategy",
+        "estimated_effort": "Decision + 1 quarter to execute",
+        "unlocks": "Focused GTM, whole product for one segment, repeatable sales playbook, reference customers who sell for you."
+      },
+      {
+        "priority": 3,
+        "title": "Build a 'whole product' for the beachhead vertical",
+        "detail": "Templates for aerospace production modeling, industry-specific case studies with named customers, aerospace terminology in the UI and marketing, partnership with aerospace consultancies (Roland Berger, BCG manufacturing practice). The pragmatist buyer needs to see that LineLab was built for THEIR industry.",
+        "type": "product",
+        "estimated_effort": "1-2 quarters",
+        "unlocks": "Shorter sales cycles, higher conversion, customer-led referrals within the vertical."
+      },
+      {
+        "priority": 4,
+        "title": "Create category awareness through comparison content",
+        "detail": "The market doesn't know analytical modeling exists as a category. Meet buyers in THEIR frame: 'LineLab vs FlexSim', 'LineLab vs AnyLogic', 'Why analytical modeling is 100x faster than DES'. SEO content targeting 'discrete event simulation alternative', 'factory simulation software comparison'. Make the unknown category legible through familiar reference points.",
+        "type": "marketing",
+        "estimated_effort": "Ongoing — 2 pieces/month",
+        "unlocks": "Inbound demand from buyers actively searching for simulation tools. Category awareness without expensive analyst relations."
+      },
+      {
+        "priority": 5,
+        "title": "Leverage Solving for Scale Summit as your community engine",
+        "detail": "You co-founded an event with MIT. That's a massive asset most startups don't have. Turn it into a recurring community: quarterly virtual events, newsletter, content series. This builds the audience that becomes your pipeline. Geoffrey Moore calls this 'creating the market before you sell into it.'",
+        "type": "marketing",
+        "estimated_effort": "Ongoing — quarterly cadence",
+        "unlocks": "Pipeline generation, thought leadership positioning, community-led growth in a vertical where trust matters more than features."
+      }
+    ],
+    "summary": "Step 1 is non-negotiable: answer the interrogation questions. Everything else is provisional without that data. Assuming the answers confirm what we suspect (small team, enterprise sales, MIT-network-dependent deals), the playbook is textbook Crossing the Chasm: pick aerospace as your beachhead, build the whole product for that vertical, create category awareness through comparison content, and leverage Solving for Scale as your community engine. You have the hardest things already — the technology, the logos, and the credibility. What's missing is the repeatable GTM machine."
+  }
+}

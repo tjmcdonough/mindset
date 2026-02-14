@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OneCamp — Growth Diagnosis | GrowthMind</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+  
+  :root {
+    --bg: #09090b;
+    --surface: #111114;
+    --surface2: #18181d;
+    --surface3: #1f1f26;
+    --border: #27272f;
+    --border-light: #35354a;
+    --text: #eaeaf0;
+    --text-secondary: #a0a0b8;
+    --text-muted: #6b6b80;
+    --accent: #6366f1;
+    --accent-light: #818cf8;
+    --accent-glow: rgba(99,102,241,0.15);
+    --green: #10b981;
+    --green-soft: #34d399;
+    --green-bg: rgba(16,185,129,0.08);
+    --green-border: rgba(16,185,129,0.2);
+    --yellow: #f59e0b;
+    --yellow-bg: rgba(245,158,11,0.08);
+    --yellow-border: rgba(245,158,11,0.2);
+    --red: #ef4444;
+    --red-bg: rgba(239,68,68,0.08);
+    --red-border: rgba(239,68,68,0.2);
+    --blue: #3b82f6;
+    --blue-bg: rgba(59,130,246,0.08);
+    --purple: #a855f7;
+    --purple-bg: rgba(168,85,247,0.08);
+    --cyan: #06b6d4;
+    --orange: #f97316;
+    --orange-bg: rgba(249,115,22,0.08);
+    --orange-border: rgba(249,115,22,0.2);
+  }
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .page { max-width: 900px; margin: 0 auto; padding: 0 32px; }
+  
+  .hero {
+    padding: 80px 0 64px;
+    text-align: center;
+    position: relative;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-light), transparent);
+  }
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-light);
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    line-height: 1.05;
+    margin-bottom: 16px;
+    background: linear-gradient(180deg, #ffffff 20%, #a0a0c0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .hero-tagline {
+    font-size: 18px;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+  }
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+  .hero-stat { text-align: center; }
+  .hero-stat-value {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--green-soft);
+    line-height: 1;
+  }
+  .hero-stat-value.red { color: var(--red); }
+  .hero-stat-value.yellow { color: var(--yellow); }
+  .hero-stat-value.orange { color: var(--orange); }
+  .hero-stat-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    margin-top: 6px;
+  }
+
+  .section {
+    padding: 64px 0;
+    position: relative;
+  }
+  .section + .section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  }
+  .section-num {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-light);
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+  }
+  .section-desc {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin-bottom: 36px;
+    max-width: 640px;
+  }
+
+  .overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .overview-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+  }
+  .overview-card.full { grid-column: 1 / -1; }
+  .ov-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .ov-value {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  .ov-value.small { font-size: 13px; font-weight: 400; color: var(--text-secondary); }
+
+  .founder {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+  }
+  .f-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), #7c3aed);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 18px;
+    flex-shrink: 0;
+    color: white;
+  }
+  .f-name { font-size: 16px; font-weight: 700; }
+  .f-role { font-size: 12px; color: var(--accent-light); margin-bottom: 6px; }
+  .f-bio { font-size: 12px; color: var(--text-secondary); line-height: 1.6; }
+  .f-tags { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 4px; }
+  .f-tag {
+    font-size: 10px;
+    padding: 2px 8px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text-muted);
+  }
+
+  .score-block {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 40px;
+    margin-bottom: 28px;
+  }
+  .ring-wrap {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+  }
+  .ring-wrap svg {
+    width: 150px;
+    height: 150px;
+    transform: rotate(-90deg);
+  }
+  .ring-track { fill: none; stroke: var(--surface3); stroke-width: 10; }
+  .ring-fill { fill: none; stroke-width: 10; stroke-linecap: round; }
+  .ring-center {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .ring-num { font-size: 40px; font-weight: 900; line-height: 1; }
+  .ring-label { font-size: 12px; color: var(--text-muted); }
+  .score-text h3 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+  .score-text p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
+  .verdict-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 14px;
+    padding: 5px 14px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .v-cond { background: var(--orange-bg); color: var(--orange); border: 1px solid var(--orange-border); }
+  .v-early { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
+
+  .dim-list { display: flex; flex-direction: column; gap: 14px; }
+  .dim {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 22px;
+  }
+  .dim-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .dim-name { font-size: 14px; font-weight: 600; }
+  .dim-score { font-size: 18px; font-weight: 800; }
+  .dim-bar {
+    height: 6px;
+    background: var(--surface3);
+    border-radius: 100px;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+  .dim-bar-fill { height: 100%; border-radius: 100px; }
+  .dim-note { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+  .c-green { color: var(--green-soft); }
+  .c-yellow { color: var(--yellow); }
+  .c-red { color: var(--red); }
+  .bg-green { background: var(--green); }
+  .bg-yellow { background: var(--yellow); }
+  .bg-red { background: var(--red); }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .col-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+  }
+  .col-card h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .col-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .col-card li {
+    font-size: 13px;
+    color: var(--text-secondary);
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.55;
+  }
+  .col-card li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+  }
+  .green-dots li::before { background: var(--green); }
+  .red-dots li::before { background: var(--red); }
+  .blue-dots li::before { background: var(--blue); }
+  .yellow-dots li::before { background: var(--yellow); }
+
+  .insight {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 28px 24px;
+    margin-bottom: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+  .insight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 3px;
+  }
+  .insight.i-crit::before { background: var(--red); }
+  .insight.i-high::before { background: var(--yellow); }
+  .insight.i-med::before { background: var(--blue); }
+  .insight-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 10px;
+  }
+  .insight-title { font-size: 17px; font-weight: 700; }
+  .insight-sev {
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    flex-shrink: 0;
+  }
+  .sev-c { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
+  .sev-h { background: var(--yellow-bg); color: var(--yellow); border: 1px solid var(--yellow-border); }
+  .sev-m { background: var(--blue-bg); color: var(--blue); border: 1px solid rgba(59,130,246,0.2); }
+  .insight-body {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  .insight-q {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 14px;
+    color: var(--accent-light);
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+  .insight-action {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    padding: 12px 16px;
+    background: var(--green-bg);
+    border: 1px solid var(--green-border);
+    border-radius: 8px;
+  }
+  .insight-action strong { color: var(--green-soft); }
+  .insight-bias {
+    margin-top: 12px;
+    display: inline-flex;
+    padding: 3px 10px;
+    background: var(--purple-bg);
+    border: 1px solid rgba(168,85,247,0.15);
+    border-radius: 100px;
+    font-size: 11px;
+    color: var(--purple);
+  }
+
+  .bright-spot {
+    background: var(--surface);
+    border: 1px solid var(--green-border);
+    border-radius: 10px;
+    padding: 22px;
+    margin-bottom: 12px;
+  }
+  .bright-spot h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--green-soft);
+    margin-bottom: 6px;
+  }
+  .bright-spot p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  .exp {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 12px;
+  }
+  .exp-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+    gap: 12px;
+  }
+  .exp-name { font-size: 15px; font-weight: 700; }
+  .exp-pri {
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+  }
+  .p0 { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
+  .p1 { background: var(--yellow-bg); color: var(--yellow); border: 1px solid var(--yellow-border); }
+  .p2 { background: var(--blue-bg); color: var(--blue); border: 1px solid rgba(59,130,246,0.2); }
+  .exp-hyp {
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 14px;
+    line-height: 1.6;
+  }
+  .exp-row {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .exp-row span { color: var(--text-muted); }
+  .exp-row strong { color: var(--text); font-weight: 600; }
+  .exp-success {
+    font-size: 12px;
+    padding: 10px 14px;
+    background: var(--surface2);
+    border-radius: 6px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+  .exp-success b { color: var(--green-soft); font-weight: 600; }
+  .exp-kill {
+    font-size: 12px;
+    padding: 10px 14px;
+    background: var(--red-bg);
+    border: 1px solid var(--red-border);
+    border-radius: 6px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-top: 8px;
+  }
+  .exp-kill b { color: var(--red); font-weight: 600; }
+
+  .comp {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 12px;
+  }
+  .comp-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .comp-name { font-size: 16px; font-weight: 700; }
+  .comp-their { font-size: 12px; color: var(--text-muted); font-style: italic; }
+  .comp-counter {
+    font-size: 14px;
+    color: var(--accent-light);
+    font-weight: 500;
+    margin-bottom: 14px;
+    line-height: 1.5;
+  }
+  .comp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .comp-cell {
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .comp-win {
+    background: var(--green-bg);
+    border: 1px solid var(--green-border);
+  }
+  .comp-win .cc-label { color: var(--green-soft); font-weight: 700; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+  .comp-lose {
+    background: var(--red-bg);
+    border: 1px solid var(--red-border);
+  }
+  .comp-lose .cc-label { color: var(--red); font-weight: 700; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+  .comp-cell p { color: var(--text-secondary); }
+
+  .anti-exp {
+    background: var(--surface);
+    border: 1px solid var(--red-border);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 10px;
+  }
+  .anti-exp h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--red);
+    margin-bottom: 4px;
+  }
+  .anti-exp p {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  .road-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+  }
+  .road-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+  }
+  .road-period {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent-light);
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .road-theme {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .road-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .road-card li {
+    font-size: 12px;
+    color: var(--text-secondary);
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .road-card li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent-light);
+    font-size: 11px;
+  }
+
+  .one-thing {
+    background: linear-gradient(135deg, #13102a 0%, #0f1525 100%);
+    border: 1px solid rgba(99,102,241,0.25);
+    border-radius: 14px;
+    padding: 52px 48px;
+    text-align: center;
+    margin: 8px 0 0;
+  }
+  .ot-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--accent-light);
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .one-thing h3 {
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 16px;
+    background: linear-gradient(180deg, #fff 0%, #a5b4fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .one-thing p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    max-width: 620px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  .q-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 32px 1fr auto;
+    gap: 14px;
+    align-items: start;
+  }
+  .q-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--surface3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent-light);
+    flex-shrink: 0;
+  }
+  .q-text { font-size: 14px; line-height: 1.6; }
+  .q-why { font-size: 12px; color: var(--text-muted); margin-top: 4px; line-height: 1.5; }
+  .q-pri {
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .qp-c { background: var(--red-bg); color: var(--red); }
+  .qp-h { background: var(--yellow-bg); color: var(--yellow); }
+  .qp-m { background: var(--blue-bg); color: var(--blue); }
+
+  .market-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .market-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+    text-align: center;
+  }
+  .m-val {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--cyan);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .m-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+  .m-detail {
+    font-size: 11px;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+
+  .content-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+    margin-bottom: 12px;
+  }
+  .content-card h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .content-card .cc-type {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent-light);
+    margin-bottom: 8px;
+  }
+  .content-card p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  .channel-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+  }
+  .channel-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+  }
+  .channel-card h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .channel-card p {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+  .channel-card .ch-pri {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .ch-high { background: var(--green-bg); color: var(--green-soft); }
+  .ch-med { background: var(--yellow-bg); color: var(--yellow); }
+
+  .risk-flag {
+    background: var(--surface);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 14px;
+    align-items: start;
+  }
+  .risk-flag.rf-red { border: 1px solid var(--red-border); }
+  .risk-flag.rf-yellow { border: 1px solid var(--yellow-border); }
+  .rf-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+  .rf-red-icon { background: var(--red-bg); }
+  .rf-yellow-icon { background: var(--yellow-bg); }
+  .rf-title { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+  .rf-text { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+  .rf-fix { font-size: 12px; color: var(--green-soft); margin-top: 6px; line-height: 1.5; }
+
+  .footer {
+    padding: 48px 0;
+    text-align: center;
+    position: relative;
+  }
+  .footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  }
+  .footer-brand { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
+  .footer-sub { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
+  .footer-disc {
+    font-size: 11px;
+    color: var(--text-muted);
+    max-width: 540px;
+    margin: 0 auto;
+    line-height: 1.6;
+    opacity: 0.5;
+  }
+
+  @media (max-width: 768px) {
+    .page { padding: 0 20px; }
+    .hero h1 { font-size: 36px; }
+    .hero-stats { gap: 24px; }
+    .overview-grid, .two-col, .comp-grid, .channel-grid { grid-template-columns: 1fr; }
+    .road-grid { grid-template-columns: 1fr; }
+    .market-grid { grid-template-columns: 1fr; }
+    .score-block { flex-direction: column; text-align: center; }
+    .q-card { grid-template-columns: 28px 1fr; }
+    .q-pri { grid-column: 2; }
+    .one-thing { padding: 36px 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ════════════ HERO ════════════ -->
+<div class="hero">
+  <div class="hero-eyebrow">🧠 GrowthMind — Growth Diagnosis</div>
+  <h1>OneCamp</h1>
+  <p class="hero-tagline">A self-hosted all-in-one workspace replacing Slack + Zoom + Asana + Notion — built solo with extraordinary technical ambition. The product is real. The distribution doesn't exist yet. Here's how to fix that.</p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-value red">20</div>
+      <div class="hero-stat-label">Demand Score</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-value red">PRE-LAUNCH</div>
+      <div class="hero-stat-label">Verdict</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-value yellow">UNOCCUPIED</div>
+      <div class="hero-stat-label">Market Position</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-value yellow">22%</div>
+      <div class="hero-stat-label">Confidence*</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ OVERVIEW ════════════ -->
+<div class="section">
+  <div class="section-num">01 — Company Profile</div>
+  <div class="section-title">What We Found</div>
+  <div class="section-desc">Everything below was researched automatically from public sources — your Reddit posts, X activity, and market data. No manual input required.</div>
+  
+  <div class="overview-grid">
+    <div class="overview-card full">
+      <div class="ov-label">Product</div>
+      <div class="ov-value">Self-hosted, all-in-one productivity workspace. Channels, DMs, video/audio calls with recording &amp; transcription, project management, real-time collaborative docs, unified search, and observability — all in a single Docker deployment.</div>
+    </div>
+    <div class="overview-card">
+      <div class="ov-label">Stage</div>
+      <div class="ov-value">Pre-Revenue, Early Beta</div>
+      <div class="ov-value small" style="margin-top:4px;">Zero paying users. Seeking beta testers via Reddit DMs.</div>
+    </div>
+    <div class="overview-card">
+      <div class="ov-label">Founded</div>
+      <div class="ov-value">~2025 · Docker-Based Web App</div>
+    </div>
+    <div class="overview-card">
+      <div class="ov-label">Traction</div>
+      <div class="ov-value">0 users · 0 revenue · No website</div>
+    </div>
+    <div class="overview-card">
+      <div class="ov-label">Pricing</div>
+      <div class="ov-value">Undecided — no business model yet</div>
+    </div>
+    <div class="overview-card full">
+      <div class="ov-label">Industry</div>
+      <div class="ov-value small">Collaboration Software · Self-Hosted Infrastructure · $7.8B self-hosted collaboration market (Dataintelo) within a $36B team collaboration market (Grand View Research)</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ FOUNDER ════════════ -->
+<div class="section">
+  <div class="section-num">02 — Founding Team</div>
+  <div class="section-title">Who's Building This</div>
+  <div class="section-desc">Auto-researched from Reddit activity and X presence.</div>
+  
+  <div class="founder">
+    <div class="f-avatar">A</div>
+    <div>
+      <div class="f-name">Akash (@akashc777)</div>
+      <div class="f-role">Solo Founder &amp; Full-Stack Engineer</div>
+      <div class="f-bio">An extraordinarily capable technical builder. Building the equivalent of Slack + Zoom + Asana + Notion as a single developer requires deep expertise in WebRTC, real-time sync, Docker orchestration, and full-stack architecture. Active on r/SaaS and X. Transparent about the solo journey — "Building solo is lonely sometimes." Builder-first archetype: months of heads-down engineering before any marketing.</div>
+      <div class="f-tags">
+        <span class="f-tag">Solo</span>
+        <span class="f-tag">Full-Stack</span>
+        <span class="f-tag">Bootstrapped</span>
+        <span class="f-tag">Self-Hosted Native</span>
+        <span class="f-tag">Builder-First</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ MARKET ════════════ -->
+<div class="section">
+  <div class="section-num">03 — Market Intelligence</div>
+  <div class="section-title">The Landscape</div>
+  <div class="section-desc">The self-hosted collaboration market is real and growing. And right now, the incumbents are handing you an opening on a silver platter.</div>
+  
+  <div class="market-grid">
+    <div class="market-card">
+      <div class="m-val">$7.8B</div>
+      <div class="m-label">Self-Hosted Collab</div>
+      <div class="m-detail">Growing steadily with GDPR &amp; data sovereignty tailwinds</div>
+    </div>
+    <div class="market-card">
+      <div class="m-val">$33M</div>
+      <div class="m-label">Mattermost Revenue</div>
+      <div class="m-detail">156 employees, $70M raised — alienating OSS community</div>
+    </div>
+    <div class="market-card">
+      <div class="m-val">$31.5M</div>
+      <div class="m-label">Rocket.Chat Revenue</div>
+      <div class="m-detail">~200 employees — same paywall backlash as Mattermost</div>
+    </div>
+  </div>
+  
+  <div class="overview-card full" style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:22px;margin-top:0;">
+    <div class="ov-label">🔥 The Mattermost/Rocket.Chat Backlash — Your Window</div>
+    <div class="ov-value small">
+      Both Mattermost and Rocket.Chat are <strong style="color:var(--red)">moving features behind paywalls and shifting from open-source to source-available licenses</strong>. The r/selfhosted community (500K+ members) is actively seeking alternatives — a thread asking for "really open source" alternatives got 90+ upvotes in Aug 2025. <strong style="color:var(--green-soft)">This creates a once-in-a-cycle timing opportunity.</strong> If OneCamp positions as the genuinely open, all-in-one alternative these communities are asking for, you ride a wave of existing frustration into a pre-built audience. <strong style="color:var(--yellow)">But windows close.</strong> Someone will fill this gap. The question is whether it's you.
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ DEMAND SCORE ════════════ -->
+<div class="section">
+  <div class="section-num">04 — Demand Scorecard</div>
+  <div class="section-title">Growth Readiness Assessment</div>
+  <div class="section-desc">Six dimensions scored 0–100. This is where you stand today — not where you could be in 90 days.</div>
+  
+  <div class="score-block">
+    <div class="ring-wrap">
+      <svg viewBox="0 0 140 140">
+        <circle class="ring-track" cx="70" cy="70" r="60" />
+        <circle class="ring-fill" cx="70" cy="70" r="60" stroke="var(--red)" stroke-dasharray="377" stroke-dashoffset="339" />
+      </svg>
+      <div class="ring-center">
+        <div class="ring-num" style="color:var(--red)">20</div>
+        <div class="ring-label">/ 100</div>
+      </div>
+    </div>
+    <div class="score-text">
+      <h3>Extraordinary Product, Zero Distribution</h3>
+      <p>This score reflects one thing: nobody can find you. You have no website, no landing page, no demo, no screenshots publicly available, and no community. The product may be excellent — we genuinely believe it is — but from the outside world's perspective, OneCamp doesn't exist yet. The good news: almost every dimension can improve dramatically in 30 days with zero engineering work. This is a distribution score, not a product score.</p>
+      <div class="verdict-pill v-early">⚡ Verdict: SHIP THE LANDING PAGE</div>
+    </div>
+  </div>
+  
+  <div class="dim-list">
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Market Timing</span>
+        <span class="dim-score c-green">75</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-green" style="width:75%"></div></div>
+      <div class="dim-note">Mattermost/Rocket.Chat backlash creates real demand. GDPR and data sovereignty regulations pushing enterprises to self-hosted. The r/selfhosted community is 500K+ strong and actively looking. The market is ready for you — you're just not in the market yet.</div>
+    </div>
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Product Ambition &amp; Differentiation</span>
+        <span class="dim-score c-yellow">55</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-yellow" style="width:55%"></div></div>
+      <div class="dim-note">"One Docker stack instead of five" is a genuinely compelling position. The self-hosted all-in-one space is theoretically unoccupied — Nextcloud is files-first, Mattermost is chat-only. But "all-in-one" also triggers skepticism: "jack of all trades, master of none." You need to prove each module is good enough.</div>
+    </div>
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Founder Technical Ability</span>
+        <span class="dim-score c-green">85</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-green" style="width:85%"></div></div>
+      <div class="dim-note">Building chat + video (WebRTC) + real-time docs + project management + observability as a solo dev is genuinely remarkable. This is not a no-code landing page — this is deep systems engineering. The technical foundation appears to be real.</div>
+    </div>
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Validation &amp; Traction</span>
+        <span class="dim-score c-red">2</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-red" style="width:2%"></div></div>
+      <div class="dim-note">Zero users. Zero revenue. No evidence of customer discovery or market validation. Two Reddit posts in r/SaaS (not your target audience) with "DM me BETA" as the CTA. No data on how many DMs were received or converted. Building in a vacuum for months is the #1 technical founder trap.</div>
+    </div>
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Distribution &amp; Discovery</span>
+        <span class="dim-score c-red">0</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-red" style="width:1%"></div></div>
+      <div class="dim-note">No website. No landing page. No demo URL. No screenshots publicly available. Not on any directory (awesome-selfhosted, AlternativeTo, Docker Hub, Product Hunt). Not posting in r/selfhosted where your actual users are. Functionally invisible to the internet.</div>
+    </div>
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Sustainability &amp; Scope Risk</span>
+        <span class="dim-score c-red">10</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-red" style="width:10%"></div></div>
+      <div class="dim-note">Solo founder building what Slack (2,500 employees), Zoom (8,000), Notion (1,000), and Asana (1,800) each have dedicated teams for. No disclosed runway, business model, or open-source strategy. The ambition is heroic but the execution risk is extreme without a plan for sustainability.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ THE ONE THING ════════════ -->
+<div class="section" style="padding-bottom:32px">
+  <div class="one-thing">
+    <div class="ot-label">⚡ The One Thing</div>
+    <h3>You've Built 4 Enterprise Products Solo.<br>That's Heroic. Now Stop Building and<br>Ship a Landing Page.</h3>
+    <p>Every day without a URL is a day OneCamp doesn't exist to the world. You don't need more features. You don't need more polish. You need a one-page site with screenshots, a Docker quick-start, and an email signup — deployed on Vercel in 4 hours. Then post it to r/selfhosted, the one community with 500K people who are <em>already looking for what you've built</em>. That single afternoon will generate more signal than 6 more months of solo engineering.</p>
+  </div>
+</div>
+
+<!-- ════════════ FOUNDER MIRROR ════════════ -->
+<div class="section">
+  <div class="section-num">05 — Founder Mirror</div>
+  <div class="section-title">The Uncomfortable Truths</div>
+  <div class="section-desc">These are the insights you need to hear. We're being direct because we genuinely believe in what you're building — and directness is the fastest path to getting it in front of people.</div>
+  
+  <div class="insight i-crit">
+    <div class="insight-head">
+      <span class="insight-title">You Don't Have a Website. In 2026.</span>
+      <span class="insight-sev sev-c">Critical</span>
+    </div>
+    <div class="insight-body">Every person who reads your Reddit post and wants to learn more hits a dead end. Every potential beta tester who hears about OneCamp and Googles it finds nothing. You've built chat, video, docs, tasks, and observability — but the one page that could actually get you users (a simple landing page) doesn't exist. This isn't a minor gap. It's existential.</div>
+    <div class="insight-q">"You built WebRTC video calling from scratch but haven't deployed a static HTML page with screenshots and an email form. What does that tell you about your priorities?"</div>
+    <div class="insight-action"><strong>Action:</strong> This weekend. One page. Product name, one-liner ("One Docker stack replaces five SaaS tools"), 5 screenshots, feature list, email capture, "Request Beta Access" button. Deploy on Vercel or Netlify. Domain: onecamp.dev or onecamp.io. 4 hours maximum. This unlocks literally everything else.</div>
+    <div class="insight-bias">🧠 Builder's trap — shipping features feels productive; shipping a landing page feels like marketing</div>
+  </div>
+  
+  <div class="insight i-crit">
+    <div class="insight-head">
+      <span class="insight-title">You're Talking to Founders, Not Users</span>
+      <span class="insight-sev sev-c">Critical</span>
+    </div>
+    <div class="insight-body">Your Reddit posts are in r/SaaS — a community of founders talking to other founders. Your target users (DevOps engineers, small team leads, self-hosting enthusiasts) are in r/selfhosted, Hacker News, and awesome-selfhosted. You're getting empathy comments from fellow builders, not "shut up and take my money" comments from potential users. Those are very different signals.</div>
+    <div class="insight-q">"r/selfhosted has 500K members who are literally your target market. You've posted there zero times. Why?"</div>
+    <div class="insight-action"><strong>Action:</strong> Write a post for r/selfhosted this week. Include: Docker Compose quick-start, 3-5 screenshots, architecture overview (stack, resource requirements), and honest "solo founder early beta" framing. This is THE audience. If they don't want it, nobody does. If they do, you have instant community.</div>
+    <div class="insight-bias">🧠 Comfort zone bias — posting where you feel welcomed vs. where your customers actually are</div>
+  </div>
+  
+  <div class="insight i-high">
+    <div class="insight-head">
+      <span class="insight-title">Your Scope Is 4x What Any Solo Founder Should Attempt</span>
+      <span class="insight-sev sev-h">High</span>
+    </div>
+    <div class="insight-body">Slack has 2,500 employees. Zoom has 8,000. Notion has 1,000. Asana has 1,800. You're building all four simultaneously. Alone. The technical achievement is genuine — but each module will be compared to the dedicated tool it replaces. Users won't compare "OneCamp docs" to "what one person could build" — they'll compare it to Notion. That bar is impossibly high for one person to clear across four product surfaces.</div>
+    <div class="insight-action"><strong>Action:</strong> You don't need to cut features — but you need to lead with one. Pick the module that's strongest and position it as the hero: "The best self-hosted team chat, plus tasks, docs, and video." Let one module carry the story while the others are bonuses, not promises.</div>
+    <div class="insight-bias">🧠 Scope creep as comfort — adding features is easier than facing whether anyone wants what exists</div>
+  </div>
+
+  <div class="insight i-high">
+    <div class="insight-head">
+      <span class="insight-title">"DM Me BETA" Is the Leakiest Funnel Possible</span>
+      <span class="insight-sev sev-h">High</span>
+    </div>
+    <div class="insight-body">Your CTA is "DM me BETA" on Reddit. This captures interest in the most lossy way possible. There's no email capture, no waitlist, no way to follow up, no data on conversion. Even a Google Form would be better. Every DM you don't receive is a potential user lost forever — and you have no way of knowing how many you're losing.</div>
+    <div class="insight-action"><strong>Action:</strong> Replace "DM me BETA" with a link to a Tally/Typeform with: email, team size, current tools used, and what they'd replace first. This gives you a lead list AND market research in one form. Takes 15 minutes to set up.</div>
+  </div>
+
+  <div class="insight i-med">
+    <div class="insight-head">
+      <span class="insight-title">No Screenshots = No Trust</span>
+      <span class="insight-sev sev-m">Medium</span>
+    </div>
+    <div class="insight-body">In the self-hosted community, seeing is believing. Users evaluate tools by: (1) screenshots, (2) Docker Compose ease, (3) documentation quality, (4) GitHub activity. You currently provide none of these. Without visual proof, your Reddit posts are indistinguishable from vaporware. That's not a judgment — it's how the community works.</div>
+    <div class="insight-action"><strong>Action:</strong> Take 10 screenshots today: the chat interface, a video call, the doc editor, the task board, the Docker Compose file, the monitoring dashboard. Post them on your landing page and in every Reddit/HN post. This single action multiplies the credibility of everything else you do.</div>
+  </div>
+</div>
+
+<!-- ════════════ BRIGHT SPOTS ════════════ -->
+<div class="section">
+  <div class="section-num">06 — What's Actually Good</div>
+  <div class="section-title">The Things You're Undervaluing</div>
+  <div class="section-desc">A 20/100 growth score doesn't mean the product is bad. It means nobody knows it exists. These are real, genuine strengths.</div>
+  
+  <div class="bright-spot">
+    <h4>✦ You Built Something Most Teams of 50 Can't</h4>
+    <p>Chat with WebRTC video, real-time collaborative docs, project management, and observability — in a single Docker deployment. Solo. This is not a wrapper around existing tools. If the engineering is as deep as it appears, this is genuinely rare. Most "all-in-one" tools are just dashboards linking to separate services. If OneCamp is truly integrated, that's your moat.</p>
+  </div>
+  <div class="bright-spot">
+    <h4>✦ Your Timing Is Better Than It's Ever Been</h4>
+    <p>Mattermost and Rocket.Chat are both alienating their open-source communities at exactly the same time. The r/selfhosted community is actively seeking alternatives. GDPR enforcement is pushing enterprises to self-hosted. Data sovereignty in the age of AI ("your data trains their models") is becoming a mainstream concern. You couldn't have picked a better moment — you just need to show up.</p>
+  </div>
+  <div class="bright-spot">
+    <h4>✦ You Occupy an Uncontested Position</h4>
+    <p>Self-hosted + all-in-one + collaboration-first is genuinely unoccupied. Nextcloud is files-first with bolted-on chat. Mattermost is chat-only. Zulip is threading-only. Nobody owns "one Docker stack for everything your team needs." That's either a massive opportunity or a sign that it's impossibly hard. Your product existing suggests it's the former.</p>
+  </div>
+  <div class="bright-spot">
+    <h4>✦ Your Authenticity Is a Growth Asset</h4>
+    <p>"Building solo is lonely sometimes." That vulnerability resonates. The indie hacker and self-hosted communities rally behind transparent solo founders who ship real things. Your build-in-public story — if you actually build in public — is a distribution channel in itself. People root for the underdog building something ambitious.</p>
+  </div>
+</div>
+
+<!-- ════════════ SWOT ════════════ -->
+<div class="section">
+  <div class="section-num">07 — Strategic Analysis</div>
+  <div class="section-title">SWOT</div>
+  
+  <div class="two-col">
+    <div class="col-card green-dots">
+      <h4><span style="color:var(--green)">▲</span> Strengths</h4>
+      <ul>
+        <li>Extraordinary technical execution — 4 enterprise products built solo</li>
+        <li>Genuinely unoccupied market position (self-hosted + all-in-one + collaboration-first)</li>
+        <li>Single Docker deployment = massive operational simplicity for users</li>
+        <li>Authentic solo founder story that resonates with self-hosted community</li>
+        <li>Integrated architecture (one auth, one backup, one update) vs. cobbling together 5 tools</li>
+      </ul>
+    </div>
+    <div class="col-card red-dots">
+      <h4><span style="color:var(--red)">▼</span> Weaknesses</h4>
+      <ul>
+        <li>Zero distribution — no website, no landing page, no demo, no screenshots</li>
+        <li>Zero users, zero revenue, zero validation after months of building</li>
+        <li>No business model decided (open source? open-core? proprietary?)</li>
+        <li>Solo founder maintaining 4 product surfaces = extreme sustainability risk</li>
+        <li>No community infrastructure (Discord, forum, GitHub)</li>
+        <li>"DM me BETA" leaks 90%+ of potential interest</li>
+      </ul>
+    </div>
+    <div class="col-card blue-dots">
+      <h4><span style="color:var(--blue)">◆</span> Opportunities</h4>
+      <ul>
+        <li>Mattermost/Rocket.Chat OSS backlash — community actively seeking alternatives</li>
+        <li>r/selfhosted (500K members) is a ready-made audience if positioned correctly</li>
+        <li>GDPR &amp; data sovereignty regulations pushing enterprises to self-hosted</li>
+        <li>"Your data trains their AI models" narrative accelerating self-hosted demand</li>
+        <li>awesome-selfhosted listing (200K+ stars) = passive discovery engine</li>
+        <li>Government/defense sector needs self-hosted tools and has real budget</li>
+      </ul>
+    </div>
+    <div class="col-card yellow-dots">
+      <h4><span style="color:var(--yellow)">◆</span> Threats</h4>
+      <ul>
+        <li>Mattermost ($33M revenue, 156 employees) and Rocket.Chat ($31.5M) have years of head start</li>
+        <li>Nextcloud ecosystem is massive and has self-hosted brand trust</li>
+        <li>Solo founder burnout — building 4 products is a multi-year, multi-team endeavor</li>
+        <li>Self-hosted community prefers composable tools — "all-in-one" triggers skepticism</li>
+        <li>Without open-source, very hard to build trust in the self-hosted market</li>
+        <li>Each module compared independently to dedicated tools (Notion, Slack, Zoom)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ COMPETITORS ════════════ -->
+<div class="section">
+  <div class="section-num">08 — Competitive Positioning</div>
+  <div class="section-title">Know Exactly What You're Up Against</div>
+  <div class="section-desc">Your competitors are established but vulnerable. The key insight: nobody occupies your exact position (self-hosted + all-in-one + collaboration-first). Here's how to win — or lose — against each.</div>
+  
+  <div class="comp">
+    <div class="comp-head">
+      <span class="comp-name">vs. Mattermost</span>
+      <span class="comp-their">$33M revenue · 156 employees · $70M raised</span>
+    </div>
+    <div class="comp-counter">"Mattermost gives you chat. OneCamp gives you chat, video, docs, tasks, and project management — in the same Docker stack. And we're not moving features behind a paywall."</div>
+    <div class="comp-grid">
+      <div class="comp-cell comp-win"><div class="cc-label">You Win When</div><p>Teams frustrated by Mattermost's paywall creep, wanting an all-in-one solution instead of cobbling together Mattermost + Jitsi + Wekan + HedgeDoc. One Docker stack vs. five.</p></div>
+      <div class="comp-cell comp-lose"><div class="cc-label">You Lose When</div><p>Enterprise buyer needs proven security track record, compliance certifications, SLAs, and a company that won't disappear. Mattermost's 156-person team is a feature for risk-averse buyers.</p></div>
+    </div>
+  </div>
+  
+  <div class="comp">
+    <div class="comp-head">
+      <span class="comp-name">vs. Rocket.Chat</span>
+      <span class="comp-their">$31.5M revenue · ~200 employees · Source-available pivot</span>
+    </div>
+    <div class="comp-counter">"Rocket.Chat just moved to source-available. Their community is looking for exits. OneCamp is what Rocket.Chat should have become — genuinely open, all-in-one, and simple to deploy."</div>
+    <div class="comp-grid">
+      <div class="comp-cell comp-win"><div class="cc-label">You Win When</div><p>Open-source advocates burned by the license change. Teams who want chat + more but find Rocket.Chat bloated and complex to self-host. The "refugee" audience is real and active.</p></div>
+      <div class="comp-cell comp-lose"><div class="cc-label">You Lose When</div><p>Teams with existing Rocket.Chat deployments and years of data. Migration cost is real. Switching requires trust you haven't built yet.</p></div>
+    </div>
+  </div>
+  
+  <div class="comp">
+    <div class="comp-head">
+      <span class="comp-name">vs. Nextcloud Hub</span>
+      <span class="comp-their">Massive ecosystem · Files-first · Talk + Deck + Office</span>
+    </div>
+    <div class="comp-counter">"Nextcloud is a file server that bolted on collaboration. OneCamp is a collaboration platform built from the ground up. Talk is inferior to dedicated chat. Deck is a basic kanban. We're not bolting on — we're building native."</div>
+    <div class="comp-grid">
+      <div class="comp-cell comp-win"><div class="cc-label">You Win When</div><p>Teams who tried Nextcloud Talk and found it lacking. Teams who want real-time collaboration (not file-first) with proper video calling and project management.</p></div>
+      <div class="comp-cell comp-lose"><div class="cc-label">You Lose When</div><p>Teams already invested in the Nextcloud ecosystem. File management is their primary need. Nextcloud's brand trust in self-hosted is massive — you're unknown.</p></div>
+    </div>
+  </div>
+
+  <div class="comp">
+    <div class="comp-head">
+      <span class="comp-name">vs. The SaaS Stack (Slack + Zoom + Notion + Asana)</span>
+      <span class="comp-their">Combined $50-100/user/month · Cloud-only · Data on their servers</span>
+    </div>
+    <div class="comp-counter">"Five subscriptions, five logins, five vendor lock-ins, five places your company data lives on someone else's servers. Or one Docker stack on your infrastructure. Your data. Your rules."</div>
+    <div class="comp-grid">
+      <div class="comp-cell comp-win"><div class="cc-label">You Win When</div><p>Privacy-conscious teams, regulated industries (healthcare, legal, finance), teams frustrated by subscription costs, and anyone who's been burned by a SaaS shutdown or price hike.</p></div>
+      <div class="comp-cell comp-lose"><div class="cc-label">You Lose When</div><p>Teams who value convenience over control. Non-technical teams without Docker expertise. Anyone who compares each module head-to-head with the dedicated $1B+ tool.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ EXPERIMENTS ════════════ -->
+<div class="section">
+  <div class="section-num">09 — Growth Experiments</div>
+  <div class="section-title">7 Experiments to Get Your First 50 Users</div>
+  <div class="section-desc">Sequenced in three waves. Wave 1 is non-negotiable. All experiments cost $0 — time only. Designed for a solo founder.</div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">1. Ship the Landing Page</span>
+      <span class="exp-pri p0">Wave 1 · URGENT</span>
+    </div>
+    <div class="exp-hyp">"If we deploy a one-page site with screenshots, feature list, Docker quick-start, and email capture, we'll convert Reddit/X traffic into a waitlist of 10-50 people within 2 weeks."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>1 day</strong> <span>Effort:</span> <strong>4 hours one-time</strong> <span>Budget:</span> <strong>$0</strong></div>
+    <div class="exp-success"><b>Success:</b> Landing page live. Email signups flowing. Every other experiment becomes possible.</div>
+    <div class="exp-kill"><b>Kill signal:</b> None — this is a prerequisite, not a test. Ship it.</div>
+  </div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">2. The r/selfhosted Launch</span>
+      <span class="exp-pri p0">Wave 1 · Critical</span>
+    </div>
+    <div class="exp-hyp">"If we post to r/selfhosted with a Docker Compose quick-start, screenshots, and honest 'solo founder beta' framing, we'll get 50-200 email signups and our first real users."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>1 day prep + post</strong> <span>Effort:</span> <strong>6 hours</strong> <span>Budget:</span> <strong>$0</strong></div>
+    <div class="exp-success"><b>Success:</b> 50+ upvotes, 50+ email signups, 10+ users running OneCamp on their own infrastructure within 14 days.</div>
+    <div class="exp-kill"><b>Kill signal:</b> Post gets &lt;10 upvotes and zero signups despite good presentation. If r/selfhosted doesn't want it, fundamentally rethink positioning.</div>
+  </div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">3. Show HN — The Solo Founder Story</span>
+      <span class="exp-pri p0">Wave 1 · Critical</span>
+    </div>
+    <div class="exp-hyp">"'Show HN: I built an all-in-one self-hosted workspace (Slack + Zoom + Asana + Notion) as a solo founder' will resonate with HN's love of technical ambition."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>1 day</strong> <span>Effort:</span> <strong>3 hours</strong> <span>Budget:</span> <strong>$0</strong></div>
+    <div class="exp-success"><b>Success:</b> 50+ HN points, meaningful comment thread, signups from high-quality technical users.</div>
+    <div class="exp-kill"><b>Kill signal:</b> Highly variable — HN is a lottery. Don't read too much into one post.</div>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">4. The Mattermost Refugee Campaign</span>
+      <span class="exp-pri p0">Wave 1 · Critical</span>
+    </div>
+    <div class="exp-hyp">"If we write a targeted post — 'I'm building the open-source all-in-one alternative that Mattermost should have been' — we'll capture frustrated users actively shopping for alternatives."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>Half day</strong> <span>Effort:</span> <strong>4 hours</strong> <span>Budget:</span> <strong>$0</strong></div>
+    <div class="exp-success"><b>Success:</b> High-intent signups from comparison-shopping traffic. Discussion in Mattermost/Rocket.Chat communities.</div>
+    <div class="exp-kill"><b>Kill signal:</b> Zero engagement from the open-source community. Signals the backlash may not translate to actual switching behavior.</div>
+  </div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">5. awesome-selfhosted + Directory Listings</span>
+      <span class="exp-pri p1">Wave 2 · High</span>
+    </div>
+    <div class="exp-hyp">"Being listed on awesome-selfhosted (200K+ stars), AlternativeTo, Docker Hub, and OpenAlternative.co will drive steady discovery traffic."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>Ongoing</strong> <span>Effort:</span> <strong>2 hours one-time</strong> <span>Budget:</span> <strong>$0</strong></div>
+    <div class="exp-success"><b>Success:</b> Listed on 4+ directories. Steady referral traffic. GitHub stars accumulating.</div>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">6. Build in Public on X</span>
+      <span class="exp-pri p1">Wave 2 · High</span>
+    </div>
+    <div class="exp-hyp">"Consistent build-in-public content on X (architecture decisions, screenshots, honest metrics) will build audience and drive 100-500 followers in 3 months."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>Ongoing</strong> <span>Effort:</span> <strong>30 min/day</strong> <span>Budget:</span> <strong>$0</strong></div>
+    <div class="exp-success"><b>Success:</b> 200+ followers, DMs from interested users, content repurposed across channels.</div>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">7. Self-Hosted YouTuber Outreach</span>
+      <span class="exp-pri p2">Wave 3 · Medium</span>
+    </div>
+    <div class="exp-hyp">"If we provide early access to self-hosted YouTubers (Techno Tim, Jim's Garage, DB Tech, Wolfgang), at least 1 will review OneCamp, driving 500+ signups."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>30-60 days</strong> <span>Effort:</span> <strong>1 hr/week</strong> <span>Budget:</span> <strong>$0</strong></div>
+    <div class="exp-success"><b>Success:</b> 1+ YouTuber publishes a review. Spike in signups and Docker pulls.</div>
+    <div class="exp-kill"><b>Kill signal:</b> Multiple YouTubers try it and find it too rough for review. Signal to invest more in polish first.</div>
+  </div>
+</div>
+
+<!-- ════════════ STOP DOING ════════════ -->
+<div class="section">
+  <div class="section-num">10 — Stop Doing These Things</div>
+  <div class="section-title">The Anti-Experiments</div>
+  <div class="section-desc">These feel productive but are actively preventing you from finding users.</div>
+
+  <div class="anti-exp">
+    <h4>🚫 Don't build another feature until you have 10 users</h4>
+    <p>You have chat, video, docs, tasks, and observability. That's more than enough to beta test. Every hour coding is an hour not spent shipping a landing page or posting to r/selfhosted. The product is sufficient. The distribution is zero.</p>
+  </div>
+  <div class="anti-exp">
+    <h4>🚫 Don't post in r/SaaS again</h4>
+    <p>r/SaaS is founders. Your users are in r/selfhosted, r/homelab, and Hacker News. You're getting sympathy from peers, not demand from customers. Different communities, different outcomes.</p>
+  </div>
+  <div class="anti-exp">
+    <h4>🚫 Don't use "DM me BETA" as a CTA</h4>
+    <p>DMs are the leakiest funnel in existence. No tracking, no follow-up, no data. Replace with a landing page URL + email capture form today. Even a Google Form is infinitely better than DMs.</p>
+  </div>
+  <div class="anti-exp">
+    <h4>🚫 Don't "polish" without user feedback</h4>
+    <p>You said you're "moving to polish." Polish what? Without users, you're guessing what matters. Ship the beta, get 10 people running it, and let them tell you what to polish. Their feedback is your roadmap.</p>
+  </div>
+  <div class="anti-exp">
+    <h4>🚫 Don't delay the open-source decision</h4>
+    <p>This is the single most important strategic decision for OneCamp and it affects everything: community, trust, GTM, competitive positioning. Decide by Day 30. Our recommendation: open-core (free base + paid enterprise features). It's the proven model for self-hosted tools and the best way to ride the Mattermost backlash.</p>
+  </div>
+</div>
+
+<!-- ════════════ CONTENT STRATEGY ════════════ -->
+<div class="section">
+  <div class="section-num">11 — Content Strategy</div>
+  <div class="section-title">What to Create &amp; Where to Post It</div>
+  <div class="section-desc">Your audience is deeply technical. Generic SaaS marketing doesn't work here. Lead with substance — architecture, Docker Compose, honest comparisons.</div>
+
+  <div class="content-card">
+    <div class="cc-type">P0 · Reddit Post · 3-4 hours to produce</div>
+    <h4>r/selfhosted Launch Post with Docker Compose Quick-Start</h4>
+    <p>"I built a self-hosted all-in-one workspace. Here's the Docker Compose to try it in 5 minutes." Include: architecture overview, resource requirements, screenshots, what works and what's still rough. Honesty is currency in this community.</p>
+  </div>
+  <div class="content-card">
+    <div class="cc-type">P0 · Blog Post · 4-6 hours to produce</div>
+    <h4>"Why I'm Building the All-in-One Alternative That Mattermost Should Have Been"</h4>
+    <p>Directly address the open-source backlash. Compare the trajectory of Mattermost/Rocket.Chat (open → paywall) with your vision. This becomes a shareable manifesto for the r/selfhosted community and positions you as the principled alternative.</p>
+  </div>
+  <div class="content-card">
+    <div class="cc-type">P1 · X Thread · 1 hour to produce</div>
+    <h4>Architecture Deep-Dive Thread</h4>
+    <p>"I built Slack + Zoom + Asana + Notion as a solo dev. Here's the architecture." Technical content performs exceptionally well on X. Walk through: real-time sync, WebRTC decisions, Docker orchestration, database choices. This is your proof of technical credibility.</p>
+  </div>
+  <div class="content-card">
+    <div class="cc-type">P1 · Video · 2-3 hours to produce</div>
+    <h4>2-Minute Demo: "docker compose up → Full Workspace"</h4>
+    <p>Screen recording walking through: docker compose up, first channel created, video call started, doc edited, task assigned. All in one deployment. This is the most persuasive content you can create — visual proof that it works.</p>
+  </div>
+  <div class="content-card">
+    <div class="cc-type">P2 · Blog Series · Ongoing</div>
+    <h4>"Replace 5 SaaS Subscriptions With One Docker Stack"</h4>
+    <p>SEO-targeted content for comparison shoppers. "OneCamp vs Mattermost," "Self-hosted Slack alternatives 2026," "How to replace Notion with a self-hosted tool." Requires a blog on the landing page — build it into the site from day one.</p>
+  </div>
+</div>
+
+<!-- ════════════ CHANNELS ════════════ -->
+<div class="section">
+  <div class="section-num">12 — Channel Recommendations</div>
+  <div class="section-title">Where Your Users Actually Are</div>
+  <div class="section-desc">Your users are engineers, DevOps teams, and self-hosting enthusiasts. They're on Reddit, Hacker News, and GitHub — not LinkedIn or Instagram.</div>
+
+  <div class="channel-grid">
+    <div class="channel-card">
+      <h4>🐧 r/selfhosted</h4>
+      <p>500K+ members. THE community for self-hosted tool discovery. Docker Compose posts with screenshots regularly get 200+ upvotes. Your #1 channel.</p>
+      <span class="ch-pri ch-high">Highest Priority</span>
+    </div>
+    <div class="channel-card">
+      <h4>🔶 Hacker News</h4>
+      <p>"Show HN" posts for self-hosted tools with interesting technical stories regularly hit the front page. HN loves ambitious solo-founder engineering stories.</p>
+      <span class="ch-pri ch-high">Highest Priority</span>
+    </div>
+    <div class="channel-card">
+      <h4>⭐ awesome-selfhosted</h4>
+      <p>200K+ stars on GitHub. The curated directory for self-hosted tools. Being listed = steady passive discovery. Submit PR to groupware/collaboration category.</p>
+      <span class="ch-pri ch-high">Highest Priority</span>
+    </div>
+    <div class="channel-card">
+      <h4>🐳 Docker Hub</h4>
+      <p>Optimized container listing with clear README, resource requirements, and quick-start. Passive discovery for Docker users browsing collaboration tools.</p>
+      <span class="ch-pri ch-high">Highest Priority</span>
+    </div>
+    <div class="channel-card">
+      <h4>𝕏 X / Twitter</h4>
+      <p>Build-in-public content: architecture decisions, screenshots, metrics. The indie hacker and DevOps communities on X are highly engaged and share generously.</p>
+      <span class="ch-pri ch-med">Medium Priority</span>
+    </div>
+    <div class="channel-card">
+      <h4>🚀 Product Hunt</h4>
+      <p>Save for when you have 10+ users and screenshots. A well-timed PH launch generates backlinks, initial credibility, and a permanent listing. Don't waste the shot too early.</p>
+      <span class="ch-pri ch-med">Medium Priority</span>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ ROADMAP ════════════ -->
+<div class="section">
+  <div class="section-num">13 — 90-Day Roadmap</div>
+  <div class="section-title">What to Do Next</div>
+  
+  <div class="road-grid">
+    <div class="road-card">
+      <div class="road-period">Days 1–7</div>
+      <div class="road-theme">Stop Building, Start Shipping</div>
+      <ul>
+        <li>Ship a landing page (onecamp.dev) with screenshots + email capture</li>
+        <li>Record a 2-minute demo video (docker compose up → full workspace)</li>
+        <li>Create a public Docker quick-start that works in under 5 minutes</li>
+        <li>Set up an email list / waitlist form</li>
+        <li>Take 10 product screenshots</li>
+      </ul>
+    </div>
+    <div class="road-card">
+      <div class="road-period">Days 7–30</div>
+      <div class="road-theme">Find Your First 10</div>
+      <ul>
+        <li>Post to r/selfhosted with Docker Compose + screenshots</li>
+        <li>Post "Show HN" on Hacker News</li>
+        <li>Write the "Mattermost refugee" blog post</li>
+        <li>Submit to awesome-selfhosted + AlternativeTo</li>
+        <li>Set up a community channel (Discord or dogfood OneCamp itself)</li>
+        <li>Talk to every beta user — 15-minute calls</li>
+        <li>Decide: open source or open-core?</li>
+      </ul>
+    </div>
+    <div class="road-card">
+      <div class="road-period">Days 30–90</div>
+      <div class="road-theme">Build Community, Find Revenue</div>
+      <ul>
+        <li>50-100 active beta users running OneCamp</li>
+        <li>First pricing experiment (even "pay what you want")</li>
+        <li>Consistent build-in-public content on X (2-3x/week)</li>
+        <li>YouTube outreach to self-hosted reviewers</li>
+        <li>Product Hunt launch with 10+ users for social proof</li>
+        <li>Evaluate: solo project or co-founder/community needed?</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ RISK FLAGS ════════════ -->
+<div class="section">
+  <div class="section-num">14 — Risk Flags</div>
+  <div class="section-title">What Could Kill This</div>
+  
+  <div class="risk-flag rf-red">
+    <div class="rf-icon rf-red-icon">🔴</div>
+    <div>
+      <div class="rf-title">Months of building with zero users and no website</div>
+      <div class="rf-text">The product may be excellent but nobody can find it, try it, or evaluate it. This is the #1 killer of technical founder projects.</div>
+      <div class="rf-fix">→ Fix: Landing page this week. r/selfhosted post next week. 10 users within 30 days or fundamentally rethink.</div>
+    </div>
+  </div>
+  <div class="risk-flag rf-red">
+    <div class="rf-icon rf-red-icon">🔴</div>
+    <div>
+      <div class="rf-title">Solo founder maintaining 4 enterprise product surfaces</div>
+      <div class="rf-text">Chat + video + docs + tasks + observability. Each needs its own performance optimization, bug fixes, and UX work. What happens when a WebRTC bug and a real-time sync issue hit simultaneously?</div>
+      <div class="rf-fix">→ Fix: Open-core model to attract contributors. Lead with strongest module. Consider co-founder or community contributors for sustainability.</div>
+    </div>
+  </div>
+  <div class="risk-flag rf-red">
+    <div class="rf-icon rf-red-icon">🔴</div>
+    <div>
+      <div class="rf-title">No business model or open-source strategy decided</div>
+      <div class="rf-text">This single decision determines your entire GTM, community dynamics, and competitive positioning. Delaying it delays everything.</div>
+      <div class="rf-fix">→ Fix: Decide by Day 30. Our recommendation: open-core (free base + paid SSO, audit logs, priority support, managed hosting).</div>
+    </div>
+  </div>
+  <div class="risk-flag rf-yellow">
+    <div class="rf-icon rf-yellow-icon">🟡</div>
+    <div>
+      <div class="rf-title">"All-in-one" skepticism in the self-hosted community</div>
+      <div class="rf-text">Self-hosted users generally prefer composable, best-of-breed tools. "Jack of all trades, master of none" is the default assumption you need to overcome.</div>
+      <div class="rf-fix">→ Fix: Lead with "one Docker stack instead of five. One backup. One update. One auth system." Position the operational benefit, not just feature breadth.</div>
+    </div>
+  </div>
+  <div class="risk-flag rf-yellow">
+    <div class="rf-icon rf-yellow-icon">🟡</div>
+    <div>
+      <div class="rf-title">Solo founder burnout is statistically likely</div>
+      <div class="rf-text">Building the scope of Slack + Zoom + Notion + Asana alone is a multi-year journey. Without users providing motivation and direction, the risk of abandonment is high.</div>
+      <div class="rf-fix">→ Fix: Get 10 beta users this month. Real people using your work is the most powerful antidote to burnout. Their feedback becomes your compass and your motivation.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ QUESTIONS ════════════ -->
+<div class="section">
+  <div class="section-num">15 — Unlock Higher Confidence</div>
+  <div class="section-title">10 Questions That Sharpen Everything</div>
+  <div class="section-desc">Our current confidence is 22%. Your answers would push it to 55–70% and unlock calibrated, specific recommendations. 15 minutes of honesty doubles the precision of every insight above.</div>
+  
+  <div class="q-card">
+    <div class="q-num">1</div>
+    <div>
+      <div class="q-text">Is OneCamp open source, source-available, or proprietary? What license?</div>
+      <div class="q-why">This single decision determines your entire GTM strategy, community dynamics, and competitive positioning. If OSS, you ride the Mattermost backlash wave. If proprietary, you need a very different playbook.</div>
+    </div>
+    <span class="q-pri qp-c">Critical</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">2</div>
+    <div>
+      <div class="q-text">What's your tech stack? And how does video/audio calling work — own WebRTC, Jitsi wrapper, LiveKit, or third-party?</div>
+      <div class="q-why">Video is the hardest feature to build and scale. If it's a genuine implementation, that's incredibly impressive. If it's a wrapper, positioning should be different.</div>
+    </div>
+    <span class="q-pri qp-c">Critical</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">3</div>
+    <div>
+      <div class="q-text">How much time per week are you spending on OneCamp — full-time, or alongside a day job? What's your runway?</div>
+      <div class="q-why">A 10hr/week side project gets a very different growth plan than a full-time commitment. Sustainability is the #1 risk for this scope.</div>
+    </div>
+    <span class="q-pri qp-c">Critical</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">4</div>
+    <div>
+      <div class="q-text">Have you talked to any potential users (not Reddit commenters) — actual teams who might deploy this?</div>
+      <div class="q-why">Zero user feedback after months of building is the riskiest signal in this report. Even 3 conversations with real teams would dramatically improve our recommendations.</div>
+    </div>
+    <span class="q-pri qp-c">Critical</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">5</div>
+    <div>
+      <div class="q-text">Who is your target customer? Homelabbers, small dev teams, mid-market enterprises, or government?</div>
+      <div class="q-why">These audiences have radically different needs, willingness to pay, and sales cycles. Homelabbers want free. Enterprises want SLAs. You can't serve both.</div>
+    </div>
+    <span class="q-pri qp-c">Critical</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">6</div>
+    <div>
+      <div class="q-text">What's the Docker resource footprint? RAM/CPU for a 10-person team? 100-person?</div>
+      <div class="q-why">Self-hosted users care deeply about resource efficiency. A lean footprint is a competitive advantage. A heavy footprint is a dealbreaker for homelabbers.</div>
+    </div>
+    <span class="q-pri qp-h">High</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">7</div>
+    <div>
+      <div class="q-text">How many DMs did you actually receive from your "DM me BETA" Reddit posts? How many converted to trying the product?</div>
+      <div class="q-why">This is the closest thing to a demand signal you have. Even "5 DMs, 0 tried it" is useful data.</div>
+    </div>
+    <span class="q-pri qp-h">High</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">8</div>
+    <div>
+      <div class="q-text">Why no website? Is one planned? What's specifically blocking it?</div>
+      <div class="q-why">Understanding the blocker helps. If it's "I don't know how" — it's 4 hours on Vercel. If it's perfectionism — ship ugly. If it's strategic — we need to hear the reasoning.</div>
+    </div>
+    <span class="q-pri qp-h">High</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">9</div>
+    <div>
+      <div class="q-text">What does success look like for you in 90 days? Specific number of users? Revenue target? Community size?</div>
+      <div class="q-why">We want to build a roadmap toward your definition of success, not a generic one.</div>
+    </div>
+    <span class="q-pri qp-m">Medium</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">10</div>
+    <div>
+      <div class="q-text">Is this a business or a passion project? Both are valid — but they get very different advice.</div>
+      <div class="q-why">If it's a business: you need revenue, a model, and urgency. If it's a project: open-source it fully, let the community carry it, enjoy the craft. The answer shapes everything.</div>
+    </div>
+    <span class="q-pri qp-m">Medium</span>
+  </div>
+</div>
+
+<!-- ════════════ FOOTER ════════════ -->
+<div class="footer">
+  <div class="footer-brand">🧠 GrowthMind.ai</div>
+  <div class="footer-sub">Diagnosed by GrowthMind.ai — 18 AI agents, one growth diagnosis</div>
+  <div class="footer-disc">This report was generated by GrowthMind's AI growth diagnosis system from publicly available data. Confidence: 22% (pre-interrogation). Answer the 10 questions above to unlock high-confidence, calibrated recommendations. Report date: February 13, 2026.</div>
+</div>
+
+</div>
+</body>
+</html>

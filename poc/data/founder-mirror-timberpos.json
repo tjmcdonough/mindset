@@ -1,0 +1,149 @@
+{
+  "org_id": "timberpos_001",
+  "agent": "founder-mirror",
+  "mirrored_at": "2026-02-13T10:51:00Z",
+  "confidence": "pre-interrogation",
+
+  "uncomfortable_truths": [
+    {
+      "truth": "You've been marketing to SaaS founders instead of barbers. Your entire online presence is in communities where developers and startup people hang out — not where your customers make buying decisions.",
+      "evidence": [
+        "Active on r/SaaS and r/startups_promotion — zero activity in r/Barber, Facebook barber groups, or Instagram",
+        "Audience Pulse confirms Facebook Groups and Instagram are THE primary channels for barber software discovery",
+        "Your Reddit post got 94 comments from SaaS people offering sympathy — not from barbers saying 'I'd use this'",
+        "Domain Expert: 'Barbers don't buy software — they adopt tools that other barbers tell them about'"
+      ],
+      "severity": "critical",
+      "what_to_do": "Stop posting on r/SaaS today. Join 5 Facebook barber groups this week. Your next 20 hours of outreach should be in places where barbers are, not founders.",
+      "empathy_note": "This is an incredibly common mistake for technical founders. You built a product for barbers but you live in the SaaS ecosystem. It's natural to seek validation from your peers — but your peers aren't your customers."
+    },
+    {
+      "truth": "Your brand name is actively sabotaging your discoverability. 'Timber' means wood, lumber, forestry to everyone except you. Every marketing dollar you spend is fighting uphill against this confusion.",
+      "evidence": [
+        "Google search 'TimberPOS' returns lumber industry POS systems",
+        "Growth Voice: 'The brand actively works against discoverability and positioning'",
+        "No search engine will rank 'Timber' for booking-related terms — the semantic association is too strong",
+        "Domain is '.app' which is good, but 'timberpos' in the URL looks like lumber software"
+      ],
+      "severity": "critical",
+      "what_to_do": "You don't have to rebrand tomorrow, but you need to make a conscious decision: accept the SEO penalty permanently, or change the name before building more marketing assets. Every blog post, backlink, and directory listing you create under 'Timber' is investment in a name that works against you.",
+      "empathy_note": "Naming is emotional — you chose this name for a reason and it represents your work. But the data is clear: it's hurting you. Better to change at 0 customers than at 100."
+    },
+    {
+      "truth": "Your best feature is invisible. The 'no app download for clients' differentiator — the one thing that could actually set you apart — is buried in a Reddit comment, not on your homepage.",
+      "evidence": [
+        "Growth Voice: 'The no app download angle is genuinely differentiating — but it's buried in comments, not front and center'",
+        "Homepage meta description uses generic language: 'easiest online booking software for barbers and salons'",
+        "Founder's own words identify this as the #1 pain: 'friction of booking for customers due to having to download an app or sign up'",
+        "This is the one feature Fresha and Booksy DON'T offer (both require app downloads for clients)"
+      ],
+      "severity": "significant",
+      "what_to_do": "Make this the first thing anyone sees on your website, in your Facebook posts, in your barbershop demos. Your headline should be: 'Your clients book in 10 seconds. No app. No signup.' Everything else is secondary.",
+      "empathy_note": "You identified the right insight — you just haven't promoted it. That's fixable in an afternoon."
+    },
+    {
+      "truth": "You have zero evidence that anyone will pay for this product. One free user and zero revenue after 1.5 months is not traction — it's a prototype in search of a customer.",
+      "evidence": [
+        "0 paying customers after 1.5+ months live",
+        "1 active user (non-paying)",
+        "No documented willingness-to-pay signal from any barber",
+        "Fresha is free — barbers may expect booking tools to be free",
+        "Domain Expert: '$0-50/month typical willingness to pay. Many prefer free tools.'"
+      ],
+      "severity": "significant",
+      "what_to_do": "This week, call your free user and ask: 'Would you pay $15/month for this?' Their answer — and more importantly, their hesitation — will tell you more than any market research. If they won't pay, find out what would make it worth paying for.",
+      "empathy_note": "Zero revenue at this stage doesn't mean the product is bad — it means you haven't tested the revenue hypothesis yet. But you need to test it soon, because building features for 6 months with no paying customers is a trap."
+    }
+  ],
+
+  "cognitive_biases": [
+    {
+      "bias": "Curse of Knowledge",
+      "evidence": "Homepage sells features ('booking + payments + customer management') instead of outcomes. Founder understands the product deeply but communicates in builder language, not barber language.",
+      "impact": "Website copy doesn't resonate with barbers who think in terms of 'I need to fill empty chairs' and 'my clients hate downloading apps', not 'I need a customer management platform'.",
+      "reframe": "Pretend you've never heard of SaaS. You're a barber with 3 chairs, a phone full of text messages from clients, and a notebook for appointments. What would make you switch?"
+    },
+    {
+      "bias": "Platform Familiarity Bias",
+      "evidence": "Founder does all outreach on Reddit because that's where they're comfortable — despite barbers being on Facebook and Instagram. This is picking the channel you know, not the channel your customers use.",
+      "impact": "Weeks of Reddit engagement produced SaaS founder sympathy, zero customer leads. Opportunity cost of not engaging on Facebook is enormous.",
+      "reframe": "If barbers congregated on Reddit, every booking SaaS would be marketing there. They don't, and for good reason. Your discomfort with Facebook is not your customers' problem."
+    },
+    {
+      "bias": "Build-First Bias (Sunk Cost adjacent)",
+      "evidence": "Built city landing pages, industry pages, SEO content — all invisible due to SPA architecture. Continued building web features instead of validating through direct conversations.",
+      "impact": "Weeks of development effort produced zero discoverable content. Time spent building could have been spent demoing to 20 barbers.",
+      "reframe": "Every feature you build before having 10 paying customers is a guess. Make it an informed guess by talking to barbers first."
+    },
+    {
+      "bias": "Optimism Bias (VC Pitch)",
+      "evidence": "Pitched to a VC on Reddit with 0 revenue, 1 user, describing the market as 'massive and fragmented' and businesses as 'under-served by tech'.",
+      "impact": "Premature investor pitch burns credibility and distracts from the real task: finding paying customers. The market IS massive, but 'massive market' is not a strategy.",
+      "reframe": "Investors fund traction, not TAM slides. Come back to them with 50 paying customers and a 30% month-over-month growth rate. They'll find you."
+    }
+  ],
+
+  "assumption_audit": [
+    {
+      "assumption": "Barbers want a simpler alternative to Fresha/Booksy/Square",
+      "evidence_for": ["Reddit threads show some barbers frustrated with incumbent support and complexity", "Domain Expert confirms pain with feature bloat"],
+      "evidence_against": ["Fresha is free and has 100K+ businesses — 'good enough' for most", "Switching costs are low but inertia is high — barbers won't switch for 'slightly simpler'", "Many barbers use Square for everything already and don't want another tool"],
+      "verdict": "questionable",
+      "what_if_wrong": "If barbers are satisfied enough with free tools, Timber needs a fundamentally different value prop — not 'simpler Fresha' but something Fresha CAN'T do."
+    },
+    {
+      "assumption": "SEO will be a viable growth channel",
+      "evidence_for": ["Barbers do Google 'best barber booking app'", "Competitor SEO presence suggests the channel works"],
+      "evidence_against": ["SPA architecture prevents indexing", "New domain has zero authority", "'TimberPOS' competes with lumber keywords", "Would take 6-12 months even if technical issues were fixed"],
+      "verdict": "contradicted",
+      "what_if_wrong": "If SEO is off the table (and currently it is), all growth must come from direct outreach, community, and referrals. This is actually fine at this stage — but the founder needs to accept it."
+    },
+    {
+      "assumption": "The 'no app download' feature is a meaningful differentiator",
+      "evidence_for": ["Founder identified this from real barber complaints", "Booksy and Fresha require app downloads for clients", "Reduces booking friction measurably"],
+      "evidence_against": ["Many clients already have Booksy/Fresha apps", "Web booking exists for most platforms as a secondary option", "Barbers may not care if their clients have to download — it's the clients' problem, not theirs"],
+      "verdict": "questionable",
+      "what_if_wrong": "If this differentiator doesn't resonate in practice, Timber has no competitive advantage and is just a less-featured version of free alternatives. The barbershop demo experiment (exp_001) will test this directly."
+    },
+    {
+      "assumption": "The market is 'under-served by tech'",
+      "evidence_for": ["Some very small shops still use paper/phone booking"],
+      "evidence_against": ["Market Intel identified 15+ active competitors", "Fresha alone has 100K+ businesses", "SQUIRE raised $160M+", "G2 lists dozens of salon software options"],
+      "verdict": "contradicted",
+      "what_if_wrong": "The market is OVER-served by tech. There are too many booking tools, not too few. This means Timber's path is niche differentiation, not filling an empty market."
+    }
+  ],
+
+  "hard_questions": [
+    "If Fresha offered everything Timber does, for free, forever — and they basically already do — what would make a barber choose Timber instead?",
+    "You've been live for 1.5 months with 0 paying customers. What specific signal would tell you it's time to pivot vs time to keep pushing?",
+    "Have you sat in a barber's chair and watched them use their current booking tool for a full day? If not, how do you know what they actually need?",
+    "If the name 'Timber' is hurting you in search and confusing potential customers, what's keeping you from changing it?",
+    "What would you build if you weren't building Timber? Is there a version of this idea that's more uniquely yours — something only you could build?"
+  ],
+
+  "bright_spots": [
+    {
+      "observation": "You identified the right pain point before building",
+      "evidence": "The 'forced app download' friction is a real and validated complaint. Many founders build first and hope for pain — you found pain first.",
+      "undervalued_because": "You're not leveraging it. This insight should be your entire brand and messaging. It's buried when it should be the headline."
+    },
+    {
+      "observation": "You're genuinely coachable — and that's rare",
+      "evidence": "Reddit thread shows you accepting critical feedback gracefully: 'You're probably right with me selling features rather than pin pointing the pain.' Most founders get defensive.",
+      "undervalued_because": "Coachability is the strongest predictor of early-stage founder success. You'll iterate faster than founders who think they already have the answers."
+    },
+    {
+      "observation": "You shipped a working product solo — that's a real achievement",
+      "evidence": "A functioning booking + payments platform with signup flow, industry pages, and city pages. Most 'founders' have a landing page and a waitlist.",
+      "undervalued_because": "You're comparing yourself to competitors with $160M in funding. Compare yourself to where they were at month 2. SQUIRE started by walking into barbershops in NYC. That's exactly what you should do."
+    },
+    {
+      "observation": "You chose the right business model (free trial, self-serve)",
+      "evidence": "14-day free trial matches how barbers evaluate software: try it for 5 minutes, keep it or delete it. This is exactly right for the market.",
+      "undervalued_because": "The model works — the distribution doesn't. Fix distribution and the business model should convert."
+    }
+  ],
+
+  "overall_mirror": "You built a real product that solves a real (if common) problem, but you've been invisible to the people who need it. You're marketing to founders instead of barbers, hiding your best feature, and fighting your own brand name. The good news: these are all fixable problems, and your willingness to learn makes you more likely to fix them than most founders at this stage. The hard truth: you're in one of the most competitive SaaS verticals on earth, and 'a slightly simpler booking tool' won't win. You need to find the one thing that makes Timber genuinely irreplaceable for a specific type of barber — and then go talk to that barber face-to-face."
+}

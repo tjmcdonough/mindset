@@ -1,0 +1,404 @@
+{
+  "org_id": "growthmind_001",
+  "generated_at": "2026-02-12T22:38:00Z",
+  "version": 1,
+  "projection_type": "foundation",
+  "rebuild_sources": ["company-seed", "market-intel", "growth-voice", "growth-pulse", "audience-pulse"],
+
+  "demand_scorecard": {
+    "overall_score": 58,
+    "dimensions": [
+      {
+        "dimension": "problem_urgency",
+        "score": 78,
+        "reasoning": "Real, validated pain. Reddit signals show founders posting weekly about the build-to-distribute gap, wasted agency spend, and zero-traction despair. 15 signals found in a single scan, 10 scoring 70+. The pain is hair-on-fire for the people experiencing it. Docked points because: it's a 'vitamin vs painkiller' question — founders in acute pain seek help, but many quietly churn out of startups instead of buying tools. The urgency is episodic, not constant."
+      },
+      {
+        "dimension": "market_size_opportunity",
+        "score": 62,
+        "reasoning": "TAM is large in theory — millions of pre-PMF founders globally. But SAM is narrow: English-speaking, tech-savvy founders who (a) recognise they have a growth problem, (b) believe an AI tool can help, (c) will pay $20-200/mo for it. At $20/mo average, you need 5,000 paying users for $100k ARR. Achievable but not trivial for a solo founder on evenings/weekends. The market exists but it's fragmented across communities, hard to aggregate, and has high churn (founders quit startups)."
+      },
+      {
+        "dimension": "competitive_differentiation",
+        "score": 65,
+        "reasoning": "No direct competitor offers the exact bundle of stage diagnosis + assumption interrogation + weekly experiments at this price. That's real whitespace. BUT: the moat is thin. ChatGPT/Claude can approximate 80% of the output with a good prompt chain. The differentiation is in methodology and UX, not in technology. Any well-funded AI startup could build this in a sprint. Defensibility depends on building a data flywheel (experiment outcomes) and community — neither exists yet."
+      },
+      {
+        "dimension": "icp_clarity",
+        "score": 72,
+        "reasoning": "ICP is well-defined on paper: pre-PMF solo/small-team founders without growth expertise. Persona work is thorough (Alex the Builder, anti-persona defined). Docked because: this ICP has never been validated with actual users. Every persona detail is either from the founder's own experience or inferred from Reddit posts. The 'who will actually pay' question is completely unanswered."
+      },
+      {
+        "dimension": "willingness_to_pay",
+        "score": 25,
+        "reasoning": "Zero signal. Literally zero. No one has paid. No one has been asked to pay. No surveys, no pricing page clicks tracked, no 'would you pay for this' conversations. The $20-200/mo range is reasonable compared to alternatives ($3-15k agencies), but pre-PMF founders are notoriously price-sensitive and often pre-revenue themselves. The free tier may cannibalise paid — founders could get the diagnosis and leave. This is the biggest unknown in the entire assessment."
+      },
+      {
+        "dimension": "timing_market_readiness",
+        "score": 70,
+        "reasoning": "Strong tailwinds: $280B AI funding boom, Elena Verna declaring old growth playbooks dead, AI tools going mainstream. The build-to-distribute gap is widening as AI makes shipping easier — more founders than ever have products but no growth skills. Counter-signal: market may be oversaturated with AI tools generally. Founders have 'AI fatigue' and another AI-powered-X may get eye-rolls. Timing is good but not uniquely good — this window has been open for 12+ months."
+      }
+    ]
+  },
+
+  "swot": {
+    "strengths": [
+      {
+        "item": "Genuine founder-problem fit",
+        "detail": "Tom built this because he lived the problem. Six months of wasted effort is a visceral, authentic origin story. This can't be faked and is the strongest marketing asset."
+      },
+      {
+        "item": "Production-grade tech stack",
+        "detail": "Not a prototype. Next.js 16, React 19, Mongoose, Inngest, Vercel AI SDK, Stripe, PropelAuth — auth, payments, event-driven architecture all wired. Most solo founders at this stage have a landing page, not a product."
+      },
+      {
+        "item": "Sharp positioning and brand voice",
+        "detail": "The 'Veteran Operator' archetype, interrogation-first framing, and anti-BS tone are distinctive and authentic. Messaging is already better than most Series A companies."
+      },
+      {
+        "item": "Low burn rate",
+        "detail": "Bootstrapped, no employees, hosting likely <$50/mo on Vercel. Can survive indefinitely without revenue. No external pressure to grow faster than learning allows."
+      },
+      {
+        "item": "Clear market gap identified",
+        "detail": "7 competitors profiled, none match the specific bundle. The $20/mo price point sits in genuine whitespace between free ChatGPT and $3k+ fractional CMOs."
+      }
+    ],
+    "weaknesses": [
+      {
+        "item": "Zero users, zero revenue, zero feedback",
+        "detail": "The product exists in a vacuum. Every assumption about value, UX, activation, and retention is untested. This is the critical weakness — everything else is theoretical until humans use it."
+      },
+      {
+        "item": "Founder has never spoken to a potential user",
+        "detail": "By his own admission: 'I haven't spoken to users properly yet.' The ICP, pain points, and aha moment are all projections from his own experience, not validated market data."
+      },
+      {
+        "item": "Solo founder, part-time (10-15 hrs/week)",
+        "detail": "Evenings and weekends only. This limits speed of iteration, support capacity, and ability to do manual concierge work. Every hour must be ruthlessly allocated."
+      },
+      {
+        "item": "Building a growth tool without knowing growth",
+        "detail": "Tom's own words: 'I do not know growth. That is why I am building it.' This is both the origin story and the risk. He's building the tool he needs, but he doesn't yet know if his growth methodology actually works — because he's never used it successfully."
+      },
+      {
+        "item": "Dormant social presence",
+        "detail": "LinkedIn and Twitter exist but are inactive. For a growth tool, having no visible growth presence is a credibility gap. Founders will Google 'Thomas McDonough growthmind' before signing up."
+      },
+      {
+        "item": "No incorporation, no legal entity",
+        "detail": "Domain bought October 2025, not incorporated. Stripe payments flowing to a personal account. Minor now, but becomes a blocker for serious B2B customers or any fundraising."
+      }
+    ],
+    "opportunities": [
+      {
+        "item": "Build-to-distribute gap is widening",
+        "detail": "AI coding tools mean more founders than ever can ship products quickly. But distribution skills haven't kept pace. The pool of 'shipped product, zero users' founders is growing weekly. Audience Pulse found this as the #1 pain theme."
+      },
+      {
+        "item": "Agency distrust creates market pull",
+        "detail": "Multiple Reddit signals show founders burned by $10-18k agency spend. They're actively looking for alternatives. Growthmind's $20/mo entry point is an easy 'yes' for this cohort."
+      },
+      {
+        "item": "Concierge MVP as learning engine",
+        "detail": "The 'Get Your Free Growth Strategy' form is the right move. Each submission is a user interview in disguise. 10 submissions = 10 data points on real founder problems. This can compound into case studies, testimonials, and product insights."
+      },
+      {
+        "item": "Reddit is the #1 acquisition channel and it's free",
+        "detail": "r/SaaS alone has multiple ICP-matching posts per week. Tom is already active there. Systematic engagement (value-first comments, not self-promotion) can drive the first 10-50 users with zero ad spend."
+      },
+      {
+        "item": "Dog-fooding creates the first case study",
+        "detail": "Growthmind's first customer should be Growthmind itself. Using the tool to diagnose its own growth stage and run experiments creates an authentic, meta case study that the ICP would find irresistible."
+      }
+    ],
+    "threats": [
+      {
+        "item": "ChatGPT/Claude as the 'good enough' alternative",
+        "detail": "The #1 competitive threat. A founder with a well-crafted prompt can get 80% of Growthmind's output for free. The moat must be in structured methodology, accountability, and compounding learning — not in AI output quality alone."
+      },
+      {
+        "item": "AI tool fatigue",
+        "detail": "The market is flooded with AI-powered-everything. Founders are increasingly skeptical of 'AI for X' pitches. Growthmind needs to lead with the problem and methodology, not the AI."
+      },
+      {
+        "item": "ICP churn rate is structurally high",
+        "detail": "Pre-PMF founders either find PMF (and outgrow the tool) or quit (and cancel). The natural customer lifecycle is 3-12 months. LTV is capped by the ICP definition itself. This isn't fatal but it means the acquisition engine must always be running."
+      },
+      {
+        "item": "Larger players could add this feature",
+        "detail": "HubSpot, Jasper, or a well-funded growth platform could bolt on 'startup growth advisor' features. They'd have distribution advantages Growthmind can't match. Speed and niche depth are the only defences."
+      },
+      {
+        "item": "Founder burnout",
+        "detail": "Solo, part-time, full-time job, building a product about avoiding burnout. The irony is the risk. If Tom burns out before finding PMF, the project dies. No co-founder, no team, no safety net."
+      }
+    ]
+  },
+
+  "verdict": {
+    "decision": "CONDITIONAL_GO",
+    "confidence": 0.65,
+    "reasoning": "This is NOT a clear GO. It's a conditional GO with a 30-day validation gate. Here's why:",
+    "go_factors": [
+      "The problem is real — Reddit signals overwhelmingly confirm founders are desperate for structured growth guidance pre-PMF",
+      "The market gap is genuine — no direct competitor offers this specific bundle at this price point",
+      "Founder-problem fit is authentic — Tom lived this pain and built from personal necessity",
+      "The product is surprisingly far along for a solo, part-time founder — production-grade stack, not vaporware",
+      "Low burn means Tom can afford to experiment without existential pressure",
+      "The concierge MVP (free growth strategy form) is the right next move"
+    ],
+    "no_go_factors": [
+      "Zero users after months of building is a red flag, not just a gap. It suggests the founder's instinct is to build, not to sell. This must change immediately.",
+      "Never spoken to a user. In 2026. Building a growth tool. The irony is painful and it's the biggest risk.",
+      "Willingness to pay is completely unknown. The $20/mo price assumes founders will pay for something they currently get 'good enough' from ChatGPT for free.",
+      "The founder doesn't know growth — which means the product's methodology is untested. If the growth advice Growthmind gives is bad, the product is worthless regardless of UX.",
+      "Part-time constraint means iteration speed is slow. In a market where AI tools launch weekly, slow iteration is dangerous."
+    ],
+    "conditions_for_full_go": [
+      "Within 30 days: 5+ founders complete the free growth strategy assessment AND provide feedback",
+      "Within 30 days: 2+ founders voluntarily return or ask for more (retention signal)",
+      "Within 60 days: 1+ paying customer at any price point (even $10/mo)",
+      "Within 30 days: Tom has had 5+ genuine user conversations (not pitches — conversations)",
+      "If none of these conditions are met by Day 30, re-evaluate whether this is a product problem, a distribution problem, or a 'no one wants this' problem"
+    ]
+  },
+
+  "positioning": {
+    "value_proposition": "Growthmind is the AI growth system that interrogates your assumptions, diagnoses your real growth stage, and prescribes personalised weekly experiments — so pre-PMF founders stop burning months on the wrong tactics and start finding product-market fit with intention.",
+    "messaging_pillars": [
+      {
+        "pillar": "Interrogation before action",
+        "one_liner": "Most tools tell you what to do. We ask what you're assuming.",
+        "why_it_works": "Differentiates from every other AI tool that jumps to recommendations. Positions Growthmind as the thoughtful alternative."
+      },
+      {
+        "pillar": "Stage-aware, not one-size-fits-all",
+        "one_liner": "The advice that grows a Series B kills a pre-PMF startup.",
+        "why_it_works": "Founders intuitively know generic advice fails. This frames Growthmind as the tool that 'gets' their specific situation."
+      },
+      {
+        "pillar": "Growth team for the price of lunch",
+        "one_liner": "Agencies charge $15k/mo and guess with your money. We charge $20/mo and question your assumptions.",
+        "why_it_works": "Price anchoring against agencies makes $20/mo feel like a steal. Founders burned by agencies are the most motivated buyers."
+      },
+      {
+        "pillar": "Built by a founder who wasted 6 months",
+        "one_liner": "I burned 6 months doing growth wrong. Then I built the tool I wish I'd had on day one.",
+        "why_it_works": "Authenticity and empathy. The ICP trusts founders who've been through it, not consultants who theorise about it."
+      }
+    ],
+    "primary_differentiation": "Methodology, not technology. Growthmind's moat is the interrogation-first, stage-aware growth methodology — not the AI model underneath. ChatGPT can generate growth advice; it can't diagnose your stage, challenge your assumptions systematically, and track your experiment outcomes over time. The product is the process, not the output."
+  },
+
+  "channels": {
+    "recommended_motion": "community-led with content amplification",
+    "reasoning": "Pre-PMF founders don't respond to ads or sales calls. They respond to peers who share genuine insights in the communities they already inhabit. Tom's strength is Reddit engagement. The play is: add value in communities → build credibility → convert to free assessment → convert to paid.",
+    "primary_channels": [
+      {
+        "channel": "Reddit (r/SaaS, r/startups, r/EntrepreneurRideAlong)",
+        "priority": 1,
+        "effort": "3-5 hrs/week",
+        "strategy": "Value-first engagement. Respond to 'how do I get first users' and 'I don't know marketing' posts with genuine frameworks. Never self-promote directly. Let your comment history build credibility. Link to free assessment only when genuinely relevant.",
+        "expected_signal": "5-10 free assessment submissions per week within 30 days"
+      },
+      {
+        "channel": "Indie Hackers",
+        "priority": 2,
+        "effort": "1-2 hrs/week",
+        "strategy": "Build-in-public posts about using Growthmind to grow Growthmind. The meta-narrative is compelling. Share actual experiment results, failures, and learnings.",
+        "expected_signal": "Community engagement, 2-3 DMs per post asking about the tool"
+      },
+      {
+        "channel": "Twitter/X (build in public)",
+        "priority": 3,
+        "effort": "1 hr/week",
+        "strategy": "Short-form insights from user conversations and experiment results. Not a priority until Reddit is working, but start planting seeds. Tag #buildinpublic, #indiehacker, #startupgrowth.",
+        "expected_signal": "Follower growth, DMs, profile clicks to growthmind.ai"
+      }
+    ],
+    "channels_to_avoid": [
+      {
+        "channel": "Paid ads (Google, Meta)",
+        "reason": "Pre-PMF. Don't spend money acquiring users until you know the product retains them. Classic premature scaling mistake — and it's exactly what Growthmind warns founders against."
+      },
+      {
+        "channel": "LinkedIn",
+        "reason": "Wrong audience energy. LinkedIn startup content is performative. The real ICP conversations happen on Reddit and Indie Hackers. Revisit post-PMF."
+      },
+      {
+        "channel": "Product Hunt launch",
+        "reason": "Not yet. PH gives you one shot at a big launch. Don't burn it until the product has testimonials, a polished onboarding, and at least 10 active users who can upvote and comment authentically."
+      }
+    ]
+  },
+
+  "roadmap_30_days": {
+    "theme": "From zero to signal. Every action must generate external feedback.",
+    "weeks": [
+      {
+        "week": 1,
+        "focus": "Talk to humans",
+        "actions": [
+          {
+            "action": "Send 20 DMs to founders in Reddit threads identified by Audience Pulse (sig_001, sig_003, sig_007, sig_010, sig_015)",
+            "type": "outreach",
+            "hours": 3,
+            "success_metric": "5 replies, 3 conversations"
+          },
+          {
+            "action": "Respond to 5 active Reddit threads with value-first comments (no self-promotion)",
+            "type": "community",
+            "hours": 2,
+            "success_metric": "Upvotes, comment replies, profile visits"
+          },
+          {
+            "action": "Dog-food Growthmind: run your own startup through the growth diagnosis",
+            "type": "validation",
+            "hours": 1,
+            "success_metric": "Is the output actually useful? Would you follow this advice?"
+          }
+        ]
+      },
+      {
+        "week": 2,
+        "focus": "Get humans INTO the product",
+        "actions": [
+          {
+            "action": "From Week 1 conversations, invite 5 founders to try the free growth assessment",
+            "type": "activation",
+            "hours": 2,
+            "success_metric": "3 complete the assessment"
+          },
+          {
+            "action": "Watch 2 founders use the product live (screen share or Loom recording)",
+            "type": "validation",
+            "hours": 2,
+            "success_metric": "Identify top 3 UX friction points"
+          },
+          {
+            "action": "Set up a simple tracking spreadsheet: Name → Source → Signed up → Completed assessment → Feedback",
+            "type": "infrastructure",
+            "hours": 0.5,
+            "success_metric": "Spreadsheet exists and is being used"
+          }
+        ]
+      },
+      {
+        "week": 3,
+        "focus": "Iterate based on signal",
+        "actions": [
+          {
+            "action": "Fix the top 3 UX issues from Week 2 observations",
+            "type": "product",
+            "hours": 4,
+            "success_metric": "Next user completes assessment without getting stuck"
+          },
+          {
+            "action": "Write first build-in-public post: 'I built a growth tool and had zero users. Here's what happened when I finally talked to founders.'",
+            "type": "content",
+            "hours": 2,
+            "success_metric": "Post gets engagement, drives 2-3 assessment submissions"
+          },
+          {
+            "action": "Continue Reddit engagement (5 value-first comments)",
+            "type": "community",
+            "hours": 2,
+            "success_metric": "Consistent profile traffic to growthmind.ai"
+          }
+        ]
+      },
+      {
+        "week": 4,
+        "focus": "Test willingness to pay",
+        "actions": [
+          {
+            "action": "Ask 3 founders who completed the free assessment: 'Would you pay $20/mo for weekly experiments based on this diagnosis?'",
+            "type": "monetization",
+            "hours": 1,
+            "success_metric": "At least 1 says yes (or better: pays)"
+          },
+          {
+            "action": "Compile learnings into a GO/NO_GO checkpoint: Do people want this? Will they pay? What did I learn?",
+            "type": "decision",
+            "hours": 1,
+            "success_metric": "Clear-eyed assessment based on data, not hope"
+          },
+          {
+            "action": "If signals are positive: plan Product Hunt launch for Week 6-8. If signals are weak: pivot scope or positioning.",
+            "type": "strategy",
+            "hours": 1,
+            "success_metric": "A plan grounded in evidence"
+          }
+        ]
+      }
+    ],
+    "total_hours_per_week": "8-12 (fits evenings/weekends constraint)",
+    "rule": "ZERO new features in Weeks 1-2. The product is good enough. The gap is people, not code."
+  },
+
+  "risk_flags": {
+    "red_flags": [
+      {
+        "flag": "Building in a vacuum",
+        "severity": "critical",
+        "detail": "Zero users + zero conversations + zero feedback = zero validated learning. The product could be perfectly built for a problem nobody will pay to solve. This is the exact trap Growthmind claims to help founders avoid.",
+        "mitigation": "5 user conversations in Week 1. Non-negotiable."
+      },
+      {
+        "flag": "Founder knows growth theory but has zero growth results",
+        "severity": "critical",
+        "detail": "Growthmind's value proposition is teaching founders how to grow. But the founder has never grown anything successfully. If the methodology doesn't work for Growthmind itself, it won't work for customers. Dog-fooding isn't optional — it's existential.",
+        "mitigation": "Use Growthmind to grow Growthmind. If it works, that's the case study. If it doesn't, fix the methodology before selling it."
+      },
+      {
+        "flag": "ChatGPT 'good enough' risk",
+        "severity": "critical",
+        "detail": "A founder can paste their startup context into ChatGPT and get a reasonable growth plan in 5 minutes for free. Growthmind must be dramatically better — not slightly better — to justify a subscription. Current differentiation is theoretical.",
+        "mitigation": "The moat must be in structured methodology, experiment tracking, and compounding learning over time. A one-time output won't win. The system must get smarter about YOUR startup each week."
+      }
+    ],
+    "yellow_flags": [
+      {
+        "flag": "Part-time founder in a fast-moving market",
+        "severity": "warning",
+        "detail": "10-15 hrs/week while AI tools launch daily. Speed of iteration is constrained. A funded competitor could build and launch a similar product in weeks.",
+        "mitigation": "Don't compete on features. Compete on authenticity, community, and niche depth. Be the best tool for pre-PMF founders, not the biggest AI marketing platform."
+      },
+      {
+        "flag": "ICP has structurally high churn",
+        "severity": "warning",
+        "detail": "Pre-PMF founders either find PMF (outgrow the tool) or quit (cancel). Expected customer lifetime is 3-12 months. This caps LTV and requires constant acquisition.",
+        "mitigation": "Build expansion revenue: post-PMF tier, team plans, or pivot to serving the next stage. Or accept the churn and build a high-volume, low-touch acquisition engine."
+      },
+      {
+        "flag": "Pricing may be too low to sustain",
+        "severity": "warning",
+        "detail": "At $20/mo average and high churn, you need thousands of paying users to be sustainable. Solo founder can't support that many users manually. Product must be self-serve from day one.",
+        "mitigation": "Ensure the $200/mo tier delivers enough value that 20% of users upgrade. $200/mo × 100 users = $20k MRR, which is viable."
+      },
+      {
+        "flag": "No legal entity",
+        "severity": "warning",
+        "detail": "Not incorporated. Stripe payments to personal account. Minor now but creates liability exposure and blocks B2B customers who need invoices from a legal entity.",
+        "mitigation": "Incorporate before first paying customer. UK Ltd company takes 24 hours and costs £12."
+      },
+      {
+        "flag": "The meta-irony risk",
+        "severity": "warning",
+        "detail": "A growth tool with zero growth is a hard sell. Founders will ask: 'If your tool works, why don't you have users?' This objection will come up. Have the answer ready.",
+        "mitigation": "Own the narrative: 'I spent 6 months building instead of talking to people — exactly the mistake I'm now helping you avoid. I'm using Growthmind on Growthmind, and here's what I'm learning.' Vulnerability is the brand."
+      }
+    ]
+  },
+
+  "hard_truths": [
+    "You have spent months building a product that teaches founders to stop building and start validating. You have not validated your own product. The irony is the diagnosis.",
+    "Your ICP, pain points, aha moment, and value proposition are all based on YOUR experience as a sample size of one. That's not validation. That's projection.",
+    "The concierge MVP form is the right move — but only if you actually do something with the submissions. If 5 founders fill it out and you just send them an AI-generated report without a follow-up conversation, you've learned nothing.",
+    "Reddit is your strongest channel, but commenting on threads is not a growth strategy. It's a lead generation tactic. You need a system: comment → DM → conversation → free assessment → feedback → iterate. Track every step.",
+    "The biggest risk isn't competition, pricing, or features. It's that you'll spend another 3 months building improvements instead of getting 10 humans to use what you already have. The product is good enough. You are the bottleneck.",
+    "Your brand voice and messaging are genuinely excellent — better than most funded startups. But great messaging with zero users is a screenplay, not a business. Ship the words to real eyeballs.",
+    "If, after 30 days of genuine outreach, you can't get 5 founders to complete a FREE growth assessment, the problem isn't distribution — it's that the product doesn't deliver enough value to justify even 10 minutes of a founder's time. That's a signal you must not ignore."
+  ]
+}

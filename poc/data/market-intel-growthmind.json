@@ -1,0 +1,231 @@
+{
+  "org_id": "growthmind_001",
+  "domain_analyzed": "AI-powered growth intelligence for pre-PMF startups",
+  "research_date": "2026-02-12",
+  "search_results": [
+    {
+      "title": "GrowthHackers Experiments (NorthStar) - Growth Experiment Platform",
+      "url": "https://www.g2.com/products/experiments-by-growthhackers/reviews",
+      "summary": "Growth experiment management platform by Sean Ellis (coined 'growth hacking'). Helps teams set North Star Metrics, ideate experiments via ICE/PIE scoring, and track learnings. Used by Spotify, IBM, and startups. Community-based pricing ~$96-$135/yr.",
+      "relevance": "high",
+      "type": "competitor"
+    },
+    {
+      "title": "IdeaProof.io - AI Startup Idea Validator",
+      "url": "https://ideaproof.io/",
+      "summary": "AI-powered validation tool for startup ideas. Generates structured reports on market potential, feasibility, competitor overlap. Trusted by 2,800+ entrepreneurs. Focuses on pre-build validation rather than ongoing growth experiments.",
+      "relevance": "high",
+      "type": "competitor"
+    },
+    {
+      "title": "GrowthMentor - Fractional Growth Talent Marketplace",
+      "url": "https://www.growthmentor.com/",
+      "summary": "Marketplace connecting founders with growth mentors and fractional CMOs. Offers 1:1 mentoring sessions and GrowthExpert fractional talent service. Human-driven advisory vs Growthmind's AI approach.",
+      "relevance": "high",
+      "type": "competitor"
+    },
+    {
+      "title": "Pipeline Velocity - Growth Marketing Services for Startups",
+      "url": "https://www.pipelinevelocity.com/blog/growth-marketing-services-for-startups/",
+      "summary": "End-to-end growth marketing agency blending SEO, omnichannel strategy, and RevOps for startups. Mentioned by Reddit founders as helpful for prioritizing tactics. Agency model represents the $15k+/mo competitor Growthmind aims to disrupt.",
+      "relevance": "high",
+      "type": "competitor"
+    },
+    {
+      "title": "Reddit: Why hiring in-house marketing before PMF killed our startup's momentum",
+      "url": "https://www.reddit.com/r/Entrepreneur/comments/1q73nsf/discussion_why_hiring_inhouse_marketing_before/",
+      "summary": "Highly upvoted r/Entrepreneur discussion (Jan 2026). Founders share that hiring in-house marketing before PMF adds burn and friction, not clarity. Validates Growthmind's thesis that pre-PMF startups need lightweight, adaptive guidance.",
+      "relevance": "high",
+      "type": "frustration_theme"
+    },
+    {
+      "title": "Reddit: Before clear PMF you may be paying to market the wrong thing",
+      "url": "https://www.reddit.com/r/startups/comments/1ncdkbo/founders_whats_your_current_setup_for_design_and/",
+      "summary": "r/startups thread (Sep 2025) where founders agree the problem isn't that agencies are overkill—it's that before PMF, you're paying to market the wrong thing. Strong evidence for Growthmind's 'diagnose stage first' approach.",
+      "relevance": "high",
+      "type": "frustration_theme"
+    },
+    {
+      "title": "Reddit: If you start with an agency or paid ads, it is money wasted until you find PMF",
+      "url": "https://www.reddit.com/r/SaaS/comments/1hrebr1/founders_what_are_your_biggest_marketing/",
+      "summary": "r/SaaS thread (Jan 2025) with founders explicitly stating agency spend is wasted pre-PMF. Iterative customer conversations and messaging testing recommended instead. Directly supports Growthmind's weekly experiment model.",
+      "relevance": "high",
+      "type": "frustration_theme"
+    },
+    {
+      "title": "Reddit: Debate on Product Market Fit - Why give up at 6 months",
+      "url": "https://www.reddit.com/r/startups/comments/192428o/debate_on_product_market_fit_why_give_up_at_6/",
+      "summary": "r/startups discussion about founders spending 6 months with zero traction before considering pivot. Validates Growthmind's pain point that founders waste ~6 months misdirecting effort without proper growth stage diagnosis.",
+      "relevance": "high",
+      "type": "frustration_theme"
+    },
+    {
+      "title": "Elena Verna on Lenny's Podcast: The New AI Growth Playbook for 2026",
+      "url": "https://www.lennysnewsletter.com/p/the-new-ai-growth-playbook-for-2026-elena-verna",
+      "summary": "Elena Verna discusses Lovable's $200M ARR climb and why AI forces every company to reinvent its growth playbook. Signals mainstream acceptance that AI is reshaping growth strategy, validating the market for AI-powered growth tools.",
+      "relevance": "high",
+      "type": "trend"
+    },
+    {
+      "title": "North American Startup Funding Soared 46% in 2025, Driven by AI Boom",
+      "url": "https://news.crunchbase.com/venture/north-american-startup-funding-2025-data-ai-us-investment/",
+      "summary": "$280 billion poured into seed through growth-stage rounds for US/Canadian companies in 2025—highest in 4 years. AI driving the surge. Favorable environment for AI-native tools like Growthmind to raise and grow.",
+      "relevance": "medium",
+      "type": "market_signal"
+    },
+    {
+      "title": "Jasper AI - AI Marketing Agents Platform",
+      "url": "https://www.jasper.ai/",
+      "summary": "Enterprise AI marketing platform with agents for SEO, personalization, content creation. Well-funded ($125M+ raised). Focuses on content execution, not growth strategy/experiments. Indirect competitor—founders may use as alternative.",
+      "relevance": "medium",
+      "type": "competitor"
+    },
+    {
+      "title": "Mutiny - AI Website Personalization for B2B",
+      "url": "https://www.origamiagents.com/resources/top-25-ai-startups-transforming-the-gtm-stack-in-2025",
+      "summary": "AI-powered B2B website personalization—dynamic headlines, social proof, CTAs based on intent signals. No-code. Focuses on conversion optimization for established GTM teams, not pre-PMF growth diagnosis.",
+      "relevance": "medium",
+      "type": "competitor"
+    },
+    {
+      "title": "Reddit: Early stage marketing struggles - bootstrapped founders",
+      "url": "https://www.reddit.com/r/startups/comments/1nvww3t/early_stage_marketing_struggles_i_will_not_promote/",
+      "summary": "Bootstrapped founder describes overwhelm of competing against funded rivals. Community advises focusing on 1-2 channels with small tight experiments. Validates demand for structured experiment-driven approach Growthmind offers.",
+      "relevance": "high",
+      "type": "frustration_theme"
+    },
+    {
+      "title": "TechCrunch: How AI startups should think about product-market fit",
+      "url": "https://techcrunch.com/2025/11/11/how-ai-startups-should-be-thinking-about-product-market-fit/",
+      "summary": "Two experienced investors share tips for AI founders on nailing PMF. Growing discourse around PMF methodology indicates market awareness and demand for structured PMF tools.",
+      "relevance": "medium",
+      "type": "trend"
+    }
+  ],
+  "competitors": [
+    {
+      "name": "GrowthHackers Experiments (NorthStar)",
+      "url": "https://growthhackers.com/",
+      "positioning": "Growth experiment management platform for teams. Set North Star Metrics, run ICE/PIE-scored experiments, share learnings across org.",
+      "pricing": "Basic ~$96/yr, Agency ~$119-135/yr (community membership). Enterprise experiment platform pricing not publicly listed.",
+      "differentiation_from_growthmind": "GrowthHackers is a collaboration/project-management tool for existing growth teams. It requires human expertise to generate hypotheses and design experiments. Growthmind is AI-native—it generates the strategy, diagnoses growth stage, and prescribes specific experiments. GrowthHackers targets teams with growth expertise; Growthmind targets founders without one.",
+      "threat_level": "medium"
+    },
+    {
+      "name": "IdeaProof.io",
+      "url": "https://ideaproof.io/",
+      "positioning": "AI startup idea validator generating market research, competitor analysis, and investor-ready reports in 120 seconds.",
+      "pricing": "Freemium (details not fully public)",
+      "differentiation_from_growthmind": "IdeaProof validates ideas pre-build (one-time report). Growthmind works post-launch with ongoing weekly experiments and growth stage diagnosis. Adjacent but different lifecycle stages—IdeaProof is pre-build, Growthmind is pre-PMF.",
+      "threat_level": "low"
+    },
+    {
+      "name": "GrowthMentor",
+      "url": "https://www.growthmentor.com/",
+      "positioning": "Marketplace for 1:1 growth mentoring and fractional CMO/growth talent. Human advisors for startup founders.",
+      "pricing": "Membership-based (~$100-200/mo for access to mentors)",
+      "differentiation_from_growthmind": "Human-driven advisory vs AI-driven. GrowthMentor requires scheduling calls and depends on mentor quality. Growthmind offers always-on AI diagnosis and weekly experiment plans. GrowthMentor is more expensive and less structured.",
+      "threat_level": "medium"
+    },
+    {
+      "name": "Fractional CMO agencies (e.g., Pipeline Velocity)",
+      "url": "https://www.pipelinevelocity.com/",
+      "positioning": "End-to-end growth marketing services for startups. SEO, RevOps, omnichannel strategy bundled.",
+      "pricing": "$3,000-$15,000+/mo typically",
+      "differentiation_from_growthmind": "Human-led agency model at 15-75x the price. Growthmind automates the strategic layer at $20-200/mo. Agencies offer execution; Growthmind offers diagnosis and experiment design. Different price points serve different founder budgets.",
+      "threat_level": "medium"
+    },
+    {
+      "name": "ChatGPT / Generic AI (OpenAI, Claude, etc.)",
+      "url": "https://chat.openai.com/",
+      "positioning": "General-purpose AI assistants that founders already use for marketing advice, copywriting, and strategy brainstorming.",
+      "pricing": "Free - $20/mo (ChatGPT Plus)",
+      "differentiation_from_growthmind": "Generic AI lacks growth stage diagnosis, structured weekly experiments, assumption interrogation, and startup-specific growth frameworks. Founders get generic playbooks, not personalised action plans. Growthmind's moat is domain-specific methodology and structured accountability.",
+      "threat_level": "high"
+    },
+    {
+      "name": "Jasper AI",
+      "url": "https://www.jasper.ai/",
+      "positioning": "Enterprise AI marketing platform with agents for content, SEO, personalization, and campaign creation.",
+      "pricing": "From $49/mo (Creator) to custom enterprise pricing",
+      "differentiation_from_growthmind": "Jasper focuses on marketing content execution at scale, not growth strategy or PMF diagnosis. It's a tool for marketers, not a growth advisor for founders. No experiment framework or growth stage assessment.",
+      "threat_level": "low"
+    },
+    {
+      "name": "Mutiny",
+      "url": "https://www.mutinyhq.com/",
+      "positioning": "AI-powered B2B website personalization. Dynamic headlines, CTAs, social proof based on visitor intent.",
+      "pricing": "Enterprise pricing (not public, estimated $1,000+/mo)",
+      "differentiation_from_growthmind": "Mutiny is a conversion optimization tool for companies with existing traffic and GTM motions. Pre-PMF startups typically lack the traffic volume to benefit. Growthmind works upstream—figuring out what to build and who to target.",
+      "threat_level": "low"
+    }
+  ],
+  "frustration_themes": [
+    {
+      "theme": "Wasting money on agencies/ads before finding PMF",
+      "evidence": "Multiple Reddit threads with founders stating 'If you start with an agency or paid ads, it is money wasted until you find PMF' and 'before clear PMF you may be paying to market the wrong thing'",
+      "source": "r/SaaS, r/startups (Jan 2025, Sep 2025)",
+      "frequency": "high"
+    },
+    {
+      "theme": "Founder burnout from DIY growth with no clear playbook",
+      "evidence": "Founders describe overwhelm competing against funded rivals, trying every channel simultaneously. 'Small, tight experiments, measure, repeat' is the advice but founders lack structure to do it.",
+      "source": "r/startups (Oct 2025), r/Entrepreneur (Jul 2025)",
+      "frequency": "high"
+    },
+    {
+      "theme": "Misdiagnosing growth stage / building before validating",
+      "evidence": "r/startups debate on founders spending 6 months with zero traction. Comments: 'If you spend 6 months on a problem and have 0 traction, it's time to reframe.' Founders concerned people 'just start building whatever came up at 3am' without PMF thinking.",
+      "source": "r/startups (Jan 2024, Aug 2025)",
+      "frequency": "high"
+    },
+    {
+      "theme": "Hiring marketing too early adds burn, not clarity",
+      "evidence": "Highly discussed r/Entrepreneur thread (Jan 2026): 'hiring in-house before PMF usually adds burn and friction instead of clarity'. r/startups agrees in-house marketing pre-PMF is premature.",
+      "source": "r/Entrepreneur (Jan 2026), r/startups (Sep 2025)",
+      "frequency": "high"
+    },
+    {
+      "theme": "Generic growth advice doesn't work for specific contexts",
+      "evidence": "'Content marketing that works for developer tools bombs for HR software. Growth tactics are industry-specific. Most founders waste money on fancy marketing tools when manual processes work better early on.'",
+      "source": "r/Entrepreneur (Jul 2025)",
+      "frequency": "medium"
+    },
+    {
+      "theme": "Struggling with message-market fit even when product is strong",
+      "evidence": "Founder: 'I am very much convinced there's PMF for the business we are building, I just haven't figured out message market fit yet.' Shows gap between product confidence and growth execution.",
+      "source": "r/startups (Aug 2025)",
+      "frequency": "medium"
+    }
+  ],
+  "market_signals": [
+    {
+      "signal": "AI startup funding hit $280B in North America in 2025 (46% YoY increase)",
+      "source": "Crunchbase (Jan 2026)",
+      "implication_for_growthmind": "Strong tailwind for AI-native products. Investors actively funding AI tools. Growthmind positioned in favorable funding environment if seeking investment."
+    },
+    {
+      "signal": "Elena Verna (top growth advisor) declares every company must reinvent growth playbook for AI era",
+      "source": "Lenny's Podcast (Dec 2025)",
+      "implication_for_growthmind": "Mainstream recognition that old growth playbooks are obsolete. Creates market pull for AI-native growth tools. Growthmind's positioning as 'AI growth system' aligns with this narrative."
+    },
+    {
+      "signal": "Growing discourse around AI-specific PMF frameworks (OpenAI's product lead, Bessemer, TechCrunch)",
+      "source": "Multiple (2025-2026)",
+      "implication_for_growthmind": "PMF is a hot topic with increasing sophistication. Founders actively seeking structured PMF methodologies. Growthmind's 'diagnose growth stage' feature directly addresses this demand."
+    },
+    {
+      "signal": "Rise of AI agents in marketing (Jasper Agents, Clay automation, AI CMO concept emerging)",
+      "source": "Industry trend (2025-2026)",
+      "implication_for_growthmind": "Market is moving toward AI agents that take action, not just advise. Growthmind's weekly experiment model fits the agentic AI trend. Risk: larger players could add growth advisory features."
+    },
+    {
+      "signal": "Reddit communities show increasing founder sophistication about growth experimentation",
+      "source": "r/startups, r/SaaS (2025)",
+      "implication_for_growthmind": "Founders already understand the concept of small experiments and iteration. Growthmind doesn't need to educate the market on methodology—just offer a better tool to execute it."
+    }
+  ],
+  "market_summary": "The market for AI-powered growth tools targeting pre-PMF startups is nascent but demand signals are strong. No direct competitor offers Growthmind's specific combination of (1) AI growth stage diagnosis, (2) assumption interrogation, and (3) personalised weekly experiment plans at $20-200/mo. The competitive landscape splits into: (a) experiment management platforms like GrowthHackers that require existing growth expertise, (b) human advisory via GrowthMentor/fractional CMOs at 10-75x the price, (c) generic AI tools (ChatGPT) that lack domain-specific methodology, and (d) AI marketing execution tools (Jasper, Mutiny) that serve post-PMF companies. Reddit frustration data overwhelmingly validates the core pain points: founders waste money on agencies pre-PMF, burn out from DIY approaches, and lack structured experimentation frameworks. The AI funding boom ($280B in 2025) and mainstream growth thought leaders declaring old playbooks obsolete create strong tailwinds.",
+  "competitive_moat_assessment": "Growthmind's primary moat is its specificity: no current tool combines growth stage diagnosis + assumption interrogation + weekly personalised experiments for pre-PMF founders at this price point. The biggest competitive threat is ChatGPT/Claude—founders can approximate Growthmind's output with careful prompting, making UX, structured methodology, and accountability loops critical differentiators. Secondary risk is that larger AI marketing platforms (Jasper, HubSpot) could add 'startup advisor' features. Defensibility should be built through: (1) proprietary growth stage diagnostic frameworks, (2) accumulated experiment outcome data creating a learning flywheel, (3) community/network effects among pre-PMF founders, and (4) tight integration with startup tools (analytics, landing page builders). The $20/mo entry price is a strong wedge against both expensive agencies and free-but-unstructured ChatGPT.",
+  "freshness_score": 0.85
+}

@@ -1,0 +1,256 @@
+{
+  "org_id": "tinywhirlwinds",
+  "analysis_type": "growth_voice",
+  "analysis_date": "2026-02-13",
+  "version": "1.0",
+
+  "brand_archetype": {
+    "primary": "The Nurturer",
+    "secondary": "The Explorer",
+    "rationale": "Tiny Whirlwinds leads with warmth, safety, and developmental care (Nurturer) but wraps it in wonder, discovery, and adventure language (Explorer). The class names — Stargazers, Explorers, Adventurers — signal curiosity, while the core promise is about safe, supported development. This dual archetype is potent for the ICP: parents want reassurance AND excitement for their child."
+  },
+
+  "current_voice_assessment": {
+    "overall_tone": "Warm-magical with a soft sell",
+    "strengths": [
+      "Genuinely inviting — 'magical sensory adventures' creates emotional pull",
+      "Good use of benefit-led headers (Brain Development, Social Skills, Bonding Time)",
+      "Testimonials feel authentic and parent-voiced",
+      "Low-pressure CTA ('No commitment required') removes friction",
+      "Class naming is imaginative and age-appropriate (Stargazers, Explorers, Adventurers)"
+    ],
+    "weaknesses": [
+      "Generic in places — 'safe, welcoming, and incredibly fun' could describe any baby class",
+      "EYFS/Birth to 5 Matters reference in the tagline is jargon most parents won't recognise or care about",
+      "No founder voice or personal story on the homepage — misses the relatability angle",
+      "Lacks specificity — no mention of Farnham, the dedicated studio, or what makes sessions tangibly different",
+      "Testimonials are anonymous, reducing trust",
+      "Missing emotional urgency — no acknowledgment of the parent's feelings (isolation, overwhelm, guilt)"
+    ],
+    "voice_personality_now": {
+      "warmth": 8,
+      "authority": 4,
+      "playfulness": 6,
+      "specificity": 3,
+      "relatability": 5,
+      "urgency": 2
+    },
+    "summary": "The current voice is pleasant but safe. It reads like a well-designed template rather than a distinctive brand. The magic language works but needs grounding in real, local, specific detail to convert browsers into bookers."
+  },
+
+  "recommended_voice": {
+    "tagline_direction": "Your calm in the chaos. Their spark of wonder.",
+    "voice_in_three_words": ["Warm", "Grounded", "Wonder-led"],
+    "description": "Speak like a trusted friend who happens to know a lot about early development — never like a textbook. Lead with emotional truth (parenting is hard, you're doing great, this is your time too) and follow with wonder (watch their eyes light up, see them reach for something new). Be specific about Farnham, the studio, Jade's story. Use 'we' and 'you' freely. Be the antidote to parenting perfection culture — real, reassuring, joyful.",
+    "tone_spectrum": {
+      "more_of": [
+        "Emotional honesty ('We know those early weeks can feel long')",
+        "Local pride ('Right here in Farnham')",
+        "Specificity ('Our darkened light-show room, tiny hands in cloud dough')",
+        "Founder presence ('I started this because...')",
+        "Parent-first framing ('Time for YOU too')"
+      ],
+      "less_of": [
+        "Educational framework jargon (EYFS, Birth to 5 Matters)",
+        "Generic superlatives ('amazing', 'incredible', 'magical')",
+        "Passive voice and corporate phrasing",
+        "Stock photography language ('precious moments')"
+      ]
+    },
+    "voice_personality_target": {
+      "warmth": 9,
+      "authority": 6,
+      "playfulness": 7,
+      "specificity": 8,
+      "relatability": 9,
+      "urgency": 5
+    }
+  },
+
+  "messaging_pillars": [
+    {
+      "pillar": "Development Through Wonder",
+      "core_message": "Every bubble, beat, and beam of light is building your baby's brain.",
+      "proof_points": [
+        "Classes designed around EYFS developmental milestones (but say it simply)",
+        "Age-specific sessions (0-6mo, 6-15mo, 15-36mo) matching developmental stages",
+        "Sensory stations targeting different neural pathways: visual, auditory, tactile",
+        "100+ babies have explored with us"
+      ],
+      "example_copy": "While they're giggling at the bubbles, their brain is forming connections that last a lifetime."
+    },
+    {
+      "pillar": "Your Village Starts Here",
+      "core_message": "You'll come for your baby. You'll stay for the friendships.",
+      "proof_points": [
+        "Testimonial: 'I've made amazing friends with other mums'",
+        "Small class sizes in a dedicated Farnham studio (not a draughty church hall)",
+        "Same-age groupings mean parents at the same stage",
+        "Weekly rhythm creates genuine community"
+      ],
+      "example_copy": "Maternity leave doesn't have to be lonely. Our Thursday mums would tell you the same — over coffee, obviously."
+    },
+    {
+      "pillar": "Mess Without the Stress",
+      "core_message": "All the sensory chaos they need. None of the cleanup you don't.",
+      "proof_points": [
+        "Purpose-built sensory studio with messy-safe zones",
+        "Tactile play, gloop, textures — all set up and cleaned by us",
+        "Safe, controlled environment for exploring freely",
+        "Parents can relax and enjoy rather than manage"
+      ],
+      "example_copy": "Cloud dough in their hair, paint between their toes, and not a single stain on your sofa. You're welcome."
+    },
+    {
+      "pillar": "Made by a Mum Who Gets It",
+      "core_message": "Jade started Tiny Whirlwinds because she couldn't find what she wanted for her own baby in Farnham.",
+      "proof_points": [
+        "Founder is a local Farnham mum, not a distant franchise HQ",
+        "Tech background (Dexla) means thoughtful, well-designed experience",
+        "Every session personally crafted, not a cookie-cutter franchise script",
+        "Responsive to parent feedback — small enough to adapt quickly"
+      ],
+      "example_copy": "I looked for a sensory class in Farnham. Couldn't find the one I wanted. So I built it."
+    }
+  ],
+
+  "tone_variations": {
+    "instagram": {
+      "tone": "Playful, visual, emoji-friendly, behind-the-scenes",
+      "guidelines": [
+        "Show, don't tell — Reels of light shows, messy play, baby reactions",
+        "Use first person (Jade's voice) for Stories and captions",
+        "Embrace imperfection — wobbly babies > polished stock",
+        "Hashtags: #FarnhamMums #SurreyBabyClasses #SensoryPlay #BabyDevelopment #FarnhamLife",
+        "Caption formula: Emotional hook → what's happening → invite to try",
+        "Repost parent content (with permission) — social proof is everything"
+      ],
+      "example_post": "She reached for the light ribbon for the first time today and her face 🥹✨ This is why I do what I do. Tiny Stargazers has one spot left this Thursday — link in bio!"
+    },
+    "local_facebook_groups": {
+      "tone": "Helpful neighbour, not salesy. Community-first.",
+      "guidelines": [
+        "Lead with value — answer questions about baby activities, development tips",
+        "Only mention classes when genuinely relevant (someone asks for recommendations)",
+        "Be a known, trusted name in the group before promoting",
+        "Share free tips: 'Easy sensory play you can do at home this rainy week'",
+        "Avoid 'SPACES AVAILABLE!!!' energy — it reads as desperate",
+        "When sharing, frame as invitation not advertisement: 'We've just opened bookings for spring term if anyone's looking'"
+      ],
+      "example_post": "Has anyone else's 8-month-old discovered the joy of crinkly things? 😂 If you're looking for more texture play ideas, I put together a little list of things you can do with stuff already in your kitchen — happy to share!"
+    },
+    "in_person": {
+      "tone": "Warm, calm, reassuring. The friend who's done this before.",
+      "guidelines": [
+        "Greet every parent by name. Learn baby names immediately.",
+        "Normalise everything: crying, napping through class, clingy phases",
+        "Frame development positively: 'Look how she's tracking the lights!' not 'She should be doing X by now'",
+        "Check in on the PARENT, not just the baby: 'How are YOU doing this week?'",
+        "End sessions with a positive observation about each child",
+        "Never compare babies to each other"
+      ]
+    },
+    "website": {
+      "tone": "Clear, warm, benefit-led. Confident but not corporate.",
+      "guidelines": [
+        "Lead with emotion, follow with evidence",
+        "Use 'you' and 'your little one' — never 'clients' or 'customers'",
+        "Keep paragraphs short — parents are reading one-handed on phones",
+        "Name the location (Farnham) early and often for SEO and trust",
+        "Include Jade's face and story prominently — people book people",
+        "Pricing should be clear and upfront — no 'contact for pricing' games"
+      ]
+    }
+  },
+
+  "forbidden_patterns": [
+    {
+      "pattern": "Developmental pressure language",
+      "examples": ["Don't let your child fall behind", "Critical window closing", "Your baby NEEDS this"],
+      "why": "Creates guilt and anxiety. The ICP is already anxious enough. Tiny Whirlwinds should reduce pressure, not add it."
+    },
+    {
+      "pattern": "Mum-shaming or judgment",
+      "examples": ["Screen time is harmful", "If you really cared about development...", "Good mums do X"],
+      "why": "Instant trust-destroyer. This audience is hyper-sensitive to perceived judgment."
+    },
+    {
+      "pattern": "Hard sell / scarcity manipulation",
+      "examples": ["LAST 2 SPACES!!!", "Don't miss out!", "Book NOW before it's too late!"],
+      "why": "Reads as desperate and pushy. Genuine waitlist communication is fine; manufactured urgency is not."
+    },
+    {
+      "pattern": "Jargon without translation",
+      "examples": ["EYFS-aligned curriculum", "Birth to 5 Matters framework", "Proprioceptive input"],
+      "why": "Most parents don't know these terms. Use the concepts, not the acronyms. Say 'designed around how babies actually develop' instead."
+    },
+    {
+      "pattern": "Corporate / franchise voice",
+      "examples": ["Our programme is award-winning", "Franchisees across the UK", "Trademark symbols everywhere"],
+      "why": "Tiny Whirlwinds' advantage is being indie, local, personal. Don't accidentally sound like a chain."
+    },
+    {
+      "pattern": "Perfectionism or Instagram-mum aesthetic",
+      "examples": ["Picture-perfect sensory setup", "Insta-worthy moments", "Pinterest-level play"],
+      "why": "Alienates real parents dealing with real mess. Celebrate authenticity instead."
+    },
+    {
+      "pattern": "Gendered assumptions",
+      "examples": ["All mums know...", "Ask your hubby to babysit", "Mummy and baby time"],
+      "why": "Dads, grandparents, carers, and same-sex parents attend too. Use 'parents', 'grown-ups', or 'you' as default."
+    }
+  ],
+
+  "competitor_voice_comparison": {
+    "summary": "The baby class market defaults to two voice modes: 'warm educational authority' (Baby Sensory) or 'quirky creative energy' (Hartbeeps). Most franchises sound similar because they ARE similar — centrally written copy, templated websites, interchangeable class descriptions. Tiny Whirlwinds has an opportunity to be the only voice that sounds like a real person from Farnham.",
+    "competitors": [
+      {
+        "name": "Baby Sensory",
+        "voice_archetype": "The Expert Nurturer",
+        "tone": "Research-backed, authoritative but warm. Leads with developmental science and credibility. Professional, polished, slightly clinical.",
+        "strengths": "Strong trust signals — 'research-backed', established brand, blog content on development topics. Comprehensive programme descriptions.",
+        "weaknesses": "Feels institutional. No individual personality. Copy is dense and information-heavy. Could be any franchise location.",
+        "sample_language": "'Support your baby's development with research-backed classes parents trust and babies love'",
+        "differentiation_opportunity": "Tiny Whirlwinds can be warmer, more personal, and more fun. Baby Sensory is the textbook; TW can be the best friend."
+      },
+      {
+        "name": "Hartbeeps",
+        "voice_archetype": "The Creative Entertainer",
+        "tone": "Quirky, imaginative, theatrical. Heavy on fantasy and character-driven sessions. Colourful and high-energy.",
+        "strengths": "Highly distinctive visual brand. Memorable session themes. Appeals to parents wanting something 'different'.",
+        "weaknesses": "Can feel gimmicky. The quirkiness may alienate more understated Surrey parents. Franchise inconsistency in local delivery.",
+        "sample_language": "Known for theatrical, character-driven sensory experiences with original music and immersive themes.",
+        "differentiation_opportunity": "TW can offer wonder without the theatre. Sensory magic that feels natural, not performative."
+      },
+      {
+        "name": "Tots Play",
+        "voice_archetype": "The Supportive Friend",
+        "tone": "Empathetic, parent-focused, conversational. Directly addresses parenting overwhelm. Warm and reassuring.",
+        "strengths": "Strong empathy hook — acknowledges that choosing activities is overwhelming. All-in-one positioning (music + yoga + sensory + signing).",
+        "weaknesses": "Jack-of-all-trades positioning dilutes expertise. Copy is wordy and could be tighter. Franchise model means local personality is lost.",
+        "sample_language": "'Bringing a new baby into your family is a momentous and life changing event — but those changes aren't something you need to navigate alone.'",
+        "differentiation_opportunity": "TW can match the empathy but add local specificity and founder authenticity that a franchise cannot."
+      },
+      {
+        "name": "Lullababy",
+        "voice_archetype": "The Gentle Guide",
+        "tone": "Soft, holistic, calm. Emphasises gentle development and parent-baby connection. Yoga/wellness-adjacent.",
+        "strengths": "Appeals to the mindful parenting segment. Strong EYFS alignment messaging.",
+        "weaknesses": "Can feel too gentle — lacks energy and excitement. May not appeal to parents wanting stimulation and fun.",
+        "sample_language": "Focuses on baby development classes linked to EYFS with sensory play to baby yoga.",
+        "differentiation_opportunity": "TW can be both gentle AND energising. Calm when needed (Stargazers) but exciting too (Adventurers)."
+      }
+    ],
+    "white_space": "No competitor in the Farnham area combines: (1) indie/founder-led authenticity, (2) dedicated studio (not hired halls), (3) wonder-led but grounded tone, and (4) genuine local community voice. This is Tiny Whirlwinds' lane."
+  },
+
+  "key_recommendations": [
+    "Rewrite the homepage tagline — drop 'EYFS & Birth to 5 Matters' from the hero. Lead with emotion, prove the pedagogy deeper in the site.",
+    "Add Jade's story and photo prominently — the founder narrative is the single biggest differentiator vs franchises.",
+    "Name Farnham everywhere — local SEO and trust both benefit. 'Farnham's dedicated sensory studio' > 'our studio'.",
+    "Launch Instagram immediately — this is the #1 discovery channel for the ICP. Aim for 3-4 posts/week mixing Reels, Stories, and carousels.",
+    "Add named testimonials with photos — anonymous quotes carry 50% less weight.",
+    "Create a 'What to Expect' page — new parents are anxious about first classes. Walk them through arrival to departure.",
+    "Develop a content voice guide for any future team members or social media help, based on this analysis."
+  ]
+}

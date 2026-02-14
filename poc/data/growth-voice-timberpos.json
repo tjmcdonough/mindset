@@ -1,0 +1,75 @@
+{
+  "org_id": "timberpos_001",
+  "agent": "growth-voice",
+  "collected_at": "2026-02-13T10:45:00Z",
+  "confidence": "pre-interrogation",
+  "note": "Website is a JS SPA that couldn't be fully scraped. Analysis based on meta tags, Google snippets, Reddit posts by founder, and the VC pitch.",
+  "brand_name_analysis": {
+    "name": "Timber",
+    "domain": "timberpos.app",
+    "assessment": "Problematic. 'Timber' evokes wood/lumber/forestry, not beauty/grooming. 'POS' in the domain further confuses — suggests Point of Sale for a lumber company. Google search results for 'timberpos' return lumber POS systems. The brand actively works against discoverability and positioning.",
+    "seo_impact": "Severe — competing for search terms with actual timber/lumber industry POS systems. Someone searching 'timber POS' expects lumber yard software, not barber booking.",
+    "recommendation": "Seriously consider rebranding. A name that signals 'booking' or 'barber' or 'appointments' would dramatically improve organic discovery and conversion."
+  },
+  "messaging_analysis": {
+    "homepage_headline": "Online Booking Software for Barbers & Salons - Appointment Scheduling App",
+    "meta_description": "Timber is the easiest online booking software for barbers and salons. Clients book themselves in seconds, reducing no-shows and saving you time. Free 14-day trial.",
+    "assessment": {
+      "clarity": "6/10 — says what it does but doesn't differentiate from 50 other tools with identical copy",
+      "specificity": "3/10 — 'easiest' is subjective and unsubstantiated. No specific claim or proof point.",
+      "differentiation": "2/10 — could be the tagline for literally any booking software. Nothing unique.",
+      "emotional_resonance": "3/10 — doesn't speak to a specific pain or aspiration",
+      "urgency": "2/10 — no compelling reason to switch from current solution right now"
+    }
+  },
+  "founder_voice_analysis": {
+    "reddit_post_tone": "Humble, honest, slightly desperate. Good for building sympathy but not confidence.",
+    "vc_pitch_tone": "More polished but still generic. Claims market is 'massive and fragmented' and businesses are 'under-served by tech' — these are true but every competitor says the same thing.",
+    "key_phrases_used": [
+      "lightweight POS + booking + payments",
+      "one clean, easy-to-use platform",
+      "without the overhead",
+      "designed for real daily use, not just a feature checklist",
+      "friction of booking for customers due to having to download an app or sign up"
+    ],
+    "strength": "The 'no app download needed' angle is genuinely differentiating — but it's buried in comments, not front and center on the website",
+    "weakness": "Selling features ('booking + payments + customer management') instead of outcomes ('stop losing clients to no-shows' or 'fill your empty chairs')"
+  },
+  "brand_archetype": {
+    "current": "The Everyman — trying to be accessible and simple, but ends up being forgettable",
+    "recommended": "The Rebel or The Outlaw — position against the bloated, expensive incumbents. 'They charge you $50/month for features you'll never use. We don't.' Or The Caregiver — 'We actually answer when you call.'"
+  },
+  "messaging_recommendations": {
+    "positioning_statement": "Timber should be 'the booking app that doesn't make your clients download anything' — this is their one genuine differentiator based on founder's market insight",
+    "headline_suggestions": [
+      "Your clients shouldn't need an app just to book a haircut.",
+      "Stop losing bookings to download screens. Timber lets clients book in 10 seconds — no app, no signup.",
+      "Barber booking, minus the BS. No forced downloads. No hidden fees. No 3-day wait for support."
+    ],
+    "messaging_pillars": [
+      {
+        "pillar": "Zero-friction booking",
+        "proof_point": "No app download, no account creation for clients — book in seconds via web",
+        "why_it_matters": "Directly addresses the #1 complaint founder identified in the market"
+      },
+      {
+        "pillar": "Human customer support",
+        "proof_point": "Solo founder = you talk to the person who built it (position this as a feature, not a limitation)",
+        "why_it_matters": "Booksy, Fresha, etc. have notoriously slow support"
+      },
+      {
+        "pillar": "Affordable simplicity",
+        "proof_point": "Only what you need, nothing you don't. Priced for independent operators.",
+        "why_it_matters": "Small shops don't need enterprise features"
+      }
+    ],
+    "tone_recommendation": "Direct, confident, slightly irreverent. Talk like a barber talks — no corporate jargon. Short sentences. Clear benefits. Social proof when available."
+  },
+  "critical_issues": [
+    "Website copy couldn't be fully analysed due to SPA rendering — but what's visible (meta tags) is completely generic",
+    "No social proof anywhere visible — no testimonials, no 'used by X businesses', no case studies",
+    "No demo video or screenshots discoverable via crawling",
+    "Brand name actively hurts SEO and brand recognition",
+    "The best messaging angle ('no app download for clients') is hidden in Reddit comments, not on the website"
+  ]
+}

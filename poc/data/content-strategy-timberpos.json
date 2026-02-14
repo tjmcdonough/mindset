@@ -1,0 +1,177 @@
+{
+  "org_id": "timberpos_001",
+  "agent": "content-strategist",
+  "created_at": "2026-02-13T10:51:00Z",
+  "confidence": "pre-interrogation",
+
+  "content_strategy": {
+    "stage_context": "Pre-revenue, 1 user, 0 paying. At this stage, content should serve ONE purpose: start conversations with barbers. No thought leadership. No SEO plays. No brand building. Pure demand-gen through demonstrating the product in formats barbers consume.",
+    "weekly_cadence": "3-4 pieces per week maximum. Short-form only. All content should take <30 minutes to produce.",
+
+    "content_suggestions": [
+      {
+        "id": "cs_001",
+        "type": "instagram_reel",
+        "topic": "10-second client booking demo — 'This is what your clients see when they book with Timber. No app. No signup.'",
+        "why_this": "This is Timber's one differentiator. Instagram Reels is the native format for barbers. A 10-second screen recording showing the frictionless booking experience is the most compelling proof point.",
+        "expected_outcome": {
+          "reach": "50-500 views per Reel initially (new account, zero followers)",
+          "conversion": "Won't convert directly — builds awareness and gives you something to share in DMs and Facebook groups",
+          "timeline": "First 2-4 weeks will be crickets. Consistency matters more than any single post.",
+          "compound_effect": "After 20+ Reels, the account becomes a portfolio of product proof. When you DM a barber, they can see the product working."
+        },
+        "distribution": {
+          "primary": "Instagram Reels",
+          "cross_post": "TikTok (same video, different account), Facebook barber groups (where relevant)",
+          "hashtags": ["#barberlife", "#barbershop", "#barberbooking", "#barbersoftware", "#noshows", "#barberbusiness"]
+        },
+        "priority": "P0",
+        "serves_experiment": "exp_005",
+        "effort": "20 minutes per Reel (screen record + text overlay + post)"
+      },
+      {
+        "id": "cs_002",
+        "type": "facebook_group_post",
+        "topic": "Value-first posts in barber groups: 'How I helped a barber reduce no-shows by 40% — here's exactly what we did'",
+        "why_this": "Facebook barber groups are where software decisions happen. But you can't pitch — you have to provide value first. Share actionable tips about reducing no-shows (with or without Timber) and let barbers come to you.",
+        "expected_outcome": {
+          "reach": "200-2,000 per post depending on group size and engagement",
+          "conversion": "1-3 DMs per high-quality post asking 'what tool do you use?'",
+          "timeline": "2-3 weeks of helpful posting before anyone trusts you enough to ask",
+          "compound_effect": "After 4-6 weeks, you become 'the booking guy' in 2-3 groups. That's a pipeline."
+        },
+        "distribution": {
+          "primary": "Facebook barber groups (Barber Nation, Barbers Talk, Booth Renters & Suite Owners)",
+          "cross_post": null,
+          "notes": "DO NOT cross-post the same content to multiple groups — each group has different norms"
+        },
+        "priority": "P0",
+        "serves_experiment": "exp_002",
+        "effort": "30 minutes per post (including reading group context and tailoring)"
+      },
+      {
+        "id": "cs_003",
+        "type": "short_video",
+        "topic": "Side-by-side comparison: 'Booking through Booksy (15 steps) vs Timber (3 steps)' — client perspective",
+        "why_this": "Barbers don't care about features — they care about their clients' experience. Showing the client journey side-by-side makes the differentiator visceral and shareable.",
+        "expected_outcome": {
+          "reach": "If shared in Facebook groups, could reach 1,000+ barbers. Comparison content performs well.",
+          "conversion": "Direct — barbers who see their clients struggling will want to try Timber",
+          "timeline": "Immediate impact when shared in the right group",
+          "compound_effect": "Becomes a reusable sales asset for DMs, emails, and in-person demos"
+        },
+        "distribution": {
+          "primary": "Instagram Reels + Facebook Groups",
+          "cross_post": "TikTok, Reddit r/Barber",
+          "notes": "Be respectful of Booksy — compare the process, don't trash-talk"
+        },
+        "priority": "P1",
+        "serves_experiment": "exp_005",
+        "effort": "1-2 hours (record both flows, edit side-by-side)"
+      },
+      {
+        "id": "cs_004",
+        "type": "facebook_group_post",
+        "topic": "Simple no-show reduction tips that don't require any software: text reminders, deposit policies, rebooking at checkout",
+        "why_this": "Establishes credibility without selling anything. Barbers' #1 pain is no-shows. If you help them with that, they'll trust you when you eventually mention Timber.",
+        "expected_outcome": {
+          "reach": "High engagement in barber groups — no-shows is a universally hated topic",
+          "conversion": "Indirect — builds trust and name recognition",
+          "timeline": "Immediate engagement",
+          "compound_effect": "Positions you as 'the person who understands barber business problems' not 'another SaaS person pitching'"
+        },
+        "distribution": {
+          "primary": "Facebook barber groups",
+          "notes": "Genuinely help. Do NOT make this a pitch for Timber."
+        },
+        "priority": "P0",
+        "serves_experiment": "exp_002",
+        "effort": "15 minutes"
+      },
+      {
+        "id": "cs_005",
+        "type": "product_hunt_launch_post",
+        "topic": "Product Hunt launch: 'Timber — Barber booking where clients don't need an app'",
+        "why_this": "PH launch generates backlinks, initial awareness, and a permanent listing. Won't reach barbers directly but builds credibility and SEO value.",
+        "expected_outcome": {
+          "reach": "200-1,000 PH visitors on launch day",
+          "conversion": "5-20 signups (mostly SaaS enthusiasts, not barbers — but reviews and feedback are valuable)",
+          "timeline": "1 day of intense activity, long-tail backlink value",
+          "compound_effect": "PH badge on website adds credibility. 'Featured on Product Hunt' matters for early social proof."
+        },
+        "distribution": {
+          "primary": "Product Hunt",
+          "cross_post": "Share PH link on Reddit r/SaaS, Twitter, LinkedIn",
+          "notes": "Time this for after you have 3-5 users so there's some social proof"
+        },
+        "priority": "P1",
+        "serves_experiment": "exp_003",
+        "effort": "4-6 hours (prep materials, launch day engagement)"
+      },
+      {
+        "id": "cs_006",
+        "type": "testimonial_video",
+        "topic": "30-second video from your first paying customer: 'Why I switched to Timber'",
+        "why_this": "In a trust-driven market, one real barber saying 'this works' is worth more than all your marketing copy combined. This is the single most valuable content asset you can create.",
+        "expected_outcome": {
+          "reach": "Moderate as standalone — but used in every other channel (Facebook groups, Instagram, website, directory listings)",
+          "conversion": "High — social proof from a peer is the #1 conversion driver for barbers",
+          "timeline": "Can only produce this after exp_006 (first paying customer)",
+          "compound_effect": "This one video unlocks credibility across every channel"
+        },
+        "distribution": {
+          "primary": "Website homepage, Instagram, Facebook groups",
+          "notes": "Ask the barber to record on their phone in their shop — authentic > polished"
+        },
+        "priority": "P1",
+        "serves_experiment": "exp_006",
+        "effort": "1 hour (coordinating with customer, light editing)"
+      }
+    ],
+
+    "anti_suggestions": [
+      {
+        "type": "Blog posts / SEO content",
+        "why_not": "Your site is a SPA — Google can't index it. Every blog post you write is invisible. Fix the architecture first."
+      },
+      {
+        "type": "LinkedIn thought leadership",
+        "why_not": "Barbers are not on LinkedIn. Your ICP doesn't read LinkedIn articles about booking software."
+      },
+      {
+        "type": "Long-form YouTube videos",
+        "why_not": "Too much production effort for your stage. Short-form (<60 seconds) gets the same message across with 10% of the effort."
+      },
+      {
+        "type": "Email newsletter",
+        "why_not": "You have 1 user. An email newsletter with 1 subscriber is not a strategy."
+      },
+      {
+        "type": "AI-generated blog content",
+        "why_not": "Google penalises thin AI content. Barbers don't read blogs about booking software. And generic AI content won't differentiate you from the 50 other booking tools writing the same articles."
+      },
+      {
+        "type": "Podcast",
+        "why_not": "Too much effort for too little reach at this stage. Consider guesting on barber business podcasts instead of creating your own."
+      }
+    ],
+
+    "90_day_content_calendar": {
+      "weeks_1_4": {
+        "focus": "Establish presence on Instagram and Facebook Groups",
+        "cadence": "3 Instagram Reels/week + 2 Facebook group value posts/week",
+        "goals": "100 Instagram followers, recognised name in 2 Facebook groups"
+      },
+      "weeks_5_8": {
+        "focus": "Product Hunt launch + comparison content + first testimonial",
+        "cadence": "3 Instagram Reels/week + 2 Facebook posts/week + PH launch",
+        "goals": "PH featured, 1 video testimonial, comparison video created"
+      },
+      "weeks_9_12": {
+        "focus": "Scale what's working, cut what isn't",
+        "cadence": "Adjust based on data — double down on highest-engagement format",
+        "goals": "300+ Instagram followers, 5+ inbound DMs from barbers, content library as sales asset"
+      }
+    }
+  }
+}

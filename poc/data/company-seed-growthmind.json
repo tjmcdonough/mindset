@@ -1,0 +1,264 @@
+{
+  "org_id": "growthmind_001",
+  "company_name": "Growthmind",
+  "website_url": "https://growthmind.ai",
+  "logo_url": null,
+  "business_idea": "AI-powered growth system that interrogates founder assumptions, diagnoses growth stage (Idea/Validation/Early Traction), and runs personalised weekly experiments to help pre-PMF companies find product-market fit — replacing expensive agencies and generic playbooks.",
+  "stage_summary": "live-but-stuck",
+  "founder_summary": "Thomas McDonough — founder who spent 6 months building a product nobody asked for, then 6 months trying every tactic blind, which led him to build Growthmind. Quote: 'The problem wasn't effort — it was that I was trying to grow without first proving what actually resonated.'",
+  "founder_name": "Thomas McDonough",
+  "founder_role": "Founder (evenings/weekends, full-time employed elsewhere)",
+  "founded_date": "2025-10",
+  "launch_date": null,
+  "product_status": {
+    "launch_stage": "live-but-stuck",
+    "has_working_product": true,
+    "has_landing_page": true,
+    "has_signup_flow": true,
+    "has_payment_flow": true,
+    "has_onboarding": null,
+    "has_analytics": null,
+    "has_users": false,
+    "user_count": 0,
+    "has_feedback_loop": false,
+    "product_completeness": "core-built-gaps-remain",
+    "biggest_product_gap": "No user conversations, no usage data, no activation metrics",
+    "ux_observations": [],
+    "product_improvement_suggestions": [],
+    "meta": {
+      "source": "tier3_founder",
+      "collected_at": "2026-02-12T22:02:00Z",
+      "confirmed_by_user": true
+    }
+  },
+  "primary_icp": "Pre-PMF founders, solo founders, technical makers, and small teams (1-10 people) without a dedicated growth team who are trying to find product-market fit",
+  "pain_points": [
+    "Burning $15k+ on agencies that guess with your money",
+    "Founder burnout from endless DIY experimentation",
+    "Generic growth playbooks fail when copied without context",
+    "80% of teams misdiagnose their growth stage",
+    "6 months of misdirected effort from wrong-stage tactics",
+    "No structured system for validating growth assumptions"
+  ],
+  "pivot_indicators": [],
+  "pivot_history": [],
+  "industry": "SaaS / AI-powered Growth Intelligence",
+  "headcount": "1",
+  "tech_stack": ["Next.js 16", "React 19", "TypeScript", "MongoDB/Mongoose 8", "Inngest", "Vercel AI SDK", "Zod 4", "Mantine UI 8", "Upstash Redis", "Stripe", "PropelAuth", "Vercel (hosting)", "Yarn 4"],
+  "social_presence": {
+    "linkedin": "exists-inactive",
+    "twitter": "exists-inactive",
+    "github": null,
+    "product_hunt": null,
+    "crunchbase": null,
+    "reddit": "active-prospecting"
+  },
+  "funding_stage": "bootstrapped",
+  "total_raised": null,
+  "customer_intelligence": {
+    "persona": {
+      "role": "Founder / Solo Maker / Head of Marketing at early-stage startup",
+      "company_size": "1-10 employees, pre-PMF",
+      "industry": "Any (horizontal SaaS targeting startups)",
+      "geo": "Global, English-speaking markets (UK spelling suggests UK-based founder)",
+      "demographics": "Technical builders who struggle with growth; non-technical founders overwhelmed by marketing",
+      "meta": [
+        {
+          "field": "persona",
+          "source": "tier1_public",
+          "source_detail": "growthmind.ai 'Who It's For' section",
+          "confidence": "high",
+          "collected_at": "2026-02-12T19:33:00Z",
+          "last_updated_by": "ai",
+          "last_updated_at": "2026-02-12T19:33:00Z",
+          "confirmed_by_user": false
+        }
+      ]
+    },
+    "problem": {
+      "pain_point": "Growth decisions pre-PMF are random guesswork — agencies are expensive and generic, DIY causes burnout, and copied tactics fail without context",
+      "trigger_event": "Founder realises they've wasted months/money on growth tactics that don't work for their stage",
+      "current_workaround": "Hiring agencies ($10-20k/mo), DIY experimentation, copying tactics from blogs/Reddit, ChatGPT for generic advice",
+      "urgency": "hair_on_fire",
+      "additional_pain_points": [
+        "Misdiagnosing growth stage leads to premature scaling",
+        "No compounding learning loop — experiments don't build on each other",
+        "Lack of growth team expertise at early stage"
+      ],
+      "meta": [
+        {
+          "field": "problem",
+          "source": "tier1_public",
+          "source_detail": "growthmind.ai 'The Core Problem' and pain point sections",
+          "confidence": "high",
+          "collected_at": "2026-02-12T19:33:00Z",
+          "last_updated_by": "ai",
+          "last_updated_at": "2026-02-12T19:33:00Z",
+          "confirmed_by_user": false
+        }
+      ]
+    },
+    "validation": {
+      "active_users": "live-no-users",
+      "aha_moment": "Receiving personalised stage diagnosis and first experiment plan that's specific to their context, not generic advice",
+      "reaching_aha": null,
+      "time_to_first_value": "10 minutes to growth profile; 7 days to first validated experiment result",
+      "qualitative_feedback": [],
+      "returning_unprompted": null,
+      "nps_score": null,
+      "meta": [
+        {
+          "field": "time_to_first_value",
+          "source": "tier1_public",
+          "source_detail": "growthmind.ai 'How It Works' section",
+          "confidence": "high",
+          "collected_at": "2026-02-12T19:33:00Z",
+          "last_updated_by": "ai",
+          "last_updated_at": "2026-02-12T19:33:00Z",
+          "confirmed_by_user": false
+        }
+      ]
+    },
+    "traction": {
+      "acquisition_source": "unknown",
+      "acquisition_sources": [],
+      "unprompted_referrals": null,
+      "feature_requests": [],
+      "retention_signals": null,
+      "meta": []
+    },
+    "monetization": {
+      "willingness_to_pay": "untested-no-signal",
+      "price_range": {
+        "current": 200,
+        "min": 20,
+        "max": 200,
+        "currency": "USD",
+        "interval": "monthly"
+      },
+      "buyer_vs_user": "Same person — the founder/growth lead is both buyer and user",
+      "competitors_considered": [
+        "Marketing agencies ($10-20k/mo)",
+        "ChatGPT / generic AI assistants",
+        "Growth consultants",
+        "DIY with blog playbooks"
+      ],
+      "why_chose_you": "Interrogation-first approach that diagnoses before prescribing; 1% the cost of an agency; personalised context that persists across sessions",
+      "why_passed_on": null,
+      "revenue_model": "SaaS subscription — Free tier (assessment only), Starter ($20/mo), Growth ($200/mo)",
+      "meta": [
+        {
+          "field": "price_range",
+          "source": "tier1_public",
+          "source_detail": "growthmind.ai pricing section",
+          "confidence": "high",
+          "collected_at": "2026-02-12T19:33:00Z",
+          "last_updated_by": "ai",
+          "last_updated_at": "2026-02-12T19:33:00Z",
+          "confirmed_by_user": false
+        },
+        {
+          "field": "revenue_model",
+          "source": "tier1_public",
+          "source_detail": "growthmind.ai pricing section",
+          "confidence": "high",
+          "collected_at": "2026-02-12T19:33:00Z",
+          "last_updated_by": "ai",
+          "last_updated_at": "2026-02-12T19:33:00Z",
+          "confirmed_by_user": false
+        }
+      ]
+    }
+  },
+  "enrichment_summary": {
+    "tier1_fields": 15,
+    "tier1_total": 20,
+    "tier2_fields": 0,
+    "tier2_total": 10,
+    "tier3_fields": 0,
+    "tier3_total": 10,
+    "overall_confidence": 0.55,
+    "last_enriched_at": "2026-02-12T19:33:00Z"
+  },
+  "identity_meta": [
+    {
+      "field": "company_name",
+      "source": "tier1_public",
+      "source_detail": "growthmind.ai website title and content",
+      "confidence": "high",
+      "collected_at": "2026-02-12T19:33:00Z",
+      "last_updated_by": "ai",
+      "last_updated_at": "2026-02-12T19:33:00Z",
+      "confirmed_by_user": false
+    },
+    {
+      "field": "business_idea",
+      "source": "tier1_public",
+      "source_detail": "growthmind.ai hero section and feature descriptions",
+      "confidence": "high",
+      "collected_at": "2026-02-12T19:33:00Z",
+      "last_updated_by": "ai",
+      "last_updated_at": "2026-02-12T19:33:00Z",
+      "confirmed_by_user": false
+    },
+    {
+      "field": "founder_name",
+      "source": "tier1_public",
+      "source_detail": "growthmind.ai founder quote section",
+      "confidence": "high",
+      "collected_at": "2026-02-12T19:33:00Z",
+      "last_updated_by": "ai",
+      "last_updated_at": "2026-02-12T19:33:00Z",
+      "confirmed_by_user": false
+    },
+    {
+      "field": "stage_summary",
+      "source": "tier1_public",
+      "source_detail": "Product has live app at unicorn.growthmind.ai with pricing tiers — indicates launched",
+      "confidence": "medium",
+      "collected_at": "2026-02-12T19:33:00Z",
+      "last_updated_by": "ai",
+      "last_updated_at": "2026-02-12T19:33:00Z",
+      "confirmed_by_user": false
+    },
+    {
+      "field": "headcount",
+      "source": "tier2_inferred",
+      "source_detail": "Solo founder indicated by website tone, no team page, single founder quoted",
+      "confidence": "low",
+      "collected_at": "2026-02-12T19:33:00Z",
+      "last_updated_by": "ai",
+      "last_updated_at": "2026-02-12T19:33:00Z",
+      "confirmed_by_user": false
+    },
+    {
+      "field": "funding_stage",
+      "source": "tier2_inferred",
+      "source_detail": "No funding info found anywhere; solo founder with no Crunchbase presence suggests bootstrapped",
+      "confidence": "low",
+      "collected_at": "2026-02-12T19:33:00Z",
+      "last_updated_by": "ai",
+      "last_updated_at": "2026-02-12T19:33:00Z",
+      "confirmed_by_user": false
+    },
+    {
+      "field": "headcount",
+      "source": "tier3_founder",
+      "source_detail": "Founder confirmed solo",
+      "confidence": "high",
+      "collected_at": "2026-02-12T20:23:00Z",
+      "last_updated_by": "founder",
+      "last_updated_at": "2026-02-12T20:23:00Z",
+      "confirmed_by_user": true
+    }
+  ],
+  "version": 1,
+  "change_log": [
+    {
+      "timestamp": "2026-02-12T19:33:00Z",
+      "action": "initial_enrichment",
+      "details": "AI enrichment from growthmind.ai website and web search. Primary source: company website. No social media, Crunchbase, or Product Hunt presence found.",
+      "by": "ai"
+    }
+  ]
+}

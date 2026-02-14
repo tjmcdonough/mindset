@@ -1,0 +1,165 @@
+{
+  "org_id": "linelab_001",
+  "generated_at": "2026-02-13T08:15:00Z",
+  "stage": "early-traction-crossing-chasm",
+  "strategy_context": "Enterprise manufacturing software company with validated early adopters (Boeing, Hadrian, GKN Aerospace) needing to build repeatable GTM beyond founder-led sales. Category creation challenge — analytical production modeling doesn't exist as a recognized category in buyer's mind.",
+  "experiments": [
+    {
+      "id": "exp_001",
+      "name": "Aerospace Beachhead Reference Program",
+      "hypothesis": "If we formalize a reference customer program with 3-5 aerospace companies, then pragmatist buyers in aerospace will convert at 2x the current rate because they buy based on peer validation, not vision.",
+      "experiment_type": "sales_process",
+      "channel": "direct_sales",
+      "priority": "P0_critical",
+      "estimated_effort": "medium",
+      "success_threshold": "3 aerospace customers agree to be named references (case study + reference call) within 60 days; at least 1 new deal sourced from a reference introduction within 90 days.",
+      "instructions": [
+        "Identify which existing aerospace customers (Boeing, GKN Aerospace) are willing to serve as formal references — name, logo, case study, and reference calls.",
+        "For each willing customer, produce a 1-page case study following the pattern: situation → challenge → LineLab approach → quantified outcome (use the 4.9x ROI, 32% cost avoidance, $6M/yr numbers).",
+        "Ask each reference customer: 'Who else in your network faces similar scale-up challenges?' — capture warm introductions.",
+        "Create a 'Reference Kit' for sales conversations: 3 case studies, 2 reference call contacts, 1 ROI summary.",
+        "Track: reference calls completed, deals influenced by references, time-to-close for reference-sourced vs cold deals."
+      ],
+      "duration": "90 days",
+      "risk_level": "low",
+      "rationale": "Geoffrey Moore's core crossing-the-chasm insight: pragmatists buy from other pragmatists. LineLab has world-class logos but may not be systematically leveraging them. This is the single highest-leverage activity for an enterprise company at this stage — it costs almost nothing and directly addresses the trust gap with mainstream buyers."
+    },
+    {
+      "id": "exp_002",
+      "name": "Standardized POC Playbook",
+      "hypothesis": "If we create a repeatable 2-week proof-of-concept framework with predefined deliverables, then we can run POCs without founder involvement and reduce sales cycle length by 30%.",
+      "experiment_type": "sales_process",
+      "channel": "direct_sales",
+      "priority": "P0_critical",
+      "estimated_effort": "high",
+      "success_threshold": "Complete 2 POCs using the standardized playbook without founder leading the technical evaluation; average POC duration ≤15 business days; POC-to-close conversion ≥60%.",
+      "instructions": [
+        "Document the current POC process: what data does LineLab need from the prospect, what model is built, what deliverables are presented, what questions arise.",
+        "Create a POC template: (1) standard intake questionnaire (process times, routings, demand, cost inputs), (2) model build checklist, (3) results presentation template showing cost decomposition, optimization results, and comparison to their current approach.",
+        "Define POC success criteria upfront with the prospect: e.g., 'LineLab will model your [specific system], show cost drivers, and deliver results within 2 weeks from data receipt.'",
+        "Train at least one non-founder team member to run the POC end-to-end.",
+        "Run 2-3 POCs using the playbook. Measure: time to complete, founder hours required, prospect satisfaction, conversion to paid.",
+        "After each POC, conduct a retrospective and update the playbook."
+      ],
+      "duration": "90 days",
+      "risk_level": "medium",
+      "rationale": "The founder explicitly said they're 'debugging the scale-up strategy.' In enterprise software, the #1 bottleneck to scaling beyond founder-led sales is a non-repeatable evaluation process. A standardized POC playbook is the bridge from 'Scott closes every deal' to 'the team closes deals.' This must work regardless of team size — even a 3-person company needs a documented process."
+    },
+    {
+      "id": "exp_003",
+      "name": "Vertical Content Wedge — Aerospace Scale-Up",
+      "hypothesis": "If we publish 4 deep technical articles targeting aerospace production scale-up decision-makers on LinkedIn and the LineLab blog, then inbound demo requests from aerospace companies will increase by 50% within 90 days.",
+      "experiment_type": "content_marketing",
+      "channel": "linkedin_and_blog",
+      "priority": "P1_high",
+      "estimated_effort": "medium",
+      "success_threshold": "4 articles published; combined 10,000+ LinkedIn impressions; 5+ inbound demo requests attributable to content (ask 'how did you hear about us' on demo form); 2+ articles shared by someone at an aerospace company.",
+      "instructions": [
+        "Identify 4 article topics that sit at the intersection of LineLab's expertise and aerospace buyer pain points. Suggested topics: (1) 'Why Your Factory Cost Estimate Is 30% Wrong — and the Math That Fixes It', (2) 'Simulation vs Analytical Modeling: What Boeing's Production Team Learned', (3) 'The Hidden Cost Drivers in Aerospace Scale-Up That Spreadsheets Can't See', (4) 'How to De-Risk a $100M Production Investment in Days, Not Months'.",
+        "Each article should follow the voice guide: lead with outcome, quantify everything, use manufacturing language, reference proof points naturally.",
+        "Publish on LineLab blog AND as LinkedIn articles from founder's personal account (personal accounts get 5-10x reach vs company pages).",
+        "Include a soft CTA: 'Want to see how this applies to your production system? Request a demo.' — no aggressive lead capture.",
+        "Cross-post key insights as short LinkedIn posts (3-5 per article) to extend reach.",
+        "Track: impressions, engagement, profile visits, demo requests, and any DMs or comments from target personas."
+      ],
+      "duration": "90 days",
+      "risk_level": "low",
+      "rationale": "LineLab already has an 'Insights' section and the Solving for Scale brand — but content needs to be laser-focused on the beachhead segment to drive inbound from pragmatist buyers. LinkedIn is where manufacturing VPs and directors spend time. The market education challenge (analytical modeling is an unknown category) can only be solved with content that frames the problem before presenting the solution. This works regardless of team size — even a solo founder can write 1 article/month."
+    },
+    {
+      "id": "exp_004",
+      "name": "Solving for Scale Community Expansion",
+      "hypothesis": "If we run a quarterly virtual 'Solving for Scale' roundtable with 15-25 manufacturing leaders (not a product demo), then 20% of attendees will request a follow-up conversation about LineLab within 30 days.",
+      "experiment_type": "community_led_growth",
+      "channel": "events",
+      "priority": "P1_high",
+      "estimated_effort": "medium",
+      "success_threshold": "First event: 15+ registrations, 10+ attendees, 2+ follow-up demo requests within 30 days. Qualitative: attendees describe it as 'valuable' in post-event survey (NPS ≥ 8).",
+      "instructions": [
+        "Leverage the existing 'Solving for Scale' brand (co-founded with MIT and NextGen Industry Group) to host a virtual roundtable focused on a specific aerospace scale-up challenge.",
+        "Format: 60 minutes. 10-min keynote from an industry expert or customer (not LineLab product pitch), 30-min moderated discussion among attendees, 15-min open Q&A, 5-min wrap. LineLab facilitates but doesn't sell.",
+        "Topic for first event: 'Production Cost Estimation for New Aerospace Programs — What Works and What Doesn't' (picks a pain point, not a product).",
+        "Invite list: existing customers, prospects in pipeline, LinkedIn connections who match ICP, MIT alumni network in manufacturing.",
+        "After the event: send a summary PDF, offer 1:1 follow-up conversations to anyone interested, ask for introductions to peers.",
+        "Measure: registrations, attendance rate, post-event survey NPS, follow-up requests, deals influenced."
+      ],
+      "duration": "120 days (plan + execute first event + measure follow-up)",
+      "risk_level": "low",
+      "rationale": "LineLab already co-founded the Solving for Scale Summit — this is an underleveraged asset. Enterprise buyers don't respond to cold outreach or ads; they respond to peer communities and trusted forums. A regular roundtable builds LineLab's position as the convener of the manufacturing scale-up conversation — exactly the kind of category-creating move needed when the category doesn't exist yet. Works with any team size; the MIT brand does the heavy lifting on credibility."
+    },
+    {
+      "id": "exp_005",
+      "name": "Channel Partner Pilot — Aerospace Consultancy",
+      "hypothesis": "If we partner with one aerospace manufacturing consultancy to offer LineLab-powered analysis as part of their engagements, then we can source 2+ enterprise deals through the partner within 6 months without adding headcount.",
+      "experiment_type": "channel_partnership",
+      "channel": "partner_sales",
+      "priority": "P2_medium",
+      "estimated_effort": "high",
+      "success_threshold": "1 signed partnership agreement; partner completes training on LineLab; 1+ joint customer engagement initiated within 120 days; 2+ partner-sourced deals in pipeline within 180 days.",
+      "instructions": [
+        "Identify 3-5 aerospace manufacturing consultancies that advise on production scale-up and factory planning. Targets: Roland Berger (strong in aerospace manufacturing), McKinsey Operations Practice, Deloitte Manufacturing Practice, smaller specialist firms like Moog Consulting or Archibald Consulting.",
+        "Pitch: 'Your consultants currently spend 4-6 weeks building simulation models for client engagements. LineLab can deliver the same analysis in days — making your team 10x more productive and your clients happier.'",
+        "Structure: LineLab provides software + training; consultancy uses it in their engagements; LineLab gets the software license revenue + right to use the engagement as a case study (anonymized if needed).",
+        "Start with ONE partner. Train 2-3 of their consultants. Support their first 2 engagements hands-on. Then evaluate.",
+        "Track: partner satisfaction, joint engagement outcomes, time savings for partner, deals sourced, revenue from partner channel."
+      ],
+      "duration": "180 days",
+      "risk_level": "medium",
+      "rationale": "Enterprise manufacturing software often scales through channel partners, not direct sales alone. Consultancies are already in the room when scale-up decisions are made — they're the trusted advisors. Rather than competing with them, LineLab can arm them with better tools. This is how PTC, Siemens, and other enterprise manufacturing software companies built distribution. The risk is partner management overhead, but a single successful partnership can open access to dozens of enterprise accounts. Critical for crossing the chasm without a large sales team."
+    },
+    {
+      "id": "exp_006",
+      "name": "ROI Calculator Lead Magnet",
+      "hypothesis": "If we add an interactive ROI calculator to the LineLab website that lets prospects estimate their potential savings from analytical modeling vs their current approach, then website-to-demo conversion rate will increase by 25%.",
+      "experiment_type": "conversion_optimization",
+      "channel": "website",
+      "priority": "P2_medium",
+      "estimated_effort": "medium",
+      "success_threshold": "Calculator launched; 50+ completions in first 60 days; 10%+ of calculator completers request a demo; calculator-sourced leads have equal or higher close rate than other sources.",
+      "instructions": [
+        "Build a simple web-based ROI calculator with 5-7 inputs: (1) number of production lines/cells, (2) annual production volume, (3) current cost estimation method (spreadsheet/simulation/consulting), (4) time currently spent on production system analysis per project, (5) approximate annual production system cost, (6) industry vertical.",
+        "Output: estimated time savings (weeks → minutes), estimated cost avoidance range (based on the 32% average), estimated ROI (based on 4.9x average), and a personalized 'Your production system could save $X' number.",
+        "Include disclaimers: 'Based on average customer results. Actual savings depend on your specific production system.' — consistent with voice guide.",
+        "Gate the detailed results behind email capture (show a preview ungated, detailed PDF requires email).",
+        "CTA after results: 'Want to see these numbers validated on your actual production data? Request a demo.'",
+        "Track: calculator starts, completions, email captures, demo requests, deals influenced."
+      ],
+      "duration": "60 days to build + 60 days to measure",
+      "risk_level": "low",
+      "rationale": "Pragmatist buyers self-qualify on ROI before engaging sales. LineLab has exceptional proof points (4.9x ROI, $6M/yr, 32% cost avoidance) but they're static on the website. An interactive calculator lets prospects see personalized numbers, pre-qualifies them for sales conversations, and captures contact information — all without adding sales headcount. This directly addresses the 'crossing the chasm' need for clear business cases that pragmatists demand."
+    },
+    {
+      "id": "exp_007",
+      "name": "Spreadsheet Upgrader Campaign",
+      "hypothesis": "If we target manufacturing engineers who currently use Excel for production cost modeling with a campaign showing what their spreadsheets are missing (queuing effects, variability, optimization), then we can open a new acquisition channel with 40% lower CAC than converting simulation users.",
+      "experiment_type": "acquisition_channel",
+      "channel": "linkedin_ads_and_content",
+      "priority": "P2_medium",
+      "estimated_effort": "medium",
+      "success_threshold": "Campaign reaches 5,000+ targeted impressions; 50+ landing page visits; 5+ demo requests from self-identified spreadsheet users; CAC for spreadsheet-upgraders is measurably lower than simulation-switchers.",
+      "instructions": [
+        "Create a LinkedIn ad campaign targeting: Manufacturing Engineers, Operations Directors, Program Managers at companies with 50-10,000 employees in aerospace, defense, semiconductors, green tech.",
+        "Lead creative concept: 'Your spreadsheet can't model this' — show a side-by-side of a spreadsheet cost model vs LineLab's dynamic model capturing queuing, variability, and utilization effects on the same production system.",
+        "Landing page: short-form content showing 3 specific things spreadsheets get wrong in production cost estimation (static averages, no queuing effects, no optimization). End with: 'See what your spreadsheet is missing — request a demo with your actual data.'",
+        "Budget: $2,000-5,000 for initial 30-day test (small enough to work regardless of funding situation).",
+        "A/B test: 'Your spreadsheet is wrong' (fear) vs 'Upgrade your spreadsheet' (aspiration) messaging.",
+        "Track: impressions, CTR, landing page conversion, demo requests, source attribution, deal progression."
+      ],
+      "duration": "60 days",
+      "risk_level": "low",
+      "rationale": "The market intel shows Excel/spreadsheets are the #1 competitor by usage — ~80% of manufacturing engineers use them for production planning. Converting spreadsheet users is easier than converting DES users (no sunk cost in existing simulation tools, no simulation team to threaten). The competitive moat assessment confirms: 'The spreadsheet-to-LineLab upgrade path may be more promising than DES-to-LineLab replacement.' This experiment tests that thesis with minimal spend."
+    }
+  ],
+  "experiment_sequence_recommendation": "Execute in priority waves. Wave 1 (immediately, P0): exp_001 (Reference Program) and exp_002 (POC Playbook) — these are foundational and everything else builds on them. Wave 2 (month 2, P1): exp_003 (Content Wedge) and exp_004 (Community Roundtable) — drive inbound while the sales infrastructure from Wave 1 is being built. Wave 3 (month 3-4, P2): exp_005 (Channel Partner), exp_006 (ROI Calculator), and exp_007 (Spreadsheet Campaign) — scale acquisition channels once the reference program and sales process are proven.",
+  "meta": {
+    "framework": "crossing_the_chasm",
+    "beachhead_segment": "aerospace_scale_up",
+    "designed_for_constraints": "Small team (2-10), unknown funding, no self-serve product, founder-led sales transitioning to repeatable GTM",
+    "key_assumptions": [
+      "Existing customers are willing to serve as references",
+      "Founder has capacity to write 1 article/month",
+      "Budget exists for $2-5K in LinkedIn ad spend",
+      "At least one non-founder team member can be trained on POC delivery"
+    ]
+  }
+}

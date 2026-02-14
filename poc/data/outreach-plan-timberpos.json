@@ -1,0 +1,172 @@
+{
+  "org_id": "timberpos_001",
+  "agent": "outreach-planner",
+  "created_at": "2026-02-13T10:51:00Z",
+  "confidence": "pre-interrogation",
+
+  "outreach_plan": {
+    "targets": {
+      "potential_users": [
+        {
+          "type": "Local independent barbershops (1-3 chairs)",
+          "where_to_find": "Google Maps search 'barbershop near me', filter for small shops with <50 reviews (larger shops likely already have systems)",
+          "quantity": "30 shops within driving distance",
+          "why": "Owner-operated shops make fast decisions. Walk in, demo, walk out with a trial signup. This is the #1 acquisition channel.",
+          "approach": "In-person visit during quiet hours. Lead with: 'I built a booking tool where your clients don't need to download anything. Can I show you for 2 minutes?'",
+          "expected_response_rate": "40-60% will give you 2 minutes. 15-25% will try a free trial."
+        },
+        {
+          "type": "Booth-rental / independent barbers",
+          "where_to_find": "Instagram hashtags (#boothrentalbarber, #independentbarber), Facebook group 'Booth Renters & Suite Owners'",
+          "quantity": "50+ reachable via social",
+          "why": "These barbers need their OWN tools — they can't use the shop's system. Under-served by SQUIRE (which targets shop owners). Perfect niche for Timber.",
+          "approach": "Instagram DM after genuinely engaging with their content first. 'Love your work! Quick question — do your clients have to download an app to book with you?'",
+          "expected_response_rate": "10-20% will respond to a genuine DM. 5% will try the product."
+        },
+        {
+          "type": "Barbers complaining about current tools on Reddit/Facebook",
+          "where_to_find": "Search r/Barber, r/smallbusiness, Facebook groups for 'booking app', 'Fresha problems', 'Booksy issues'",
+          "quantity": "5-10 per week (monitor ongoing)",
+          "why": "These are barbers actively in buying mode — they have a problem right now",
+          "approach": "Reply helpfully to their complaint. 'I had the same frustration, which is why I built [Timber]. Happy to give you free access to try it.'",
+          "expected_response_rate": "20-30% for in-thread complaints. They're already looking for alternatives."
+        }
+      ],
+      "influencers": [
+        {
+          "type": "Barber Instagram influencers (10K-100K followers)",
+          "where_to_find": "Instagram search #barberlife, look for barbers who post business content (not just haircut photos)",
+          "quantity": "Target 5-10",
+          "why": "One popular barber showing Timber in their story could drive 50+ trial signups. Barbers follow barbers.",
+          "approach": "Offer free lifetime account in exchange for an honest review. Don't ask for promotion — ask for feedback. If they like it, they'll share organically.",
+          "expected_response_rate": "5-10% will respond to a cold DM. Higher if you've engaged with their content first.",
+          "caveat": "This only works AFTER you have a polished product and some social proof. Wave 2, not Wave 1."
+        }
+      ],
+      "partners": [
+        {
+          "type": "Local barber supply stores",
+          "where_to_find": "Google Maps 'barber supply store'",
+          "quantity": "2-3 in your area",
+          "why": "Every barber visits their supply store. A flyer or QR code at the register is free, persistent advertising.",
+          "approach": "Visit in person. 'I built a booking app for barbers. Could I leave some flyers? Happy to send any of your customers a discount.'",
+          "expected_response_rate": "50%+ will say yes — it costs them nothing and helps their customers."
+        },
+        {
+          "type": "Local barber schools / cosmetology programs",
+          "where_to_find": "Google 'barber school [your city]'",
+          "quantity": "1-3",
+          "why": "New barbers choosing their first tools. Get them on Timber before they discover Booksy or Fresha.",
+          "approach": "Offer a free 'business tools for new barbers' workshop or just ask to present for 15 minutes",
+          "expected_response_rate": "Medium — schools may welcome guest speakers about business tools"
+        }
+      ],
+      "media": [
+        {
+          "type": "Behind the Chair (content platform)",
+          "url": "https://behindthechair.com",
+          "why": "Widely read by salon professionals. Getting featured or listed as a recommended tool drives qualified traffic.",
+          "approach": "Submit a guest post or sponsor a feature. Pitch: 'New booking tool eliminates app downloads for clients'",
+          "expected_response_rate": "Low for cold pitches. Better after you have 10+ users and a case study.",
+          "timing": "Wave 3 — need social proof first"
+        },
+        {
+          "type": "Barber business YouTube channels",
+          "where_to_find": "Search 'barbershop business tips' on YouTube, look for channels with 5K-50K subscribers",
+          "why": "Barbers watch YouTube for business advice. A tool review from a trusted channel converts well.",
+          "approach": "Offer free access + a small sponsorship ($100-200) for an honest review",
+          "timing": "Wave 2-3"
+        }
+      ],
+      "community_leaders": [
+        {
+          "type": "Facebook barber group admins",
+          "where_to_find": "Admin lists on Barber Nation, Barbers Talk, etc.",
+          "why": "Group admins control what gets promoted and what gets deleted. Getting on their good side means your posts survive.",
+          "approach": "Be a genuine contributor for 2-4 weeks. Then DM the admin: 'I've been helping in the group — I also built a booking tool for barbers. Would it be okay to share?'",
+          "expected_response_rate": "High if you've been genuinely helpful first. Most admins appreciate contributors who add value."
+        }
+      ]
+    },
+
+    "messaging_angles": [
+      {
+        "angle": "The Download Problem",
+        "message_direction": "'Your clients hate downloading apps to book a haircut. What if they didn't have to?'",
+        "when_to_use": "Primary angle for all outreach. This is the differentiator. Lead with it always.",
+        "works_best_on": "Barbers who've heard clients complain about downloading Booksy or Fresha",
+        "expected_response": "Curiosity — 'How does that work?'",
+        "what_not_to_say": "Don't trash-talk Booksy/Fresha by name. Compare the experience, not the brand."
+      },
+      {
+        "angle": "The Simplicity Play",
+        "message_direction": "'You just need booking and payments. Not 47 features you'll never use.'",
+        "when_to_use": "For barbers frustrated with complex tools (Vagaro, Fresha's feature bloat)",
+        "works_best_on": "Solo barbers who feel overwhelmed by enterprise software",
+        "expected_response": "Relief — 'That's exactly what I need'",
+        "what_not_to_say": "Don't promise features you don't have. Be honest about what Timber does and doesn't do."
+      },
+      {
+        "angle": "The Human Support Angle",
+        "message_direction": "'When something breaks, you talk to me — the person who built it. Not a chatbot.'",
+        "when_to_use": "For barbers who've had bad support experiences (very common with Booksy and Fresha)",
+        "works_best_on": "Barbers who recently complained about support in a group or review",
+        "expected_response": "Interest — personal attention is rare and valued",
+        "what_not_to_say": "Don't over-promise. Solo founder support scales badly — acknowledge you're small and position it as an advantage for now."
+      },
+      {
+        "angle": "The Free Trial / Low Risk",
+        "message_direction": "'Try it free for 14 days. If it doesn't work for you, no hard feelings.'",
+        "when_to_use": "Closing angle — after generating interest, remove the risk",
+        "works_best_on": "Everyone — barbers are risk-averse with new tools",
+        "expected_response": "'Sure, I'll try it'",
+        "what_not_to_say": "Don't be pushy about the trial ending. Let the product sell itself."
+      }
+    ],
+
+    "cadence": {
+      "weekly_target": {
+        "in_person_visits": "5 barbershops per week (experiment exp_001)",
+        "facebook_group_engagement": "5 helpful posts/comments per week, 2-3 targeted DMs when natural",
+        "instagram_dms": "3-5 genuine DMs per week to barbers who post about booking frustrations",
+        "total_outreach_hours": "5-7 hours per week"
+      },
+      "follow_up": {
+        "after_demo": "Text within 24 hours: 'Great meeting you — here's the link to try Timber. Any questions, text me.'",
+        "after_trial_signup": "Check in at day 3 and day 10. 'How's it going? Anything I can help with?'",
+        "after_no_response": "One follow-up after 5 days. If no response, move on. Don't be a pest."
+      }
+    },
+
+    "expected_outcomes": {
+      "in_person_demos": "20 demos → 5-8 trial signups → 1-3 paying customers (30-day cycle)",
+      "facebook_engagement": "4 weeks of value-first posting → recognised in 2-3 groups → 2-5 inbound inquiries",
+      "instagram_dms": "20 DMs → 4-6 responses → 1-2 trial signups",
+      "overall_30_day": "8-15 trial signups, 2-5 paying customers if product is good",
+      "overall_90_day": "30-50 trial signups, 10-20 paying customers, word-of-mouth beginning"
+    },
+
+    "dont_bother": [
+      {
+        "target": "Large salon chains (10+ locations)",
+        "why": "They use enterprise solutions (Boulevard, Zenoti) and won't switch to an unknown solo-founder tool. Sales cycle is months with procurement committees."
+      },
+      {
+        "target": "LinkedIn outreach to barbers",
+        "why": "Barbers are not on LinkedIn. You'll find salon software VENDORS, not customers."
+      },
+      {
+        "target": "Email outreach to barbershops",
+        "why": "Most independent barbers don't check business email regularly. They live on text, Instagram DMs, and Facebook. Cold email will have <1% open rate."
+      },
+      {
+        "target": "SaaS community outreach (r/SaaS, Indie Hackers, etc.)",
+        "why": "These are your peers, not your customers. Great for emotional support, terrible for customer acquisition. You've already learned this."
+      },
+      {
+        "target": "PR / press outreach to tech publications",
+        "why": "TechCrunch doesn't write about pre-revenue barber booking tools. Local barbershop publications might — but not until you have a story to tell."
+      }
+    ]
+  }
+}

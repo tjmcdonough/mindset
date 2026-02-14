@@ -1,0 +1,193 @@
+{
+  "org_id": "growthmind_001",
+  "scan_date": "2026-02-12T22:03:00Z",
+  "freshness_window": "24h",
+  "channels_scanned": [
+    "reddit/r/SaaS",
+    "reddit/r/startups",
+    "reddit/r/Entrepreneur",
+    "reddit/r/EntrepreneurRideAlong",
+    "reddit/r/indiehackers",
+    "reddit/r/growmybusiness",
+    "reddit/r/microsaas",
+    "reddit/r/ycombinator",
+    "reddit/r/DigitalMarketing",
+    "reddit/r/smallbusiness"
+  ],
+  "channel_health": [
+    {"channel": "reddit/r/SaaS", "status": "active", "signals_found": 2},
+    {"channel": "reddit/r/Entrepreneur", "status": "active", "signals_found": 3},
+    {"channel": "reddit/r/microsaas", "status": "active", "signals_found": 1},
+    {"channel": "reddit/r/smallbusinessuk", "status": "active", "signals_found": 1},
+    {"channel": "reddit/r/startups", "status": "low_volume", "signals_found": 0},
+    {"channel": "reddit/r/EntrepreneurRideAlong", "status": "low_volume", "signals_found": 0},
+    {"channel": "reddit/r/indiehackers", "status": "low_volume", "signals_found": 0},
+    {"channel": "reddit/r/growmybusiness", "status": "low_volume", "signals_found": 0},
+    {"channel": "reddit/r/ycombinator", "status": "low_volume", "signals_found": 0},
+    {"channel": "reddit/r/DigitalMarketing", "status": "low_volume", "signals_found": 0},
+    {"channel": "reddit/r/smallbusiness", "status": "low_volume", "signals_found": 0}
+  ],
+  "signals": [
+    {
+      "id": "sig_001",
+      "source": "reddit/r/SaaS",
+      "url": "https://www.reddit.com/r/SaaS/comments/1r2f9ep/which_marketing_agency_is_best_for_saas_user/",
+      "title": "Which marketing agency is best for SaaS user acquisition and signup growth?",
+      "author": "unknown",
+      "posted_approx": "2026-02-12T19:00:00Z",
+      "content_summary": "Founder recently launched a SaaS and burned a lot of money on paid ads with low ROI. Asking for marketing agency recommendations for user acquisition and signup growth. Already evaluating multiple agencies.",
+      "intent": "seeking_help",
+      "pain_level": "high",
+      "icp_match_score": 0.95,
+      "authenticity_score": 0.85,
+      "actionability_score": 0.9,
+      "overall_signal_score": 88,
+      "ai_summary": "SaaS founder burned money on paid ads with low ROI, desperately seeking marketing agency help for user acquisition.",
+      "recommended_action": "Engage with empathy about paid ads waste. Position Growthmind as an alternative to expensive agencies — an AI system that diagnoses their growth stage and prescribes specific experiments weekly, far cheaper than agency retainers."
+    },
+    {
+      "id": "sig_002",
+      "source": "reddit/r/Entrepreneur",
+      "url": "https://www.reddit.com/r/Entrepreneur/comments/1r1z1ac/how_do_you_know_youre_iterating_vs_just_refusing/",
+      "title": "How do you know you're iterating vs just refusing to quit?",
+      "author": "unknown",
+      "posted_approx": "2026-02-11T20:00:00Z",
+      "content_summary": "Founder has been working on the same product for years. Product is better, onboarding smoother, conversion slightly up — but growth hasn't moved. Stuck in limbo: quitting feels wrong because there's some traction, continuing feels wrong because the market isn't reacting. Asking when to kill a project.",
+      "intent": "venting",
+      "pain_level": "high",
+      "icp_match_score": 0.9,
+      "authenticity_score": 0.95,
+      "actionability_score": 0.85,
+      "overall_signal_score": 85,
+      "ai_summary": "Founder stuck for years with a polished product that won't grow, questioning whether they're iterating or just refusing to quit.",
+      "recommended_action": "Respond with the PMF diagnostic angle — the issue isn't the product quality, it's likely a growth strategy/channel problem. Suggest Growthmind can diagnose exactly where they're stuck (awareness, activation, retention) and prescribe targeted experiments rather than building in the dark."
+    },
+    {
+      "id": "sig_003",
+      "source": "reddit/r/Entrepreneur",
+      "url": "https://www.reddit.com/r/Entrepreneur/comments/1r1rtql/what_is_the_best_marketing_tool_for_small/",
+      "title": "What is the best marketing tool for small businesses?",
+      "author": "unknown",
+      "posted_approx": "2026-02-11T16:00:00Z",
+      "content_summary": "Small business owner looking for marketing tools to streamline operations. 34 upvotes and 26 comments indicate strong engagement. Multiple commenters recommending various tools (HubSpot, Brevo, etc.).",
+      "intent": "seeking_help",
+      "pain_level": "moderate",
+      "icp_match_score": 0.5,
+      "authenticity_score": 0.9,
+      "actionability_score": 0.6,
+      "overall_signal_score": 55,
+      "ai_summary": "Small business owner seeking marketing tool recommendations, indicating confusion about which growth tools to use.",
+      "recommended_action": "Lower priority — this is a small business (law firm), not a startup/SaaS. Could comment about how the real challenge isn't the tool but having a clear growth strategy first."
+    },
+    {
+      "id": "sig_004",
+      "source": "reddit/r/Entrepreneur",
+      "url": "https://www.reddit.com/r/Entrepreneur/comments/1r1zbe6/how_can_i_start_seo_as_a_beginner/",
+      "title": "How can I start SEO as a beginner?",
+      "author": "Joker4803",
+      "posted_approx": "2026-02-11T21:00:00Z",
+      "content_summary": "Beginner asking how to start SEO and where to find freelance work. Very entry-level question indicating someone early in their journey without marketing knowledge.",
+      "intent": "seeking_help",
+      "pain_level": "mild",
+      "icp_match_score": 0.3,
+      "authenticity_score": 0.8,
+      "actionability_score": 0.3,
+      "overall_signal_score": 30,
+      "ai_summary": "Complete beginner asking how to start SEO — too early stage for Growthmind ICP.",
+      "recommended_action": "Skip — this person is looking for freelance SEO work, not a startup founder. Not ICP."
+    },
+    {
+      "id": "sig_005",
+      "source": "reddit/r/Entrepreneur",
+      "url": "https://www.reddit.com/r/Entrepreneur/comments/1r1ofeq/facebook_ads_vs_google_ads_which_actually/",
+      "title": "Facebook Ads vs Google Ads. Which actually performs better in 2026?",
+      "author": "unknown",
+      "posted_approx": "2026-02-11T14:00:00Z",
+      "content_summary": "Entrepreneur comparing Facebook Ads vs Google Ads performance in 2026. Discussion about AI-driven targeting and Advantage+ campaigns. Indicates someone actively trying to figure out paid acquisition channels.",
+      "intent": "comparing",
+      "pain_level": "moderate",
+      "icp_match_score": 0.6,
+      "authenticity_score": 0.85,
+      "actionability_score": 0.5,
+      "overall_signal_score": 50,
+      "ai_summary": "Entrepreneur comparing ad platforms, indicating they're actively spending on paid acquisition and need guidance on channel strategy.",
+      "recommended_action": "Could comment about how for pre-PMF startups, paid ads are often premature — need to validate channels with organic/scrappy experiments first. Light touch positioning."
+    },
+    {
+      "id": "sig_006",
+      "source": "reddit/r/microsaas",
+      "url": "https://www.reddit.com/r/microsaas/comments/1r23bve/looking_for_aipowered_seo_analysis_tool_that/",
+      "title": "Looking for AI-powered SEO analysis tool that suggests next actions based on my website data - or should I build a custom AI agent?",
+      "author": "unknown",
+      "posted_approx": "2026-02-11T22:00:00Z",
+      "content_summary": "Microsaas founder looking for an AI tool that analyzes their website data and suggests next SEO actions. Considering building their own AI agent. Shows technical founder who can build but wants growth guidance.",
+      "intent": "seeking_help",
+      "pain_level": "moderate",
+      "icp_match_score": 0.7,
+      "authenticity_score": 0.85,
+      "actionability_score": 0.65,
+      "overall_signal_score": 62,
+      "ai_summary": "Technical microsaas founder seeking AI-powered growth guidance for SEO — classic builder-not-marketer profile.",
+      "recommended_action": "Engage around the broader problem: SEO is just one channel. Growthmind can diagnose which channels actually matter for their stage and prescribe experiments across all growth levers, not just SEO."
+    },
+    {
+      "id": "sig_007",
+      "source": "reddit/r/smallbusinessuk",
+      "url": "https://www.reddit.com/r/smallbusinessuk/comments/1r1w0h6/how_do_i_get_started_with_online_advertising_with/",
+      "title": "How do I get started with online advertising with a small budget?",
+      "author": "unknown",
+      "posted_approx": "2026-02-11T19:00:00Z",
+      "content_summary": "Small business owner in UK asking how to start online advertising on a limited budget. Discussion around conversion rate optimization before ads. Budget-constrained founder seeking growth help.",
+      "intent": "seeking_help",
+      "pain_level": "moderate",
+      "icp_match_score": 0.5,
+      "authenticity_score": 0.9,
+      "actionability_score": 0.5,
+      "overall_signal_score": 48,
+      "ai_summary": "Budget-constrained small business owner looking for affordable online growth strategies.",
+      "recommended_action": "Lower priority — small business rather than SaaS/startup. Could be relevant if they're building a digital product."
+    }
+  ],
+  "high_value_signals": [
+    {
+      "id": "sig_001",
+      "url": "https://www.reddit.com/r/SaaS/comments/1r2f9ep/which_marketing_agency_is_best_for_saas_user/",
+      "overall_signal_score": 88,
+      "reason": "Direct ICP match: SaaS founder who burned money on ads, seeking growth help. Perfect Growthmind positioning opportunity."
+    },
+    {
+      "id": "sig_002",
+      "url": "https://www.reddit.com/r/Entrepreneur/comments/1r1z1ac/how_do_you_know_youre_iterating_vs_just_refusing/",
+      "overall_signal_score": 85,
+      "reason": "Founder stuck in growth limbo with a polished product — classic pre-PMF struggle. High emotional pain, very actionable."
+    }
+  ],
+  "pain_themes": [
+    {
+      "theme": "Wasted money on paid acquisition",
+      "frequency": 2,
+      "signal_ids": ["sig_001", "sig_005"],
+      "description": "Founders burning money on paid ads (Facebook, Google) without ROI, looking for alternatives or agency help."
+    },
+    {
+      "theme": "Growth plateau / stagnation",
+      "frequency": 1,
+      "signal_ids": ["sig_002"],
+      "description": "Founder with years invested in a product that won't grow despite improvements. Existential doubt about whether to continue."
+    },
+    {
+      "theme": "Technical founders seeking marketing guidance",
+      "frequency": 2,
+      "signal_ids": ["sig_006", "sig_003"],
+      "description": "Builders who can create products but don't know which growth channels to pursue or what tools to use."
+    },
+    {
+      "theme": "Channel confusion / tool overload",
+      "frequency": 3,
+      "signal_ids": ["sig_003", "sig_005", "sig_006"],
+      "description": "Founders overwhelmed by marketing tool and channel options, paralyzed by choice without a strategic framework."
+    }
+  ],
+  "summary": "Scan of 10 Reddit subreddits over the past 24h yielded 7 signals, 2 high-value. Today's signal volume was moderate — the SaaSpocalypse macro event (AI disrupting SaaS stocks) dominated Reddit SaaS discussion, somewhat drowning out individual founder pain posts. Top signal: a SaaS founder on r/SaaS who burned money on paid ads and is now seeking agency help (sig_001, score 88) — perfect Growthmind ICP match. Second: an r/Entrepreneur founder stuck for years with a polished product that won't grow (sig_002, score 85) — classic PMF limbo. Key pain themes: wasted ad spend, growth stagnation, and technical founders who can build but can't market. Recommended priority: engage sig_001 and sig_002 within 12 hours with value-first comments positioning Growthmind's diagnostic approach as an alternative to expensive agencies and aimless iteration.",
+  "notes": "API rate limiting (Brave Search free tier: 1 req/sec) constrained search volume. Ran 14 queries total. Many queries returned zero results for the 24h window — Reddit's daily volume of ICP-matching pain posts is naturally low. The SaaSpocalypse news event ($285B SaaS market wipeout on Feb 3) dominated SaaS-related search results. Consider upgrading Brave API plan for higher throughput in future scans."
+}

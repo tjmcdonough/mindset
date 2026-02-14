@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Growthmind — System Architecture v3.1</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+  :root {
+    --bg: #0a0b0f;
+    --bg-layer: #10121a;
+    --bg-card: #161924;
+    --border: #1e2235;
+    --border-hover: #2a3050;
+    --text: #c8cdd8;
+    --text-dim: #6b7394;
+    --text-bright: #ebeef5;
+    --accent-teal: #2dd4bf;
+    --accent-teal-dim: rgba(45, 212, 191, 0.08);
+    --accent-teal-glow: rgba(45, 212, 191, 0.25);
+    --accent-amber: #f59e0b;
+    --accent-amber-dim: rgba(245, 158, 11, 0.08);
+    --accent-violet: #8b5cf6;
+    --accent-violet-dim: rgba(139, 92, 246, 0.08);
+    --accent-rose: #f43f5e;
+    --accent-rose-dim: rgba(244, 63, 94, 0.08);
+    --accent-blue: #3b82f6;
+    --accent-blue-dim: rgba(59, 130, 246, 0.08);
+    --accent-emerald: #10b981;
+    --accent-emerald-dim: rgba(16, 185, 129, 0.08);
+    --accent-slate: #64748b;
+    --accent-slate-dim: rgba(100, 116, 139, 0.08);
+    --radius: 10px;
+    --radius-sm: 6px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Outfit', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .noise-overlay {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  }
+
+  .page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 32px 80px;
+  }
+
+  /* Header */
+  .header {
+    margin-bottom: 48px;
+    position: relative;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -24px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  }
+  .header-top {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-bright);
+    letter-spacing: -0.5px;
+  }
+  .header .version {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--accent-teal);
+    background: var(--accent-teal-dim);
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(45, 212, 191, 0.15);
+  }
+  .header .subtitle {
+    font-size: 15px;
+    color: var(--text-dim);
+    font-weight: 400;
+  }
+
+  /* Legend */
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 32px;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-dim);
+    padding: 5px 12px;
+    background: var(--bg-layer);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+    user-select: none;
+  }
+  .legend-item:hover {
+    border-color: var(--border-hover);
+    color: var(--text);
+  }
+  .legend-item.active {
+    color: var(--text-bright);
+    border-color: var(--border-hover);
+    background: var(--bg-card);
+  }
+  .legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+
+  /* SVG Canvas */
+  .diagram-canvas {
+    position: relative;
+    width: 100%;
+  }
+  .svg-connectors {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Layer */
+  .layer {
+    position: relative;
+    margin-bottom: 20px;
+    z-index: 2;
+  }
+  .layer-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    padding-left: 4px;
+  }
+  .layer-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+  .layer-line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+  .layer-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--text-dim);
+    padding: 2px 8px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+  }
+
+  .layer-content {
+    background: var(--bg-layer);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .layer-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+  }
+
+  .layer-content.foundation::before { background: linear-gradient(90deg, var(--accent-teal), var(--accent-teal-glow), transparent); }
+  .layer-content.core::before { background: linear-gradient(90deg, var(--accent-amber), rgba(245, 158, 11, 0.25), transparent); }
+  .layer-content.projection::before { background: linear-gradient(90deg, var(--accent-violet), rgba(139, 92, 246, 0.25), transparent); }
+  .layer-content.crosscut::before { background: linear-gradient(90deg, var(--accent-rose), rgba(244, 63, 94, 0.25), transparent); }
+  .layer-content.infra::before { background: linear-gradient(90deg, var(--accent-slate), rgba(100, 116, 139, 0.25), transparent); }
+
+  /* Module cards */
+  .modules-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .module-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 14px 16px;
+    min-width: 180px;
+    flex: 1;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .module-card:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  .module-card.selected {
+    z-index: 10;
+  }
+  .module-card.dimmed {
+    opacity: 0.25;
+    filter: grayscale(0.5);
+  }
+
+  .module-card .card-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+  }
+
+  .module-card .module-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-bright);
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .module-card .module-type {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 400;
+    padding: 1px 6px;
+    border-radius: 3px;
+    border: 1px solid;
+  }
+  .module-card .module-path {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-dim);
+    margin-bottom: 8px;
+  }
+  .module-card .module-desc {
+    font-size: 12px;
+    color: var(--text-dim);
+    line-height: 1.5;
+  }
+  .module-card .module-collection {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--text-dim);
+    background: rgba(255,255,255,0.03);
+    padding: 2px 6px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-top: 6px;
+  }
+
+  .module-card .module-deps {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .dep-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    border: 1px solid;
+  }
+  .dep-tag.cache { color: var(--accent-teal); border-color: rgba(45,212,191,0.2); background: var(--accent-teal-dim); }
+  .dep-tag.event { color: var(--accent-amber); border-color: rgba(245,158,11,0.2); background: var(--accent-amber-dim); }
+  .dep-tag.emits { color: var(--accent-violet); border-color: rgba(139,92,246,0.2); background: var(--accent-violet-dim); }
+
+  /* Foundation accent */
+  .layer-content.foundation .module-card .card-accent { background: var(--accent-teal); }
+  .layer-content.foundation .module-card.selected { border-color: var(--accent-teal); box-shadow: 0 0 20px var(--accent-teal-dim); }
+  .layer-content.foundation .module-card .module-type { color: var(--accent-teal); border-color: rgba(45,212,191,0.3); background: var(--accent-teal-dim); }
+
+  .layer-content.core .module-card .card-accent { background: var(--accent-amber); }
+  .layer-content.core .module-card.selected { border-color: var(--accent-amber); box-shadow: 0 0 20px var(--accent-amber-dim); }
+  .layer-content.core .module-card .module-type { color: var(--accent-amber); border-color: rgba(245,158,11,0.3); background: var(--accent-amber-dim); }
+
+  .layer-content.projection .module-card .card-accent { background: var(--accent-violet); }
+  .layer-content.projection .module-card.selected { border-color: var(--accent-violet); box-shadow: 0 0 20px var(--accent-violet-dim); }
+  .layer-content.projection .module-card .module-type { color: var(--accent-violet); border-color: rgba(139,92,246,0.3); background: var(--accent-violet-dim); }
+
+  .layer-content.crosscut .module-card .card-accent { background: var(--accent-rose); }
+  .layer-content.crosscut .module-card.selected { border-color: var(--accent-rose); box-shadow: 0 0 20px var(--accent-rose-dim); }
+  .layer-content.crosscut .module-card .module-type { color: var(--accent-rose); border-color: rgba(244,63,94,0.3); background: var(--accent-rose-dim); }
+
+  .layer-content.infra .module-card .card-accent { background: var(--accent-slate); }
+  .layer-content.infra .module-card.selected { border-color: var(--accent-slate); }
+  .layer-content.infra .module-card .module-type { color: var(--accent-slate); border-color: rgba(100,116,139,0.3); background: var(--accent-slate-dim); }
+
+  /* Ingestion bar */
+  .ingestion-bar {
+    background: var(--bg-layer);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+    position: relative;
+    overflow: hidden;
+  }
+  .ingestion-bar::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-blue), rgba(59,130,246,0.25), transparent);
+  }
+  .ingestion-bar .ing-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--accent-blue);
+    white-space: nowrap;
+  }
+  .ingestion-bar .ing-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .ingestion-bar .ing-item {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-dim);
+    padding: 3px 10px;
+    background: rgba(59,130,246,0.06);
+    border: 1px solid rgba(59,130,246,0.12);
+    border-radius: 4px;
+  }
+
+  /* Event bus bar */
+  .event-bus {
+    background: var(--bg-layer);
+    border: 1px dashed rgba(245, 158, 11, 0.25);
+    border-radius: var(--radius);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .event-bus .bus-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent-amber);
+    letter-spacing: 0.5px;
+  }
+  .event-bus .bus-desc {
+    font-size: 11px;
+    color: var(--text-dim);
+  }
+  .bus-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent-amber);
+    animation: busPulse 2s ease-in-out infinite;
+  }
+  @keyframes busPulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+  }
+
+  /* Flow arrows between layers */
+  .flow-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 0;
+    color: var(--text-dim);
+    font-size: 11px;
+    gap: 8px;
+  }
+  .flow-arrow svg {
+    opacity: 0.4;
+  }
+  .flow-arrow .flow-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--text-dim);
+    opacity: 0.6;
+  }
+
+  /* Detail panel */
+  .detail-panel {
+    position: fixed;
+    top: 0;
+    right: -460px;
+    width: 440px;
+    height: 100vh;
+    background: var(--bg-layer);
+    border-left: 1px solid var(--border);
+    z-index: 100;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    padding: 32px 28px;
+    box-shadow: -8px 0 40px rgba(0,0,0,0.4);
+  }
+  .detail-panel.open { right: 0; }
+  .detail-panel .panel-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: all 0.2s;
+  }
+  .detail-panel .panel-close:hover { border-color: var(--text-dim); color: var(--text); }
+  .detail-panel h2 { font-size: 20px; font-weight: 700; color: var(--text-bright); margin-bottom: 4px; }
+  .detail-panel .panel-path { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-dim); margin-bottom: 16px; }
+  .detail-panel .panel-section { margin-bottom: 20px; }
+  .detail-panel .panel-section h3 {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 8px;
+  }
+  .detail-panel .panel-section p {
+    font-size: 13px;
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .detail-panel .event-list {
+    list-style: none;
+  }
+  .detail-panel .event-list li {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--text);
+    padding: 5px 10px;
+    background: rgba(255,255,255,0.02);
+    border-radius: 4px;
+    margin-bottom: 4px;
+    border-left: 2px solid;
+  }
+  .detail-panel .event-list li.emit { border-color: var(--accent-violet); }
+  .detail-panel .event-list li.subscribe { border-color: var(--accent-amber); }
+  .detail-panel .event-list li.cache-read { border-color: var(--accent-teal); }
+
+  /* Platform/Feature collapsed */
+  .support-section {
+    margin-top: 32px;
+  }
+  .support-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .support-box {
+    background: var(--bg-layer);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .support-box::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+  }
+  .support-box.platform::before { background: linear-gradient(90deg, var(--accent-blue), transparent); }
+  .support-box.feature::before { background: linear-gradient(90deg, var(--accent-emerald), transparent); }
+  .support-box h3 {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .support-box.platform h3 { color: var(--accent-blue); }
+  .support-box.feature h3 { color: var(--accent-emerald); }
+  .support-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .support-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-dim);
+    padding: 3px 10px;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+  }
+
+  /* Rules section */
+  .rules-section {
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+  }
+  .rules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+  }
+  .rule-card {
+    background: var(--bg-layer);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 14px 16px;
+  }
+  .rule-card .rule-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--accent-teal);
+    margin-bottom: 4px;
+  }
+  .rule-card .rule-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-bright);
+    margin-bottom: 4px;
+  }
+  .rule-card .rule-desc {
+    font-size: 12px;
+    color: var(--text-dim);
+    line-height: 1.5;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .modules-grid { flex-direction: column; }
+    .support-grid { grid-template-columns: 1fr; }
+    .detail-panel { width: 100%; right: -100%; }
+    .rules-grid { grid-template-columns: 1fr; }
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--border-hover); }
+</style>
+</head>
+<body>
+<div class="noise-overlay"></div>
+
+<div class="page">
+  <!-- Header -->
+  <div class="header">
+    <div class="header-top">
+      <h1>Growthmind</h1>
+      <span class="version">v3.1</span>
+    </div>
+    <div class="subtitle">System Architecture — Module Boundaries, Data Ownership & Event Flows</div>
+  </div>
+
+  <!-- Legend -->
+  <div class="legend" id="legend">
+    <div class="legend-item active" data-filter="all">
+      <span class="legend-dot" style="background: var(--text-dim)"></span>All Layers
+    </div>
+    <div class="legend-item" data-filter="foundation">
+      <span class="legend-dot" style="background: var(--accent-teal)"></span>Foundation
+    </div>
+    <div class="legend-item" data-filter="core">
+      <span class="legend-dot" style="background: var(--accent-amber)"></span>Core
+    </div>
+    <div class="legend-item" data-filter="projection">
+      <span class="legend-dot" style="background: var(--accent-violet)"></span>Projection
+    </div>
+    <div class="legend-item" data-filter="crosscut">
+      <span class="legend-dot" style="background: var(--accent-rose)"></span>Cross-Cutting
+    </div>
+    <div class="legend-item" data-filter="cache">
+      <span class="legend-dot" style="background: var(--accent-teal)"></span>Cache Reads
+    </div>
+    <div class="legend-item" data-filter="events">
+      <span class="legend-dot" style="background: var(--accent-amber)"></span>Event Flows
+    </div>
+  </div>
+
+  <!-- Diagram -->
+  <div class="diagram-canvas" id="diagramCanvas">
+
+    <!-- Ingestion Layer -->
+    <div class="ingestion-bar">
+      <span class="ing-label">Ingestion</span>
+      <div class="ing-items">
+        <span class="ing-item">API Gateway</span>
+        <span class="ing-item">Onboarding Flow</span>
+        <span class="ing-item">User Actions</span>
+        <span class="ing-item">Webhooks</span>
+        <span class="ing-item">Cron</span>
+      </div>
+    </div>
+
+    <!-- Flow arrow -->
+    <div class="flow-arrow">
+      <svg width="16" height="20" viewBox="0 0 16 20"><path d="M8 0v16M2 11l6 6 6-6" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+      <span class="flow-text">emit events</span>
+    </div>
+
+    <!-- Event Bus -->
+    <div class="event-bus">
+      <div class="bus-dot"></div>
+      <span class="bus-label">INNGEST EVENT BUS</span>
+      <span class="bus-desc">Idempotent · At-least-once · Fan-out</span>
+      <div class="bus-dot" style="animation-delay: 0.5s"></div>
+    </div>
+
+    <!-- Flow arrow -->
+    <div class="flow-arrow">
+      <svg width="16" height="20" viewBox="0 0 16 20"><path d="M8 0v16M2 11l6 6 6-6" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+      <span class="flow-text">route to handlers</span>
+    </div>
+
+    <!-- Foundation Layer -->
+    <div class="layer" data-layer="foundation">
+      <div class="layer-header">
+        <span class="layer-label">Foundation Layer</span>
+        <span class="layer-line"></span>
+        <span class="layer-badge">Read by All · Written by Few</span>
+      </div>
+      <div class="layer-content foundation">
+        <div class="modules-grid">
+
+          <div class="module-card" data-module="seed" onclick="showDetail('seed')">
+            <div class="card-accent"></div>
+            <div class="module-name">
+              Company Seed
+              <span class="module-type">SEED</span>
+              <span class="module-type" style="color:var(--accent-emerald);border-color:rgba(16,185,129,0.3);background:rgba(16,185,129,0.08);">EVOLVING</span>
+            </div>
+            <div class="module-path">modules/company-seed/</div>
+            <div class="module-desc">Identity + customer intelligence — business idea, stage, founder, ICP, pain points, plus persona, problem, validation, traction, monetization intelligence. Enriched progressively.</div>
+            <span class="module-collection">company_profiles</span>
+            <div class="module-deps">
+              <span class="dep-tag emits">emits: seed_created</span>
+              <span class="dep-tag emits">emits: seed_updated</span>
+              <span class="dep-tag emits">emits: customer_intel_enriched</span>
+              <span class="dep-tag emits">emits: validation_milestone</span>
+              <span class="dep-tag event">sub: experiment.completed</span>
+              <span class="dep-tag event">sub: audience.signal</span>
+              <span class="dep-tag event">sub: checkpoint.answered</span>
+            </div>
+          </div>
+
+          <div class="module-card" data-module="intel" onclick="showDetail('intel')">
+            <div class="card-accent"></div>
+            <div class="module-name">
+              Market Intelligence
+              <span class="module-type">AI AGENT</span>
+            </div>
+            <div class="module-path">modules/market-intel/</div>
+            <div class="module-desc">External research — competitors, frustration themes, market signals. Reads Seed.</div>
+            <span class="module-collection">market_research</span>
+            <div class="module-deps">
+              <span class="dep-tag cache">reads: Seed</span>
+              <span class="dep-tag emits">emits: research_completed</span>
+            </div>
+          </div>
+
+          <div class="module-card" data-module="voice" onclick="showDetail('voice')">
+            <div class="card-accent"></div>
+            <div class="module-name">
+              Growth Voice
+              <span class="module-type">EVOLVING</span>
+            </div>
+            <div class="module-path">modules/growth-voice/</div>
+            <div class="module-desc">Living brand identity — voice, messaging, ICP, product. Evolves from evidence.</div>
+            <span class="module-collection">growth_voices</span>
+            <div class="module-deps">
+              <span class="dep-tag cache">reads: Seed, Intel</span>
+              <span class="dep-tag event">sub: experiment.completed</span>
+              <span class="dep-tag event">sub: audience.signal</span>
+              <span class="dep-tag emits">emits: voice.evolved</span>
+            </div>
+          </div>
+
+          <div class="module-card" data-module="strategy" onclick="showDetail('strategy')">
+            <div class="card-accent"></div>
+            <div class="module-name">
+              Strategic Assessment
+              <span class="module-type">PROJECTION ⚡</span>
+            </div>
+            <div class="module-path">modules/strategy/</div>
+            <div class="module-desc">Derived — SWOT, GO/NO_GO, positioning, roadmap. Rebuildable from events. Core never queries.</div>
+            <span class="module-collection">strategic_assessments</span>
+            <div class="module-deps">
+              <span class="dep-tag event">sub: seed_created</span>
+              <span class="dep-tag event">sub: research_completed</span>
+              <span class="dep-tag event">sub: validation_milestone</span>
+              <span class="dep-tag event">sub: experiment.completed</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Flow arrow -->
+    <div class="flow-arrow">
+      <svg width="16" height="20" viewBox="0 0 16 20"><path d="M8 0v16M2 11l6 6 6-6" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+      <span class="flow-text">core reads Foundation via cache · zero runtime queries</span>
+    </div>
+
+    <!-- Core Layer -->
+    <div class="layer" data-layer="core">
+      <div class="layer-header">
+        <span class="layer-label">Core Modules</span>
+        <span class="layer-line"></span>
+        <span class="layer-badge">Own Data · Own Agent · Own Events · Zero Peer Reads</span>
+      </div>
+      <div class="layer-content core">
+        <div class="modules-grid">
+
+          <div class="module-card" data-module="experiments" onclick="showDetail('experiments')">
+            <div class="card-accent"></div>
+            <div class="module-name">
+              Growth Experiments
+              <span class="module-type">AI AGENT</span>
+            </div>
+            <div class="module-path">modules/growth-experiments/</div>
+            <div class="module-desc">Full experiment lifecycle — hypothesis → execution → verdict. Consolidated from 3 modules.</div>
+            <span class="module-collection">growth_experiments</span>
+            <div class="module-deps">
+              <span class="dep-tag cache">reads: Seed, Intel, Voice</span>
+              <span class="dep-tag event">sub: audience.signal</span>
+              <span class="dep-tag emits">emits: experiment.completed</span>
+            </div>
+          </div>
+
+          <div class="module-card" data-module="mirror" onclick="showDetail('mirror')">
+            <div class="card-accent"></div>
+            <div class="module-name">
+              Founder Mirror
+              <span class="module-type">AI AGENT</span>
+            </div>
+            <div class="module-path">modules/mirror/</div>
+            <div class="module-desc">Provocative insights — challenges assumptions, surfaces uncomfortable truths.</div>
+            <span class="module-collection">insights</span>
+            <div class="module-deps">
+              <span class="dep-tag cache">reads: Seed, Voice</span>
+              <span class="dep-tag event">sub: experiment.completed</span>
+              <span class="dep-tag event">sub: audience.signal</span>
+              <span class="dep-tag emits">emits: insight.surfaced</span>
+            </div>
+          </div>
+
+          <div class="module-card" data-module="audience" onclick="showDetail('audience')">
+            <div class="card-accent"></div>
+            <div class="module-name">
+              Audience Pulse
+              <span class="module-type">HYBRID</span>
+            </div>
+            <div class="module-path">modules/audience/</div>
+            <div class="module-desc">Live audience signals — external scan, channel health, pain-level detection. Purest leaf module.</div>
+            <span class="module-collection">signals, channels</span>
+            <div class="module-deps">
+              <span class="dep-tag cache">reads: Seed, Intel</span>
+              <span class="dep-tag emits">emits: audience.scan_completed</span>
+              <span class="dep-tag emits">emits: audience.high_value_signal</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Flow arrow -->
+    <div class="flow-arrow">
+      <svg width="16" height="20" viewBox="0 0 16 20"><path d="M8 0v16M2 11l6 6 6-6" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+      <span class="flow-text">emit domain events</span>
+    </div>
+
+    <!-- Projection + Cross-cutting Layer -->
+    <div class="layer" data-layer="projection">
+      <div class="layer-header">
+        <span class="layer-label">Projection + Cross-Cutting</span>
+        <span class="layer-line"></span>
+        <span class="layer-badge">Subscribe · Materialise · Never queried by Core</span>
+      </div>
+      <div class="layer-content projection">
+        <div class="modules-grid">
+
+          <div class="module-card" data-module="pulse" onclick="showDetail('pulse')">
+            <div class="card-accent"></div>
+            <div class="module-name">
+              Growth Pulse ⚡
+              <span class="module-type">PROJECTION</span>
+            </div>
+            <div class="module-path">modules/growth-pulse/</div>
+            <div class="module-desc">Three-panel aha moment dashboard — what's working, what needs work, what to do next. One glance.</div>
+            <div class="module-deps">
+              <span class="dep-tag event">sub: experiment.*, audience.*, strategy.*, company.customer_intel_enriched, company.validation_milestone</span>
+            </div>
+          </div>
+
+          <div class="module-card" data-module="strategist" onclick="showDetail('strategist')">
+            <div class="card-accent"></div>
+            <div class="module-name">
+              Strategist Brief ⚡
+              <span class="module-type">AI PROJECTION</span>
+            </div>
+            <div class="module-path">modules/strategist/</div>
+            <div class="module-desc">Weekly AI advisor memo — WHERE to focus and WHY.</div>
+            <div class="module-deps">
+              <span class="dep-tag event">sub: experiment.*, insight.*, audience.*, voice.*, strategy.*</span>
+            </div>
+          </div>
+
+          <div class="module-card" data-module="activity" onclick="showDetail('activity')">
+            <div class="card-accent"></div>
+            <div class="module-name">
+              Activity Feed ⚡
+              <span class="module-type">PROJECTION</span>
+            </div>
+            <div class="module-path">modules/activity/</div>
+            <div class="module-desc">Timeline of system actions. Materialised from all domain events.</div>
+            <div class="module-deps">
+              <span class="dep-tag event">sub: all significant events</span>
+            </div>
+          </div>
+
+          <div class="module-card" style="border-color: rgba(244,63,94,0.2);" data-module="interrogation" onclick="showDetail('interrogation')">
+            <div class="card-accent" style="background: var(--accent-rose);"></div>
+            <div class="module-name">
+              Interrogation ✦
+              <span class="module-type" style="color:var(--accent-rose);border-color:rgba(244,63,94,0.3);background:var(--accent-rose-dim);">CROSS-CUT</span>
+            </div>
+            <div class="module-path">modules/interrogation/</div>
+            <div class="module-desc">Hard questions. Side-channel — killable with zero impact on core.</div>
+            <div class="module-deps">
+              <span class="dep-tag event">sub: experiment.*, audience.*, voice.*, strategy.*, market.*</span>
+              <span class="dep-tag emits">emits: checkpoint.answered</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Flow arrow -->
+    <div class="flow-arrow">
+      <svg width="16" height="20" viewBox="0 0 16 20"><path d="M8 0v16M2 11l6 6 6-6" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+      <span class="flow-text">persist to</span>
+    </div>
+
+    <!-- Infrastructure Layer -->
+    <div class="layer" data-layer="infra">
+      <div class="layer-header">
+        <span class="layer-label">Infrastructure</span>
+        <span class="layer-line"></span>
+        <span class="layer-badge">Hard Dependencies</span>
+      </div>
+      <div class="layer-content infra">
+        <div class="modules-grid">
+          <div class="module-card" style="min-width:130px;">
+            <div class="card-accent"></div>
+            <div class="module-name">MongoDB<span class="module-type">CRITICAL</span></div>
+            <div class="module-desc">Primary data store. Mongoose v8.</div>
+          </div>
+          <div class="module-card" style="min-width:130px;">
+            <div class="card-accent"></div>
+            <div class="module-name">Redis / Upstash<span class="module-type">CACHE</span></div>
+            <div class="module-desc">Foundation cache. Per-tenant. Invalidate on change.</div>
+          </div>
+          <div class="module-card" style="min-width:130px;">
+            <div class="card-accent"></div>
+            <div class="module-name">Vector Store<span class="module-type">SEARCH</span></div>
+            <div class="module-desc">Semantic search for signals and content.</div>
+          </div>
+          <div class="module-card" style="min-width:130px;">
+            <div class="card-accent"></div>
+            <div class="module-name">LLM Gateway<span class="module-type">AI</span></div>
+            <div class="module-desc">Tiered routing — Haiku / Sonnet / Opus.</div>
+          </div>
+          <div class="module-card" style="min-width:130px;">
+            <div class="card-accent"></div>
+            <div class="module-name">Inngest Queue<span class="module-type">CRITICAL</span></div>
+            <div class="module-desc">Event bus backbone. DLQ + auto-retry.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /diagram-canvas -->
+
+  <!-- Support Categories -->
+  <div class="support-section">
+    <div class="layer-header">
+      <span class="layer-label">Support Categories</span>
+      <span class="layer-line"></span>
+      <span class="layer-badge">Outside Layered Hierarchy</span>
+    </div>
+    <div class="support-grid">
+      <div class="support-box platform">
+        <h3>Platform Modules</h3>
+        <div class="support-tags">
+          <span class="support-tag">Auth</span>
+          <span class="support-tag">OAuth2</span>
+          <span class="support-tag">Settings</span>
+          <span class="support-tag">Subscriptions</span>
+          <span class="support-tag">Push Notifications</span>
+          <span class="support-tag">Integrations</span>
+          <span class="support-tag">Internal Analytics</span>
+        </div>
+      </div>
+      <div class="support-box feature">
+        <h3>Feature Modules</h3>
+        <div class="support-tags">
+          <span class="support-tag">Tasks</span>
+          <span class="support-tag">Publishing</span>
+          <span class="support-tag">Brain Dump</span>
+          <span class="support-tag">Feedback</span>
+          <span class="support-tag">Specialists</span>
+          <span class="support-tag">Assistant</span>
+          <span class="support-tag">AI Prompts</span>
+          <span class="support-tag">Onboarding</span>
+          <span class="support-tag">Review</span>
+          <span class="support-tag">YC Assessment</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Architecture Rules -->
+  <div class="rules-section">
+    <div class="layer-header">
+      <span class="layer-label">Non-Negotiable Rules</span>
+      <span class="layer-line"></span>
+    </div>
+    <div class="rules-grid">
+      <div class="rule-card">
+        <div class="rule-num">RULE 1</div>
+        <div class="rule-title">No Cross-Module Writes</div>
+        <div class="rule-desc">Each module writes only to its own collection. Changes propagate via events.</div>
+      </div>
+      <div class="rule-card">
+        <div class="rule-num">RULE 2</div>
+        <div class="rule-title">Zero Peer Reads</div>
+        <div class="rule-desc">Core modules read Foundation cache only. Cross-module context comes via event accumulation.</div>
+      </div>
+      <div class="rule-card">
+        <div class="rule-num">RULE 3</div>
+        <div class="rule-title">Foundation Down, Events Up</div>
+        <div class="rule-desc">Synchronous reads flow downward. Events decouple the upward flow. No circular call chains.</div>
+      </div>
+      <div class="rule-card">
+        <div class="rule-num">RULE 4</div>
+        <div class="rule-title">Domain-Scoped Payloads</div>
+        <div class="rule-desc">Events carry the producer's domain data. Not IDs only. Not the whole world.</div>
+      </div>
+      <div class="rule-card">
+        <div class="rule-num">RULE 5</div>
+        <div class="rule-title">Projections Never Queried by Core</div>
+        <div class="rule-desc">Front-end reads projections. Core modules never import them.</div>
+      </div>
+      <div class="rule-card">
+        <div class="rule-num">RULE 6</div>
+        <div class="rule-title">Module = Folder Boundary</div>
+        <div class="rule-desc">Only index.ts exports are importable. Everything else is internal.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Detail Panel -->
+<div class="detail-panel" id="detailPanel">
+  <button class="panel-close" onclick="closeDetail()">✕</button>
+  <div id="panelContent"></div>
+</div>
+
+<script>
+const moduleData = {
+  seed: {
+    name: 'Company Seed',
+    path: 'modules/company-seed/',
+    layer: 'Foundation (Seed + Evolving)',
+    collection: 'company_profiles',
+    agent: 'CustomerIntelEnrichment (AI — multi-source enrichment + conversational extraction)',
+    description: 'The unified identity root — captures both who you are (static company identity) and who your customers are (structured customer intelligence). Identity fields: business idea, stage, founder summary, primary ICP, pain points, pivot indicators. Customer Intelligence: PersonaIntelligence (role, company size, industry, geo), ProblemIntelligence (pain point, trigger event, workaround, urgency), ValidationIntelligence (active users, aha moment, qualitative feedback), TractionIntelligence (acquisition source, referrals, feature requests), MonetizationIntelligence (willingness to pay, price point, competitors, why chose/passed). Each customer intel field is tagged with DataPointMeta tracking enrichment tier (Tier 1: public sources, Tier 2: connected tools, Tier 3: founder-only).',
+    cacheReads: [],
+    subscribes: ['experiment.completed (validation/traction insights)', 'audience.high_value_signal (customer intel data points)', 'interrogation.checkpoint_answered (Tier 3 founder data)'],
+    emits: ['company.seed_created', 'company.seed_updated', 'company.customer_intel_enriched', 'company.validation_milestone'],
+    cache: 'Redis/Upstash per-tenant. TTL: indefinite for identity; event-driven invalidation for customer intel. Invalidated on seed_updated or customer_intel_enriched.',
+    mutation: 'Rarely for identity (onboarding, pivots). Progressive for customer intelligence (enrichment events, integration syncs, founder input).'
+  },
+  intel: {
+    name: 'Market Intelligence',
+    path: 'modules/market-intel/',
+    layer: 'Foundation',
+    collection: 'market_research, competitors, user_signals',
+    agent: 'MarketResearchAgent (AI — external research)',
+    description: 'External market context. Domain analysis, 8–15 search results per scan, frustration themes, competitor landscape, market signals. Data decays over time with freshness scoring.',
+    cacheReads: ['Company Seed'],
+    subscribes: [],
+    emits: ['market.research_completed', 'market.competitor_updated', 'market.signal_detected'],
+    cache: 'Redis/Upstash per-tenant. TTL: 7 days. Invalidated on research_completed.',
+    mutation: 'Weekly/monthly refresh cadence'
+  },
+  voice: {
+    name: 'Growth Voice',
+    path: 'modules/growth-voice/',
+    layer: 'Foundation (Evolving)',
+    collection: 'growth_voices (one per org, versioned)',
+    agent: 'GrowthVoiceAgent (AI — evolves identity from evidence)',
+    description: 'The living brand identity. Contains Brand (voice, personality, tone rules, forbidden patterns), Messaging (one-liner, elevator pitch, value props), ICP (personas, facets, anti-persona), and Product (features, JTBD, pricing, proof points). Evolves based on validated experiments, audience resonance, and founder voice preferences.',
+    cacheReads: ['Company Seed', 'Market Intel'],
+    subscribes: ['experiment.completed (messaging-related)', 'audience.high_value_signal', 'interrogation.checkpoint_answered (voice-related)'],
+    emits: ['growth_voice.evolved', 'growth_voice.manual_update'],
+    cache: 'Redis/Upstash per-tenant. TTL: indefinite. Invalidated on evolved or manual_update.',
+    mutation: 'On evidence — experiments validate messaging, audience signals shift ICP'
+  },
+  strategy: {
+    name: 'Strategic Assessment',
+    path: 'modules/strategy/',
+    layer: 'Foundation (Projection)',
+    collection: 'strategic_assessments (materialised)',
+    agent: 'StrategyAssessmentAgent (AI — rebuilds on input change)',
+    description: 'Derived projection — not source of truth. Demand scorecard (6-dimension), SWOT, GO/NO_GO verdict, positioning, channels, 30-day roadmap, risk flags. Core modules NEVER query this. It serves the front-end and projection layer only.',
+    cacheReads: [],
+    subscribes: ['company.seed_created', 'market.research_completed', 'company.validation_milestone', 'experiment.completed'],
+    emits: ['strategy.assessment_updated'],
+    cache: 'Redis/Upstash. TTL: 1 day. Debounced by 5min.',
+    mutation: 'On Foundation or experiment changes (debounced)'
+  },
+  experiments: {
+    name: 'Growth Experiments',
+    path: 'modules/growth-experiments/',
+    layer: 'Core',
+    collection: 'growth_experiments',
+    agent: 'GrowthExperimentAgent (AI)',
+    description: 'Full experiment lifecycle: suggested → accepted → running → completed/invalidated/dismissed. AI generates hypothesis, prepared assets, success thresholds. Founder executes and reports results. Consolidates the former hypotheses, execution, and campaigns modules.',
+    cacheReads: ['Company Seed', 'Market Intel', 'Growth Voice'],
+    subscribes: ['audience.high_value_signal (accumulated into generation_context)'],
+    emits: ['experiment.result_reported', 'experiment.completed', 'experiment.accepted', 'experiment.dismissed'],
+    cache: 'N/A — reads Foundation from cache, accumulates audience context locally.',
+    mutation: 'Weekly batch generation + user-reported results'
+  },
+  mirror: {
+    name: 'Founder Mirror',
+    path: 'modules/mirror/',
+    layer: 'Core',
+    collection: 'insights',
+    agent: 'InsightEvaluatorAgent (AI)',
+    description: 'Provocative insights and uncomfortable truths that challenge founder assumptions. Subscribes to experiment verdicts and audience patterns, accumulates context locally, evaluates whether an insight is warranted. The "hard look in the mirror."',
+    cacheReads: ['Company Seed', 'Growth Voice'],
+    subscribes: ['experiment.completed (verdicts)', 'audience.high_value_signal (patterns)', 'interrogation.checkpoint_answered (founder signals)'],
+    emits: ['insight.surfaced', 'insight.responded'],
+    cache: 'N/A — accumulates experiment/audience context in own storage.',
+    mutation: 'Triggered by experiment completions and audience signals'
+  },
+  audience: {
+    name: 'Audience Pulse',
+    path: 'modules/audience/',
+    layer: 'Core (Leaf)',
+    collection: 'signals, channels',
+    agent: 'AudienceScanAgent (Hybrid — AI + external APIs)',
+    description: 'Live audience signals from external platforms. Channel health monitoring. Pain-level detection. The purest core module — reads Foundation, scans externally, emits signals. Zero coupling to any other core module. No event subscriptions from core.',
+    cacheReads: ['Company Seed', 'Market Intel'],
+    subscribes: [],
+    emits: ['audience.scan_completed', 'audience.high_value_signal'],
+    cache: 'N/A — truly independent leaf module.',
+    mutation: 'Periodic external scans (cron-driven)'
+  },
+  pulse: {
+    name: 'Growth Pulse',
+    path: 'modules/growth-pulse/',
+    layer: 'Projection',
+    collection: 'growth_pulses (one per org, materialised)',
+    agent: 'GrowthPulseMapper (Deterministic + AI summary)',
+    description: 'Three-panel aha moment dashboard. ✅ What\'s Working: validated experiments, strong audience signals, confirmed willingness-to-pay, returning users. ⚠️ What Needs Work: weak validation signals, untested assumptions, gaps in customer intelligence (powered by DataPointMeta enrichment tracking), red/yellow flags. 🎯 What To Do Next: priority experiments, interrogation questions to answer, integrations to connect, quick wins. Missing knowledge becomes actionable — "You haven\'t validated willingness-to-pay yet" → "Connect your Stripe account" or "Run this pricing experiment."',
+    cacheReads: [],
+    subscribes: ['experiment.completed', 'audience.*', 'strategy.assessment_updated', 'company.customer_intel_enriched', 'company.validation_milestone'],
+    emits: [],
+    cache: 'Debounce: 5s.',
+    mutation: 'On each subscribed event — slice update + AI summary refresh on milestones'
+  },
+  strategist: {
+    name: 'Strategist Brief',
+    path: 'modules/strategist/',
+    layer: 'Projection',
+    collection: 'strategist_briefings (one per generation)',
+    agent: 'StrategistBriefingAgent (AI)',
+    description: 'Weekly AI advisor memo — WHERE to focus and WHY. Subscribes to all major domain events.',
+    cacheReads: [],
+    subscribes: ['experiment.*', 'insight.*', 'audience.*', 'growth_voice.*', 'strategy.*'],
+    emits: [],
+    cache: 'Debounce: 5min.',
+    mutation: 'Weekly generation or on significant events'
+  },
+  activity: {
+    name: 'Activity Feed',
+    path: 'modules/activity/',
+    layer: 'Projection',
+    collection: 'activity_events',
+    agent: 'None — deterministic append',
+    description: 'Timeline of system actions. Materialised from all significant domain events. Reclassified as projection — it never owns source data.',
+    cacheReads: [],
+    subscribes: ['All significant domain events'],
+    emits: [],
+    cache: 'N/A — append-only timeline.',
+    mutation: 'On every significant event'
+  },
+  interrogation: {
+    name: 'Interrogation',
+    path: 'modules/interrogation/',
+    layer: 'Cross-Cutting',
+    collection: 'checkpoints',
+    agent: 'HardQuestionGenAgent (AI)',
+    description: 'Hard questions that challenge the founder. Side-channel — fully killable. Remove it and zero impact on core. Reads domain events, decides if a question is warranted. checkpoint.answered feeds Growth Voice evolution and Founder Mirror signals.',
+    cacheReads: [],
+    subscribes: ['experiment.*', 'audience.*', 'growth_voice.evolved', 'strategy.assessment_updated', 'market.research_completed'],
+    emits: ['checkpoint.answered'],
+    cache: 'N/A',
+    mutation: 'Triggered by domain events'
+  }
+};
+
+function showDetail(moduleId) {
+  const d = moduleData[moduleId];
+  if (!d) return;
+
+  const panel = document.getElementById('detailPanel');
+  const content = document.getElementById('panelContent');
+
+  let html = `<h2>${d.name}</h2>`;
+  html += `<div class="panel-path">${d.path}</div>`;
+
+  html += `<div class="panel-section"><h3>Layer</h3><p>${d.layer}</p></div>`;
+  html += `<div class="panel-section"><h3>Description</h3><p>${d.description}</p></div>`;
+  html += `<div class="panel-section"><h3>Agent</h3><p style="font-family:'JetBrains Mono',monospace;font-size:12px;">${d.agent}</p></div>`;
+  html += `<div class="panel-section"><h3>Collection</h3><p style="font-family:'JetBrains Mono',monospace;font-size:12px;">${d.collection}</p></div>`;
+
+  if (d.cacheReads.length) {
+    html += `<div class="panel-section"><h3>Foundation Cache Reads</h3><ul class="event-list">`;
+    d.cacheReads.forEach(r => html += `<li class="cache-read">${r}</li>`);
+    html += `</ul></div>`;
+  }
+
+  if (d.subscribes.length) {
+    html += `<div class="panel-section"><h3>Subscribes To</h3><ul class="event-list">`;
+    d.subscribes.forEach(s => html += `<li class="subscribe">${s}</li>`);
+    html += `</ul></div>`;
+  }
+
+  if (d.emits.length) {
+    html += `<div class="panel-section"><h3>Events Emitted</h3><ul class="event-list">`;
+    d.emits.forEach(e => html += `<li class="emit">${e}</li>`);
+    html += `</ul></div>`;
+  }
+
+  html += `<div class="panel-section"><h3>Cache Strategy</h3><p style="font-size:12px;">${d.cache}</p></div>`;
+  html += `<div class="panel-section"><h3>Mutation Rate</h3><p style="font-size:12px;">${d.mutation}</p></div>`;
+
+  content.innerHTML = html;
+  panel.classList.add('open');
+
+  // Highlight selected card
+  document.querySelectorAll('.module-card').forEach(c => c.classList.remove('selected'));
+  const card = document.querySelector(`[data-module="${moduleId}"]`);
+  if (card) card.classList.add('selected');
+}
+
+function closeDetail() {
+  document.getElementById('detailPanel').classList.remove('open');
+  document.querySelectorAll('.module-card').forEach(c => c.classList.remove('selected'));
+}
+
+// Legend filtering
+document.getElementById('legend').addEventListener('click', (e) => {
+  const item = e.target.closest('.legend-item');
+  if (!item) return;
+  const filter = item.dataset.filter;
+
+  document.querySelectorAll('.legend-item').forEach(l => l.classList.remove('active'));
+  item.classList.add('active');
+
+  const allCards = document.querySelectorAll('.module-card');
+  const allLayers = document.querySelectorAll('.layer');
+
+  if (filter === 'all') {
+    allCards.forEach(c => c.classList.remove('dimmed'));
+    allLayers.forEach(l => l.style.opacity = '1');
+    return;
+  }
+
+  if (filter === 'cache') {
+    allCards.forEach(c => {
+      const hasCacheTag = c.querySelector('.dep-tag.cache');
+      c.classList.toggle('dimmed', !hasCacheTag);
+    });
+    allLayers.forEach(l => l.style.opacity = '1');
+    return;
+  }
+
+  if (filter === 'events') {
+    allCards.forEach(c => {
+      const hasEventTag = c.querySelector('.dep-tag.event') || c.querySelector('.dep-tag.emits');
+      c.classList.toggle('dimmed', !hasEventTag);
+    });
+    allLayers.forEach(l => l.style.opacity = '1');
+    return;
+  }
+
+  allLayers.forEach(l => {
+    const layerType = l.dataset.layer;
+    if (layerType === filter || filter === 'crosscut' && layerType === 'projection') {
+      l.style.opacity = '1';
+    } else {
+      l.style.opacity = '0.3';
+    }
+  });
+
+  allCards.forEach(c => c.classList.remove('dimmed'));
+});
+
+// Close panel on Escape
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeDetail();
+});
+
+// Close panel on click outside
+document.addEventListener('click', (e) => {
+  const panel = document.getElementById('detailPanel');
+  if (panel.classList.contains('open') && !panel.contains(e.target) && !e.target.closest('.module-card')) {
+    closeDetail();
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+{
+  "org_id": "growthmind_001",
+  "last_updated": "2026-02-12T20:44:00Z",
+  "overall_stage": "validation",
+  "confidence_score": 68,
+  "confidence_delta": "+36 (from 32)",
+  "interrogation_impact": "8 founder-confirmed fields replaced AI guesses. Stage, headcount, funding, tech_stack, active_users, WTP, social presence, and founded_date now high-confidence. Remaining gaps are all market-facing (require real users to fill).",
+  "working": {
+    "items": [
+      {
+        "category": "positioning",
+        "title": "Clear, differentiated market position",
+        "detail": "No direct competitor combines stage diagnosis + interrogation + weekly experiment loops at $20-200/mo. 7 competitors profiled, none match this specific bundle.",
+        "evidence": "Market intelligence scan of 7 competitors; Reddit frustration themes validate the gap",
+        "confidence": "medium"
+      },
+      {
+        "category": "positioning",
+        "title": "Problem urgency is real (hair-on-fire)",
+        "detail": "Target founders have acute pain around growth strategy. Founder himself is patient zero — building the tool because he couldn't find it.",
+        "evidence": "Reddit sentiment analysis + founder confirmation: 'I do not know growth. That is why I am building it'",
+        "confidence": "high"
+      },
+      {
+        "category": "messaging",
+        "title": "Brand voice and persona are defined",
+        "detail": "Veteran Operator archetype, Alex the Builder persona, 4 value prop pillars, anti-persona defined.",
+        "evidence": "Growth Voice outputs completed",
+        "confidence": "medium"
+      },
+      {
+        "category": "positioning",
+        "title": "ICP and pain points are sharp",
+        "detail": "Primary ICP defined with high confidence. Pain points mapped from website and founder's own experience.",
+        "evidence": "Company Seed fields confirmed by founder",
+        "confidence": "high"
+      },
+      {
+        "category": "product",
+        "title": "Production-grade tech stack",
+        "detail": "Next.js 16, React 19, MongoDB/Mongoose 8, Inngest, Vercel AI SDK, Stripe, PropelAuth — this isn't a prototype, it's a real product with auth, payments, and event-driven architecture already wired.",
+        "evidence": "package.json reviewed; 13 production dependencies confirmed",
+        "confidence": "high"
+      },
+      {
+        "category": "founder",
+        "title": "Founder-problem fit is genuine",
+        "detail": "Tom is building the exact tool he needs. He doesn't know growth, went in circles, and is now systematising the solution. This is the strongest type of founder motivation.",
+        "evidence": "Founder interrogation: 'I keep going in circles. I haven't spoken to users properly yet, I do not know growth. That is why I am building it'",
+        "confidence": "high"
+      }
+    ],
+    "summary": "Strong foundations: real problem, genuine founder-problem fit, sharp ICP, production-grade product, and clear market gap. The company profile is now 68% confident with founder-verified data. What's missing is entirely market-facing — you need humans using this thing."
+  },
+  "needs_work": {
+    "items": [
+      {
+        "category": "validation",
+        "title": "Zero users — product is live but nobody's in it",
+        "detail": "Product is deployed, auth and payments wired, but zero active users. You've been building, not selling.",
+        "severity": "critical",
+        "action_to_resolve": "Stop building features. Spend the next 2 weeks doing ONLY user outreach. 10 founders using the product is the goal."
+      },
+      {
+        "category": "validation",
+        "title": "No user conversations — biggest risk",
+        "detail": "Founder confirmed: 'I haven't spoken to users properly yet.' This is the #1 risk. You're building in a vacuum. Every assumption about ICP, pain points, and aha moment is unvalidated.",
+        "severity": "critical",
+        "action_to_resolve": "Schedule 5 user interviews this week. Reddit DMs, Indie Hackers, founder Slack groups. 15 minutes each. Ask: what's your biggest growth challenge right now?"
+      },
+      {
+        "category": "monetization",
+        "title": "Willingness to pay — zero signal",
+        "detail": "Stripe is wired but nobody has hit it. Pricing exists on the site but it's theoretical.",
+        "severity": "critical",
+        "action_to_resolve": "After getting 5 free users through the product, offer the 6th a paid plan. Even $10/mo. One transaction validates the model."
+      },
+      {
+        "category": "traction",
+        "title": "Reddit prospecting but no systematic acquisition",
+        "detail": "Active on Reddit looking for customers, but no tracking, no funnel, no conversion data.",
+        "severity": "high",
+        "action_to_resolve": "Create a simple tracking sheet: Reddit post/comment → DM → signup → activated → retained. Measure your conversion at each step."
+      },
+      {
+        "category": "bandwidth",
+        "title": "Evenings and weekends only",
+        "detail": "Solo founder with a full-time job. ~10-15 hrs/week available. This constraint means every hour must count — no more building features, only validation activities.",
+        "severity": "high",
+        "action_to_resolve": "Ruthless prioritisation. The ONLY things that matter in the next 2 weeks: user conversations, watching people use the product, and collecting feedback."
+      },
+      {
+        "category": "validation",
+        "title": "Going in circles — no feedback loop",
+        "detail": "Founder admitted to going in circles. The fix is external signal. Users break the loop because they tell you what matters vs what you think matters.",
+        "severity": "high",
+        "action_to_resolve": "Each week, write down your top assumption. Design one action to test it. Do it. Record the result. This IS the GrowthMind methodology — use it on yourself."
+      },
+      {
+        "category": "credibility",
+        "title": "Dormant social presence",
+        "detail": "LinkedIn and Twitter exist but unused. For a growth tool, this is a trust gap. Founders will Google you before signing up.",
+        "severity": "warning",
+        "action_to_resolve": "Pick ONE channel. Post 2x/week about what you're learning from building a growth tool. Build in public = free marketing + credibility."
+      }
+    ],
+    "summary": "The pattern is clear: you've over-indexed on building and under-indexed on talking to people. Product is real, but every market-facing metric is zero. The circles you're going in will only break when you get external signal from actual humans using the product."
+  },
+  "next_steps": {
+    "items": [
+      {
+        "priority": 1,
+        "title": "5 user interviews in the next 7 days",
+        "detail": "DM founders on Reddit (r/startups, r/SaaS, r/EntrepreneurRideAlong), Indie Hackers, or founder Slack groups. Message: 'I'm building a growth tool for pre-PMF founders — can I get 15 min of your time to understand your biggest growth challenge?' You're not selling. You're listening.",
+        "type": "validation",
+        "estimated_effort": "5h over 1 week",
+        "unlocks": "Problem validation, ICP refinement, language-market fit, feature priorities from real humans.",
+        "bandwidth_note": "2-3 evenings of DMs + calls. Fits your schedule."
+      },
+      {
+        "priority": 2,
+        "title": "Get 5 founders INTO the product",
+        "detail": "From those conversations (or separate outreach), get 5 people to actually sign up and go through the growth diagnosis flow. Watch at least 2 of them do it live (screen share). You need to see where they get stuck, confused, or delighted.",
+        "type": "experiment",
+        "estimated_effort": "1 week",
+        "unlocks": "Activation rate, aha moment validation, UX friction points, first qualitative feedback.",
+        "bandwidth_note": "Offer free access. Make it easy. 'Hey I'll walk you through it in 10 min' works."
+      },
+      {
+        "priority": 3,
+        "title": "Track everything in a simple spreadsheet",
+        "detail": "Columns: Name, Source, Date contacted, Signed up (Y/N), Reached diagnosis (Y/N), Came back (Y/N), Feedback. No fancy analytics needed yet — just a Google Sheet.",
+        "type": "quick_win",
+        "estimated_effort": "30 min",
+        "unlocks": "Conversion funnel visibility, pattern recognition across users."
+      },
+      {
+        "priority": 4,
+        "title": "Use GrowthMind on yourself",
+        "detail": "You're building a growth tool and you're pre-PMF. Dog-food it. Run your own startup through the diagnosis flow. If it gives you useful advice, that's validation. If it doesn't, that's a bug to fix before showing anyone else.",
+        "type": "validation",
+        "estimated_effort": "1h",
+        "unlocks": "Product quality check, content of first case study, founder story for marketing."
+      },
+      {
+        "priority": 5,
+        "title": "Start building in public (1 channel, 2x/week)",
+        "detail": "Pick Twitter or LinkedIn. Share: what you're learning, mistakes you're making, insights from user interviews. This builds credibility AND is your acquisition channel.",
+        "type": "experiment",
+        "estimated_effort": "2h/week",
+        "unlocks": "Social presence, organic discovery, founder credibility, content for future marketing."
+      }
+    ],
+    "summary": "Your next 2 weeks in 3 words: TALK TO PEOPLE. You have ~10-15 hrs/week. Spend 80% on conversations and watching people use the product, 20% on fixing what you learn. Zero hours on new features. The circles stop when external signal starts."
+  }
+}

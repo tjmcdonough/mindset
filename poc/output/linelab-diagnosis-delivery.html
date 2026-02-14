@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LineLab — Growth Diagnosis | GrowthMind</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+  
+  :root {
+    --bg: #09090b;
+    --surface: #111114;
+    --surface2: #18181d;
+    --surface3: #1f1f26;
+    --border: #27272f;
+    --border-light: #35354a;
+    --text: #eaeaf0;
+    --text-secondary: #a0a0b8;
+    --text-muted: #6b6b80;
+    --accent: #6366f1;
+    --accent-light: #818cf8;
+    --accent-glow: rgba(99,102,241,0.15);
+    --green: #10b981;
+    --green-soft: #34d399;
+    --green-bg: rgba(16,185,129,0.08);
+    --green-border: rgba(16,185,129,0.2);
+    --yellow: #f59e0b;
+    --yellow-bg: rgba(245,158,11,0.08);
+    --yellow-border: rgba(245,158,11,0.2);
+    --red: #ef4444;
+    --red-bg: rgba(239,68,68,0.08);
+    --red-border: rgba(239,68,68,0.2);
+    --blue: #3b82f6;
+    --blue-bg: rgba(59,130,246,0.08);
+    --purple: #a855f7;
+    --purple-bg: rgba(168,85,247,0.08);
+    --cyan: #06b6d4;
+  }
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .page { max-width: 900px; margin: 0 auto; padding: 0 32px; }
+  
+  /* ─── Hero ─── */
+  .hero {
+    padding: 80px 0 64px;
+    text-align: center;
+    position: relative;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-light), transparent);
+  }
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-light);
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    line-height: 1.05;
+    margin-bottom: 16px;
+    background: linear-gradient(180deg, #ffffff 20%, #a0a0c0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .hero-tagline {
+    font-size: 18px;
+    color: var(--text-secondary);
+    max-width: 560px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+  }
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+  .hero-stat {
+    text-align: center;
+  }
+  .hero-stat-value {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--green-soft);
+    line-height: 1;
+  }
+  .hero-stat-value.yellow { color: var(--yellow); }
+  .hero-stat-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    margin-top: 6px;
+  }
+  
+  /* ─── Sections ─── */
+  .section {
+    padding: 64px 0;
+    position: relative;
+  }
+  .section + .section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  }
+  .section-num {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-light);
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+  }
+  .section-desc {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin-bottom: 36px;
+    max-width: 640px;
+  }
+  
+  /* ─── Company Overview ─── */
+  .overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .overview-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+  }
+  .overview-card.full { grid-column: 1 / -1; }
+  .ov-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .ov-value {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  .ov-value.small { font-size: 13px; font-weight: 400; color: var(--text-secondary); }
+  
+  /* ─── Founders ─── */
+  .founder-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .founder {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+  }
+  .f-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), #7c3aed);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 18px;
+    flex-shrink: 0;
+    color: white;
+  }
+  .f-name { font-size: 16px; font-weight: 700; }
+  .f-role { font-size: 12px; color: var(--accent-light); margin-bottom: 6px; }
+  .f-bio { font-size: 12px; color: var(--text-secondary); line-height: 1.6; }
+  .f-tags { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 4px; }
+  .f-tag {
+    font-size: 10px;
+    padding: 2px 8px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text-muted);
+  }
+  
+  /* ─── Score Ring ─── */
+  .score-block {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 40px;
+    margin-bottom: 28px;
+  }
+  .ring-wrap {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+  }
+  .ring-wrap svg {
+    width: 150px;
+    height: 150px;
+    transform: rotate(-90deg);
+  }
+  .ring-track { fill: none; stroke: var(--surface3); stroke-width: 10; }
+  .ring-fill { fill: none; stroke-width: 10; stroke-linecap: round; }
+  .ring-center {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .ring-num { font-size: 40px; font-weight: 900; line-height: 1; }
+  .ring-label { font-size: 12px; color: var(--text-muted); }
+  .score-text h3 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+  .score-text p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
+  .verdict-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 14px;
+    padding: 5px 14px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .v-go { background: var(--green-bg); color: var(--green-soft); border: 1px solid var(--green-border); }
+  
+  /* ─── Dimension Bars ─── */
+  .dim-list { display: flex; flex-direction: column; gap: 14px; }
+  .dim {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 22px;
+  }
+  .dim-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .dim-name { font-size: 14px; font-weight: 600; }
+  .dim-score { font-size: 18px; font-weight: 800; }
+  .dim-bar {
+    height: 6px;
+    background: var(--surface3);
+    border-radius: 100px;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+  .dim-bar-fill { height: 100%; border-radius: 100px; }
+  .dim-note { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+  .c-green { color: var(--green-soft); }
+  .c-yellow { color: var(--yellow); }
+  .bg-green { background: var(--green); }
+  .bg-yellow { background: var(--yellow); }
+  
+  /* ─── Two Column ─── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .col-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+  }
+  .col-card h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .col-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .col-card li {
+    font-size: 13px;
+    color: var(--text-secondary);
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.55;
+  }
+  .col-card li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+  }
+  .green-dots li::before { background: var(--green); }
+  .red-dots li::before { background: var(--red); }
+  .blue-dots li::before { background: var(--blue); }
+  .yellow-dots li::before { background: var(--yellow); }
+  
+  /* ─── Insight Cards ─── */
+  .insight {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 28px 24px;
+    margin-bottom: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+  .insight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 3px;
+  }
+  .insight.i-crit::before { background: var(--red); }
+  .insight.i-high::before { background: var(--yellow); }
+  .insight.i-med::before { background: var(--blue); }
+  .insight-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 10px;
+  }
+  .insight-title { font-size: 17px; font-weight: 700; }
+  .insight-sev {
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    flex-shrink: 0;
+  }
+  .sev-c { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
+  .sev-h { background: var(--yellow-bg); color: var(--yellow); border: 1px solid var(--yellow-border); }
+  .sev-m { background: var(--blue-bg); color: var(--blue); border: 1px solid rgba(59,130,246,0.2); }
+  .insight-body {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  .insight-q {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 14px;
+    color: var(--accent-light);
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+  .insight-action {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    padding: 12px 16px;
+    background: var(--green-bg);
+    border: 1px solid var(--green-border);
+    border-radius: 8px;
+  }
+  .insight-action strong { color: var(--green-soft); }
+  .insight-bias {
+    margin-top: 12px;
+    display: inline-flex;
+    padding: 3px 10px;
+    background: var(--purple-bg);
+    border: 1px solid rgba(168,85,247,0.15);
+    border-radius: 100px;
+    font-size: 11px;
+    color: var(--purple);
+  }
+  
+  /* ─── Experiments ─── */
+  .exp {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 12px;
+  }
+  .exp-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+    gap: 12px;
+  }
+  .exp-name { font-size: 15px; font-weight: 700; }
+  .exp-pri {
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+  }
+  .p0 { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
+  .p1 { background: var(--yellow-bg); color: var(--yellow); border: 1px solid var(--yellow-border); }
+  .p2 { background: var(--blue-bg); color: var(--blue); border: 1px solid rgba(59,130,246,0.2); }
+  .exp-hyp {
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 14px;
+    line-height: 1.6;
+  }
+  .exp-row {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .exp-row span { color: var(--text-muted); }
+  .exp-row strong { color: var(--text); font-weight: 600; }
+  .exp-success {
+    font-size: 12px;
+    padding: 10px 14px;
+    background: var(--surface2);
+    border-radius: 6px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+  .exp-success b { color: var(--green-soft); font-weight: 600; }
+  
+  /* ─── Competitors ─── */
+  .comp {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 12px;
+  }
+  .comp-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .comp-name { font-size: 16px; font-weight: 700; }
+  .comp-their { font-size: 12px; color: var(--text-muted); font-style: italic; }
+  .comp-counter {
+    font-size: 14px;
+    color: var(--accent-light);
+    font-weight: 500;
+    margin-bottom: 14px;
+    line-height: 1.5;
+  }
+  .comp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .comp-cell {
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .comp-win {
+    background: var(--green-bg);
+    border: 1px solid var(--green-border);
+  }
+  .comp-win .cc-label { color: var(--green-soft); font-weight: 700; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+  .comp-lose {
+    background: var(--red-bg);
+    border: 1px solid var(--red-border);
+  }
+  .comp-lose .cc-label { color: var(--red); font-weight: 700; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+  .comp-cell p { color: var(--text-secondary); }
+  
+  /* ─── Roadmap ─── */
+  .road-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+  }
+  .road-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+  }
+  .road-period {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent-light);
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .road-theme {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .road-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .road-card li {
+    font-size: 12px;
+    color: var(--text-secondary);
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .road-card li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent-light);
+    font-size: 11px;
+  }
+  
+  /* ─── One Thing ─── */
+  .one-thing {
+    background: linear-gradient(135deg, #13102a 0%, #0f1525 100%);
+    border: 1px solid rgba(99,102,241,0.25);
+    border-radius: 14px;
+    padding: 52px 48px;
+    text-align: center;
+    margin: 8px 0 0;
+  }
+  .ot-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--accent-light);
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .one-thing h3 {
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 16px;
+    background: linear-gradient(180deg, #fff 0%, #a5b4fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .one-thing p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    max-width: 620px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+  
+  /* ─── Questions ─── */
+  .q-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 32px 1fr auto;
+    gap: 14px;
+    align-items: start;
+  }
+  .q-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--surface3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent-light);
+    flex-shrink: 0;
+  }
+  .q-text { font-size: 14px; line-height: 1.6; }
+  .q-why { font-size: 12px; color: var(--text-muted); margin-top: 4px; line-height: 1.5; }
+  .q-pri {
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .qp-c { background: var(--red-bg); color: var(--red); }
+  .qp-h { background: var(--yellow-bg); color: var(--yellow); }
+  .qp-m { background: var(--blue-bg); color: var(--blue); }
+  
+  /* ─── Positioning ─── */
+  .pillar-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .pillar {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+  }
+  .pillar h4 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--accent-light);
+  }
+  .pillar p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  .pillar-proof {
+    font-size: 11px;
+    color: var(--green-soft);
+    font-weight: 500;
+  }
+  
+  /* ─── Market Data ─── */
+  .market-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .market-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+    text-align: center;
+  }
+  .m-val {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--cyan);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .m-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+  .m-detail {
+    font-size: 11px;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+  
+  /* ─── Footer ─── */
+  .footer {
+    padding: 48px 0;
+    text-align: center;
+    position: relative;
+  }
+  .footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  }
+  .footer-brand { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
+  .footer-sub { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
+  .footer-disc {
+    font-size: 11px;
+    color: var(--text-muted);
+    max-width: 540px;
+    margin: 0 auto;
+    line-height: 1.6;
+    opacity: 0.5;
+  }
+  .footer-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+    padding: 12px 28px;
+    background: var(--accent);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .footer-cta:hover { background: var(--accent-light); }
+
+  @media (max-width: 768px) {
+    .page { padding: 0 20px; }
+    .hero h1 { font-size: 36px; }
+    .hero-stats { gap: 24px; }
+    .overview-grid, .founder-row, .two-col, .pillar-grid, .comp-grid { grid-template-columns: 1fr; }
+    .road-grid { grid-template-columns: 1fr; }
+    .market-grid { grid-template-columns: 1fr; }
+    .score-block { flex-direction: column; text-align: center; }
+    .q-card { grid-template-columns: 28px 1fr; }
+    .q-pri { grid-column: 2; }
+    .one-thing { padding: 36px 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ════════════ HERO ════════════ -->
+<div class="hero">
+  <div class="hero-eyebrow">🧠 GrowthMind — Growth Diagnosis</div>
+  <h1>LineLab</h1>
+  <p class="hero-tagline">The only analytical alternative to discrete-event simulation. MIT-born, enterprise-proven, and sitting on a massive opportunity — if you focus.</p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-value">80.5</div>
+      <div class="hero-stat-label">Demand Score</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-value">GO</div>
+      <div class="hero-stat-label">Verdict</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-value">91</div>
+      <div class="hero-stat-label">Differentiation</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-value yellow">42%</div>
+      <div class="hero-stat-label">Confidence*</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ OVERVIEW ════════════ -->
+<div class="section">
+  <div class="section-num">01 — Company Profile</div>
+  <div class="section-title">What We Found</div>
+  <div class="section-desc">Everything below was researched automatically from public sources — your website, LinkedIn, academic publications, RocketReach, Reddit, and market data. No manual input required.</div>
+  
+  <div class="overview-grid">
+    <div class="overview-card full">
+      <div class="ov-label">Business</div>
+      <div class="ov-value">Production system modeling software using MIT-developed analytical methods (extended queueing theory + mathematical optimization) — replacing slow, expensive discrete-event simulation with rapid, accurate, transparent results for scale-up decisions, cost prediction, and capacity planning.</div>
+    </div>
+    <div class="overview-card">
+      <div class="ov-label">Stage</div>
+      <div class="ov-value">Post-validation, Crossing the Chasm</div>
+      <div class="ov-value small" style="margin-top:4px;">Early adopters are bought in. Now you need pragmatists.</div>
+    </div>
+    <div class="overview-card">
+      <div class="ov-label">Founded</div>
+      <div class="ov-value">2021 · Desktop (Win/Mac)</div>
+    </div>
+    <div class="overview-card">
+      <div class="ov-label">Key Customers</div>
+      <div class="ov-value">Boeing · Hadrian · GKN Aerospace · MIT · Sidewalk Labs (Alphabet)</div>
+    </div>
+    <div class="overview-card">
+      <div class="ov-label">Quantified Outcomes</div>
+      <div class="ov-value">4.9x ROI · 32% cost avoidance · $6M/yr savings · 0.64% accuracy</div>
+    </div>
+    <div class="overview-card full">
+      <div class="ov-label">Industry</div>
+      <div class="ov-value small">Manufacturing Software · Industrial Engineering · Production Optimization</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ FOUNDERS ════════════ -->
+<div class="section">
+  <div class="section-num">02 — Founding Team</div>
+  <div class="section-title">Who's Building This</div>
+  <div class="section-desc">Auto-researched from LinkedIn, RocketReach, and academic publications.</div>
+  
+  <div class="founder-row">
+    <div class="founder">
+      <div class="f-avatar">SN</div>
+      <div>
+        <div class="f-name">Scott Nill</div>
+        <div class="f-role">Co-founder & CTO</div>
+        <div class="f-bio">MIT PhD. Developed LineLab's core analytical technology during MIT research. Lecturer at MIT Advanced Manufacturing and Design program. Published at Winter Simulation Conference 2023.</div>
+        <div class="f-tags">
+          <span class="f-tag">MIT PhD</span>
+          <span class="f-tag">Chicago</span>
+          <span class="f-tag">500+ connections</span>
+        </div>
+      </div>
+    </div>
+    <div class="founder">
+      <div class="f-avatar">LN</div>
+      <div>
+        <div class="f-name">Larissa Nietner</div>
+        <div class="f-role">Co-founder</div>
+        <div class="f-bio">MIT-affiliated. Previous roles at STEMgem and MIT Sloan School of Management. Co-authored WSC 2023 paper on foundry operations modeling. Presented on fab modeling for InchFab.</div>
+        <div class="f-tags">
+          <span class="f-tag">MIT Sloan</span>
+          <span class="f-tag">Cambridge MA</span>
+          <span class="f-tag">500+ connections</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ MARKET ════════════ -->
+<div class="section">
+  <div class="section-num">03 — Market Intelligence</div>
+  <div class="section-title">The Landscape</div>
+  <div class="section-desc">Your market is growing, consolidating, and shifting toward you — if you move fast enough.</div>
+  
+  <div class="market-grid">
+    <div class="market-card">
+      <div class="m-val">$1.7B</div>
+      <div class="m-label">DES Market (2025)</div>
+      <div class="m-detail">Growing 9.6% CAGR to $2.7B by 2030</div>
+    </div>
+    <div class="market-card">
+      <div class="m-val">$13.6B</div>
+      <div class="m-label">Digital Twin Market</div>
+      <div class="m-detail">41.4% CAGR — adjacent expansion opportunity</div>
+    </div>
+    <div class="market-card">
+      <div class="m-val">$50B+</div>
+      <div class="m-label">CHIPS Act Investment</div>
+      <div class="m-detail">US semiconductor fab buildout driving demand</div>
+    </div>
+  </div>
+  
+  <div class="overview-card full" style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:22px;margin-top:0;">
+    <div class="ov-label">Key Market Events</div>
+    <div class="ov-value small">
+      <strong style="color:var(--yellow)">Autodesk acquired FlexSim (Nov 2023)</strong> — DES market consolidating around platforms. FlexSim now $6K/yr under Autodesk. This validates the space but compresses your window to establish a position before simulation gets bundled into every CAD suite. <strong style="color:var(--green-soft)">Your advantage:</strong> analytical modeling is architecturally impossible to bolt onto DES. Your moat is methodological, not feature-based.
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ DEMAND SCORE ════════════ -->
+<div class="section">
+  <div class="section-num">04 — Demand Scorecard</div>
+  <div class="section-title">Is There a Market Worth Pursuing?</div>
+  <div class="section-desc">Six dimensions scored 0–100. Composite score determines the GO/NO-GO verdict.</div>
+  
+  <div class="score-block">
+    <div class="ring-wrap">
+      <svg viewBox="0 0 140 140">
+        <circle class="ring-track" cx="70" cy="70" r="60" />
+        <circle class="ring-fill" cx="70" cy="70" r="60" stroke="var(--green)" stroke-dasharray="377" stroke-dashoffset="73.5" />
+      </svg>
+      <div class="ring-center">
+        <div class="ring-num" style="color:var(--green-soft)">80.5</div>
+        <div class="ring-label">/ 100</div>
+      </div>
+    </div>
+    <div class="score-text">
+      <h3>Strong Demand Signal</h3>
+      <p>LineLab scores in the top quintile across all six dimensions. The standout is competitive differentiation at 91 — you own genuine white space. Your weakest areas are ICP clarity (too many verticals) and unverified willingness-to-pay data. This is a clear GO.</p>
+      <div class="verdict-pill v-go">✓ Verdict: GO</div>
+    </div>
+  </div>
+  
+  <div class="dim-list">
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Competitive Differentiation</span>
+        <span class="dim-score c-green">91</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-green" style="width:91%"></div></div>
+      <div class="dim-note">No direct competitor offers analytical modeling. A Dec 2025 review of 9 DES tools doesn't mention the category. Your moat is methodological — genuinely hard to replicate.</div>
+    </div>
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Timing & Market Readiness</span>
+        <span class="dim-score c-green">85</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-green" style="width:85%"></div></div>
+      <div class="dim-note">Autodesk-FlexSim validates DES market, CHIPS Act drives $50B+ in fab investment, digital twin at 41% CAGR. Market tailwinds are strong.</div>
+    </div>
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Problem Urgency</span>
+        <span class="dim-score c-green">82</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-green" style="width:82%"></div></div>
+      <div class="dim-note">$10M–$500M+ capital commitments made with inadequate tools. DES takes weeks. Spreadsheets miss dynamics. Consultants charge $200–500K.</div>
+    </div>
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Market Size</span>
+        <span class="dim-score c-green">78</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-green" style="width:78%"></div></div>
+      <div class="dim-note">Direct DES replacement: $1.7B. Adjacent digital twin: $13.6B. Realistic SAM for LineLab: $200–500M near-term.</div>
+    </div>
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">ICP Clarity</span>
+        <span class="dim-score c-yellow">75</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-yellow" style="width:75%"></div></div>
+      <div class="dim-note">Good persona understanding, but ICP spans 6+ industries. Crossing the chasm requires narrowing to ONE beachhead segment.</div>
+    </div>
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Willingness to Pay</span>
+        <span class="dim-score c-yellow">72</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-yellow" style="width:72%"></div></div>
+      <div class="dim-note">Enterprise customers are paying. 4.9x ROI justifies premium pricing. But actual ACV and revenue data are unknown.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ WHAT'S WORKING ════════════ -->
+<div class="section">
+  <div class="section-num">05 — Growth Pulse</div>
+  <div class="section-title">What's Working & What Isn't</div>
+  <div class="section-desc">Current confidence: 42%. This will jump to ~65–75% once you answer the 12 questions at the end of this report.</div>
+  
+  <div class="two-col">
+    <div class="col-card green-dots">
+      <h4><span style="color:var(--green)">●</span> Working Well</h4>
+      <ul>
+        <li>Enterprise logos that would impress any investor — Boeing, Hadrian, GKN, Alphabet</li>
+        <li>Quantified outcomes: 4.9x ROI, $6M/yr savings, 0.64% accuracy vs actuals</li>
+        <li>Genuinely differentiated technology — analytical vs Monte Carlo, no direct competitor exists</li>
+        <li>MIT provenance + WSC 2023 peer-reviewed publication</li>
+        <li>Solving for Scale Summit — you're building the community that becomes your pipeline</li>
+        <li>Product-market fit with early adopters is proven. This is NOT a product problem.</li>
+      </ul>
+    </div>
+    <div class="col-card red-dots">
+      <h4><span style="color:var(--red)">●</span> Needs Attention</h4>
+      <ul>
+        <li>7 customers across 5+ industries — impressive breadth, zero depth. Not a beachhead.</li>
+        <li>Sales pipeline may be your MIT network — warm intros aren't repeatable GTM</li>
+        <li>No public pricing — pragmatist buyers can't self-qualify or build a business case</li>
+        <li>No self-serve trial — "request a demo" filters out the mainstream buyers you need</li>
+        <li>Category awareness near-zero — buyers don't know analytical modeling exists</li>
+        <li>Desktop-only in a cloud-first enterprise world — creates procurement friction</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ THE ONE THING ════════════ -->
+<div class="section" style="padding-bottom:32px">
+  <div class="one-thing">
+    <div class="ot-label">⚡ The One Thing</div>
+    <h3>Pick Aerospace as Your Beachhead.<br>Build 5 Referenceable Customers in 6 Months.</h3>
+    <p>Everything else — content, pricing, partnerships, product roadmap — is downstream of this decision. Without a beachhead, every deal is a custom pitch to a new vertical. With one, you have: "We're the production modeling platform for aerospace scale-up programs. Here are 5 companies like you who saved millions." That's the sentence that crosses the chasm.</p>
+  </div>
+</div>
+
+<!-- ════════════ SWOT ════════════ -->
+<div class="section">
+  <div class="section-num">06 — Strategic Analysis</div>
+  <div class="section-title">SWOT</div>
+  
+  <div class="two-col">
+    <div class="col-card green-dots">
+      <h4><span style="color:var(--green)">▲</span> Strengths</h4>
+      <ul>
+        <li>Analytical modeling — a structural moat, not a feature advantage</li>
+        <li>MIT provenance + peer-reviewed academic validation</li>
+        <li>Marquee enterprise logos with quantified outcomes</li>
+        <li>Speed: minutes vs weeks for production system modeling</li>
+        <li>Built-in optimization of thousands of variables simultaneously</li>
+        <li>Solving for Scale Summit — co-founded with MIT</li>
+        <li>Spreadsheet-to-model workflow lowers adoption barrier</li>
+      </ul>
+    </div>
+    <div class="col-card red-dots">
+      <h4><span style="color:var(--red)">▼</span> Weaknesses</h4>
+      <ul>
+        <li>2-person team — limited capacity for simultaneous sales + dev</li>
+        <li>No self-serve trial or freemium — demo-first only</li>
+        <li>Desktop software — not cloud SaaS, procurement friction</li>
+        <li>Broad ICP across 6+ industries — no focused beachhead</li>
+        <li>58 LinkedIn followers — minimal marketing reach</li>
+        <li>No visible pricing — hard for pragmatists to self-qualify</li>
+        <li>Unknown funding status — may constrain GTM investment</li>
+      </ul>
+    </div>
+    <div class="col-card blue-dots">
+      <h4><span style="color:var(--blue)">◆</span> Opportunities</h4>
+      <ul>
+        <li>CHIPS Act: $50B+ in US semiconductor fab investment</li>
+        <li>Autodesk-FlexSim commoditizes DES — makes your differentiation more valuable</li>
+        <li>Digital twin market $13.6B at 41% CAGR</li>
+        <li>Spreadsheet users: larger, easier-to-convert market than DES users</li>
+        <li>Channel partnerships with manufacturing consultancies</li>
+        <li>Academic pipeline: university adoption creates future champions</li>
+        <li>Climate/green tech manufacturing boom</li>
+      </ul>
+    </div>
+    <div class="col-card yellow-dots">
+      <h4><span style="color:var(--yellow)">◆</span> Threats</h4>
+      <ul>
+        <li>Autodesk/Siemens could bundle simulation at zero marginal cost</li>
+        <li>DES incumbents adding optimization layers</li>
+        <li>AI/ML could make DES faster, eroding speed advantage</li>
+        <li>Small team may not sustain 6–12 month enterprise sales cycles</li>
+        <li>Category awareness near-zero — heavy market education needed</li>
+        <li>Enterprise procurement may resist a small, unknown vendor</li>
+        <li>Key-person risk: core tech concentrated in 1–2 people</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ POSITIONING ════════════ -->
+<div class="section">
+  <div class="section-num">07 — Positioning</div>
+  <div class="section-title">How to Talk About What You Do</div>
+  <div class="section-desc">Four pillars that should frame every conversation, piece of content, and sales pitch.</div>
+  
+  <div class="pillar-grid">
+    <div class="pillar">
+      <h4>⚡ Minutes, Not Weeks</h4>
+      <p>Build production system models from spreadsheet data and get optimized results analytically — no Monte Carlo, no weeks of iteration.</p>
+      <span class="pillar-proof">✓ Customers report model creation in minutes vs weeks for DES tools</span>
+    </div>
+    <div class="pillar">
+      <h4>🎯 Optimize, Don't Simulate</h4>
+      <p>Simultaneously optimize thousands of variables — capacity, staffing, inventory, throughput — to find the best answer, not just a feasible one.</p>
+      <span class="pillar-proof">✓ Replaces hundreds of trial-and-error simulation scenarios</span>
+    </div>
+    <div class="pillar">
+      <h4>🔍 Transparent Cost Drivers</h4>
+      <p>Every result shows exactly where cost comes from, which variables matter most, and what levers exist to reduce it. No black boxes.</p>
+      <span class="pillar-proof">✓ 32% cost avoidance through finding hidden cost drivers</span>
+    </div>
+    <div class="pillar">
+      <h4>🏢 Enterprise-Proven</h4>
+      <p>MIT science, peer-reviewed methodology, results validated at Boeing, Hadrian, and GKN Aerospace.</p>
+      <span class="pillar-proof">✓ 4.9x ROI · $6M/yr savings · 0.64% accuracy vs actuals</span>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ FOUNDER MIRROR ════════════ -->
+<div class="section">
+  <div class="section-num">08 — Founder Mirror</div>
+  <div class="section-title">The Uncomfortable Truths</div>
+  <div class="section-desc">These are the insights you need to hear, not the ones you want to hear. Evidence-based, actionable, and designed to challenge the assumptions holding you back.</div>
+  
+  <div class="insight i-crit">
+    <div class="insight-head">
+      <span class="insight-title">You Named the Framework But Aren't Following It</span>
+      <span class="insight-sev sev-c">Critical</span>
+    </div>
+    <div class="insight-body">You told us you're "crossing the chasm." But Boeing, Hadrian, GKN, Running Tide, MIT, Sidewalk Labs — that's 7 customers across 5+ industries. That's not a beachhead. That's a trophy case. Geoffrey Moore's entire thesis is that you pick ONE segment and dominate it so thoroughly that pragmatists in adjacent segments hear about you through word-of-mouth. You haven't crossed anything yet.</div>
+    <div class="insight-q">If you had to pick ONE industry and say no to every opportunity outside it for 18 months — which would it be, and why haven't you done that already?</div>
+    <div class="insight-action"><strong>Action:</strong> Audit your existing customers. Which vertical has (a) the most referenceable wins, (b) the shortest sales cycle, and (c) buyers who talk to each other at the same conferences? Commit. Build aerospace-specific everything. Say no to the rest until you have 5+.</div>
+    <div class="insight-bias">🧠 Collection bias — impressive logos ≠ market penetration</div>
+  </div>
+  
+  <div class="insight i-high">
+    <div class="insight-head">
+      <span class="insight-title">Nobody Is Searching for What You Sell</span>
+      <span class="insight-sev sev-h">High</span>
+    </div>
+    <div class="insight-body">A December 2025 academic review of 9 simulation tools doesn't mention analytical modeling as a category. When a VP of Manufacturing needs to plan a production line, they search "factory simulation software" — not "analytical production modeling." You're trying to create a category that doesn't exist in the buyer's vocabulary. Category creation is a $50M+ marketing exercise. Meanwhile, Autodesk will spend more marketing FlexSim in one quarter than your entire lifetime budget.</div>
+    <div class="insight-q">When that VP types into Google, does the search lead them to you?</div>
+    <div class="insight-action"><strong>Action:</strong> Stop creating "analytical modeling" as a category. Position as the answer to a search that already exists: "faster alternative to discrete-event simulation." Anchor to the buyer's existing mental model, then educate inside your funnel.</div>
+    <div class="insight-bias">🧠 Curse of knowledge — you understand the distinction; your buyers don't</div>
+  </div>
+  
+  <div class="insight i-high">
+    <div class="insight-head">
+      <span class="insight-title">Your Sales Pipeline May Be Your MIT Rolodex</span>
+      <span class="insight-sev sev-h">High</span>
+    </div>
+    <div class="insight-body">Every visible customer has a plausible connection to MIT or the academic research network. Boeing is a major MIT research partner. Sidewalk Labs (Alphabet) has deep MIT ties. This isn't a repeatable GTM motion — it's a warm-intro network that will exhaust. The question isn't whether these are real customers. They are. The question is: can you close a customer who has never heard of MIT's Advanced Manufacturing program?</div>
+    <div class="insight-q">Of your last 5 sales conversations, how many started with a warm intro from your network vs. a cold inbound from your website or content?</div>
+    <div class="insight-action"><strong>Action:</strong> Map every closed deal to its origin. If >80% are warm intros, build a repeatable inbound engine: SEO, gated ROI calculator, LinkedIn thought leadership. Goal: close 3 customers in 2026 who found you through content, not connections.</div>
+    <div class="insight-bias">🧠 Survivorship bias — you see the deals that closed through your network</div>
+  </div>
+  
+  <div class="insight i-high">
+    <div class="insight-head">
+      <span class="insight-title">You're Selling the Engine When Buyers Want the Destination</span>
+      <span class="insight-sev sev-h">High</span>
+    </div>
+    <div class="insight-body">Your messaging leads with methodology: "extended queueing theory," "mathematical optimization," "analytical vs Monte Carlo." But the VP who signs the check doesn't care about queueing theory. They care about one thing: "Will my factory cost what you say it will?" You're an MIT PhD who built something genuinely better. The risk is falling in love with WHY it's better rather than focusing on WHAT it does for the buyer.</div>
+    <div class="insight-q">If you removed every mention of "queueing theory," "analytical," and "MIT" from your website — would the value proposition still be compelling?</div>
+    <div class="insight-action"><strong>Action:</strong> Restructure the homepage around outcomes. Hero section: "$6M saved. 32% cost avoidance. Answers in minutes, not weeks." Save the methodology for a "How It Works" page that technical evaluators can find.</div>
+    <div class="insight-bias">🧠 Engineer's fallacy — if they understood the tech, they'd choose you. They won't.</div>
+  </div>
+  
+  <div class="insight i-med">
+    <div class="insight-head">
+      <span class="insight-title">Desktop Software in a Cloud-First World</span>
+      <span class="insight-sev sev-m">Medium</span>
+    </div>
+    <div class="insight-body">Enterprise IT increasingly mandates cloud-native procurement. Desktop apps require installation approval, endpoint management, update cycles, per-machine licensing. FlexSim went cloud via Autodesk. AnyLogic has a cloud version. You're the only major player still desktop-only. Every procurement friction point is a deal killer for a 2-person company.</div>
+    <div class="insight-action"><strong>Action:</strong> You don't need to rebuild as SaaS overnight. But build a browser-based entry point — even a limited "try LineLab" that runs a sample model in the cloud. This solves three problems at once: procurement friction, self-serve trial, and usage analytics.</div>
+  </div>
+</div>
+
+<!-- ════════════ COMPETITORS ════════════ -->
+<div class="section">
+  <div class="section-num">09 — Competitive Positioning</div>
+  <div class="section-title">How to Win Every Conversation</div>
+  <div class="section-desc">For each competitor: their pitch, your counter, and exactly when you win or lose.</div>
+  
+  <div class="comp">
+    <div class="comp-head">
+      <span class="comp-name">vs. AnyLogic</span>
+      <span class="comp-their">~$26M revenue · 165 employees</span>
+    </div>
+    <div class="comp-counter">"Power without speed is waste. LineLab gives you the answer AnyLogic takes weeks to approximate — and optimizes it automatically."</div>
+    <div class="comp-grid">
+      <div class="comp-cell comp-win"><div class="cc-label">You Win When</div><p>Buyer doesn't have a simulation team, needs answers fast, or has been burned by DES cost overruns.</p></div>
+      <div class="comp-cell comp-lose"><div class="cc-label">You Lose When</div><p>Buyer has an existing AnyLogic team invested in the tool and views LineLab as a threat to their jobs.</p></div>
+    </div>
+  </div>
+  
+  <div class="comp">
+    <div class="comp-head">
+      <span class="comp-name">vs. FlexSim (Autodesk)</span>
+      <span class="comp-their">Acquired Nov 2023 · $6K/yr</span>
+    </div>
+    <div class="comp-counter">"FlexSim shows you what your factory looks like. LineLab shows you what it should cost and how to optimize it. Different questions, different tools."</div>
+    <div class="comp-grid">
+      <div class="comp-cell comp-win"><div class="cc-label">You Win When</div><p>Buyer cares about cost accuracy, speed-to-answer, and optimization — especially during early concept phase.</p></div>
+      <div class="comp-cell comp-lose"><div class="cc-label">You Lose When</div><p>Buyer needs 3D visualization for stakeholder buy-in and doesn't care about optimization.</p></div>
+    </div>
+  </div>
+  
+  <div class="comp">
+    <div class="comp-head">
+      <span class="comp-name">vs. Excel / Spreadsheets</span>
+      <span class="comp-their">~80% of manufacturing engineers use them</span>
+    </div>
+    <div class="comp-counter">"Your spreadsheet assumes averages. Your factory doesn't run on averages. LineLab models the variability that causes your real costs to exceed estimates by 30%+."</div>
+    <div class="comp-grid">
+      <div class="comp-cell comp-win"><div class="cc-label">You Win When</div><p>$50M+ production investment and the buyer realizes their spreadsheet can't model variability or queuing effects.</p></div>
+      <div class="comp-cell comp-lose"><div class="cc-label">You Lose When</div><p>Decision is low-stakes enough that spreadsheet accuracy is acceptable.</p></div>
+    </div>
+  </div>
+  
+  <div class="comp">
+    <div class="comp-head">
+      <span class="comp-name">vs. Consulting Firms</span>
+      <span class="comp-their">$200K–$500K per engagement</span>
+    </div>
+    <div class="comp-counter">"We give your team the same capability permanently — for less than one engagement. And you can re-run the model whenever assumptions change."</div>
+    <div class="comp-grid">
+      <div class="comp-cell comp-win"><div class="cc-label">You Win When</div><p>Buyer is tired of paying $300K for a static report that's outdated before the ink dries.</p></div>
+      <div class="comp-cell comp-lose"><div class="cc-label">You Lose When</div><p>Buyer wants external validation and political cover, not just better numbers.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ EXPERIMENTS ════════════ -->
+<div class="section">
+  <div class="section-num">10 — Growth Experiments</div>
+  <div class="section-title">7 Experiments to Cross the Chasm</div>
+  <div class="section-desc">Sequenced in three waves. Wave 1 (P0) builds the foundation. Wave 2 (P1) drives inbound. Wave 3 (P2) scales channels.</div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">1. Aerospace Beachhead Reference Program</span>
+      <span class="exp-pri p0">P0 Critical</span>
+    </div>
+    <div class="exp-hyp">"If we formalize a reference program with 3–5 aerospace companies, pragmatist buyers will convert at 2x the current rate because they buy based on peer validation."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>90 days</strong> <span>Effort:</span> <strong>Medium</strong> <span>Risk:</span> <strong>Low</strong></div>
+    <div class="exp-success"><b>Success criteria:</b> 3 aerospace customers agree to be named references within 60 days; 1+ new deal sourced from a reference intro within 90 days.</div>
+  </div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">2. Standardized POC Playbook</span>
+      <span class="exp-pri p0">P0 Critical</span>
+    </div>
+    <div class="exp-hyp">"If we create a repeatable 2-week POC framework, we can run POCs without founder involvement and reduce sales cycle by 30%."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>90 days</strong> <span>Effort:</span> <strong>High</strong> <span>Risk:</span> <strong>Medium</strong></div>
+    <div class="exp-success"><b>Success criteria:</b> 2 POCs completed without founder leading; average ≤15 business days; POC-to-close ≥60%.</div>
+  </div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">3. Vertical Content Wedge — Aerospace</span>
+      <span class="exp-pri p1">P1 High</span>
+    </div>
+    <div class="exp-hyp">"If we publish 4 deep technical articles targeting aerospace decision-makers, inbound demo requests from aerospace increase 50% in 90 days."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>90 days</strong> <span>Effort:</span> <strong>Medium</strong> <span>Risk:</span> <strong>Low</strong></div>
+    <div class="exp-success"><b>Success criteria:</b> 4 articles published; 10,000+ LinkedIn impressions; 5+ inbound demo requests from aerospace companies.</div>
+  </div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">4. Solving for Scale Community</span>
+      <span class="exp-pri p1">P1 High</span>
+    </div>
+    <div class="exp-hyp">"If we run quarterly virtual roundtables with 15–25 manufacturing leaders, 20% will request a follow-up within 30 days."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>120 days</strong> <span>Effort:</span> <strong>Medium</strong> <span>Risk:</span> <strong>Low</strong></div>
+    <div class="exp-success"><b>Success criteria:</b> 15+ registrations, 10+ attendees, 2+ demo requests within 30 days post-event.</div>
+  </div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">5. Channel Partner Pilot — Consultancy</span>
+      <span class="exp-pri p2">P2 Medium</span>
+    </div>
+    <div class="exp-hyp">"If we partner with one aerospace consultancy to embed LineLab in their engagements, 2+ deals in 6 months without headcount."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>180 days</strong> <span>Effort:</span> <strong>High</strong> <span>Risk:</span> <strong>Medium</strong></div>
+    <div class="exp-success"><b>Success criteria:</b> 1 signed partnership; partner trained; 1+ joint engagement within 120 days.</div>
+  </div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">6. ROI Calculator Lead Magnet</span>
+      <span class="exp-pri p2">P2 Medium</span>
+    </div>
+    <div class="exp-hyp">"If we add an interactive ROI calculator to the website, demo conversion increases 25%."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>120 days</strong> <span>Effort:</span> <strong>Medium</strong> <span>Risk:</span> <strong>Low</strong></div>
+    <div class="exp-success"><b>Success criteria:</b> 50+ completions in 60 days; 10%+ of completers request a demo.</div>
+  </div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">7. Spreadsheet Upgrader Campaign</span>
+      <span class="exp-pri p2">P2 Medium</span>
+    </div>
+    <div class="exp-hyp">"If we target Excel-using engineers showing what spreadsheets miss, we open a channel with 40% lower CAC."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>60 days</strong> <span>Effort:</span> <strong>Medium</strong> <span>Risk:</span> <strong>Low</strong></div>
+    <div class="exp-success"><b>Success criteria:</b> 5,000+ impressions; 50+ landing page visits; 5+ demo requests from spreadsheet users.</div>
+  </div>
+</div>
+
+<!-- ════════════ ROADMAP ════════════ -->
+<div class="section">
+  <div class="section-num">11 — 90-Day Roadmap</div>
+  <div class="section-title">What to Do Next</div>
+  
+  <div class="road-grid">
+    <div class="road-card">
+      <div class="road-period">Days 1–30</div>
+      <div class="road-theme">Lock the Beachhead</div>
+      <ul>
+        <li>Confirm aerospace as the beachhead</li>
+        <li>Audit Boeing & GKN as public references</li>
+        <li>Identify 10 target aerospace accounts</li>
+        <li>Document the sales playbook</li>
+        <li>Scott posts on LinkedIn 3x/week</li>
+        <li>Add ROI calculator to the site</li>
+      </ul>
+    </div>
+    <div class="road-card">
+      <div class="road-period">Days 31–60</div>
+      <div class="road-theme">Build Pipeline & Content</div>
+      <ul>
+        <li>3–5 active aerospace opportunities</li>
+        <li>Publish 2 aerospace technical articles</li>
+        <li>Launch Solving for Scale quarterly event</li>
+        <li>Evaluate 1 consultancy partnership</li>
+        <li>Academic outreach: 3 top IE programs</li>
+        <li>Set up demo funnel analytics</li>
+      </ul>
+    </div>
+    <div class="road-card">
+      <div class="road-period">Days 61–90</div>
+      <div class="road-theme">Close & Prove</div>
+      <ul>
+        <li>Close 1–2 new aerospace customers</li>
+        <li>3+ referenceable aerospace customers</li>
+        <li>Begin recruiting first AE</li>
+        <li>Publish head-to-head comparison content</li>
+        <li>Evaluate: does the motion work?</li>
+        <li>If yes, double down. If no, pivot with data.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ QUESTIONS ════════════ -->
+<div class="section">
+  <div class="section-num">12 — Unlock Higher Confidence</div>
+  <div class="section-title">12 Questions That Change Everything</div>
+  <div class="section-desc">Our current confidence is 42%. Your answers will push it to 65–75% and unlock specific, calibrated recommendations instead of educated guesses. 30 minutes of honesty will double the precision of every insight above.</div>
+  
+  <div class="q-card">
+    <div class="q-num">1</div>
+    <div>
+      <div class="q-text">What does your pricing look like right now — annual license, per-seat, usage-based? And roughly what range are your contracts landing at?</div>
+      <div class="q-why">Pricing model and ACV determine whether the bottleneck is sales efficiency, market sizing, or packaging.</div>
+    </div>
+    <span class="q-pri qp-c">Critical</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">2</div>
+    <div>
+      <div class="q-text">Are you bootstrapped, or have you raised? If funded, what stage and how much runway?</div>
+      <div class="q-why">Changes every recommendation about hiring, marketing spend, and sales motion.</div>
+    </div>
+    <span class="q-pri qp-c">Critical</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">3</div>
+    <div>
+      <div class="q-text">Of your current customers — how did each deal actually start? Inbound, warm intro, conference, MIT connection?</div>
+      <div class="q-why">If every deal came through MIT, the chasm problem is really a channel dependency problem.</div>
+    </div>
+    <span class="q-pri qp-c">Critical</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">4</div>
+    <div>
+      <div class="q-text">Who signs the contract? The manufacturing engineer or a VP/Director? How many people in the buying decision?</div>
+      <div class="q-why">Selling to the user vs. selling through the user to a budget holder — completely different playbooks.</div>
+    </div>
+    <span class="q-pri qp-c">Critical</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">5</div>
+    <div>
+      <div class="q-text">How big is the team? How many on product/eng vs. sales/GTM?</div>
+      <div class="q-why">A 2-person team with zero sales needs a different playbook than a 10-person team with AEs who can't close.</div>
+    </div>
+    <span class="q-pri qp-h">High</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">6</div>
+    <div>
+      <div class="q-text">How many active customers do you have right now, and what's your ARR?</div>
+      <div class="q-why">The gap between 3 and 15 customers tells us whether the problem is pipeline, conversion, or expansion.</div>
+    </div>
+    <span class="q-pri qp-h">High</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">7</div>
+    <div>
+      <div class="q-text">Are existing customers expanding — more seats, more lines, renewing without pushback? Or is it one-and-done project work?</div>
+      <div class="q-why">If customers aren't expanding, the real problem might be retention, not acquisition.</div>
+    </div>
+    <span class="q-pri qp-h">High</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">8</div>
+    <div>
+      <div class="q-text">What does your pipeline look like? How many active conversations, and how long from first call to signed contract?</div>
+      <div class="q-why">Pipeline size and velocity tell us whether you need more top-of-funnel or better conversion.</div>
+    </div>
+    <span class="q-pri qp-h">High</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">9</div>
+    <div>
+      <div class="q-text">Think about deals you've lost — what was the reason? Price, politics, "not now," chose a competitor?</div>
+      <div class="q-why">Lost deal analysis is the fastest way to identify the real chasm barrier.</div>
+    </div>
+    <span class="q-pri qp-h">High</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">10</div>
+    <div>
+      <div class="q-text">Have you considered a self-serve entry point — free trial, freemium, or open-source model builder?</div>
+      <div class="q-why">"Request a demo" may be filtering out the pragmatist majority who want to try before they buy.</div>
+    </div>
+    <span class="q-pri qp-m">Medium</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">11</div>
+    <div>
+      <div class="q-text">If you had to pick ONE vertical to own completely for the next 12 months — which and why?</div>
+      <div class="q-why">Reveals whether there's already a natural beachhead forming in your mind.</div>
+    </div>
+    <span class="q-pri qp-m">Medium</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">12</div>
+    <div>
+      <div class="q-text">What's your current marketing spend? Any content, ads, events, outbound — or all organic/referral?</div>
+      <div class="q-why">Zero spend + organic growth = untapped demand waiting to be captured with intentional effort.</div>
+    </div>
+    <span class="q-pri qp-m">Medium</span>
+  </div>
+</div>
+
+<!-- ════════════ FOOTER ════════════ -->
+<div class="footer">
+  <div class="footer-brand">🧠 GrowthMind.ai</div>
+  <div class="footer-sub">Growth Diagnosis for Pre-PMF Startups</div>
+  <a href="https://growthmind.ai" class="footer-cta">Get Your Growth Diagnosis →</a>
+  <div class="footer-disc">This report was generated by GrowthMind's AI growth diagnosis system from publicly available data. Confidence: 42% (pre-interrogation). Answer the 12 questions above to unlock high-confidence, calibrated recommendations. Report date: February 13, 2026.</div>
+</div>
+
+</div>
+</body>
+</html>

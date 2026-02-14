@@ -1,0 +1,484 @@
+{
+  "org_id": "tinywhirlwinds",
+  "report_type": "channel-finder",
+  "generated_at": "2026-02-13T10:00:00Z",
+  "version": "1.0",
+
+  "channels": {
+    "directories": [
+      {
+        "name": "Google Business Profile",
+        "url": "https://business.google.com",
+        "relevance": 10,
+        "effort": "low",
+        "impact": "high",
+        "listed": false,
+        "cost": "Free",
+        "notes": "Non-negotiable. Parents search 'baby classes Farnham' and 'sensory classes near me' on Google. Maps result is often the first thing they see. Needs photos, correct hours, booking link, and reviews. Competitors Baby Sensory and Lullababy appear in Maps already."
+      },
+      {
+        "name": "Happity",
+        "url": "https://www.happity.co.uk",
+        "relevance": 10,
+        "effort": "low",
+        "impact": "high",
+        "listed": false,
+        "cost": "Free to list (premium options available)",
+        "notes": "THE discovery platform for baby classes in the UK. 2.6M parents/year. Competitors are already listed: Lullababy (happity.co.uk/lullababy/aldershot-farnham-farnborough), Baby Sensory Basingstoke/Alton/Farnham. Classes at Wrecclesham Community Centre, Tongham, Farnham URC Church, Spire Church all listed. TW's ABSENCE here is a critical gap. Multiple Farnham venues already indexed."
+      },
+      {
+        "name": "Farnham Rocks",
+        "url": "https://www.farnhamrocks.co.uk/things-to-do/groups-and-classes",
+        "relevance": 9,
+        "effort": "low",
+        "impact": "medium-high",
+        "listed": false,
+        "cost": "Free (community listing)",
+        "notes": "Local Farnham family directory listing baby/toddler classes and groups. Well-indexed by Google for Farnham-specific searches. Covers Farnham, Farnborough, Camberley, Alton, Bordon, Fleet. Submit a listing — this is where local parents browse."
+      },
+      {
+        "name": "Surrey Family Information Directory",
+        "url": "https://familyinformationdirectory.surreycc.gov.uk",
+        "relevance": 8,
+        "effort": "low",
+        "impact": "medium",
+        "listed": false,
+        "cost": "Free",
+        "notes": "Official Surrey County Council directory. Health visitors and children's centre staff refer parents here. Lists toddler groups in Farnham already. Getting listed adds official credibility and may be referenced by health professionals."
+      },
+      {
+        "name": "Surrey Mummy",
+        "url": "https://www.surreymummy.com",
+        "relevance": 8,
+        "effort": "low",
+        "impact": "medium",
+        "listed": false,
+        "cost": "Free or low-cost listing",
+        "notes": "Award-winning Surrey parent directory. Silver award at Surrey Digital Awards for social media. Parents search and review activities here. Submit a listing and encourage parent reviews."
+      },
+      {
+        "name": "Netmums Local",
+        "url": "https://www.netmums.com/farnham/places-to-go",
+        "relevance": 7,
+        "effort": "low",
+        "impact": "medium",
+        "listed": false,
+        "cost": "Free",
+        "notes": "Still used by parents searching for local activities. Less dominant than Happity but good for SEO backlink and additional discovery surface."
+      },
+      {
+        "name": "Toddle About",
+        "url": "https://toddleabout.co.uk",
+        "relevance": 6,
+        "effort": "low",
+        "impact": "low-medium",
+        "listed": false,
+        "cost": "Free listing available",
+        "notes": "Lists mums & tots groups by area. Less traffic than Happity but another free listing that takes 10 mins."
+      },
+      {
+        "name": "Pembee Profile",
+        "url": "https://tinywhirlwinds.pembee.app",
+        "relevance": 5,
+        "effort": "already done",
+        "impact": "low",
+        "listed": true,
+        "cost": "Included with Pembee",
+        "notes": "Already using Pembee for booking. Ensure the Pembee profile is fully completed with photos, descriptions, and class details. Some parents discover classes through Pembee search."
+      }
+    ],
+
+    "communities": [
+      {
+        "name": "Love Farnham (Facebook Page)",
+        "url": "https://www.facebook.com/FarnhamSurrey",
+        "members": "14,600+ likes",
+        "icp_density": 6,
+        "self_promo_rules": "Community page — may share local business news. Check if they accept listings.",
+        "strategy": "Follow and engage. Ask if they'd share a 'new local business' feature. Good for launch announcement."
+      },
+      {
+        "name": "Surrey Mums Meet (Facebook Group)",
+        "url": "https://www.facebook.com/groups/587377835646200/",
+        "members": "Unknown — active Surrey-wide group",
+        "icp_density": 8,
+        "self_promo_rules": "Check group rules — many allow promo on specific days.",
+        "strategy": "Join, be helpful for 2 weeks, then share when relevant. When someone asks for Farnham baby class recommendations, mention TW naturally."
+      },
+      {
+        "name": "Farnham Community / Farnham Families (Facebook Groups)",
+        "url": "Search Facebook for 'Farnham mums', 'Farnham families', 'Farnham community'",
+        "members": "Varies — typically 2-10K in local groups",
+        "icp_density": 7,
+        "self_promo_rules": "Most local groups have promo rules. Some allow 'promo Friday' or 'small business Saturday'.",
+        "strategy": "Find and join ALL Farnham-area parent/community groups. Search terms: 'Farnham mums', 'Farnham parents', 'Farnham baby', 'Aldershot mums', 'Farnham community', 'Waverley mums'. Aim to join 5-8 groups. Help first, promote later per EXP-004."
+      },
+      {
+        "name": "NCT Farnham / Waverley (Facebook Group)",
+        "url": "Search Facebook for 'NCT Farnham' or 'NCT Waverley'",
+        "members": "Varies — NCT groups are typically 200-1,000 but HIGHLY concentrated ICP",
+        "icp_density": 10,
+        "self_promo_rules": "NCT groups are often moderated. May need to contact NCT branch coordinator to share. DO NOT spam.",
+        "strategy": "This is the highest-value community. Contact the local NCT branch directly (nct.org.uk) and offer a free taster session (EXP-007). NCT coordinators actively seek activities for their groups. A personal introduction beats a group post."
+      },
+      {
+        "name": "Nextdoor (Farnham area)",
+        "url": "https://nextdoor.co.uk",
+        "members": "Neighbourhood-based — typically 500-3,000 per neighbourhood",
+        "icp_density": 5,
+        "self_promo_rules": "Business pages available. Neighbours can recommend local businesses. Organic recommendations carry weight.",
+        "strategy": "Create a free Nextdoor Business page. Post a friendly introduction: 'New baby sensory studio opening in Farnham!' Nextdoor is trusted for local recommendations. Less useful than Facebook groups for baby-specific discovery but good for general local visibility."
+      },
+      {
+        "name": "Mumsnet Local (Farnham/Surrey)",
+        "url": "https://www.mumsnet.com/talk/mumsnet_local_farnham (or Surrey equivalent)",
+        "members": "Low local traffic — Mumsnet Local boards are often quiet",
+        "icp_density": 7,
+        "self_promo_rules": "Mumsnet Local allows business introductions in the local boards. Main Mumsnet forums do not allow advertising.",
+        "strategy": "Low priority. Post a friendly introduction in the Mumsnet Local Farnham/Surrey board. Don't expect much traffic — Mumsnet Local is less active than Facebook groups. Worth 10 mins but don't invest more."
+      },
+      {
+        "name": "Instagram Local Accounts",
+        "url": "Search Instagram for #FarnhamMums, #SurreyMums, #FarnhamLife",
+        "members": "N/A — hashtag-based discovery",
+        "icp_density": 8,
+        "self_promo_rules": "No rules — engage genuinely with local accounts",
+        "strategy": "Follow and engage with: local Farnham businesses, other baby class providers (non-competitive ones like swimming, music), Farnham lifestyle accounts, local photographers who do baby shoots (referral opportunity — Sarah Angel Photography in Farnham does newborn photography and lists local baby classes on her blog). Comment genuinely, build relationships. Tag location as Farnham in every post."
+      }
+    ],
+
+    "competitor_presence": [
+      {
+        "competitor": "Lullababy (Aldershot, Farnham & Farnborough)",
+        "channels": [
+          "Happity (fully listed with class schedules at Wrecclesham Community Centre)",
+          "Own website (lullababy.co.uk/aldershot-farnham-farnborough)",
+          "Facebook page",
+          "Instagram",
+          "Farnham Rocks (likely listed)",
+          "Wrecclesham Community Centre noticeboard (physical)"
+        ],
+        "notes": "STRONGEST local competitor presence. Active on Happity with multiple class times. Operating from community centres in Farnham area. TW needs to match their directory presence at minimum."
+      },
+      {
+        "competitor": "Baby Sensory (Basingstoke, Alton & Farnham)",
+        "channels": [
+          "Happity (listed: happity.co.uk/baby-sensory/basingstoke-alton-and-farnham)",
+          "Own website (babysensory.com/basingstoke)",
+          "National brand SEO (ranks for 'baby sensory' generically)",
+          "Facebook page",
+          "Instagram",
+          "National press/blog coverage"
+        ],
+        "notes": "Benefits from national brand SEO. When parents search 'baby sensory' they find the franchise first. TW needs to compete on 'Farnham' + 'sensory' local terms."
+      },
+      {
+        "competitor": "Tots Play (Farnham & Alton)",
+        "channels": [
+          "Happity (likely listed)",
+          "Own website (totsplay.co.uk)",
+          "Facebook page",
+          "Instagram"
+        ],
+        "notes": "Active in Farnham area. Standard franchise presence."
+      },
+      {
+        "competitor": "Vivace Music School",
+        "channels": [
+          "Own website with active blog (published comparison article of local sensory classes Oct 2025)",
+          "Local Family Events directory",
+          "Fleet/Farnham/Yateley coverage"
+        ],
+        "notes": "Interesting — Vivace published a blog comparing local sensory classes. This means they're doing content marketing. TW should reach out to Karen Hurley (mentioned as compiling Local Family Events directory) for inclusion."
+      }
+    ],
+
+    "physical_distribution_points": [
+      {
+        "type": "Healthcare",
+        "locations": [
+          {
+            "name": "Farnham Centre for Health (health visitors)",
+            "action": "Visit in person. Introduce yourself. Leave 30 leaflets. Ask about noticeboard.",
+            "priority": "P0 — this week",
+            "impact": "high",
+            "notes": "Health visitors are the #1 trusted referral source for new parents. A single HV recommending TW could fill a class."
+          },
+          {
+            "name": "Frimley Park Hospital (maternity ward / postnatal ward noticeboard)",
+            "action": "Visit the maternity ward reception. Ask about leaving leaflets on the community noticeboard. Some hospitals have a 'local activities' rack.",
+            "priority": "P0 — this week",
+            "impact": "high",
+            "notes": "Nearest major maternity unit. Every parent leaving with a newborn passes the noticeboard. May need to go through PALS or reception."
+          },
+          {
+            "name": "Local midwife practices / GP surgeries with baby clinics",
+            "action": "Identify 3-4 GP surgeries in Farnham that run baby weigh-in clinics. Visit and leave leaflets.",
+            "priority": "P1 — first month",
+            "impact": "medium-high",
+            "notes": "Baby weigh-in clinics are weekly gatherings of exactly the ICP. Noticeboards here get read while parents wait."
+          }
+        ]
+      },
+      {
+        "type": "Community Venues",
+        "locations": [
+          {
+            "name": "Farnham Library (Vernon House, 28 West Street, GU9 7DR)",
+            "action": "Visit the library. Ask about the community noticeboard. Farnham Library runs rhyme time sessions — parents attending those are the exact ICP. Leave leaflets.",
+            "priority": "P0 — this week",
+            "impact": "medium-high",
+            "notes": "Library rhyme time parents are proven activity-seekers. Community noticeboard is free. Library staff may also verbally recommend."
+          },
+          {
+            "name": "Farnham Maltings",
+            "action": "Visit the Maltings cafe and community board. Ask about leaving leaflets or a small poster. The Maltings is a community hub — parents visit for events and the cafe.",
+            "priority": "P1 — first month",
+            "impact": "medium",
+            "notes": "Cultural hub of Farnham. Riverside Cafe is popular with families. Community noticeboard visible to high footfall."
+          },
+          {
+            "name": "Farnham URC Church (South Street, GU9 7QU)",
+            "action": "Already hosts toddler groups (Wednesdays and Fridays 10am-11:30am per Surrey directory). Visit the toddler group, introduce yourself, leave leaflets. Parents attending free church groups are potential upsell to paid sensory classes.",
+            "priority": "P1 — first month",
+            "impact": "medium",
+            "notes": "Free toddler group attendees are the ICP. Not competitors — complementary. Parents often attend both free and paid activities."
+          },
+          {
+            "name": "The Spire Church, Farnham",
+            "action": "Hosts baby/toddler activities per Happity. Leave leaflets on community board.",
+            "priority": "P1 — first month",
+            "impact": "low-medium",
+            "notes": "Another venue hosting baby activities. Community noticeboard."
+          },
+          {
+            "name": "Wrecclesham Community Centre",
+            "action": "Lullababy already operates here. Leave leaflets on the community noticeboard but be aware competitor classes run from here.",
+            "priority": "P2 — this quarter",
+            "impact": "low",
+            "notes": "Competitor territory. Still worth a noticeboard presence but don't invest time."
+          }
+        ]
+      },
+      {
+        "type": "Baby-Friendly Cafes",
+        "locations": [
+          {
+            "name": "Cafe Coco, Farnham",
+            "action": "Visit, ask if you can leave a small stack of leaflets or postcards by the till / on the community board.",
+            "priority": "P1 — first month",
+            "impact": "medium",
+            "notes": "Mentioned as community-serving cafe. Baby-friendly cafes are where new parents go after classes and meetups."
+          },
+          {
+            "name": "Other Farnham cafes with noticeboards",
+            "action": "Walk the high street. Any cafe with a community noticeboard or leaflet rack — ask to leave cards. Target cafes near car parks or buggy-accessible locations.",
+            "priority": "P1 — first month",
+            "impact": "low-medium",
+            "notes": "Scatter 5-10 leaflets across 4-5 cafes. Takes 30 mins on a walk through town. Minimal effort, passive discovery."
+          }
+        ]
+      },
+      {
+        "type": "Nurseries & Childcare",
+        "locations": [
+          {
+            "name": "Farnham nurseries (identify 3-5 local nurseries)",
+            "action": "Visit with leaflets. Nurseries serve an older age range (2-5) but parents of babies often have older children at nursery. Ask if they have a 'local activities' board for parents.",
+            "priority": "P2 — this quarter",
+            "impact": "low-medium",
+            "notes": "Secondary channel. Parents picking up children at nursery are time-poor but may have a younger baby at home."
+          }
+        ]
+      },
+      {
+        "type": "Local Media / Directories",
+        "locations": [
+          {
+            "name": "Local Family Events (compiled by Karen Hurley)",
+            "action": "Contact Karen Hurley (mentioned in Vivace Music School blog as compiling the most comprehensive local baby class listing for Fleet/Farnham/Yateley). Ask to be included.",
+            "priority": "P1 — first month",
+            "impact": "medium",
+            "notes": "A trusted local curator. Being included in her listings = credibility and discovery. Vivace referenced her directly."
+          },
+          {
+            "name": "Sarah Angel Photography blog",
+            "action": "Sarah Angel Photography (Farnham) published a blog post listing 'Top Newborn Baby Groups and Classes in Farnham'. Contact her to be added to the list. Also explore a cross-referral: she photographs babies, you run baby classes — natural partnership.",
+            "priority": "P1 — first month",
+            "impact": "medium",
+            "notes": "Her blog ranks on Google for Farnham baby class searches. Being listed = SEO backlink + referral traffic. Mutual referral opportunity."
+          }
+        ]
+      }
+    ],
+
+    "action_plan": {
+      "this_week": {
+        "label": "Before launch — non-negotiable foundations",
+        "actions": [
+          {
+            "action": "Set up Google Business Profile",
+            "time": "1-2 hours",
+            "cost": "Free",
+            "serves_experiment": "EXP-002",
+            "notes": "Full profile with 10+ photos, booking link, class descriptions. Verify the business."
+          },
+          {
+            "action": "List on Happity",
+            "time": "30-60 mins",
+            "cost": "Free",
+            "serves_experiment": "EXP-005",
+            "notes": "Complete listing with all class types, ages, pricing, photos, booking link. This is where competitors already are."
+          },
+          {
+            "action": "Submit listing to Farnham Rocks",
+            "time": "15-30 mins",
+            "cost": "Free",
+            "serves_experiment": "EXP-005",
+            "notes": "Local directory specifically for Farnham families. Quick win."
+          },
+          {
+            "action": "Visit Farnham health centre + Farnham Library with leaflets",
+            "time": "2 hours (including travel)",
+            "cost": "£30-50 for 200 printed leaflets/postcards",
+            "serves_experiment": "EXP-001",
+            "notes": "In person. Introduce yourself. Leave leaflets. Ask about noticeboards. This is the highest-impact action in the entire plan."
+          },
+          {
+            "action": "Visit Frimley Park Hospital maternity reception with leaflets",
+            "time": "1 hour",
+            "cost": "Included in leaflet print above",
+            "serves_experiment": "EXP-001",
+            "notes": "Ask about community noticeboard in maternity/postnatal ward."
+          }
+        ],
+        "total_time": "~5-6 hours",
+        "total_cost": "£30-50"
+      },
+
+      "this_month": {
+        "label": "Build the discovery network",
+        "actions": [
+          {
+            "action": "Join 5-8 Farnham/Surrey Facebook groups",
+            "time": "30 mins to join, then 15-20 mins/day engagement",
+            "cost": "Free",
+            "serves_experiment": "EXP-004",
+            "notes": "Search: 'Farnham mums', 'Surrey mums', 'Farnham community', 'Farnham parents', 'NCT Farnham/Waverley', 'Aldershot and Farnham'. Be helpful for 2 weeks before any promotion."
+          },
+          {
+            "action": "Submit to Surrey Family Information Directory",
+            "time": "20 mins",
+            "cost": "Free",
+            "serves_experiment": "EXP-005",
+            "notes": "Official council directory. Health visitors reference this."
+          },
+          {
+            "action": "Submit to Surrey Mummy, Netmums Local, Toddle About",
+            "time": "30 mins total",
+            "cost": "Free",
+            "serves_experiment": "EXP-005",
+            "notes": "Batch these. 10 mins each. Free listings, passive discovery."
+          },
+          {
+            "action": "Create Nextdoor Business page",
+            "time": "15 mins",
+            "cost": "Free",
+            "serves_experiment": "N/A (general visibility)",
+            "notes": "Post a friendly introduction. Nextdoor neighbours trust local recommendations."
+          },
+          {
+            "action": "Contact NCT Farnham/Waverley branch",
+            "time": "30 mins",
+            "cost": "Free",
+            "serves_experiment": "EXP-007",
+            "notes": "Offer a free taster session at their next coffee morning. This is the highest-conversion channel after health visitors."
+          },
+          {
+            "action": "Contact Karen Hurley (Local Family Events) + Sarah Angel Photography",
+            "time": "30 mins (2 emails)",
+            "cost": "Free",
+            "serves_experiment": "EXP-005",
+            "notes": "Ask to be included in their Farnham baby class listings. Mutual referral opportunity with Sarah Angel."
+          },
+          {
+            "action": "Leaflet drop: Farnham Maltings, Farnham URC Church toddler group, 3-4 baby-friendly cafes",
+            "time": "1-2 hours (combine with a town walk)",
+            "cost": "£0 (use remaining leaflets from initial print)",
+            "serves_experiment": "EXP-001",
+            "notes": "Visit the URC Church toddler group in person (Wed or Fri 10am). Meet parents directly. Leave leaflets at the Maltings and cafes."
+          }
+        ],
+        "total_time": "~6-8 hours one-off + 15-20 mins/day Facebook engagement",
+        "total_cost": "£0"
+      },
+
+      "this_quarter": {
+        "label": "Expand and optimise",
+        "actions": [
+          {
+            "action": "Explore partnership with a local baby-friendly cafe (cross-promotion)",
+            "notes": "Offer: 'Our parents get 10% off coffee after class / you display our leaflets.' Mutual benefit."
+          },
+          {
+            "action": "Visit 3-5 local nurseries with leaflets",
+            "notes": "Secondary channel. Parents of nursery-age children may have younger babies."
+          },
+          {
+            "action": "If classes are filling: collect 5-10 Google reviews to dominate local search",
+            "notes": "Reviews are the strongest Google Maps ranking signal. Ask after every class."
+          },
+          {
+            "action": "Explore a listing on ClassForKids if available in the area",
+            "notes": "Another booking/discovery platform. Lower priority than Happity."
+          },
+          {
+            "action": "Consider one £50 Facebook/Instagram ad targeting Farnham parents with babies 0-12 months",
+            "notes": "ONLY if organic channels are working and you want to accelerate. Not before month 2. Need 300+ followers and 20+ posts as social proof first."
+          },
+          {
+            "action": "Mumsnet Local board post",
+            "notes": "Quick post on the Surrey/Farnham local board. Low traffic but takes 5 mins."
+          }
+        ],
+        "total_time": "3-5 hours spread across the quarter",
+        "total_cost": "£0-50"
+      },
+
+      "skip": [
+        {
+          "channel": "TikTok",
+          "why": "Wrong platform for the ICP. Farnham mums aged 28-38 discovering local baby classes are on Instagram and Facebook, not TikTok. The effort-to-return ratio is terrible for a local business. Revisit in 12+ months if Instagram is mature."
+        },
+        {
+          "channel": "Twitter/X",
+          "why": "Parents don't search for baby classes on X. Zero local discovery value. Not worth any time."
+        },
+        {
+          "channel": "LinkedIn",
+          "why": "ICP is not searching for baby classes on LinkedIn. Only relevant future-state for franchise recruitment. Not now."
+        },
+        {
+          "channel": "Product Hunt / BetaList / startup directories",
+          "why": "This is a local service business, not a tech product. These platforms have zero relevance."
+        },
+        {
+          "channel": "Paid Google Ads",
+          "why": "Budget is £30-50 total. Google Ads for local services cost £1-3 per click. The budget would last 1-2 days. Google Business Profile (free) achieves the same goal. Revisit only if revenue is proven and you want to scale."
+        },
+        {
+          "channel": "Local newspaper advertising",
+          "why": "Expensive (£200+), wrong audience (newspaper readers skew older), and unmeasurable. Leaflets at health centres reach 10x more of the ICP for 1/10th the cost."
+        },
+        {
+          "channel": "Hoop app",
+          "why": "Hoop has closed/been absorbed. Traffic now goes to Happity. Don't waste time looking for it."
+        },
+        {
+          "channel": "Yelp",
+          "why": "Yelp is irrelevant for baby classes in the UK. Google reviews and Happity reviews are what matters."
+        }
+      ]
+    }
+  }
+}

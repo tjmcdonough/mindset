@@ -1,0 +1,118 @@
+{
+  "org_id": "timberpos_001",
+  "agent": "growth-pulse",
+  "assessed_at": "2026-02-13T10:51:00Z",
+  "confidence": "pre-interrogation",
+
+  "primary_bottleneck": {
+    "bottleneck": "Distribution — total invisibility to target market",
+    "evidence": [
+      "0 presence on any platform where barbers make software decisions (Facebook Groups, Instagram)",
+      "0 listings on any software directory (G2, Capterra, GetApp)",
+      "SPA architecture = 0 SEO visibility (only homepage indexed)",
+      "Reddit outreach targets SaaS founders, not barbers",
+      "2,400 impressions → 17 clicks = 0.71% CTR = messaging doesn't resonate even when seen",
+      "17 clicks → 1 user = 5.9% click-to-signup = website doesn't convert",
+      "1 user → 0 paying = no revenue signal at all"
+    ],
+    "severity": "critical",
+    "explanation": "This is not a product problem (yet) — it's a distribution problem. The product exists but nobody in the target market knows about it. The founder is marketing to the wrong people (Reddit SaaS communities) on the wrong platform (Reddit instead of Facebook/Instagram) with the wrong message ('easiest booking software' instead of 'no app download needed'). Every layer of the funnel is broken: discovery, click-through, signup, and conversion."
+  },
+
+  "secondary_bottleneck": {
+    "bottleneck": "Positioning — generic messaging in a commodity market",
+    "evidence": [
+      "Homepage meta: 'Online Booking Software for Barbers & Salons' — identical to 50+ competitors",
+      "Best differentiator ('no app download for clients') is buried in Reddit comments, not on website",
+      "Brand name 'Timber' confuses with lumber industry",
+      "Selling features (booking + payments + CRM) instead of outcomes (fewer no-shows, more bookings)"
+    ],
+    "severity": "high"
+  },
+
+  "whats_working": [
+    {
+      "signal": "Founder is actively seeking and accepting feedback",
+      "evidence": "94 comments on Reddit post, founder responded to most, acknowledged mistakes",
+      "confidence": "high",
+      "leverage": "This coachability is rare and valuable — the founder will likely execute on good advice"
+    },
+    {
+      "signal": "Product exists and functions",
+      "evidence": "Working signup flow, booking system, and (likely) payment processing at timberpos.app",
+      "confidence": "medium",
+      "leverage": "Having a working demo to show barbers is a significant advantage over 'coming soon' competitors"
+    },
+    {
+      "signal": "Identified a real pain point",
+      "evidence": "Booking friction (forced app downloads) is confirmed by Reddit discussions and competitor reviews",
+      "confidence": "high",
+      "leverage": "This specific pain ('my clients hate downloading apps to book') could be the entire marketing message"
+    }
+  ],
+
+  "whats_not_working": [
+    {
+      "signal": "SEO strategy — completely non-functional",
+      "evidence": "SPA architecture prevents indexing. Only 1 page indexed. Built city/industry pages nobody can find.",
+      "severity": "critical",
+      "recommendation": "Abandon SEO as a channel until SSR is implemented. Zero time should be spent on SEO content."
+    },
+    {
+      "signal": "Reddit outreach — wrong audience",
+      "evidence": "r/SaaS is SaaS founders, not barbers. Founder's post got sympathy from devs, not customers.",
+      "severity": "high",
+      "recommendation": "Shift to Facebook barber groups and Instagram immediately"
+    },
+    {
+      "signal": "Website messaging — doesn't convert",
+      "evidence": "17 clicks → 1 signup = 5.9% conversion. Generic copy doesn't differentiate from competitors.",
+      "severity": "high",
+      "recommendation": "Rewrite homepage around 'no app download' differentiator with specific barber-focused language"
+    },
+    {
+      "signal": "Brand discovery — name causes confusion",
+      "evidence": "Google 'TimberPOS' returns lumber industry results. Name hurts every marketing effort.",
+      "severity": "high",
+      "recommendation": "Evaluate rebrand. Every marketing dollar invested in 'Timber' has a negative SEO externality."
+    }
+  ],
+
+  "funnel_diagnosis": {
+    "awareness": {
+      "status": "broken",
+      "metric": "2,400 impressions total in 1.5 months",
+      "benchmark": "A new SaaS with active organic marketing should see 10,000-50,000 impressions/month within 3 months",
+      "gap": "~95% below minimum viable awareness"
+    },
+    "interest": {
+      "status": "broken",
+      "metric": "0.71% CTR",
+      "benchmark": "Organic search CTR for position 1 is ~30%. Even position 10 is ~2.5%. 0.71% suggests either very low ranking or poor meta descriptions.",
+      "gap": "Messaging doesn't compel clicks even when shown"
+    },
+    "signup": {
+      "status": "very_weak",
+      "metric": "1 signup from 17 clicks (5.9%)",
+      "benchmark": "Decent SaaS landing pages convert 5-15% of visitors. 5.9% from 17 clicks is too small a sample to be meaningful.",
+      "gap": "Sample too small for statistical significance, but directionally weak"
+    },
+    "activation": {
+      "status": "unknown",
+      "metric": "1 user using product (non-paying)",
+      "note": "Cannot assess activation quality without more user data"
+    },
+    "revenue": {
+      "status": "zero",
+      "metric": "$0 revenue, 0 paying customers",
+      "benchmark": "After 1.5 months with a live product, 0 revenue is a yellow-to-red flag depending on pricing model and sales cycle",
+      "gap": "No evidence anyone will pay for this product"
+    }
+  },
+
+  "overall_growth_health": {
+    "score": 15,
+    "interpretation": "Critical. The growth engine is not running — it hasn't been built yet. There is no channel producing leads, no messaging that converts, and no evidence of willingness to pay. However, this is a common position for a solo technical founder 1.5 months in. The question isn't 'is this working?' (it's not) — it's 'can the founder shift from building to selling?' If yes, the situation is recoverable. If no, this will slowly die of obscurity.",
+    "trajectory": "flat-to-declining — without a channel shift, more time will not produce different results"
+  }
+}

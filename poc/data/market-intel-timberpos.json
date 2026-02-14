@@ -1,0 +1,151 @@
+{
+  "org_id": "timberpos_001",
+  "agent": "market-intel",
+  "collected_at": "2026-02-13T10:45:00Z",
+  "confidence": "pre-interrogation",
+  "market_definition": "Salon & Barber Booking/Management Software — software platforms that help beauty and grooming businesses manage appointments, payments, customer relationships, and business operations",
+  "market_size": {
+    "salon_booking_software": {
+      "2025_value": "$518 million",
+      "2033_projected": "$1.06 billion",
+      "cagr": "6.7%",
+      "source": "Global Growth Insights"
+    },
+    "barber_shop_software": {
+      "2025_estimated": "$150-250 million",
+      "cagr": "~15%",
+      "source": "Data Insights Market (estimated)"
+    },
+    "spa_and_salon_software_total": {
+      "note": "Medical spa segment alone forecast at $0.23 billion in 2025, doubling by 2030",
+      "source": "Mordor Intelligence"
+    }
+  },
+  "market_characteristics": {
+    "fragmentation": "Highly fragmented — dozens of competitors from enterprise to solo solutions",
+    "winner_take_all": false,
+    "switching_costs": "Low-medium — data portability is limited but most shops can switch in days",
+    "growth_drivers": [
+      "Shift from walk-in to online booking post-COVID",
+      "Increasing adoption of digital payments",
+      "Gen Z/millennial barbers expecting modern tools",
+      "Rise of independent/booth-rental barbers needing lightweight tools"
+    ],
+    "headwinds": [
+      "Market saturation — too many booking tools already",
+      "Fresha's free model undercuts paid competitors",
+      "Square and Stripe moving into vertical SaaS",
+      "Low willingness to pay among small shops ($20-50/month ceiling)",
+      "AI scheduling and chatbot booking emerging"
+    ]
+  },
+  "competitors": {
+    "tier1_dominant": [
+      {
+        "name": "Fresha",
+        "url": "https://www.fresha.com",
+        "positioning": "Free booking software for beauty & wellness (monetizes via payment processing)",
+        "funding": "$100M+ raised",
+        "users": "100,000+ businesses globally",
+        "pricing": "Free core product, takes % of payments",
+        "threat_level": "critical",
+        "why": "Free product with massive scale — extremely hard to compete on price"
+      },
+      {
+        "name": "Square Appointments",
+        "url": "https://squareup.com/appointments",
+        "positioning": "Booking built into Square's ecosystem",
+        "funding": "Block Inc (public company)",
+        "pricing": "Free for individuals, $29+/mo for teams",
+        "threat_level": "critical",
+        "why": "Trusted brand, payment infrastructure, massive distribution"
+      },
+      {
+        "name": "Vagaro",
+        "url": "https://www.vagaro.com",
+        "positioning": "All-in-one salon, spa & fitness software",
+        "pricing": "$30+/month",
+        "threat_level": "high",
+        "why": "Feature-rich, established, good reputation"
+      }
+    ],
+    "tier2_significant": [
+      {
+        "name": "Booksy",
+        "url": "https://booksy.com",
+        "positioning": "Barber-first booking platform",
+        "pricing": "$29.99/month",
+        "threat_level": "high",
+        "why": "Strong barber niche focus — exactly Timber's target"
+      },
+      {
+        "name": "GlossGenius",
+        "url": "https://glossgenius.com",
+        "positioning": "Beautiful, simple booking for beauty pros",
+        "pricing": "$24/month",
+        "threat_level": "high",
+        "why": "Strong brand, good UX, similar 'simplicity' positioning"
+      },
+      {
+        "name": "SQUIRE",
+        "url": "https://getsquire.com",
+        "positioning": "Barbershop-specific management platform",
+        "funding": "$160M+ raised",
+        "threat_level": "high",
+        "why": "Barber-specific with massive funding"
+      },
+      {
+        "name": "StyleSeat",
+        "url": "https://www.styleseat.com",
+        "positioning": "Marketplace + booking for beauty professionals",
+        "threat_level": "medium"
+      },
+      {
+        "name": "Mangomint",
+        "url": "https://www.mangomint.com",
+        "positioning": "Premium salon software",
+        "pricing": "$165+/month",
+        "threat_level": "low",
+        "why": "Premium segment, different market"
+      }
+    ],
+    "tier3_emerging": [
+      {
+        "name": "Anolla",
+        "url": "https://anolla.com",
+        "positioning": "AI-powered barbershop booking with walk-in queue management",
+        "threat_level": "medium",
+        "why": "New entrant with AI differentiation"
+      },
+      {
+        "name": "TheCut",
+        "url": "https://thecut.co",
+        "positioning": "Booking app focused on Black barbershops",
+        "threat_level": "medium-niche"
+      },
+      {
+        "name": "BarbNow",
+        "url": "https://www.barbnow.com",
+        "positioning": "Barber shop management software",
+        "threat_level": "low"
+      },
+      {
+        "name": "Noona",
+        "url": "https://noona.app",
+        "positioning": "Simple booking system (Nordic origin)",
+        "threat_level": "low"
+      }
+    ]
+  },
+  "competitive_dynamics": {
+    "summary": "This is one of the most crowded SaaS verticals. Fresha offers a free product that's hard to undercut. SQUIRE has $160M+ in funding targeting barbers specifically. Square has infinite distribution. The window for 'another booking tool' is essentially closed unless there's a genuinely novel angle.",
+    "barriers_to_entry": "Very low — building a basic booking tool is a common dev project. The barrier is distribution and trust, not technology.",
+    "moat_potential": "Near zero for a generic booking tool. Possible moats: deep niche specialization (e.g., only barbers in one city), superior integrations, community-led growth, or truly novel UX.",
+    "key_insight": "The market doesn't need another booking tool. It needs someone who understands a specific segment deeply and builds for their exact workflow. Timber's current positioning is too generic to compete."
+  },
+  "market_verdict": {
+    "attractiveness": "low-for-new-entrant",
+    "reasoning": "Massive TAM but extremely crowded with well-funded incumbents. Free alternatives exist (Fresha). Low switching costs mean even if you acquire users, retention is hard. Solo founder with no funding competing against companies with $100M+ is a severe structural disadvantage.",
+    "possible_path": "Hyper-niche (one specific sub-segment), superior customer service as a moat, local/geographic focus, or pivot to adjacent underserved vertical"
+  }
+}

@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timber — Growth Diagnosis | GrowthMind</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+  
+  :root {
+    --bg: #09090b;
+    --surface: #111114;
+    --surface2: #18181d;
+    --surface3: #1f1f26;
+    --border: #27272f;
+    --border-light: #35354a;
+    --text: #eaeaf0;
+    --text-secondary: #a0a0b8;
+    --text-muted: #6b6b80;
+    --accent: #6366f1;
+    --accent-light: #818cf8;
+    --accent-glow: rgba(99,102,241,0.15);
+    --green: #10b981;
+    --green-soft: #34d399;
+    --green-bg: rgba(16,185,129,0.08);
+    --green-border: rgba(16,185,129,0.2);
+    --yellow: #f59e0b;
+    --yellow-bg: rgba(245,158,11,0.08);
+    --yellow-border: rgba(245,158,11,0.2);
+    --red: #ef4444;
+    --red-bg: rgba(239,68,68,0.08);
+    --red-border: rgba(239,68,68,0.2);
+    --blue: #3b82f6;
+    --blue-bg: rgba(59,130,246,0.08);
+    --purple: #a855f7;
+    --purple-bg: rgba(168,85,247,0.08);
+    --cyan: #06b6d4;
+    --orange: #f97316;
+    --orange-bg: rgba(249,115,22,0.08);
+    --orange-border: rgba(249,115,22,0.2);
+  }
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .page { max-width: 900px; margin: 0 auto; padding: 0 32px; }
+  
+  /* ─── Hero ─── */
+  .hero {
+    padding: 80px 0 64px;
+    text-align: center;
+    position: relative;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-light), transparent);
+  }
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-light);
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    line-height: 1.05;
+    margin-bottom: 16px;
+    background: linear-gradient(180deg, #ffffff 20%, #a0a0c0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .hero-tagline {
+    font-size: 18px;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+  }
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+  .hero-stat {
+    text-align: center;
+  }
+  .hero-stat-value {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--green-soft);
+    line-height: 1;
+  }
+  .hero-stat-value.red { color: var(--red); }
+  .hero-stat-value.yellow { color: var(--yellow); }
+  .hero-stat-value.orange { color: var(--orange); }
+  .hero-stat-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    margin-top: 6px;
+  }
+  
+  /* ─── Sections ─── */
+  .section {
+    padding: 64px 0;
+    position: relative;
+  }
+  .section + .section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  }
+  .section-num {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-light);
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+  }
+  .section-desc {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin-bottom: 36px;
+    max-width: 640px;
+  }
+  
+  /* ─── Overview ─── */
+  .overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .overview-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+  }
+  .overview-card.full { grid-column: 1 / -1; }
+  .ov-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .ov-value {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  .ov-value.small { font-size: 13px; font-weight: 400; color: var(--text-secondary); }
+
+  /* ─── Founders ─── */
+  .founder {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+  }
+  .f-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), #7c3aed);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 18px;
+    flex-shrink: 0;
+    color: white;
+  }
+  .f-name { font-size: 16px; font-weight: 700; }
+  .f-role { font-size: 12px; color: var(--accent-light); margin-bottom: 6px; }
+  .f-bio { font-size: 12px; color: var(--text-secondary); line-height: 1.6; }
+  .f-tags { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 4px; }
+  .f-tag {
+    font-size: 10px;
+    padding: 2px 8px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text-muted);
+  }
+  
+  /* ─── Score Ring ─── */
+  .score-block {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 40px;
+    margin-bottom: 28px;
+  }
+  .ring-wrap {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+  }
+  .ring-wrap svg {
+    width: 150px;
+    height: 150px;
+    transform: rotate(-90deg);
+  }
+  .ring-track { fill: none; stroke: var(--surface3); stroke-width: 10; }
+  .ring-fill { fill: none; stroke-width: 10; stroke-linecap: round; }
+  .ring-center {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .ring-num { font-size: 40px; font-weight: 900; line-height: 1; }
+  .ring-label { font-size: 12px; color: var(--text-muted); }
+  .score-text h3 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+  .score-text p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
+  .verdict-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 14px;
+    padding: 5px 14px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .v-cond { background: var(--orange-bg); color: var(--orange); border: 1px solid var(--orange-border); }
+  
+  /* ─── Dimension Bars ─── */
+  .dim-list { display: flex; flex-direction: column; gap: 14px; }
+  .dim {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 22px;
+  }
+  .dim-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .dim-name { font-size: 14px; font-weight: 600; }
+  .dim-score { font-size: 18px; font-weight: 800; }
+  .dim-bar {
+    height: 6px;
+    background: var(--surface3);
+    border-radius: 100px;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+  .dim-bar-fill { height: 100%; border-radius: 100px; }
+  .dim-note { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+  .c-green { color: var(--green-soft); }
+  .c-yellow { color: var(--yellow); }
+  .c-red { color: var(--red); }
+  .bg-green { background: var(--green); }
+  .bg-yellow { background: var(--yellow); }
+  .bg-red { background: var(--red); }
+  
+  /* ─── Two Column ─── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .col-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+  }
+  .col-card h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .col-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .col-card li {
+    font-size: 13px;
+    color: var(--text-secondary);
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.55;
+  }
+  .col-card li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+  }
+  .green-dots li::before { background: var(--green); }
+  .red-dots li::before { background: var(--red); }
+  .blue-dots li::before { background: var(--blue); }
+  .yellow-dots li::before { background: var(--yellow); }
+  
+  /* ─── Insight Cards ─── */
+  .insight {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 28px 24px;
+    margin-bottom: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+  .insight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 3px;
+  }
+  .insight.i-crit::before { background: var(--red); }
+  .insight.i-high::before { background: var(--yellow); }
+  .insight.i-med::before { background: var(--blue); }
+  .insight-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 10px;
+  }
+  .insight-title { font-size: 17px; font-weight: 700; }
+  .insight-sev {
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    flex-shrink: 0;
+  }
+  .sev-c { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
+  .sev-h { background: var(--yellow-bg); color: var(--yellow); border: 1px solid var(--yellow-border); }
+  .sev-m { background: var(--blue-bg); color: var(--blue); border: 1px solid rgba(59,130,246,0.2); }
+  .insight-body {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  .insight-q {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 14px;
+    color: var(--accent-light);
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+  .insight-action {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    padding: 12px 16px;
+    background: var(--green-bg);
+    border: 1px solid var(--green-border);
+    border-radius: 8px;
+  }
+  .insight-action strong { color: var(--green-soft); }
+  .insight-bias {
+    margin-top: 12px;
+    display: inline-flex;
+    padding: 3px 10px;
+    background: var(--purple-bg);
+    border: 1px solid rgba(168,85,247,0.15);
+    border-radius: 100px;
+    font-size: 11px;
+    color: var(--purple);
+  }
+
+  /* ─── Bright Spots ─── */
+  .bright-spot {
+    background: var(--surface);
+    border: 1px solid var(--green-border);
+    border-radius: 10px;
+    padding: 22px;
+    margin-bottom: 12px;
+  }
+  .bright-spot h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--green-soft);
+    margin-bottom: 6px;
+  }
+  .bright-spot p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+  
+  /* ─── Experiments ─── */
+  .exp {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 12px;
+  }
+  .exp-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+    gap: 12px;
+  }
+  .exp-name { font-size: 15px; font-weight: 700; }
+  .exp-pri {
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+  }
+  .p0 { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
+  .p1 { background: var(--yellow-bg); color: var(--yellow); border: 1px solid var(--yellow-border); }
+  .p2 { background: var(--blue-bg); color: var(--blue); border: 1px solid rgba(59,130,246,0.2); }
+  .exp-hyp {
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 14px;
+    line-height: 1.6;
+  }
+  .exp-row {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .exp-row span { color: var(--text-muted); }
+  .exp-row strong { color: var(--text); font-weight: 600; }
+  .exp-success {
+    font-size: 12px;
+    padding: 10px 14px;
+    background: var(--surface2);
+    border-radius: 6px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+  .exp-success b { color: var(--green-soft); font-weight: 600; }
+  .exp-kill {
+    font-size: 12px;
+    padding: 10px 14px;
+    background: var(--red-bg);
+    border: 1px solid var(--red-border);
+    border-radius: 6px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-top: 8px;
+  }
+  .exp-kill b { color: var(--red); font-weight: 600; }
+  
+  /* ─── Competitors ─── */
+  .comp {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 12px;
+  }
+  .comp-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .comp-name { font-size: 16px; font-weight: 700; }
+  .comp-their { font-size: 12px; color: var(--text-muted); font-style: italic; }
+  .comp-counter {
+    font-size: 14px;
+    color: var(--accent-light);
+    font-weight: 500;
+    margin-bottom: 14px;
+    line-height: 1.5;
+  }
+  .comp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .comp-cell {
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .comp-win {
+    background: var(--green-bg);
+    border: 1px solid var(--green-border);
+  }
+  .comp-win .cc-label { color: var(--green-soft); font-weight: 700; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+  .comp-lose {
+    background: var(--red-bg);
+    border: 1px solid var(--red-border);
+  }
+  .comp-lose .cc-label { color: var(--red); font-weight: 700; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+  .comp-cell p { color: var(--text-secondary); }
+
+  /* ─── Anti-Experiments ─── */
+  .anti-exp {
+    background: var(--surface);
+    border: 1px solid var(--red-border);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 10px;
+  }
+  .anti-exp h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--red);
+    margin-bottom: 4px;
+  }
+  .anti-exp p {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+  
+  /* ─── Roadmap ─── */
+  .road-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+  }
+  .road-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+  }
+  .road-period {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent-light);
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .road-theme {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .road-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .road-card li {
+    font-size: 12px;
+    color: var(--text-secondary);
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .road-card li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent-light);
+    font-size: 11px;
+  }
+  
+  /* ─── One Thing ─── */
+  .one-thing {
+    background: linear-gradient(135deg, #13102a 0%, #0f1525 100%);
+    border: 1px solid rgba(99,102,241,0.25);
+    border-radius: 14px;
+    padding: 52px 48px;
+    text-align: center;
+    margin: 8px 0 0;
+  }
+  .ot-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--accent-light);
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .one-thing h3 {
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 16px;
+    background: linear-gradient(180deg, #fff 0%, #a5b4fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .one-thing p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    max-width: 620px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+  
+  /* ─── Questions ─── */
+  .q-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 32px 1fr auto;
+    gap: 14px;
+    align-items: start;
+  }
+  .q-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--surface3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent-light);
+    flex-shrink: 0;
+  }
+  .q-text { font-size: 14px; line-height: 1.6; }
+  .q-why { font-size: 12px; color: var(--text-muted); margin-top: 4px; line-height: 1.5; }
+  .q-pri {
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .qp-c { background: var(--red-bg); color: var(--red); }
+  .qp-h { background: var(--yellow-bg); color: var(--yellow); }
+  .qp-m { background: var(--blue-bg); color: var(--blue); }
+  
+  /* ─── Market Data ─── */
+  .market-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .market-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+    text-align: center;
+  }
+  .m-val {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--cyan);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .m-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+  .m-detail {
+    font-size: 11px;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+
+  /* ─── Content Strategy ─── */
+  .content-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+    margin-bottom: 12px;
+  }
+  .content-card h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .content-card .cc-type {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent-light);
+    margin-bottom: 8px;
+  }
+  .content-card p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* ─── Channel Cards ─── */
+  .channel-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+  }
+  .channel-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+  }
+  .channel-card h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .channel-card p {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+  .channel-card .ch-pri {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .ch-high { background: var(--green-bg); color: var(--green-soft); }
+  .ch-med { background: var(--yellow-bg); color: var(--yellow); }
+  
+  /* ─── Risk Flags ─── */
+  .risk-flag {
+    background: var(--surface);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 14px;
+    align-items: start;
+  }
+  .risk-flag.rf-red { border: 1px solid var(--red-border); }
+  .risk-flag.rf-yellow { border: 1px solid var(--yellow-border); }
+  .rf-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+  .rf-red-icon { background: var(--red-bg); }
+  .rf-yellow-icon { background: var(--yellow-bg); }
+  .rf-title { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+  .rf-text { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+  .rf-fix { font-size: 12px; color: var(--green-soft); margin-top: 6px; line-height: 1.5; }
+  
+  /* ─── Footer ─── */
+  .footer {
+    padding: 48px 0;
+    text-align: center;
+    position: relative;
+  }
+  .footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  }
+  .footer-brand { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
+  .footer-sub { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
+  .footer-disc {
+    font-size: 11px;
+    color: var(--text-muted);
+    max-width: 540px;
+    margin: 0 auto;
+    line-height: 1.6;
+    opacity: 0.5;
+  }
+
+  @media (max-width: 768px) {
+    .page { padding: 0 20px; }
+    .hero h1 { font-size: 36px; }
+    .hero-stats { gap: 24px; }
+    .overview-grid, .two-col, .comp-grid, .channel-grid { grid-template-columns: 1fr; }
+    .road-grid { grid-template-columns: 1fr; }
+    .market-grid { grid-template-columns: 1fr; }
+    .score-block { flex-direction: column; text-align: center; }
+    .q-card { grid-template-columns: 28px 1fr; }
+    .q-pri { grid-column: 2; }
+    .one-thing { padding: 36px 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ════════════ HERO ════════════ -->
+<div class="hero">
+  <div class="hero-eyebrow">🧠 GrowthMind — Growth Diagnosis</div>
+  <h1>Timber</h1>
+  <p class="hero-tagline">A booking & payments platform for barbers and salons — with a genuine insight about client friction, trapped inside a distribution problem. Here's how to break out.</p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-value red">30</div>
+      <div class="hero-stat-label">Demand Score</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-value orange">CONDITIONAL</div>
+      <div class="hero-stat-label">Verdict</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-value red">12</div>
+      <div class="hero-stat-label">Differentiation</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-value yellow">28%</div>
+      <div class="hero-stat-label">Confidence*</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ OVERVIEW ════════════ -->
+<div class="section">
+  <div class="section-num">01 — Company Profile</div>
+  <div class="section-title">What We Found</div>
+  <div class="section-desc">Everything below was researched automatically from public sources — your website, Reddit posts, Google Search Console data you shared, and market data. No manual input required.</div>
+  
+  <div class="overview-grid">
+    <div class="overview-card full">
+      <div class="ov-label">Business</div>
+      <div class="ov-value">Lightweight booking + payments platform for small service businesses (barbers, salons, med spas, nail salons). Positions as a simpler alternative to legacy booking software — clients book without downloading an app or creating an account.</div>
+    </div>
+    <div class="overview-card">
+      <div class="ov-label">Stage</div>
+      <div class="ov-value">Pre-Revenue, Seeking First Paying Users</div>
+      <div class="ov-value small" style="margin-top:4px;">MVP live. 1 free user. 0 paying customers after ~1.5 months.</div>
+    </div>
+    <div class="overview-card">
+      <div class="ov-label">Founded</div>
+      <div class="ov-value">~Late 2025 · Web App (SPA)</div>
+    </div>
+    <div class="overview-card">
+      <div class="ov-label">Traction</div>
+      <div class="ov-value">2,400 impressions · 17 clicks · 1 user · $0 revenue</div>
+    </div>
+    <div class="overview-card">
+      <div class="ov-label">Pricing</div>
+      <div class="ov-value">14-day free trial · Tiers unknown (SPA not crawlable)</div>
+    </div>
+    <div class="overview-card full">
+      <div class="ov-label">Industry</div>
+      <div class="ov-value small">Beauty & Wellness SaaS · Salon Booking Software · One of the most crowded verticals in SaaS</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ FOUNDER ════════════ -->
+<div class="section">
+  <div class="section-num">02 — Founding Team</div>
+  <div class="section-title">Who's Building This</div>
+  <div class="section-desc">Auto-researched from Reddit activity and public sources.</div>
+  
+  <div class="founder">
+    <div class="f-avatar">T</div>
+    <div>
+      <div class="f-name">u/Timberpos</div>
+      <div class="f-role">Solo Founder</div>
+      <div class="f-bio">Technical builder — shipped a working product solo. Active on r/SaaS and r/startups_promotion. Coachable and responsive to feedback (a rare and valuable trait). No public LinkedIn or industry presence. Appears to be building alongside other commitments.</div>
+      <div class="f-tags">
+        <span class="f-tag">Solo</span>
+        <span class="f-tag">Technical</span>
+        <span class="f-tag">Bootstrapped</span>
+        <span class="f-tag">Reddit-native</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ MARKET ════════════ -->
+<div class="section">
+  <div class="section-num">03 — Market Intelligence</div>
+  <div class="section-title">The Landscape</div>
+  <div class="section-desc">The market is large and growing. The problem: it's also one of the most crowded verticals in all of SaaS.</div>
+  
+  <div class="market-grid">
+    <div class="market-card">
+      <div class="m-val">$518M</div>
+      <div class="m-label">Salon Booking Software</div>
+      <div class="m-detail">Growing 6.7% CAGR to $1.06B by 2033</div>
+    </div>
+    <div class="market-card">
+      <div class="m-val">$160M+</div>
+      <div class="m-label">SQUIRE Funding</div>
+      <div class="m-detail">Barber-specific competitor, massively funded</div>
+    </div>
+    <div class="market-card">
+      <div class="m-val">100K+</div>
+      <div class="m-label">Fresha Businesses</div>
+      <div class="m-detail">Free product with massive scale globally</div>
+    </div>
+  </div>
+  
+  <div class="overview-card full" style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:22px;margin-top:0;">
+    <div class="ov-label">The Hard Truth About This Market</div>
+    <div class="ov-value small">
+      <strong style="color:var(--red)">Fresha offers a FREE booking product</strong> with 100,000+ businesses worldwide. <strong style="color:var(--red)">SQUIRE raised $160M+</strong> targeting barbers specifically. <strong style="color:var(--yellow)">Booksy, Square, Vagaro, GlossGenius</strong> are all well-established with strong brands. The window for "another booking tool" is essentially closed — unless you find a genuinely novel angle and a niche neither of them serves well. <strong style="color:var(--green-soft)">Your angle:</strong> the "no app download" insight is real. But an angle isn't a moat. You need to prove this matters enough to make barbers switch.
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ DEMAND SCORE ════════════ -->
+<div class="section">
+  <div class="section-num">04 — Demand Scorecard</div>
+  <div class="section-title">Is There a Market Worth Pursuing?</div>
+  <div class="section-desc">Six dimensions scored 0–100. This is an honest assessment of where you stand — not where you hope to be.</div>
+  
+  <div class="score-block">
+    <div class="ring-wrap">
+      <svg viewBox="0 0 140 140">
+        <circle class="ring-track" cx="70" cy="70" r="60" />
+        <circle class="ring-fill" cx="70" cy="70" r="60" stroke="var(--red)" stroke-dasharray="377" stroke-dashoffset="264" />
+      </svg>
+      <div class="ring-center">
+        <div class="ring-num" style="color:var(--red)">30</div>
+        <div class="ring-label">/ 100</div>
+      </div>
+    </div>
+    <div class="score-text">
+      <h3>Severe Structural Challenges</h3>
+      <p>This score reflects the competitive dynamics, distribution position, and resource constraints — not your effort or the product's quality. The problem is real. The product works. But you're invisible to your market, competing against free and $160M-funded alternatives, with a brand name that fights against you. The score would improve significantly with evidence of product-market fit, any traction signal, and a focused niche strategy.</p>
+      <div class="verdict-pill v-cond">⚠ Verdict: CONDITIONAL</div>
+    </div>
+  </div>
+  
+  <div class="dim-list">
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Market Readiness</span>
+        <span class="dim-score c-yellow">70</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-yellow" style="width:70%"></div></div>
+      <div class="dim-note">Market is growing post-COVID. Gen Z barbers expect modern tools. Booth rental model is creating demand for individual-barber solutions. Conditions are right — but the market is already well-served.</div>
+    </div>
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Problem Severity</span>
+        <span class="dim-score c-yellow">62</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-yellow" style="width:62%"></div></div>
+      <div class="dim-note">The "forced app download" pain is real but not hair-on-fire. Barbers cope with existing tools. Fresha is free and "good enough" for most. The bigger pain is no-shows and getting new clients — not the booking tool itself.</div>
+    </div>
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Founder-Market Fit</span>
+        <span class="dim-score c-red">25</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-red" style="width:25%"></div></div>
+      <div class="dim-note">No visible connection to the barber industry. Technical ability is strong (built a working product solo), but in a market where trust and peer recommendations drive adoption, having no industry connections is a major handicap.</div>
+    </div>
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Execution Capacity</span>
+        <span class="dim-score c-red">20</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-red" style="width:20%"></div></div>
+      <div class="dim-note">Solo, likely part-time founder with no funding competing against teams of 50–500+. The SPA architecture mistake suggests gaps in web marketing knowledge. Not a judgment — just the reality of resource constraints.</div>
+    </div>
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Competitive Position</span>
+        <span class="dim-score c-red">12</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-red" style="width:12%"></div></div>
+      <div class="dim-note">No unique technology, patents, or methodology. The "no app download" differentiator is a feature, not a moat — any competitor could replicate it in a sprint. Zero social proof: 1 user, 0 paying, 0 testimonials, not listed on any directory.</div>
+    </div>
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Distribution Advantage</span>
+        <span class="dim-score c-red">8</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-red" style="width:8%"></div></div>
+      <div class="dim-note">Effectively zero distribution. Not on any directory. No social media presence where barbers are. Reddit outreach targets SaaS founders, not customers. Website invisible to Google due to SPA. 2,400 impressions → 17 clicks → 1 user → $0 = broken funnel at every stage.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ THE ONE THING ════════════ -->
+<div class="section" style="padding-bottom:32px">
+  <div class="one-thing">
+    <div class="ot-label">⚡ The One Thing</div>
+    <h3>Stop Marketing Online.<br>Walk Into 20 Barbershops This Month.</h3>
+    <p>Your product is invisible online and your market buys through trust and face-to-face relationships. Every hour you spend on Reddit, SEO, or feature development right now is an hour not spent learning whether barbers will actually choose Timber when they see it. Twenty in-person demos will teach you more in 30 days than 6 months of online outreach. SQUIRE started by walking into barbershops in NYC. That's exactly what you should do.</p>
+  </div>
+</div>
+
+<!-- ════════════ FOUNDER MIRROR ════════════ -->
+<div class="section">
+  <div class="section-num">05 — Founder Mirror</div>
+  <div class="section-title">The Uncomfortable Truths</div>
+  <div class="section-desc">These are the insights you need to hear. Evidence-based, actionable, and designed to challenge the assumptions holding you back. We're being direct because we genuinely want this to work.</div>
+  
+  <div class="insight i-crit">
+    <div class="insight-head">
+      <span class="insight-title">You've Been Marketing to SaaS Founders, Not Barbers</span>
+      <span class="insight-sev sev-c">Critical</span>
+    </div>
+    <div class="insight-body">Your entire online presence is in communities where developers and startup people hang out — r/SaaS, r/startups_promotion. Your Reddit post got 94 comments from SaaS people offering sympathy. Not one was from a barber saying "I'd use this." Meanwhile, Facebook barber groups and Instagram — where your actual customers make buying decisions — are completely untouched.</div>
+    <div class="insight-q">"If barbers congregated on Reddit, every booking SaaS would be marketing there. They don't, and for good reason. Your discomfort with Facebook is not your customers' problem."</div>
+    <div class="insight-action"><strong>Action:</strong> Stop posting on r/SaaS today. Join 5 Facebook barber groups this week: Barber Nation, Barbers Talk, Black Barber Connect, Salon Owners Club, Booth Renters & Suite Owners. Your next 20 hours of outreach should be where barbers are, not founders.</div>
+    <div class="insight-bias">🧠 Platform familiarity bias — picking the channel you know, not the channel your customers use</div>
+  </div>
+  
+  <div class="insight i-crit">
+    <div class="insight-head">
+      <span class="insight-title">Your Brand Name Is Actively Sabotaging You</span>
+      <span class="insight-sev sev-c">Critical</span>
+    </div>
+    <div class="insight-body">"Timber" means wood, lumber, forestry to everyone except you. Google "TimberPOS" and you get lumber industry POS systems. Every marketing dollar you spend is fighting uphill against this confusion. The domain 'timberpos.app' looks like software for a lumber yard. No search engine will rank "Timber" for booking-related terms — the semantic association is too strong.</div>
+    <div class="insight-q">"If you were starting today with a clean slate, would you really name a barber booking app 'Timber'?"</div>
+    <div class="insight-action"><strong>Action:</strong> You don't have to rebrand tomorrow, but make a conscious decision: accept the SEO penalty permanently, or change the name before building more marketing assets. Every directory listing, backlink, and social profile you create under 'Timber' is investment in a name that works against you. Better to change at 0 customers than at 100.</div>
+    <div class="insight-bias">🧠 Endowment effect — the name represents your work, making it feel more valuable than it is to your customers</div>
+  </div>
+  
+  <div class="insight i-high">
+    <div class="insight-head">
+      <span class="insight-title">Your Best Feature Is Invisible</span>
+      <span class="insight-sev sev-h">High</span>
+    </div>
+    <div class="insight-body">The "no app download for clients" differentiator — the one thing that could actually set you apart — is buried in a Reddit comment, not on your homepage. Your homepage says "easiest online booking software" — which is the tagline of literally every competitor. But "Your clients book in 10 seconds, no app, no signup" — that's a message that could actually cut through.</div>
+    <div class="insight-action"><strong>Action:</strong> This afternoon, change your homepage headline to: "Your clients shouldn't need an app just to book a haircut." Make this the first thing anyone sees — on your website, in your Facebook posts, in your barbershop demos. Everything else is secondary.</div>
+    <div class="insight-bias">🧠 Curse of knowledge — you understand the feature; you haven't promoted the benefit</div>
+  </div>
+  
+  <div class="insight i-high">
+    <div class="insight-head">
+      <span class="insight-title">Zero Evidence Anyone Will Pay</span>
+      <span class="insight-sev sev-h">High</span>
+    </div>
+    <div class="insight-body">One free user and zero revenue after 1.5 months isn't traction — it's a prototype in search of a customer. And Fresha is free. Barbers may expect booking tools to be free. You haven't tested the most important hypothesis: will barbers pay for this when free alternatives exist? Building features for 6 months with no paying customers is a trap.</div>
+    <div class="insight-q">"This week, call your free user and ask: 'Would you pay $15/month for this?' Their answer — and more importantly, their hesitation — will tell you more than any market research."</div>
+    <div class="insight-action"><strong>Action:</strong> Contact every free user personally. Offer $10/month for the first 3 months. If they say yes: celebrate, get a testimonial, ask for a referral. If they say no: ask what would need to change. This is the most important conversation you'll have this month.</div>
+    <div class="insight-bias">🧠 Build-first bias — continued building instead of validating the revenue hypothesis</div>
+  </div>
+
+  <div class="insight i-med">
+    <div class="insight-head">
+      <span class="insight-title">Your Website Is Invisible to Google</span>
+      <span class="insight-sev sev-m">Medium</span>
+    </div>
+    <div class="insight-body">Your site is built as a single-page app (SPA). Google can't crawl it. You've built city landing pages, industry pages, SEO content — all invisible. Only your homepage is indexed. Every blog post you write is pouring water into a bucket with no bottom. This is the single biggest technical mistake in your stack.</div>
+    <div class="insight-action"><strong>Action:</strong> Either implement server-side rendering (SSR) so Google can index your pages, or accept that SEO is permanently off the table and build a 100% direct-sales strategy. Don't invest another hour in content until this is resolved.</div>
+  </div>
+</div>
+
+<!-- ════════════ BRIGHT SPOTS ════════════ -->
+<div class="section">
+  <div class="section-num">06 — What's Actually Good</div>
+  <div class="section-title">The Things You're Undervaluing</div>
+  <div class="section-desc">A 30/100 score doesn't mean there's nothing to work with. These are real strengths — you're just not leveraging them yet.</div>
+  
+  <div class="bright-spot">
+    <h4>✦ You Identified the Right Pain Before Building</h4>
+    <p>The "forced app download" friction is a real and validated complaint. Many founders build first and hope for pain — you found pain first. This insight should be your entire brand and messaging. It's currently buried when it should be the headline.</p>
+  </div>
+  <div class="bright-spot">
+    <h4>✦ You're Genuinely Coachable — That's Rare and Valuable</h4>
+    <p>Your Reddit thread shows you accepting critical feedback gracefully: "You're probably right with me selling features rather than pin pointing the pain." Most founders get defensive. Coachability is the strongest predictor of early-stage founder success. You'll iterate faster than founders who think they already have the answers.</p>
+  </div>
+  <div class="bright-spot">
+    <h4>✦ You Shipped a Real Product Solo</h4>
+    <p>A functioning booking + payments platform with signup flow, industry pages, and city pages. Most "founders" have a landing page and a waitlist. Don't compare yourself to competitors with $160M in funding. Compare yourself to where they were at month 2. SQUIRE started the same way — walking into barbershops.</p>
+  </div>
+  <div class="bright-spot">
+    <h4>✦ You Chose the Right Business Model</h4>
+    <p>14-day free trial matches exactly how barbers evaluate software: try it for 5 minutes, keep it or delete it. No RFPs, no demos, no committees. The model is right — the distribution is the problem.</p>
+  </div>
+</div>
+
+<!-- ════════════ SWOT ════════════ -->
+<div class="section">
+  <div class="section-num">07 — Strategic Analysis</div>
+  <div class="section-title">SWOT</div>
+  
+  <div class="two-col">
+    <div class="col-card green-dots">
+      <h4><span style="color:var(--green)">▲</span> Strengths</h4>
+      <ul>
+        <li>Working MVP — live product with signup, booking, and payments</li>
+        <li>Genuine differentiator: no app download required for clients to book</li>
+        <li>Right business model: 14-day free trial matches how barbers evaluate</li>
+        <li>Coachable founder who accepts critical feedback constructively</li>
+        <li>Solo founder = "you talk to the person who built it" (position as a feature)</li>
+      </ul>
+    </div>
+    <div class="col-card red-dots">
+      <h4><span style="color:var(--red)">▼</span> Weaknesses</h4>
+      <ul>
+        <li>Zero distribution — invisible to target market entirely</li>
+        <li>Brand name creates active confusion with lumber industry</li>
+        <li>No social proof: 0 testimonials, 0 case studies, 0 reviews</li>
+        <li>SPA architecture prevents Google from indexing any pages</li>
+        <li>Generic positioning ("easiest booking software") in a saturated market</li>
+        <li>Solo founder with no industry network or connections</li>
+      </ul>
+    </div>
+    <div class="col-card blue-dots">
+      <h4><span style="color:var(--blue)">◆</span> Opportunities</h4>
+      <ul>
+        <li>Hyper-local direct sales — walk into barbershops with a tablet and demo</li>
+        <li>Booth-rental barbers are underserved by enterprise-focused tools like SQUIRE</li>
+        <li>Facebook Groups are an untapped goldmine (THE community for barber software decisions)</li>
+        <li>Free directory listings (G2, Capterra, AlternativeTo) — immediate and zero cost</li>
+        <li>Instagram Reels showing the frictionless booking experience</li>
+        <li>Product Hunt launch for backlinks and initial credibility</li>
+      </ul>
+    </div>
+    <div class="col-card yellow-dots">
+      <h4><span style="color:var(--yellow)">◆</span> Threats</h4>
+      <ul>
+        <li>Fresha's free model makes paid alternatives nearly impossible to sell to cost-sensitive barbers</li>
+        <li>SQUIRE is barber-specific with $160M+ and a direct sales team</li>
+        <li>Square's brand trust and infinite distribution</li>
+        <li>AI-powered booking tools emerging (Anolla, etc.)</li>
+        <li>Low willingness to pay — $20-50/month ceiling, many expect free</li>
+        <li>"No app download" is a feature, not a moat — replicable in one sprint</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ COMPETITORS ════════════ -->
+<div class="section">
+  <div class="section-num">08 — Competitive Positioning</div>
+  <div class="section-title">Know Exactly What You're Up Against</div>
+  <div class="section-desc">This is the most competitive part of your diagnosis. These are the conversations you need to win — or avoid entirely.</div>
+  
+  <div class="comp">
+    <div class="comp-head">
+      <span class="comp-name">vs. Fresha</span>
+      <span class="comp-their">$100M+ raised · 100K+ businesses · Free product</span>
+    </div>
+    <div class="comp-counter">"Fresha's free — but free comes with trade-offs. Your clients need to download their app. Your data lives on their platform. And when something breaks at 10am on a Saturday, good luck getting help."</div>
+    <div class="comp-grid">
+      <div class="comp-cell comp-win"><div class="cc-label">You Win When</div><p>Barber values frictionless client experience and personal support over price. Barber has heard clients complain about downloading Fresha.</p></div>
+      <div class="comp-cell comp-lose"><div class="cc-label">You Lose When</div><p>Barber's #1 priority is cost. Free is free. Hard to compete with zero — you need to offer something free can't.</p></div>
+    </div>
+  </div>
+  
+  <div class="comp">
+    <div class="comp-head">
+      <span class="comp-name">vs. SQUIRE</span>
+      <span class="comp-their">$160M+ raised · Barber-specific · Direct sales team</span>
+    </div>
+    <div class="comp-counter">"SQUIRE is built for multi-chair shops with managers and staff. If you're an independent barber renting a chair, you're paying for 90% of features you'll never touch."</div>
+    <div class="comp-grid">
+      <div class="comp-cell comp-win"><div class="cc-label">You Win When</div><p>Solo barber or booth renter who finds SQUIRE overcomplicated and overpriced for their simple needs.</p></div>
+      <div class="comp-cell comp-lose"><div class="cc-label">You Lose When</div><p>Multi-chair shop that needs payroll, inventory, team scheduling — enterprise features you don't have.</p></div>
+    </div>
+  </div>
+  
+  <div class="comp">
+    <div class="comp-head">
+      <span class="comp-name">vs. Booksy</span>
+      <span class="comp-their">$29.99/month · Strong barber niche · App-based</span>
+    </div>
+    <div class="comp-counter">"Booksy forces your clients to download yet another app. That download screen is where you lose bookings. Timber: no download, no signup, 10 seconds to book."</div>
+    <div class="comp-grid">
+      <div class="comp-cell comp-win"><div class="cc-label">You Win When</div><p>Barber has heard clients say "I don't want to download another app." The side-by-side booking comparison is your sales weapon.</p></div>
+      <div class="comp-cell comp-lose"><div class="cc-label">You Lose When</div><p>Barber values the Booksy marketplace (client discovery) and their clients already have the app installed.</p></div>
+    </div>
+  </div>
+  
+  <div class="comp">
+    <div class="comp-head">
+      <span class="comp-name">vs. Square Appointments</span>
+      <span class="comp-their">Block Inc · Free for individuals · Massive distribution</span>
+    </div>
+    <div class="comp-counter">"Square's great for payments. But their booking is an afterthought. Timber is booking-first — built specifically for how barbers and their clients actually schedule."</div>
+    <div class="comp-grid">
+      <div class="comp-cell comp-win"><div class="cc-label">You Win When</div><p>Barber finds Square's booking clunky and wants something purpose-built for appointments, not tacked onto a payment terminal.</p></div>
+      <div class="comp-cell comp-lose"><div class="cc-label">You Lose When</div><p>Barber already uses Square hardware for payments and doesn't want another vendor. Ecosystem lock-in is real.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ EXPERIMENTS ════════════ -->
+<div class="section">
+  <div class="section-num">09 — Growth Experiments</div>
+  <div class="section-title">8 Experiments to Find Product-Market Fit</div>
+  <div class="section-desc">Sequenced in three waves. Wave 1 is do-or-die. All experiments cost $0 — time only. Designed for ~10-12 hours/week.</div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">1. The Barbershop Blitz — 20 In-Person Demos</span>
+      <span class="exp-pri p0">Wave 1 · Critical</span>
+    </div>
+    <div class="exp-hyp">"If we demo Timber face-to-face in 20 local barbershops, at least 5 will sign up for a free trial, because barbers buy through trust and personal relationships, not websites."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>30 days</strong> <span>Effort:</span> <strong>4 hrs/week</strong> <span>Budget:</span> <strong>$0</strong></div>
+    <div class="exp-success"><b>Success:</b> 20 demos completed, 5+ free trial signups, 20 conversations documented with real objections and feedback.</div>
+    <div class="exp-kill"><b>Kill signal:</b> After 10 demos, if 0 barbers show any interest or all say "I use Fresha and I'm happy", your positioning needs fundamental rework.</div>
+  </div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">2. Facebook Group Immersion</span>
+      <span class="exp-pri p0">Wave 1 · Critical</span>
+    </div>
+    <div class="exp-hyp">"If we engage in 3-5 Facebook barber groups for 4 weeks (helping first, not selling), barbers will start asking about Timber organically."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>30 days</strong> <span>Effort:</span> <strong>3 hrs/week</strong> <span>Budget:</span> <strong>$0</strong></div>
+    <div class="exp-success"><b>Success:</b> 20+ genuine engagements, 3+ inbound DMs asking about Timber, 2+ trial signups from Facebook.</div>
+    <div class="exp-kill"><b>Kill signal:</b> After 4 weeks of genuine engagement, zero barbers show interest when you mention the product.</div>
+  </div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">3. Directory Blitz — Get Listed Everywhere</span>
+      <span class="exp-pri p0">Wave 1 · Critical</span>
+    </div>
+    <div class="exp-hyp">"If we list Timber on G2, Capterra, GetApp, AlternativeTo, SaaSHub, and BetaList, we'll generate 50+ monthly visits and 2-3 signups from directory traffic."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>7 days</strong> <span>Effort:</span> <strong>One-time 4 hrs</strong> <span>Budget:</span> <strong>$0</strong></div>
+    <div class="exp-success"><b>Success:</b> 7 directories live, 50+ monthly visitors, 1+ review on G2/Capterra from existing user.</div>
+  </div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">4. Homepage Rewrite — Lead With the Differentiator</span>
+      <span class="exp-pri p0">Wave 1 · Critical</span>
+    </div>
+    <div class="exp-hyp">"If we rewrite the homepage to lead with 'no app download' instead of generic 'easiest booking software', click-to-signup conversion increases from ~6% to 15%+."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>1 day</strong> <span>Effort:</span> <strong>3 hrs one-time</strong> <span>Budget:</span> <strong>$0</strong></div>
+    <div class="exp-success"><b>Success:</b> Click-to-signup conversion >15%, time on page increases 50%+.</div>
+  </div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">5. The First Paying Customer</span>
+      <span class="exp-pri p0">Wave 1 · Critical</span>
+    </div>
+    <div class="exp-hyp">"If we personally call our free user(s) and offer a discounted first 3 months ($10/month), at least 1 will convert to paid."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>14 days</strong> <span>Effort:</span> <strong>1 hr/week</strong> <span>Budget:</span> <strong>$0</strong></div>
+    <div class="exp-success"><b>Success:</b> 1 paying customer, detailed product feedback documented, 1 testimonial or quote.</div>
+    <div class="exp-kill"><b>Kill signal:</b> If your existing free users won't pay even $10/month, this is a serious product-market fit signal. Don't ignore it.</div>
+  </div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">6. Instagram Proof-of-Concept</span>
+      <span class="exp-pri p1">Wave 2 · High</span>
+    </div>
+    <div class="exp-hyp">"If we post 3 short Reels per week showing the booking experience from a client's perspective, we'll gain 200+ followers and 5+ DMs from barbers in 6 weeks."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>42 days</strong> <span>Effort:</span> <strong>3 hrs/week</strong> <span>Budget:</span> <strong>$0</strong></div>
+    <div class="exp-success"><b>Success:</b> 200+ followers, 5+ DMs from interested barbers, 2+ trial signups.</div>
+  </div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">7. Barber Referral Seed</span>
+      <span class="exp-pri p1">Wave 2 · High</span>
+    </div>
+    <div class="exp-hyp">"If we offer early users 1 free month for every barber they refer, each user will refer 1-2 barbers via word-of-mouth."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>30 days</strong> <span>Effort:</span> <strong>1 hr/week</strong> <span>Budget:</span> <strong>$0</strong></div>
+    <div class="exp-success"><b>Success:</b> 5+ referrals sent, 2+ referred signups.</div>
+  </div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">8. Local Barber Supply Store Partnership</span>
+      <span class="exp-pri p2">Wave 3 · Medium</span>
+    </div>
+    <div class="exp-hyp">"If we partner with 1-2 local supply stores to display flyers with QR codes, we'll get 10+ scans and 2+ signups per month."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>60 days</strong> <span>Effort:</span> <strong>1 hr/week</strong> <span>Budget:</span> <strong>$0</strong></div>
+    <div class="exp-success"><b>Success:</b> 10+ QR code scans/month, 2+ signups from flyers.</div>
+  </div>
+</div>
+
+<!-- ════════════ STOP DOING ════════════ -->
+<div class="section">
+  <div class="section-num">10 — Stop Doing These Things</div>
+  <div class="section-title">The Anti-Experiments</div>
+  <div class="section-desc">These feel productive but are actively wasting your limited time. Stop them immediately.</div>
+
+  <div class="anti-exp">
+    <h4>🚫 Don't invest any time in SEO or blog posts</h4>
+    <p>Your site is a SPA that Google can't crawl. Every blog post is invisible. Fix the architecture first, THEN consider SEO.</p>
+  </div>
+  <div class="anti-exp">
+    <h4>🚫 Don't run paid ads</h4>
+    <p>With 0 paying customers, a &lt;6% conversion rate, and no social proof, paid ads will burn money. You'd pay $5-15 per click to send people to a page that doesn't convert.</p>
+  </div>
+  <div class="anti-exp">
+    <h4>🚫 Don't build new features</h4>
+    <p>You don't have enough users to know what features matter. Every hour coding is an hour not spent talking to barbers. The product is good enough to demo — the problem is nobody's seeing it.</p>
+  </div>
+  <div class="anti-exp">
+    <h4>🚫 Don't pitch to VCs or apply to accelerators</h4>
+    <p>With 0 revenue and 1 user, you won't get funded, and the process will consume weeks better spent on customer development. Come back with 50+ paying customers.</p>
+  </div>
+  <div class="anti-exp">
+    <h4>🚫 Don't expand to med spas, nail salons, or other verticals</h4>
+    <p>You haven't proven you can win ONE barber. Spreading across verticals dilutes your already-thin resources and makes your messaging even more generic.</p>
+  </div>
+</div>
+
+<!-- ════════════ CONTENT STRATEGY ════════════ -->
+<div class="section">
+  <div class="section-num">11 — Content Strategy</div>
+  <div class="section-title">What to Create & Where to Post It</div>
+  <div class="section-desc">At your stage, content serves ONE purpose: start conversations with barbers. No thought leadership. No SEO plays. Pure demand-gen in formats barbers consume.</div>
+
+  <div class="content-card">
+    <div class="cc-type">P0 · Instagram Reel · 20 min to produce</div>
+    <h4>10-Second Client Booking Demo</h4>
+    <p>"This is what your clients see when they book with Timber. No app. No signup." Screen record the frictionless booking experience. Post 3x/week. Cross-post to TikTok and Facebook barber groups. Hashtags: #barberlife #barbershop #barberbooking</p>
+  </div>
+  <div class="content-card">
+    <div class="cc-type">P0 · Facebook Group Post · 30 min to produce</div>
+    <h4>Value-First Posts in Barber Groups</h4>
+    <p>"How I helped a barber reduce no-shows by 40% — here's exactly what we did." Share actionable tips about reducing no-shows (with or without Timber). Let barbers come to you. DO NOT pitch for the first 2 weeks.</p>
+  </div>
+  <div class="content-card">
+    <div class="cc-type">P1 · Short Video · 1-2 hrs to produce</div>
+    <h4>Side-by-Side: Booksy (15 steps) vs Timber (3 steps)</h4>
+    <p>Show the client booking journey side-by-side. Makes the differentiator visceral and shareable. Be respectful — compare the process, don't trash-talk. This becomes a reusable sales asset for DMs, demos, and your website.</p>
+  </div>
+  <div class="content-card">
+    <div class="cc-type">P1 · Product Hunt Launch · 4-6 hrs one-time</div>
+    <h4>"Timber — Barber Booking Where Clients Don't Need an App"</h4>
+    <p>Generates backlinks, initial awareness, and a permanent listing. Time this for after you have 3-5 users for social proof. PH badge on your website adds credibility.</p>
+  </div>
+  <div class="content-card">
+    <div class="cc-type">P1 · Testimonial Video · 1 hr</div>
+    <h4>30-Second Video From Your First Paying Customer</h4>
+    <p>In a trust-driven market, one real barber saying "this works" is worth more than all your marketing copy combined. Ask them to record on their phone in their shop — authentic beats polished. This one asset unlocks credibility across every channel.</p>
+  </div>
+</div>
+
+<!-- ════════════ CHANNELS ════════════ -->
+<div class="section">
+  <div class="section-num">12 — Channel Recommendations</div>
+  <div class="section-title">Where Your Customers Actually Are</div>
+  <div class="section-desc">Your customers are not on Reddit, LinkedIn, or tech blogs. They're in barbershops, Facebook groups, and Instagram. Meet them there.</div>
+
+  <div class="channel-grid">
+    <div class="channel-card">
+      <h4>🏪 Walk-In Demos</h4>
+      <p>Walk into local barbershops during quiet hours (Tue-Wed, 10-11am). "I built a booking app — can I show you for 2 minutes?" 40-60% will give you 2 minutes.</p>
+      <span class="ch-pri ch-high">Highest Priority</span>
+    </div>
+    <div class="channel-card">
+      <h4>📱 Facebook Groups</h4>
+      <p>Barber Nation, Barbers Talk, Booth Renters & Suite Owners. Help for 2 weeks, then naturally mention Timber when someone asks for recommendations.</p>
+      <span class="ch-pri ch-high">Highest Priority</span>
+    </div>
+    <div class="channel-card">
+      <h4>📸 Instagram</h4>
+      <p>Barbers live on Instagram. Short Reels showing the booking experience + engaging with barber content. DM barbers who post about booking frustrations.</p>
+      <span class="ch-pri ch-high">Highest Priority</span>
+    </div>
+    <div class="channel-card">
+      <h4>📋 Software Directories</h4>
+      <p>G2, Capterra, GetApp, AlternativeTo — you're on zero of them. Free listings, immediate. List as alternative to Fresha, Booksy, Square.</p>
+      <span class="ch-pri ch-high">Highest Priority</span>
+    </div>
+    <div class="channel-card">
+      <h4>✂️ Barber Supply Stores</h4>
+      <p>Every barber visits their supply store. Leave flyers with QR codes. Free, persistent, local advertising in a high-trust environment.</p>
+      <span class="ch-pri ch-med">Medium Priority</span>
+    </div>
+    <div class="channel-card">
+      <h4>🎓 Barber Schools</h4>
+      <p>New barbers choosing their first tools. Get them on Timber before they discover Booksy. Offer a free workshop: "Business tools for new barbers."</p>
+      <span class="ch-pri ch-med">Medium Priority</span>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ ROADMAP ════════════ -->
+<div class="section">
+  <div class="section-num">13 — 90-Day Roadmap</div>
+  <div class="section-title">What to Do Next</div>
+  
+  <div class="road-grid">
+    <div class="road-card">
+      <div class="road-period">Days 1–30</div>
+      <div class="road-theme">Validate or Kill</div>
+      <ul>
+        <li>Rewrite homepage headline today</li>
+        <li>List on G2, Capterra, AlternativeTo this weekend</li>
+        <li>Join 5 Facebook barber groups</li>
+        <li>Walk into 20 barbershops and demo</li>
+        <li>Call your free user — ask if they'd pay</li>
+        <li>Log every conversation: objections, current tool, interest</li>
+        <li>Make a decision on the brand name</li>
+      </ul>
+    </div>
+    <div class="road-card">
+      <div class="road-period">Days 31–60</div>
+      <div class="road-theme">First Revenue</div>
+      <ul>
+        <li>5 paying customers (even at $10/month)</li>
+        <li>1 barber willing to give a video testimonial</li>
+        <li>Active presence in 3+ Facebook barber groups</li>
+        <li>Launch Instagram with 3 Reels/week</li>
+        <li>Create side-by-side comparison video</li>
+        <li>Plan Product Hunt launch</li>
+      </ul>
+    </div>
+    <div class="road-card">
+      <div class="road-period">Days 61–90</div>
+      <div class="road-theme">Prove or Pivot</div>
+      <ul>
+        <li>20 paying customers, $300+/month revenue</li>
+        <li>Word-of-mouth referrals starting organically</li>
+        <li>Product Hunt launch completed</li>
+        <li>SSR implemented (if SEO route chosen)</li>
+        <li>One local area where barbers know "Timber"</li>
+        <li>If yes → double down. If no → pivot with data.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ RISK FLAGS ════════════ -->
+<div class="section">
+  <div class="section-num">14 — Risk Flags</div>
+  <div class="section-title">What Could Kill This</div>
+  
+  <div class="risk-flag rf-red">
+    <div class="rf-icon rf-red-icon">🔴</div>
+    <div>
+      <div class="rf-title">Zero revenue after 1.5+ months with a live product</div>
+      <div class="rf-text">1 user, 0 paying customers, 0.71% CTR from 2,400 impressions. No product-market fit signal.</div>
+      <div class="rf-fix">→ Fix: Stop optimising the product. 10 face-to-face demos will tell you more than 10,000 impressions.</div>
+    </div>
+  </div>
+  <div class="risk-flag rf-red">
+    <div class="rf-icon rf-red-icon">🔴</div>
+    <div>
+      <div class="rf-title">Competing against free (Fresha) and $160M (SQUIRE) with zero resources</div>
+      <div class="rf-text">Market is dominated by well-funded incumbents with massive distribution.</div>
+      <div class="rf-fix">→ Fix: Do NOT compete head-on. Find a niche neither serves well (e.g., booth-rental barbers in your city) and own it completely.</div>
+    </div>
+  </div>
+  <div class="risk-flag rf-red">
+    <div class="rf-icon rf-red-icon">🔴</div>
+    <div>
+      <div class="rf-title">Brand name creates active confusion with lumber industry</div>
+      <div class="rf-text">Google "TimberPOS" → lumber yard POS systems. Every marketing dollar fights against this.</div>
+      <div class="rf-fix">→ Fix: Seriously consider rebranding before investing more in marketing. Better now than at 100 customers.</div>
+    </div>
+  </div>
+  <div class="risk-flag rf-yellow">
+    <div class="rf-icon rf-yellow-icon">🟡</div>
+    <div>
+      <div class="rf-title">SPA architecture makes SEO non-viable</div>
+      <div class="rf-text">Only homepage indexed despite having city and industry landing pages.</div>
+      <div class="rf-fix">→ Fix: Implement SSR/pre-rendering. Until then, SEO is off the table.</div>
+    </div>
+  </div>
+  <div class="risk-flag rf-yellow">
+    <div class="rf-icon rf-yellow-icon">🟡</div>
+    <div>
+      <div class="rf-title">Anonymous founder creates trust deficit</div>
+      <div class="rf-text">No LinkedIn, no public identity, Reddit-only. In a trust-driven market, personal brand matters.</div>
+      <div class="rf-fix">→ Fix: Create a LinkedIn or personal presence tied to Timber. "Built by [Your Name]" adds human credibility.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ QUESTIONS ════════════ -->
+<div class="section">
+  <div class="section-num">15 — Unlock Higher Confidence</div>
+  <div class="section-title">10 Questions That Sharpen Everything</div>
+  <div class="section-desc">Our current confidence is 28%. Your answers would push it to 55–65% and unlock specific, calibrated recommendations. 15 minutes of honesty will double the precision of every insight above.</div>
+  
+  <div class="q-card">
+    <div class="q-num">1</div>
+    <div>
+      <div class="q-text">How much time per week are you spending on Timber — is this full-time, or alongside a day job?</div>
+      <div class="q-why">A 10hr/week side project gets a very different growth plan than a full-time commitment.</div>
+    </div>
+    <span class="q-pri qp-c">Critical</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">2</div>
+    <div>
+      <div class="q-text">What's your monthly budget for Timber (hosting, tools, marketing) — and how many months of runway do you have?</div>
+      <div class="q-why">Some recommendations need $50/month. Others need $0. We need to know the right frame.</div>
+    </div>
+    <span class="q-pri qp-c">Critical</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">3</div>
+    <div>
+      <div class="q-text">What specific feedback have your free users given you? What do they love, and what's broken or missing?</div>
+      <div class="q-why">This is the closest thing you have to a product-market fit signal. Their words matter more than any market research.</div>
+    </div>
+    <span class="q-pri qp-c">Critical</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">4</div>
+    <div>
+      <div class="q-text">Have you walked into any barbershops in person to demo Timber? If not, what's holding you back?</div>
+      <div class="q-why">In-person demos are our #1 recommendation. Whether this is accessible to you changes everything.</div>
+    </div>
+    <span class="q-pri qp-c">Critical</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">5</div>
+    <div>
+      <div class="q-text">Why did you choose to build for barbers specifically? Do you have any connection to the industry?</div>
+      <div class="q-why">If you have even one barbershop relationship, that changes our entire local sales strategy.</div>
+    </div>
+    <span class="q-pri qp-c">Critical</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">6</div>
+    <div>
+      <div class="q-text">Your website is a single-page app — would you be open to switching to server-side rendering? How much rework?</div>
+      <div class="q-why">This is the #1 technical blocker to any SEO strategy. Your city and industry pages are invisible to Google.</div>
+    </div>
+    <span class="q-pri qp-h">High</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">7</div>
+    <div>
+      <div class="q-text">Have you considered changing the name from 'Timber'? When you Google it, lumber POS systems dominate.</div>
+      <div class="q-why">Not vanity — it's a distribution question. Your brand name is actively fighting you in search.</div>
+    </div>
+    <span class="q-pri qp-h">High</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">8</div>
+    <div>
+      <div class="q-text">What does your payment processing look like — Stripe, Square integration, or still being built?</div>
+      <div class="q-why">Fresha monetises through payment processing. Your pricing model depends on this.</div>
+    </div>
+    <span class="q-pri qp-h">High</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">9</div>
+    <div>
+      <div class="q-text">What does success look like for you in 90 days? A specific number of paying customers? Revenue target?</div>
+      <div class="q-why">We want to build a roadmap toward YOUR definition of success, not a generic one.</div>
+    </div>
+    <span class="q-pri qp-m">Medium</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">10</div>
+    <div>
+      <div class="q-text">Are you based in the US or UK? Local barbershop outreach is our top recommendation and we'd tailor it to your area.</div>
+      <div class="q-why">Market dynamics differ by region. We'd give you specific local recommendations.</div>
+    </div>
+    <span class="q-pri qp-m">Medium</span>
+  </div>
+</div>
+
+<!-- ════════════ FOOTER ════════════ -->
+<div class="footer">
+  <div class="footer-brand">🧠 GrowthMind.ai</div>
+  <div class="footer-sub">Diagnosed by GrowthMind.ai — 18 AI agents, one growth diagnosis</div>
+  <div class="footer-disc">This report was generated by GrowthMind's AI growth diagnosis system from publicly available data. Confidence: 28% (pre-interrogation). Answer the 10 questions above to unlock high-confidence, calibrated recommendations. Report date: February 13, 2026.</div>
+</div>
+
+</div>
+</body>
+</html>

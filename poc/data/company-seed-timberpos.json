@@ -1,0 +1,147 @@
+{
+  "org_id": "timberpos_001",
+  "company_name": "Timber",
+  "website_url": "https://www.timberpos.app",
+  "logo_url": null,
+  "business_idea": "Lightweight POS + booking + payments platform for small service businesses (barbers, salons, med spas, nail salons). Positions as a simpler, easier alternative to legacy booking software — clients book without downloading an app or signing up, reducing friction. Combines appointment scheduling, payment processing, and customer management in one clean platform.",
+  "stage_summary": "pre-revenue-pre-traction",
+  "founder_summary": "Solo founder, identity unknown beyond Reddit username 'Timberpos'. Account created ~Jan 2026. Active on r/SaaS, r/startups_promotion, r/AskReddit. Doing manual outreach to barbers/salons. No LinkedIn, Crunchbase, or public founder profile found. Likely a solo developer/founder.",
+  "founders": [
+    {
+      "name": "Unknown",
+      "role": "Founder",
+      "location": "Unknown",
+      "linkedin": null,
+      "education": null,
+      "background": "Solo builder. Reddit username 'Timberpos'. Has pitched to VCs on Reddit. Actively engaging in SaaS communities for advice. Appears to be technical (built the product). No prior startup history found.",
+      "source": "reddit (u/Timberpos)"
+    }
+  ],
+  "founder_name": "Unknown (Reddit: u/Timberpos)",
+  "founder_role": "Founder",
+  "founded_date": "~late 2025",
+  "launch_date": "~Dec 2025 / Jan 2026",
+  "product_status": {
+    "launch_stage": "launched-no-revenue",
+    "has_working_product": true,
+    "has_landing_page": true,
+    "has_signup_flow": true,
+    "has_payment_flow": "unknown-likely-yes",
+    "has_onboarding": null,
+    "has_analytics": null,
+    "has_users": true,
+    "user_count": 1,
+    "paying_users": 0,
+    "has_feedback_loop": true,
+    "product_completeness": "mvp-live-seeking-first-paying-users",
+    "biggest_product_gap": "Zero revenue. No product-market fit signal. No paying users after 1.5+ months. Website is a JS SPA with poor SEO crawlability — only homepage indexed by Google. The name 'TimberPOS' creates massive confusion with timber/lumber industry POS systems.",
+    "ux_observations": [
+      "Website is entirely JavaScript-rendered (SPA) — web crawlers and SEO bots likely see a blank page",
+      "Only 1 page indexed by Google despite having industry + city landing pages",
+      "Meta title: 'Online Booking Software for Barbers & Salons - Appointment Scheduling App' — generic, doesn't differentiate",
+      "Meta description from Google: 'Timber is the easiest online booking software for barbers and salons. Clients book themselves in seconds, reducing no-shows and saving you time. Free 14-day trial.'",
+      "Signup flow exists at /signup",
+      "Industry pages exist at /industry but are not crawlable/indexable",
+      "City SEO pages exist but are not being indexed due to SPA architecture",
+      "Free 14-day trial offered",
+      "No visible pricing page content (SPA rendering issue)",
+      "Brand name 'Timber' with domain 'timberpos.app' creates SEO confusion with actual timber/lumber POS systems"
+    ],
+    "product_improvement_suggestions": [
+      "CRITICAL: Fix SPA rendering — implement SSR (server-side rendering) or pre-rendering so Google can index pages. This is the #1 blocker for SEO.",
+      "Rename or rebrand to avoid timber/lumber confusion — 'TimberPOS' competes for keywords with actual lumber industry POS systems",
+      "Add social proof — even 1 testimonial from the free user would help",
+      "Add pricing page with clear tiers visible to crawlers",
+      "Consider a demo video or screenshots on the homepage for visitors who can't try immediately",
+      "Fix meta tags and structured data for all pages",
+      "Stop relying on SEO as primary channel — at this stage, direct outreach is the only viable strategy"
+    ],
+    "meta": {
+      "source": "tier1_public",
+      "collected_at": "2026-02-13T10:44:00Z",
+      "confirmed_by_user": false,
+      "confidence": "pre-interrogation",
+      "notes": "Website content could not be fully scraped due to JS SPA architecture. Most product details inferred from Reddit posts, Google search snippets, and founder's own descriptions."
+    }
+  },
+  "primary_icp": "Independent barbers, salon owners, med spa operators, and nail technicians who need a simple, affordable booking and payments platform — especially those frustrated with incumbent solutions (Fresha, Booksy, Square, Vagaro) due to complexity, cost, or poor customer support",
+  "pain_points": [
+    "Booking friction — customers forced to download apps or create accounts to book appointments",
+    "Poor customer service from incumbent platforms — slow response times when issues arise",
+    "Overpriced all-in-one systems with features small shops don't need",
+    "Managing multiple disconnected tools (booking, payments, CRM separately)",
+    "Clunky legacy software that's hard to set up and use daily",
+    "High churn in the category due to poor UX and painful onboarding"
+  ],
+  "pivot_indicators": [
+    "The name 'TimberPOS' strongly implies a Point of Sale system, but the product is primarily a booking/appointment platform with payments — positioning mismatch",
+    "Industry landing pages suggest trying to be horizontal across all service businesses, not just barbers/salons",
+    "Founder mentioned 'barbers, hair salons, medspas, nails' — broad scope for a pre-revenue product"
+  ],
+  "pivot_history": [],
+  "industry": "Beauty & Wellness SaaS / Salon Booking Software / Service Business Management",
+  "headcount": "1 (solo founder, inferred)",
+  "headcount_source": "inferred from Reddit activity and lack of team mentions",
+  "tech_stack": [
+    "JavaScript SPA (likely React or Vue based on rendering behavior)",
+    "Custom domain: timberpos.app",
+    "Web-based platform (no native app mentioned)",
+    "Payment processing integrated (details unknown)"
+  ],
+  "social_presence": {
+    "linkedin": null,
+    "twitter": null,
+    "github": null,
+    "product_hunt": null,
+    "crunchbase": null,
+    "reddit": "active",
+    "reddit_username": "Timberpos",
+    "instagram": null,
+    "facebook": null,
+    "tiktok": null
+  },
+  "funding": {
+    "total_raised": null,
+    "last_round": null,
+    "investors": [],
+    "source": "no public funding info found — likely bootstrapped"
+  },
+  "pricing": {
+    "model": "freemium-trial",
+    "free_trial": "14-day free trial",
+    "tiers": "unknown — pricing page not crawlable",
+    "source": "Google search snippet"
+  },
+  "competitors_mentioned_by_founder": [
+    "Implied: Fresha, Booksy, Square, Vagaro (referred to as 'big competitors' with slow customer service)"
+  ],
+  "key_metrics_shared": {
+    "impressions": 2400,
+    "clicks": 17,
+    "ctr": "0.71%",
+    "active_users": 1,
+    "paying_users": 0,
+    "revenue": 0,
+    "source": "Reddit post by founder, ~Jan 22 2026",
+    "time_since_launch": "~1.5 months at time of posting"
+  },
+  "red_flags": [
+    "Zero revenue after 1.5+ months",
+    "Extremely crowded market with well-funded incumbents (Fresha: $100M+ raised, Vagaro, Booksy, Square, etc.)",
+    "No clear differentiation beyond 'simpler' and 'better customer service'",
+    "SPA architecture makes SEO strategy completely ineffective — pages aren't indexable",
+    "Brand name creates confusion with timber/lumber industry",
+    "Solo founder with no visible track record or network",
+    "Relying on SEO as primary growth channel despite being a brand new domain",
+    "0.71% CTR suggests positioning/messaging doesn't resonate even when seen",
+    "No launch on Product Hunt, Hacker News, or any startup platform",
+    "Pitching to VCs on Reddit with 0 paying users — premature"
+  ],
+  "opportunities": [
+    "Founder is actively learning and receptive to feedback",
+    "The pain points identified (booking friction, bad support) are real and validated by Reddit conversations",
+    "If the product is genuinely good and simple, there's a path through direct local sales (walk into barbershops)",
+    "Niche down aggressively — e.g., 'the booking app for independent barbers' rather than all beauty services",
+    "14-day free trial is the right model for this market"
+  ]
+}

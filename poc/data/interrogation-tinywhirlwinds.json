@@ -1,0 +1,87 @@
+{
+  "org_id": "tinywhirlwinds",
+  "report_type": "interrogation-checkpoints",
+  "generated_at": "2026-02-13T08:48:00Z",
+  "total_checkpoints": 11,
+  "notes": "Questions target genuinely unknowable information — internal metrics, motivations, frustrations, and plans that cannot be found through public research.",
+
+  "checkpoints": [
+    {
+      "checkpoint_id": "TW-INT-001",
+      "field_targeted": "customer_intelligence.traction / product_status.user_count",
+      "question": "How full are your classes right now? Like, if a class holds 10 spots, how many are you actually filling on average — and is that mostly term bookings or drop-ins?",
+      "why_it_matters": "Fill rate and term-vs-drop-in split reveals actual revenue per class and demand strength. The website says 100+ babies served but we have no idea about current weekly utilisation.",
+      "priority": "critical"
+    },
+    {
+      "checkpoint_id": "TW-INT-002",
+      "field_targeted": "customer_intelligence.monetization / financials",
+      "question": "Rough ballpark — what does a typical month look like money-wise? Are the classes covering the studio rent and costs, or are you still investing to get it going?",
+      "why_it_matters": "Unit economics are completely unknown. Whether the business is profitable, breaking even, or burning savings determines every growth recommendation we can make.",
+      "priority": "critical"
+    },
+    {
+      "checkpoint_id": "TW-INT-003",
+      "field_targeted": "customer_intelligence.acquisition_channels",
+      "question": "When a new family books, how did they usually find you? Is it mostly word of mouth from other parents, or Google, or Pembee, or something else?",
+      "why_it_matters": "With zero social media and no Happity listing detected, the acquisition channels are a mystery. Knowing what's working now tells us where to double down and what's missing.",
+      "priority": "critical"
+    },
+    {
+      "checkpoint_id": "TW-INT-004",
+      "field_targeted": "customer_intelligence.retention",
+      "question": "Do families tend to rebook term after term, or do most come for one term and move on? What's the longest anyone's been coming?",
+      "why_it_matters": "Retention rate determines lifetime value and whether growth should focus on new acquisition or keeping existing families longer. Also reveals natural churn points (e.g. return to work).",
+      "priority": "critical"
+    },
+    {
+      "checkpoint_id": "TW-INT-005",
+      "field_targeted": "social_presence / marketing_strategy",
+      "question": "You've got no Instagram or Facebook yet — is that a deliberate choice, or more of a 'haven't got round to it' thing? What's holding you back?",
+      "why_it_matters": "Instagram is THE discovery channel for baby classes. Understanding the blocker (time? confidence? priority? privacy concerns?) determines whether the fix is content help, templates, or a mindset shift.",
+      "priority": "high"
+    },
+    {
+      "checkpoint_id": "TW-INT-006",
+      "field_targeted": "founders.goals / stage_summary",
+      "question": "Big picture — where do you want this to be in a year or two? Is Tiny Whirlwinds a 'nice thing that fits around family life' or are you thinking bigger — more classes, more locations, maybe hiring other instructors?",
+      "why_it_matters": "Growth strategy is entirely different for a lifestyle business vs one with franchise/scaling ambitions. Her tech background suggests she might think bigger, but having a young baby changes priorities.",
+      "priority": "high"
+    },
+    {
+      "checkpoint_id": "TW-INT-007",
+      "field_targeted": "product_status.biggest_product_gap",
+      "question": "Active Adventurers and Parties are listed as 'coming soon' on the site — what's the timeline on those? Is it a demand thing or more about capacity and time?",
+      "why_it_matters": "The 15-36 month gap means families age out with nowhere to go. Understanding the blocker (demand uncertainty vs bandwidth) shapes whether to prioritise launch or optimise existing classes.",
+      "priority": "high"
+    },
+    {
+      "checkpoint_id": "TW-INT-008",
+      "field_targeted": "customer_intelligence.partnerships / acquisition_channels",
+      "question": "Have you connected with any local health visitors, NCT groups, or children's centres in Farnham? Are they sending families your way, or is that untapped?",
+      "why_it_matters": "Local partnerships are the highest-trust acquisition channel for baby classes. Health visitor recommendations carry enormous weight with new parents. If this is untapped, it's a quick win.",
+      "priority": "high"
+    },
+    {
+      "checkpoint_id": "TW-INT-009",
+      "field_targeted": "competitive_landscape / positioning",
+      "question": "Do you know what your families were doing before they found you? Were they at Baby Sensory or Lullababy, or were they not doing any classes at all?",
+      "why_it_matters": "Whether customers are switching from competitors or are first-time class-goers changes the competitive positioning and messaging strategy entirely.",
+      "priority": "high"
+    },
+    {
+      "checkpoint_id": "TW-INT-010",
+      "field_targeted": "product_status / operations",
+      "question": "What happens when you're ill or need a day off — do the classes just not run? Is that something that worries you?",
+      "why_it_matters": "Solo operator risk is the biggest structural vulnerability. Her answer reveals whether she's thought about hiring, training someone, or if this is an unaddressed anxiety. Critical for any scaling plan.",
+      "priority": "medium"
+    },
+    {
+      "checkpoint_id": "TW-INT-011",
+      "field_targeted": "operations / founder_insights",
+      "question": "What's the one thing that's working really well that you're proud of, and what's the one thing that's properly frustrating you right now?",
+      "why_it_matters": "Open-ended insight question that reveals what she values and where she needs help. Often surfaces the real priorities that structured questions miss.",
+      "priority": "medium"
+    }
+  ]
+}

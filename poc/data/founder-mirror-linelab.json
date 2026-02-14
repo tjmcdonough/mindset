@@ -1,0 +1,135 @@
+{
+  "org_id": "linelab_001",
+  "generated_at": "2026-02-13T08:15:00Z",
+  "agent": "founder-mirror",
+  "mirror_insights": [
+    {
+      "id": "mirror_001",
+      "type": "gtm_blind_spot",
+      "severity": "critical",
+      "title": "You Named the Framework But Aren't Following It",
+      "insight": "You told us you're 'crossing the chasm,' but your customer list — Boeing, Hadrian, GKN Aerospace, Running Tide, MIT, Sidewalk Labs — spans aerospace, climate tech, advanced manufacturing, academia, and Alphabet. That's not a beachhead. That's a trophy case. Moore's entire thesis is that you pick ONE segment and dominate it so thoroughly that pragmatists in adjacent segments hear about you through word-of-mouth. You have 7 logos across 5+ industries. That's the early market — visionaries who bought because the tech is cool. You haven't crossed anything yet.",
+      "evidence": [
+        "Customer list spans aerospace (Boeing, GKN), advanced manufacturing (Hadrian), climate tech (Running Tide), academia (MIT, UQ), and tech (Sidewalk Labs/Alphabet)",
+        "No evidence of concentrated wins within a single vertical — no 3-5 referenceable customers in one industry who talk to each other",
+        "Founder self-identifies as 'crossing the chasm' but the customer pattern is textbook early market",
+        "Solving for Scale Summit mixes industries rather than deepening one vertical"
+      ],
+      "question_for_founder": "If you had to pick ONE industry vertical and say no to every opportunity outside it for the next 18 months, which would it be — and why haven't you done that already?",
+      "what_to_do_about_it": "Audit your existing customers: which vertical has (a) the most referenceable wins, (b) the shortest sales cycle, and (c) buyers who talk to each other at the same conferences? Likely aerospace. Commit to it. Build aerospace-specific templates, case studies, pricing, and channel partnerships. Say no to everything else until you have 5+ aerospace customers who will actively refer you.",
+      "cognitive_bias": "Collection bias — impressive logos feel like progress, but breadth of logos ≠ depth of market penetration. Each new vertical resets your sales learning to zero."
+    },
+    {
+      "id": "mirror_002",
+      "type": "category_risk",
+      "severity": "high",
+      "title": "Nobody Is Searching for What You Sell",
+      "insight": "A December 2025 academic review of 9 simulation tools for smart manufacturing doesn't mention analytical modeling as a category. Your buyers Google 'discrete event simulation software' or 'factory planning tool' — not 'analytical production modeling.' You're creating a category that doesn't exist in the buyer's vocabulary. Category creation is a $50M+ marketing exercise that requires either massive funding or a decade of patience. You have neither. Meanwhile, Autodesk just bought FlexSim and will spend more on marketing it in one quarter than your entire lifetime budget.",
+      "evidence": [
+        "Springer systematic review (Dec 2025) of 9 DES tools makes zero mention of analytical alternatives",
+        "LineLab's audience keywords include 'discrete event simulation alternative' — you're defining yourself relative to a category buyers know, which means you don't own your own",
+        "No Crunchbase presence, unknown funding — unlikely to have category-creation budget",
+        "Autodesk acquired FlexSim and will integrate it into their massive distribution engine"
+      ],
+      "question_for_founder": "When a VP of Manufacturing at a mid-market aerospace company needs to plan a new production line, what do they type into Google? And does that search lead them to you?",
+      "what_to_do_about_it": "Stop trying to create 'analytical modeling' as a category. Instead, position as the answer to a search that already exists: 'faster alternative to discrete-event simulation' or 'factory cost optimization software.' Anchor to the buyer's existing mental model, then educate once they're in your funnel. Invest in SEO and content targeting the exact frustration queries showing up on Reddit: 'simulation software too expensive,' 'FlexSim vs AnyLogic,' 'factory planning without simulation.'",
+      "cognitive_bias": "Curse of knowledge — you understand the technical distinction between analytical modeling and DES. Your buyers don't. They just want answers faster and cheaper."
+    },
+    {
+      "id": "mirror_003",
+      "type": "network_dependency",
+      "severity": "high",
+      "title": "Your Sales Pipeline May Be Your MIT Rolodex",
+      "insight": "Every visible customer has a plausible connection to MIT or the academic research network: Boeing (major MIT research partner), MIT (obviously), Sidewalk Labs (Alphabet, deep MIT ties), Hadrian (YC-backed, VC-connected), GKN Aerospace (UK aerospace with MIT collaboration history), University of Queensland (academic network). Running Tide had MIT-connected advisors. This isn't a repeatable GTM motion — it's a warm-intro network that will exhaust. The question isn't whether these are real customers. They are. The question is: can you close a customer who has never heard of MIT's Advanced Manufacturing program?",
+      "evidence": [
+        "Founder is MIT PhD, product born from MIT research",
+        "Customer list skews heavily toward organizations with documented MIT connections",
+        "Acquisition sources listed as 'enterprise-sales-and-referrals' and 'MIT academic network and alumni'",
+        "No evidence of inbound pipeline from content marketing, SEO, or paid channels",
+        "LinkedIn has only 58 followers — not yet a significant inbound channel"
+      ],
+      "question_for_founder": "Of your last 5 sales conversations, how many started with a warm intro from someone in your network vs. a cold inbound from your website or content?",
+      "what_to_do_about_it": "Map every closed deal to its origin: warm intro, event, inbound, outbound. If >80% are warm intros, you don't have a sales process — you have a network. Build a repeatable inbound engine: SEO content targeting DES frustration keywords, a gated ROI calculator, aerospace-specific case studies, and LinkedIn thought leadership from Scott (not the company page). Goal: close 3 customers in 2026 who found you through content, not connections.",
+      "cognitive_bias": "Survivorship bias — you see the deals that closed through your network and assume the market is responding to your product. You're not seeing the thousands of potential buyers who've never encountered you."
+    },
+    {
+      "id": "mirror_004",
+      "type": "pricing_friction",
+      "severity": "medium",
+      "title": "No Public Pricing Is Costing You the Pragmatist Buyer",
+      "insight": "Visionaries tolerate 'request a demo' because they're buying the vision. Pragmatists won't. Moore's pragmatist buyer needs to build a business case before they ever talk to sales. No pricing page means they can't self-qualify, can't compare you to AnyLogic ($25-150k) or FlexSim ($6k), and can't bring a number to their procurement team. Every 'request a demo' button is a conversion wall that filters for people with time and curiosity — which selects for visionaries, not pragmatists. You're literally building a funnel that prevents you from crossing the chasm.",
+      "evidence": [
+        "No pricing page on linelab.io",
+        "No self-serve signup or trial",
+        "Demo-request-only model",
+        "Competitors FlexSim ($6k/yr) and Simio ($11k/yr) have more transparent pricing",
+        "Reddit threads show SME engineers looking for affordable simulation alternatives — they won't click 'request a demo' for an unknown tool",
+        "Desktop software delivery model adds procurement complexity"
+      ],
+      "question_for_founder": "How many website visitors hit your demo page and leave without requesting? And of those who do request, what percentage are pragmatist buyers building a business case vs. visionary early adopters exploring new tech?",
+      "what_to_do_about_it": "At minimum, publish a pricing range or 'starting at' figure. Better: offer a self-serve evaluation tier — even if limited — that lets engineers try LineLab on a sample problem without talking to sales. Best: build an ROI calculator on the website that takes their production parameters and shows estimated savings, pre-qualifying them before the demo call. The goal is to let pragmatists self-serve the business case.",
+      "cognitive_bias": "Status quo bias — enterprise software 'always' does demo-first sales. But you're a 2-10 person startup competing against Autodesk's distribution. You can't afford the enterprise sales cycle with every prospect."
+    },
+    {
+      "id": "mirror_005",
+      "type": "technical_superiority_trap",
+      "severity": "high",
+      "title": "You're Selling the Engine When Buyers Want the Destination",
+      "insight": "Your messaging leads with methodology: 'extended queueing theory,' 'mathematical optimization,' 'analytical vs Monte Carlo.' Your growth voice doc literally says 'lead with the outcome, then reveal the method' — but your actual positioning does the opposite. The Winter Simulation Conference paper, the MIT lineage, the 0.64% accuracy figure — these are proof points for engineers evaluating the science. But the VP of Manufacturing who signs the check doesn't care about queueing theory. They care about: 'Will my factory cost what you say it will?' You're an MIT PhD who built something genuinely better. The risk is that you fall in love with WHY it's better rather than focusing on WHAT it does for the buyer.",
+      "evidence": [
+        "Product features emphasize methodology (queueing theory, mathematical optimization) over outcomes",
+        "Growth voice document itself identifies this tension but the website still leads with technical differentiation",
+        "Competitive differentiation framed as 'analytical vs Monte Carlo' — a distinction that means nothing to a non-technical buyer",
+        "HandWiki article reads like an academic paper, not a product page",
+        "Brand archetype is 'The Applied Scientist' — the word 'scientist' may be the problem"
+      ],
+      "question_for_founder": "If you removed every mention of 'queueing theory,' 'analytical,' and 'MIT' from your website — would the value proposition still be compelling? What would be left?",
+      "what_to_do_about_it": "Restructure the website around buyer outcomes, not technology. Homepage hero: '$6M saved. 32% cost avoidance. Answers in minutes.' Save the methodology for a 'How It Works' page that technical evaluators can find. Test this: show your homepage to a VP of Manufacturing who's never heard of queueing theory. If they don't immediately understand what LineLab does for them, the messaging isn't working.",
+      "cognitive_bias": "Engineer's fallacy — believing that if people understood the technical superiority, they'd obviously choose your product. They won't. They'll choose the product that most clearly promises to solve their problem."
+    },
+    {
+      "id": "mirror_006",
+      "type": "competitive_underestimation",
+      "severity": "medium",
+      "title": "The Tools You Dismiss Have 100x Your Install Base — And They're Not Standing Still",
+      "insight": "Your competitive framing positions DES tools as slow, opaque, and stuck in the '90s. But AnyLogic has $26M revenue and 165 employees. FlexSim just got acquired by Autodesk — a company with $5B revenue and every manufacturing engineer's email address. Siemens Tecnomatix is embedded in the PLM stack of every major automotive and aerospace company. These tools aren't going to watch you eat their lunch. AnyLogic is already adding cloud capabilities. Autodesk will bundle FlexSim into Fusion 360 subscriptions. And any of them could bolt on an optimization layer or acquire an analytical engine. Your 18-month head start is a methodological moat, not a business moat.",
+      "evidence": [
+        "AnyLogic: ~$26.3M revenue, 165 employees, 96+ enterprise customers",
+        "FlexSim acquired by Autodesk (Nov 2023) — now has access to Autodesk's entire manufacturing customer base",
+        "Siemens Tecnomatix is part of a $20B+ digital industries division",
+        "Arena/Rockwell is backed by a $30B industrial automation company",
+        "LineLab: 2-10 employees, unknown funding, 58 LinkedIn followers"
+      ],
+      "question_for_founder": "What happens when Autodesk adds an optimization module to FlexSim and offers it to their 100,000+ manufacturing customers for $6k/yr? What's your response?",
+      "what_to_do_about_it": "Your moat is methodological depth — extended queueing theory is genuinely hard to replicate. But moats only matter if you have enough market share to defend them. Move faster on GTM. Consider strategic partnerships: could LineLab be the analytical engine inside someone else's platform? Could you partner with a consulting firm (McKinsey, BCG) as their production modeling tool? Being the best technology that nobody uses is not a viable outcome.",
+      "cognitive_bias": "Innovator's blind spot — assuming incumbents are too slow or too invested in legacy approaches to respond. Autodesk didn't acquire FlexSim to let the market shift underneath them."
+    },
+    {
+      "id": "mirror_007",
+      "type": "platform_risk",
+      "severity": "medium",
+      "title": "Desktop Software in a Cloud-First World Is a Distribution Handicap",
+      "insight": "LineLab is a desktop application (Windows/macOS) in an era where every enterprise buyer expects cloud-native, collaborative, and browser-based tools. This isn't just a technical preference — it's a procurement reality. Cloud software goes through IT security review once. Desktop software requires installation approval, endpoint management, update cycles, and per-machine licensing. For a 2-10 person company trying to scale sales, every friction point in procurement is a deal killer. FlexSim went cloud via Autodesk. AnyLogic has a cloud version. Even Siemens moved to Xcelerator cloud. You're the only major player still desktop-only.",
+      "evidence": [
+        "Product listed as 'Desktop application (Windows, macOS)'",
+        "No self-serve signup flow on website",
+        "No cloud or SaaS version mentioned",
+        "Competitors AnyLogic and FlexSim/Autodesk both offer cloud versions",
+        "Product improvement suggestions from seed data include 'Consider a cloud/SaaS version to reduce friction'",
+        "Enterprise IT procurement increasingly mandates cloud-first policies"
+      ],
+      "question_for_founder": "How many deals have stalled or died because IT couldn't approve a desktop installation, or because the evaluation required downloading software instead of clicking a link?",
+      "what_to_do_about_it": "You don't need to rebuild the product as SaaS overnight. But you need a browser-based entry point — even if it's a limited 'try LineLab' experience that runs a sample model in the cloud. This solves three problems at once: (1) removes procurement friction for evaluation, (2) enables self-serve trial for pragmatist buyers, (3) gives you usage analytics you currently don't have. Consider a phased approach: cloud-hosted demo environment → limited cloud tier → full cloud product."
+    }
+  ],
+  "summary": "LineLab has genuinely differentiated technology and impressive early adopter validation. But the company is exhibiting classic signs of a technical founder who has built a better mousetrap and is waiting for the world to beat a path to their door. The core challenge isn't the product — it's the go-to-market. Seven customers across five industries isn't crossing the chasm; it's touring the early market. The MIT network has been a gift for getting started, but it's not a scalable acquisition channel. And the combination of no public pricing, no self-serve trial, desktop-only delivery, and methodology-first messaging creates a funnel that systematically filters out the pragmatist buyers LineLab needs to reach. The technology moat is real but time-limited — Autodesk and Siemens have the resources to close the gap. The clock is ticking on GTM, not on R&D.",
+  "meta": {
+    "data_sources": [
+      "company-seed-linelab.json",
+      "market-intel-linelab.json",
+      "growth-voice-linelab.json"
+    ],
+    "confidence": "high — based on extensive public data, competitive intelligence, and founder's own chasm-crossing framing",
+    "tone_check": "direct, evidence-based, challenges strategy not person"
+  }
+}

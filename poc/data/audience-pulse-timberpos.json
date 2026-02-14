@@ -1,0 +1,115 @@
+{
+  "org_id": "timberpos_001",
+  "agent": "audience-pulse",
+  "collected_at": "2026-02-13T10:45:00Z",
+  "confidence": "pre-interrogation",
+  "icp_definition": "Independent barbers, salon owners, med spa operators, and nail technicians — primarily 1-5 person shops, owner-operated, looking for affordable modern tools",
+  "where_they_hang_out": {
+    "reddit": {
+      "signal_strength": "high",
+      "communities": [
+        {
+          "name": "r/Barber",
+          "members": "~100K+",
+          "relevance": "high — barbers discuss tools, booking apps, business challenges",
+          "active_discussions": "Best tool for booking appointments, software recommendations, business advice"
+        },
+        {
+          "name": "r/SalonOwners",
+          "relevance": "high — salon business owners discussing operations, software, marketing"
+        },
+        {
+          "name": "r/BarberShop",
+          "relevance": "medium — mix of enthusiasts and professionals"
+        },
+        {
+          "name": "r/Hair",
+          "relevance": "medium — stylists active here, some business discussion"
+        },
+        {
+          "name": "r/smallbusiness",
+          "relevance": "medium — barber/salon owners post here about POS, booking software",
+          "notable_threads": [
+            "Best salon software for booking, scheduling, POS, and client management",
+            "New Barbershop Owner Seeking Advice on Attracting More Customers"
+          ]
+        },
+        {
+          "name": "r/Esthetics",
+          "relevance": "medium — estheticians and med spa professionals"
+        },
+        {
+          "name": "r/NailTech",
+          "relevance": "medium — nail technicians discussing business tools"
+        }
+      ]
+    },
+    "facebook_groups": {
+      "signal_strength": "very high",
+      "note": "Facebook groups are THE primary online community for barbers and salon owners. This is where the majority of the ICP hangs out and makes software decisions.",
+      "key_groups": [
+        "Barber Nation (large, active)",
+        "Salon Owners Club",
+        "Barbers Talk",
+        "Mobile Barbers Network",
+        "Black Barber Connect",
+        "Salon Business Secrets",
+        "Beauty Industry Group",
+        "Independent Salon Owner",
+        "Booth Renters & Suite Owners"
+      ]
+    },
+    "instagram": {
+      "signal_strength": "very high",
+      "note": "Barbers are extremely active on Instagram — it's their primary marketing channel. Software companies that succeed in this space have strong Instagram presence.",
+      "hashtags": ["#barberlife", "#barbershop", "#barbersconnect", "#salonowner", "#hairstylist", "#barberbusiness"]
+    },
+    "tiktok": {
+      "signal_strength": "high",
+      "note": "Younger barbers and stylists are very active on TikTok. Software demos and 'day in the life' content perform well."
+    },
+    "youtube": {
+      "signal_strength": "medium",
+      "note": "Barber tutorials, shop tours, business advice channels. Good for longer-form content and software reviews."
+    },
+    "forums_and_communities": [
+      {
+        "name": "Hair Salon Pro",
+        "url": "https://www.hairsalonpro.com",
+        "type": "online community",
+        "relevance": "medium"
+      },
+      {
+        "name": "Behind the Chair",
+        "url": "https://behindthechair.com",
+        "type": "content platform + community",
+        "relevance": "medium-high for salon professionals"
+      },
+      {
+        "name": "Barber Board / State licensing forums",
+        "type": "forums",
+        "relevance": "low — more about licensing than software"
+      }
+    ],
+    "offline_and_events": [
+      "Local barber expos and trade shows",
+      "Barber conventions (International Barber Convention, etc.)",
+      "Cosmetology school networks",
+      "Barber supply store communities (physical hubs)",
+      "Word of mouth — barbers talk to other barbers in person"
+    ]
+  },
+  "buying_behavior": {
+    "discovery": "Word of mouth (barber-to-barber), Instagram recommendations, Facebook group discussions, Google search ('best barber booking app')",
+    "evaluation": "Try free trial/free plan, ask in Facebook group or ask their barber friends, check reviews on App Store/Google Play",
+    "decision_speed": "Fast — usually within 1 day of trying. Either it works for them or it doesn't.",
+    "price_sensitivity": "Very high — most independent barbers resist paying >$30/month for software",
+    "switching_trigger": "Poor support experience, unexpected fees, forced app downloads frustrating their clients, or a recommendation from a trusted barber"
+  },
+  "content_that_resonates": {
+    "formats": ["Short-form video (TikTok/Reels)", "Before/after transformations", "Day-in-the-life content", "Quick tips and hacks", "Software demo walkthroughs"],
+    "topics": ["Growing your client list", "Reducing no-shows", "Managing booth rent vs commission", "Marketing your barbershop", "Work-life balance as a barber"],
+    "tone": "Casual, real, peer-to-peer. Barbers don't respond to corporate marketing — they respond to other barbers and authentic voices."
+  },
+  "key_insight": "Timber's founder is doing manual outreach on Reddit, but the ICP is primarily on Facebook Groups and Instagram. Reddit is where SaaS founders hang out, not where barbers make software decisions. The outreach strategy needs to shift dramatically toward Facebook Groups and Instagram DMs."
+}

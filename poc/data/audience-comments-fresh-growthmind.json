@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-02-12T22:21:00.000Z",
+  "comments": [
+    {
+      "signal_id": "sig_001",
+      "url": "https://www.reddit.com/r/SaaS/comments/1r2f9ep/which_marketing_agency_is_best_for_saas_user/",
+      "subreddit": "r/SaaS",
+      "post_title": "Which marketing agency is best for SaaS user acquisition and signup growth?",
+      "comment": "tbh before you spend more on an agency, it might be worth figuring out which channel actually works first. i burned through like $8k on a \"SaaS growth agency\" that basically just ran broad facebook ads and called it strategy.\n\nwhat ended up moving the needle for us was way less sexy — manually posting in communities where our users already hung out, doing cold outreach on linkedin, and writing comparison pages targeting competitor keywords. none of that needed an agency.\n\nif you do go the agency route, ask them specifically what their first 30 days look like and what experiments they'll run. if they can't answer that clearly or just say \"we'll optimize your funnel\" — run. the good ones will tell you exactly what they're testing and why.\n\nwhat's your current CAC looking like? that context would help people give better recs.",
+      "tone": "casual",
+      "word_count": 139
+    },
+    {
+      "signal_id": "sig_002",
+      "url": "https://www.reddit.com/r/Entrepreneur/comments/1r1z1ac/how_do_you_know_youre_iterating_vs_just_refusing/",
+      "subreddit": "r/Entrepreneur",
+      "post_title": "How do you know you're iterating vs just refusing to quit?",
+      "comment": "the \"polished dead end\" line hit me. been there.\n\none thing that helped me get honest with myself: i stopped looking at whether the product was getting better and started tracking whether my *growth rate* was changing. product improvements feel like progress but if your month-over-month growth has been flat for 6+ months while you're actively trying to grow — that's a signal.\n\nthe framework i use now: iteration means each cycle teaches you something new about your market. if you're just making the existing thing shinier for the same people, that's polishing, not iterating.\n\nhonest question — are your current users pulling other people in organically at all? even a little? if not, the issue probably isn't timing, it's that you haven't found the thing that makes people talk about it unprompted.",
+      "tone": "empathetic",
+      "word_count": 137
+    }
+  ]
+}

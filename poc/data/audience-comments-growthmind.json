@@ -1,0 +1,95 @@
+{
+  "generated_at": "2026-02-12T21:44:00.000Z",
+  "comments": [
+    {
+      "signal_id": "sig_001",
+      "url": "https://www.reddit.com/r/SaaS/comments/1qvp0tn/how_to_get_first_users/",
+      "subreddit": "r/SaaS",
+      "post_title": "How to get first users?",
+      "comment": "contract scanning is actually a great niche because you can find your ICP so easily — go to r/freelance, r/contractors, r/legaladvice and just... answer questions about contracts. don't pitch. just help people and have your tool in your profile.\n\nalso tbh the fastest path to 10 beta testers: find 50 freelancers on twitter/linkedin who've posted about getting screwed by a contract. DM them offering free access. most won't reply but you only need 10.\n\nthe \"build it and they will come\" thing is a lie. at this stage it's manual, ugly, one-at-a-time outreach. that's normal.\n\nfwiw i'm building something called growthmind.ai that helps early founders figure out exactly which growth experiments to run each week — basically because i kept getting stuck at this same stage myself.",
+      "tone": "casual",
+      "word_count": 131
+    },
+    {
+      "signal_id": "sig_002",
+      "url": "https://www.reddit.com/r/ycombinator/comments/1qzz5op/built_multiple_ai_products_struggling_to_find/",
+      "subreddit": "r/ycombinator",
+      "post_title": "Built multiple AI products, struggling to find distribution",
+      "comment": "your infra sounds legit but the pattern you're describing — ship fast, no traction, ship again — is the classic builder's trap. distribution isn't a thing you bolt on after. it needs to be the constraint you design around.\n\npractical suggestion: pick the ONE product where you got that R&D client through contacts-of-contacts. that warm path is your distribution channel. double down on it. go find 5 more companies in that exact vertical and do direct outreach.\n\nthe \"I can build in <1 week\" superpower becomes dangerous when it lets you avoid the hard thing (selling to one specific person).\n\ni've been obsessing over this exact problem and started building growthmind.ai to help pre-PMF founders diagnose where they actually are and run the right experiments. still early but the framework might be useful.",
+      "tone": "technical",
+      "word_count": 138
+    },
+    {
+      "signal_id": "sig_003",
+      "url": "https://www.reddit.com/r/startups/comments/1qcsznf/built_22_products_0_revenue_looking_for_a_reality/",
+      "subreddit": "r/startups",
+      "post_title": "Built 22 products, $0 revenue. Looking for a reality check",
+      "comment": "you already diagnosed yourself perfectly — \"I optimized for ships completed when I should have optimized for problems validated.\" that's the whole answer tbh.\n\nmy vote is Option A with a twist: pick the 2-3 where you got the most *unprompted* inbound interest (not github stars — actual people asking for it). then give yourself 90 days per product with one rule: no building. only talking to users and selling what already exists.\n\nre: B2B vs consumer — you have a consulting biz with B2B relationships. that's an unfair advantage most indie hackers would kill for. use it.\n\nthe calendar app with community interest sounds promising if you can convert free users to paid.\n\ni'm working on something at growthmind.ai that basically automates this triage — figuring out which stage you're at and what to focus on next. might be relevant for you.",
+      "tone": "empathetic",
+      "word_count": 145
+    },
+    {
+      "signal_id": "sig_004",
+      "url": "https://www.reddit.com/r/startups/comments/1qx3962/marketing_a_product_i_will_not_promote_that_keeps/",
+      "subreddit": "r/startups",
+      "post_title": "Marketing a product I will not promote that keeps pivoting",
+      "comment": "\"putting lipstick on a pig rather than helping decide if we should be raising a pig\" — this is painfully accurate and honestly a sign you understand product better than you think.\n\nwhen i was in a similar spot i reframed it: instead of fighting for a title change, i just started doing product work. wrote a one-pager on who the customer actually is. shared it casually. when it clicked with the founders, suddenly i was \"the product person\" without asking.\n\nre: mental health — if the pivots are weekly with no thesis behind them, that's not iteration, it's chaos. worth having an honest convo about whether there's a real strategy or just vibes.\n\nno silver bullet but you clearly think about this the right way.",
+      "tone": "empathetic",
+      "word_count": 121
+    },
+    {
+      "signal_id": "sig_005",
+      "url": "https://www.reddit.com/r/DigitalMarketing/comments/1qndflh/spent_18k_on_a_marketing_agency_in_5_months/",
+      "subreddit": "r/DigitalMarketing",
+      "post_title": "Spent $18k on a marketing agency in 5 months",
+      "comment": "\"market conditions\" as an explanation for 40% CPL increase is criminal lmao. glad you got out.\n\nyour DIY stack is solid. one thing i'd add — the real unlock isn't just cheaper tools, it's that YOU now understand your own numbers. agencies create learned helplessness. you're building a muscle that compounds.\n\nonly watch out for: spending all your time on execution and none on strategy. easy trap when you're finally in control of everything. block 2hrs/week to just look at what's working and kill what isn't.\n\ni'm actually building something along these lines at growthmind.ai — helping founders run structured growth experiments instead of just throwing stuff at the wall. your story is exactly why it exists.",
+      "tone": "casual",
+      "word_count": 118
+    },
+    {
+      "signal_id": "sig_006",
+      "url": "https://www.reddit.com/r/SaaS/comments/1qwlrcj/how_to_scale_run_marketing_desperate_for_any_ideas/",
+      "subreddit": "r/SaaS",
+      "post_title": "How to scale/run marketing? Desperate for any ideas",
+      "comment": "<1% conversion from signup to paid is almost always a positioning or onboarding problem, not a traffic problem. before spending on Meta ads i'd look at:\n\n1. what happens after signup? do users hit the aha moment or bounce?\n2. are the cheap signups actually your ICP or just curious clickers?\n3. have you talked to the ones who DID convert? what was different about them?\n\npouring more traffic into a leaky funnel just burns money faster. fix the <1% first, then scale.\n\nfor e-comm specifically, i'd try linkedin outreach to agency owners directly — way more targeted than broad paid ads.\n\nfwiw i'm building growthmind.ai to help founders at exactly this stage figure out which experiment to run next instead of guessing. still early days but the diagnostic might help.",
+      "tone": "casual",
+      "word_count": 131
+    },
+    {
+      "signal_id": "sig_007",
+      "url": "https://www.reddit.com/r/SaaS/comments/1qn38qu/i_have_no_idea_how_to_market_my_saas/",
+      "subreddit": "r/SaaS",
+      "post_title": "I have no idea how to market my SaaS",
+      "comment": "forget SEO and ads for now. seriously. at your stage those are money pits.\n\nhere's what actually works when you're at zero:\n\n1. find where your users already hang out (reddit, discord, slack communities, twitter)\n2. help people there for free. answer questions. be useful.\n3. do manual outreach — find 20 people who fit your ICP, reach out personally\n\nthe goal isn't \"marketing.\" it's getting 10 people to use your thing and tell you what they think. everything else is premature.\n\npaid ads make sense when you know your conversion rates and unit economics. you don't know those yet.\n\ni've been building growthmind.ai partly because i kept seeing founders (including myself) spin their wheels on the wrong channel at the wrong stage.",
+      "tone": "casual",
+      "word_count": 121
+    },
+    {
+      "signal_id": "sig_008",
+      "url": "https://www.reddit.com/r/SaaS/comments/1qn8sh3/i_made_a_really_good_product_but_i_dont_know_how/",
+      "subreddit": "r/SaaS",
+      "post_title": "I made a really good product but I don't know how to market it",
+      "comment": "mock interviews is a great niche because your users are extremely findable — career subs, bootcamp discords, linkedin job seekers.\n\nyou're already doing the comment thing which is good. but here's what i'd add: partner with bootcamps and career coaches. offer them a free tier or affiliate deal. they need tools for their students, you need distribution. win-win.\n\nalso the testimonial/demo idea in your edit is smart. real user recordings are 10x more convincing than any landing page copy.\n\none thing — don't write off paid ads entirely, but don't start there. manual channels first until you really understand what message converts.\n\ni'm working on growthmind.ai which is basically a system for figuring out which growth experiments to prioritize at each stage. happy to share more if useful.",
+      "tone": "casual",
+      "word_count": 129
+    },
+    {
+      "signal_id": "sig_009",
+      "url": "https://www.reddit.com/r/startups/comments/1qybnuf/everyone_talks_about_iterating_the_product_with/",
+      "subreddit": "r/startups",
+      "post_title": "Everyone talks about iterating the product with users, but how do you get them?",
+      "comment": "this is the question nobody answers honestly. \"just talk to users\" assumes you have users. here's how i've actually gotten early ones:\n\n- cold outreach on linkedin. not \"check out my product\" but \"i noticed you deal with [problem], can i get 15 min of your time? building something and want to make sure it doesn't suck\"\n- post in niche communities where your ICP hangs out. not pitching, just participating\n- find adjacent products on Product Hunt, look at who reviewed them, reach out\n\nthe trick is framing it as asking for help, not selling. people love giving advice.\n\nalso: you don't need \"users\" to iterate. you need 5 conversations with people who have the problem. that's it.\n\ni've been building growthmind.ai around this exact gap — helping pre-PMF founders figure out what to do when all the advice assumes you're further along than you are.",
+      "tone": "empathetic",
+      "word_count": 148
+    },
+    {
+      "signal_id": "sig_010",
+      "url": "https://www.reddit.com/r/SaaS/comments/1qc9c6y/for_founders_who_broke_through_the_first_10/",
+      "subreddit": "r/SaaS",
+      "post_title": "For founders who broke through the first 10 customers",
+      "comment": "my first 10 were all from doing things that don't scale:\n\n- 3 came from reddit/twitter conversations where i genuinely helped someone and they checked my profile\n- 4 from cold linkedin DMs (sent maybe 60, so ~7% conversion which felt terrible but worked)\n- 2 from a Show HN post\n- 1 from a friend of a friend\n\nzero from SEO, zero from paid ads, zero from content marketing. all that came later.\n\nthe unsexy truth is first 10 customers is a manual sales job. you're not \"doing marketing\" yet. you're doing customer discovery that sometimes ends in a sale.\n\ni'm building growthmind.ai to help founders at this stage run structured weekly experiments instead of guessing — basically because i wished something like it existed when i was here.",
+      "tone": "casual",
+      "word_count": 130
+    }
+  ]
+}

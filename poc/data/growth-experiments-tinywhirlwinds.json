@@ -1,0 +1,242 @@
+{
+  "org_id": "tinywhirlwinds",
+  "report_type": "growth-experiments",
+  "generated_at": "2026-02-13T09:55:00Z",
+  "version": "1.0",
+
+  "context": {
+    "stage": "Pre-launch (official launch in 2 weeks)",
+    "constraints": ["Solo founder", "No marketing experience", "Limited budget", "New mum balancing family"],
+    "primary_goal": "Fill first 3 classes to 8+ attendees within 6 weeks of launch",
+    "secondary_goals": ["Build Instagram to 500 followers in 3 months", "Establish 3+ local referral partnerships", "Achieve 60%+ term rebooking rate"]
+  },
+
+  "experiments": [
+    {
+      "id": "EXP-001",
+      "name": "Health Visitor & Midwife Leaflet Drop",
+      "priority_wave": "P0",
+      "priority_label": "Before launch",
+      "hypothesis": "If Jade introduces herself and leaves branded leaflets/cards at local health visitor clinics, children's centres, and midwife practices, at least 5 new enquiries will come from this channel within 4 weeks — because health professionals are the most trusted source of activity recommendations for new parents.",
+      "channel": "Local partnerships / referral",
+      "success_criteria": [
+        "Leaflets distributed to 5+ locations within 1 week",
+        "At least 5 enquiries traced to this channel within 4 weeks",
+        "At least 2 trial bookings from partnership referrals"
+      ],
+      "duration": "1 week to set up, 4 weeks to measure",
+      "effort": "Low-medium (half a day visiting locations, cost of leaflet printing ~£30-50)",
+      "risk": "Low — worst case, nobody picks up a leaflet",
+      "instructions": [
+        "Design a simple A5 leaflet or postcard: class name, age ranges, pricing, location, QR code to booking page, Jade's photo. Use Canva — there are baby class templates.",
+        "Print 200 leaflets (Vistaprint or local print shop, ~£30).",
+        "Make a list of targets: Farnham health centre, Farnham children's centre, local midwife practices, Farnham hospital maternity ward noticeboard, Phyllis Tuckwell (if they have a community board).",
+        "Visit each IN PERSON. Don't just drop leaflets — introduce yourself. Say: 'Hi, I'm Jade, I run baby sensory classes in Farnham. Would it be OK to leave some leaflets for your parents? I'd love to support the families you work with.'",
+        "Ask if they have a noticeboard, a leaflet rack, or if they'd be willing to mention you to new parents.",
+        "Leave 20-30 leaflets per location. Offer to replenish.",
+        "Track where bookings come from — add 'How did you hear about us?' to the booking flow.",
+        "Follow up in 2 weeks to replenish and build the relationship."
+      ]
+    },
+    {
+      "id": "EXP-002",
+      "name": "Google My Business Launch",
+      "priority_wave": "P0",
+      "priority_label": "Before launch",
+      "hypothesis": "If Tiny Whirlwinds has a complete, verified Google Business Profile with photos, correct hours, and class descriptions, it will appear in 'baby classes near me' and 'sensory classes Farnham' searches — driving 3+ organic enquiries per month from parents actively searching.",
+      "channel": "Local SEO / Google",
+      "success_criteria": [
+        "Profile live and verified within 1 week",
+        "Appearing in Google Maps results for 'baby classes Farnham' within 2 weeks",
+        "First Google review within 2 weeks of launch",
+        "5+ reviews within first term"
+      ],
+      "duration": "2 hours to set up, ongoing maintenance",
+      "effort": "Low (one-time setup, then ask for reviews)",
+      "risk": "None — this is table stakes",
+      "instructions": [
+        "Go to business.google.com and create a Business Profile for Tiny Whirlwinds.",
+        "Category: 'Baby and toddler activity class' or closest match. Add secondary: 'Sensory play area'.",
+        "Add: full address, phone number, website URL, booking link, opening hours (class times).",
+        "Upload 10+ high-quality photos: the studio setup, light shows, sensory stations, exterior of building, Jade teaching. These photos will appear in search and Maps.",
+        "Write a description (750 chars): 'Tiny Whirlwinds is Farnham's dedicated baby and toddler sensory studio. We run gentle, developmental sensory classes for babies 0-15 months in small groups. Our purpose-built studio features light shows, tactile play stations, and music — all designed around how babies actually develop. Founded by local mum Jade. Book a £7 trial class today.'",
+        "Verify the business (Google may send a postcard or call).",
+        "After each class, ask happy parents: 'If you enjoyed today, a Google review would really help other Farnham parents find us.' Send them the direct review link.",
+        "Post weekly updates (Google Posts): class photos, special offers, new term openings."
+      ]
+    },
+    {
+      "id": "EXP-003",
+      "name": "Instagram Content Engine (30-Day Sprint)",
+      "priority_wave": "P0",
+      "priority_label": "Before and through launch",
+      "hypothesis": "If Jade posts 4x per week on Instagram (2 Reels, 1 carousel, 1 Story sequence) for 30 days using a content formula, the account will grow from ~90 to 300+ followers, generate 10+ DM enquiries, and become the primary discovery channel — because Instagram is how Farnham mums find baby activities.",
+      "channel": "Instagram",
+      "success_criteria": [
+        "300+ followers within 30 days",
+        "10+ DM enquiries or link-in-bio clicks",
+        "3+ bookings traceable to Instagram",
+        "Consistent 4x/week posting maintained for 30 days"
+      ],
+      "duration": "30 days (then ongoing)",
+      "effort": "Medium-high (3-5 hours per week for content creation and engagement)",
+      "risk": "Low financial risk, high time investment. Risk of overwhelm — batch content creation helps.",
+      "instructions": [
+        "CONTENT PILLARS (rotate through these): (1) Studio magic — Reels of light shows, sensory setups, before/after room transformation. (2) Baby reactions — short clips of babies engaging (with parent permission). (3) Jade's story — why she started, what she was looking for, behind-the-scenes. (4) Tips — 'Easy sensory play at home' carousels that provide value. (5) Social proof — parent quotes, class moments, milestones.",
+        "REEL FORMULA: Hook in first 1.5 seconds (a baby's face, lights turning on, a surprising sensory moment). Keep under 15 seconds for reach. Use trending audio when it fits. Add text overlay for silent viewers.",
+        "BATCH CREATION: Spend 1 hour on Sunday filming 3-4 short clips during setup or after class. Edit in CapCut (free). Schedule with Later or Meta Business Suite (free). This prevents daily content stress.",
+        "ENGAGEMENT (15 mins/day): Follow and engage with Farnham mums, local businesses, parenting accounts. Comment genuinely on posts (not 'love this! 🔥'). Respond to every DM and comment.",
+        "HASHTAG SET: #FarnhamMums #SurreyBabyClasses #SensoryPlay #BabyDevelopment #FarnhamLife #ThingsToDoInFarnham #SurreyMums #BabyClassesNearMe #SensoryBaby #NewMum — use 10-15 per post, mix broad and local.",
+        "LAUNCH REEL (going out today): Pin it to profile. Make sure it shows the studio, Jade's face, and a clear CTA (book a trial, link in bio).",
+        "STORIES: Use daily for casual behind-the-scenes, polls ('What sensory texture does your baby love?'), and class reminders. Stories build relationship; posts build reach.",
+        "ASK FOR PERMISSION: After each class, ask parents if you can share photos/videos. Most will say yes. Create a simple photo consent form."
+      ]
+    },
+    {
+      "id": "EXP-004",
+      "name": "Farnham Mums Facebook Group Presence",
+      "priority_wave": "P1",
+      "priority_label": "First month",
+      "hypothesis": "If Jade becomes a helpful, known presence in Farnham-area parent Facebook groups (answering questions, sharing tips, NOT hard-selling), she will receive 5+ direct recommendations when parents ask 'any good baby classes in Farnham?' — because local Facebook groups are the #1 recommendation channel for parent services.",
+      "channel": "Facebook groups / community",
+      "success_criteria": [
+        "Joined 3+ relevant local Facebook groups",
+        "Posted 2+ genuinely helpful (non-promotional) posts within first 2 weeks",
+        "Received at least 1 organic recommendation from a group member within 6 weeks",
+        "3+ bookings traceable to Facebook groups"
+      ],
+      "duration": "Ongoing (20 mins/day engagement)",
+      "effort": "Low (time, not money)",
+      "risk": "Low. Only risk is being perceived as spammy if too promotional — hence the 'help first' approach.",
+      "instructions": [
+        "Find and join: 'Farnham Mums', 'Surrey Mums', 'Farnham Community', 'Aldershot & Farnham Parents', any NCT Farnham group. Search Facebook for 'Farnham mum' and 'Farnham baby'.",
+        "DO NOT post about Tiny Whirlwinds immediately. Spend 2 weeks being helpful: answer questions about baby activities, share free sensory play tips, recommend other local services genuinely.",
+        "When someone asks 'any good baby classes in Farnham?' — THEN mention TW naturally: 'I actually run sensory classes in Farnham if you're interested! We're just launching — happy to answer any questions.'",
+        "Share occasional value posts: 'Hey Farnham mums! Here are 5 easy sensory activities you can do at home with kitchen stuff 🧊🍝' — with a gentle sign-off: 'Jade from Tiny Whirlwinds'.",
+        "NEVER use 'SPACES AVAILABLE!!!!' energy. Be the helpful neighbour, not the desperate salesperson.",
+        "If groups allow business posts on specific days (many have 'promo Fridays'), use those — but keep it warm and personal."
+      ]
+    },
+    {
+      "id": "EXP-005",
+      "name": "Happity Listing + Booking Platform Visibility",
+      "priority_wave": "P1",
+      "priority_label": "First month",
+      "hypothesis": "If Tiny Whirlwinds is listed on Happity (2.6M parents/year) and other discovery platforms with complete information and photos, it will receive 5+ monthly views and 2+ bookings from parents who discover classes through these platforms.",
+      "channel": "Discovery platforms",
+      "success_criteria": [
+        "Listed on Happity within 1 week",
+        "Complete profile with photos, pricing, and booking link",
+        "2+ bookings from platform discovery within first term"
+      ],
+      "duration": "1 hour to set up, minimal maintenance",
+      "effort": "Very low",
+      "risk": "None — free to list",
+      "instructions": [
+        "Go to happity.co.uk and register as a class provider. It's free to list.",
+        "Create a complete listing: class names, descriptions, ages, pricing, location (with map), booking link to Pembee.",
+        "Upload 5+ photos of the studio and classes.",
+        "Happity is where parents go when they search 'baby classes near me' — it's the Rightmove of baby activities. Being listed is non-negotiable.",
+        "Also check: ClassForKids, Kiddikicks local directories, Netmums local listings, Mumsnet local. List on all free platforms.",
+        "Set a calendar reminder to update listings each term with new dates and availability."
+      ]
+    },
+    {
+      "id": "EXP-006",
+      "name": "Launch Week 'Bring a Friend' Offer",
+      "priority_wave": "P0",
+      "priority_label": "Launch week",
+      "hypothesis": "If the 4 existing term-booked parents are each given a free 'bring a friend' trial pass for launch week, at least 3 will bring someone — and at least 1 friend will convert to a term booking. Because word-of-mouth from a trusted friend is the highest-converting channel for baby classes.",
+      "channel": "Referral / word-of-mouth",
+      "success_criteria": [
+        "All 4 existing parents receive a 'bring a friend' pass",
+        "3+ friends attend a trial class",
+        "1+ friend converts to a term booking"
+      ],
+      "duration": "Launch week + 2 weeks follow-up",
+      "effort": "Very low (cost: £0 — just forgoing one trial fee per referral)",
+      "risk": "None. Even if nobody converts, the class is fuller and more fun.",
+      "instructions": [
+        "Message each of the 4 term-booked parents personally: 'Hey [name]! We're officially launching on [date] and I'd love the class to feel buzzy. Bring a friend with a baby — their first class is on me! Just let me know their name so I can say hello.'",
+        "Make it personal and easy — no codes, no forms, just 'tell me their name'.",
+        "When the friend attends, welcome them warmly. At the end of class, mention the trial offer (£7) and term pricing.",
+        "Follow up within 24 hours: 'Lovely to meet you and [baby name] today! If you'd like to join us regularly, here's the term booking link. No pressure at all — we'd love to have you.'",
+        "If this works, make it a permanent programme: every term-booked parent gets one free friend trial per term."
+      ]
+    },
+    {
+      "id": "EXP-007",
+      "name": "NCT Coffee Morning Partnership",
+      "priority_wave": "P1",
+      "priority_label": "First month",
+      "hypothesis": "If Jade hosts or co-hosts a free 'taster' sensory session at a local NCT coffee morning or children's centre group, she will convert 3+ attendees into trial bookings — because experiencing the product removes all purchase anxiety and NCT groups are concentrated pools of the exact ICP.",
+      "channel": "Local partnerships / events",
+      "success_criteria": [
+        "1 taster session hosted within first month",
+        "8+ parents attend",
+        "3+ trial bookings from attendees"
+      ],
+      "duration": "1 week to arrange, 1 session to deliver, 2 weeks to measure conversion",
+      "effort": "Medium (need to coordinate, transport some equipment, deliver a mini session)",
+      "risk": "Low. Time cost of one session. Builds reputation even if nobody books.",
+      "instructions": [
+        "Contact the Farnham NCT branch (find on nct.org.uk or their Facebook group). Offer to run a free 15-minute sensory taster at their next coffee morning or bumps group.",
+        "Also approach: Farnham children's centres, library baby groups, local church toddler groups.",
+        "Bring a portable sensory kit: a UV light, some glow-in-the-dark toys, a couple of textured items, bubbles. You don't need the full studio setup — just enough to give a taste.",
+        "Keep it short (15 mins max), fun, and zero-pressure. End with: 'If your little one enjoyed that, we do full sessions at our studio on [days]. Here's a card with a trial offer.'",
+        "Have printed cards/leaflets ready with QR code to booking.",
+        "This is the most powerful conversion tool for a local class: let people experience it, then invite them. The product sells itself."
+      ]
+    },
+    {
+      "id": "EXP-008",
+      "name": "Website Cleanup & SEO Quick Wins",
+      "priority_wave": "P0",
+      "priority_label": "Before launch",
+      "hypothesis": "If the website is cleaned up (remove Parties, clarify Active Adventurers, add Jade's photo/story, add Farnham to key pages, add social links) and basic SEO is implemented (title tags, meta descriptions, Google Search Console), organic search traffic will increase and conversion rate will improve.",
+      "channel": "Website / SEO",
+      "success_criteria": [
+        "Parties page removed or hidden within 2 days",
+        "Active Adventurers marked as 'Coming Soon — join waitlist'",
+        "Jade's photo and story added to homepage",
+        "'Farnham' appears in page titles and headers",
+        "Instagram link added to website",
+        "Google Search Console set up and sitemap submitted"
+      ],
+      "duration": "2-4 hours one-time",
+      "effort": "Low-medium (Jade has the tech skills to do this herself)",
+      "risk": "None",
+      "instructions": [
+        "IMMEDIATE: Remove or hide the Parties page/section. It creates confusion and broken expectations.",
+        "Active Adventurers: Change from 'Coming Soon' to a clear message: 'Active Adventurers (15-36 months) is coming! Join our waitlist to be first to know.' Add an email capture form.",
+        "Homepage: Add a section with Jade's photo and a short story: 'Hi, I'm Jade. I started Tiny Whirlwinds because I couldn't find the sensory class I wanted for my baby here in Farnham...' (3-4 sentences max).",
+        "SEO: Update page titles to include 'Farnham' — e.g., 'Baby Sensory Classes in Farnham | Tiny Whirlwinds'. Update meta descriptions similarly.",
+        "Add Instagram link in the website header/footer.",
+        "Set up Google Search Console (search.google.com/search-console), verify the site, submit the sitemap.",
+        "Verify the '100+ babies' claim on the site — if aspirational, remove it. Trust is everything at launch.",
+        "These are one-time fixes that compound over time. Jade's tech background means she can do this faster than most."
+      ]
+    }
+  ],
+
+  "priority_summary": {
+    "P0_before_launch": {
+      "experiments": ["EXP-001", "EXP-002", "EXP-003", "EXP-006", "EXP-008"],
+      "total_time": "~10-15 hours over 2 weeks",
+      "total_cost": "~£30-50 (leaflet printing)",
+      "rationale": "These are the non-negotiable foundations. Launch without these and the business is invisible."
+    },
+    "P1_first_month": {
+      "experiments": ["EXP-004", "EXP-005", "EXP-007"],
+      "total_time": "~5-8 hours setup + 30 mins/day ongoing",
+      "total_cost": "£0 (all free channels)",
+      "rationale": "These build the referral and discovery network that creates sustainable, compounding growth."
+    },
+    "P2_first_quarter": {
+      "experiments": "Review results of P0/P1. If classes are filling: add Saturday class, plan Active Adventurers launch, explore partnership with a local café (cross-promotion), start collecting video testimonials for Instagram. If classes aren't filling: double down on what's working from P0/P1, consider a one-time local Facebook ad campaign (£50-100 budget, targeted to Farnham parents with babies 0-12 months).",
+      "focus": "Optimise what's working, expand what's proven, drop what isn't."
+    }
+  },
+
+  "founder_note": "Jade — these experiments are deliberately simple. None require marketing expertise. They're designed for someone who's great at building things and connecting with people (which you clearly are, based on how your classes have gone) but hasn't done 'marketing' before. The secret: for a local baby class, the best marketing doesn't look like marketing. It looks like a mum helping other mums find something great."
+}

@@ -1,0 +1,320 @@
+{
+  "org_id": "tinywhirlwinds",
+  "report_type": "content-strategy",
+  "generated_at": "2026-02-13T10:00:00Z",
+  "version": "1.0",
+
+  "content_strategy": {
+    "stage_context": "PRE-LAUNCH local B2C baby sensory class. Solo founder (Jade) with zero marketing experience, a baby, and 2 weeks to launch. Instagram is 2 days old with ~90 followers and 1 post. Budget: £30-50. The content strategy must be ultra-simple, low-effort, and serve the prescribed experiments (EXP-001 through EXP-008). Content is NOT the primary growth driver — local partnerships and word-of-mouth are. Content supports those channels.",
+
+    "weekly_cadence": {
+      "total_time": "3-4 hours per week maximum",
+      "breakdown": {
+        "content_creation": "1-1.5 hours (batch on Sunday evening or during nap time)",
+        "posting_and_scheduling": "30 mins (use Meta Business Suite to schedule the week)",
+        "engagement": "15 mins/day, 5 days = 1.25 hours (reply to comments, DMs, engage with local accounts)",
+        "stories": "5 mins/day spontaneous — phone clips, no editing needed"
+      },
+      "weekly_rhythm": {
+        "sunday": "Batch: film 2-3 short clips, create 1 carousel in Canva, schedule the week",
+        "monday": "Post 1 goes live (scheduled). Engage 15 mins. 1 Story from class setup/delivery.",
+        "tuesday": "Engage 15 mins. No post needed.",
+        "wednesday": "Post 2 goes live (scheduled). Engage 15 mins. Optional: 1 Story (behind-the-scenes or tip).",
+        "thursday": "Engage 15 mins. 1 Story from class.",
+        "friday": "Post 3 goes live (scheduled). Engage 15 mins.",
+        "saturday": "Off. No content. Rest."
+      },
+      "posts_per_week": "3 feed posts + 3-5 Stories. That's it. Do NOT try to do more."
+    },
+
+    "content_suggestions": [
+      {
+        "id": "CS-001",
+        "type": "instagram_reel",
+        "topic": "Studio transformation — empty room to sensory wonderland in 30 seconds",
+        "format_notes": "15-second timelapse or quick-cut Reel. Film setup on your phone (prop it up, hit record). Speed up in CapCut. Trending audio optional.",
+        "why_this": "Shows the dedicated studio advantage — no competitor can replicate this. Parents see the production value and understand why this isn't a church hall class. Visual content performs best on Instagram for discovery.",
+        "expected_outcome": {
+          "reach": "200-800 views for a new account. Local hashtags will help Farnham mums discover it.",
+          "conversion": "Won't directly book people, but builds the 'wow, this looks amazing' feeling that makes them click the bio link.",
+          "timeline": "Immediate — post this in launch week.",
+          "compound_effect": "This becomes a signature content type. Each new setup = another Reel. Over time, builds a library of visual proof."
+        },
+        "distribution": {
+          "primary": "Instagram Reels",
+          "cross_post": "Share to Instagram Stories with a 'New class starting [date]' sticker. Can also be saved and used on Happity listing.",
+          "hashtags": "#FarnhamMums #SurreyBabyClasses #SensoryPlay #BabyClassesFarnham #SensoryStudio #BabyDevelopment #FarnhamLife"
+        },
+        "priority": "P0",
+        "serves_experiment": "EXP-003",
+        "effort": "20 mins (film during normal setup, 10 mins editing)"
+      },
+      {
+        "id": "CS-002",
+        "type": "instagram_reel",
+        "topic": "Baby reaction moment — a baby seeing the light show / touching a texture for the first time",
+        "format_notes": "5-10 second clip. Close-up on baby's face/hands. Emotional music or trending sound. Text overlay: 'First time in the light tunnel 🥹'. MUST have parent's written permission.",
+        "why_this": "Baby reaction content is the highest-performing content type in the parenting niche. It's emotional, shareable, and shows the product in action. This is what makes a parent DM you.",
+        "expected_outcome": {
+          "reach": "500-3,000 views — reaction content gets shared and saved more than any other type.",
+          "conversion": "This is the content most likely to generate DM enquiries. Parents see their baby could have this experience.",
+          "timeline": "Post after first class of each week.",
+          "compound_effect": "A library of baby reaction clips becomes irresistible social proof. One clip going locally viral (5-10K views) could fill a class."
+        },
+        "distribution": {
+          "primary": "Instagram Reels",
+          "cross_post": "Stories (tag the parent if they're on Instagram — they'll reshare). Can screenshot comments for future social proof posts."
+        },
+        "priority": "P0",
+        "serves_experiment": "EXP-003",
+        "effort": "10 mins (film during class, minimal editing). KEY: Create a simple photo/video consent form for parents."
+      },
+      {
+        "id": "CS-003",
+        "type": "instagram_carousel",
+        "topic": "5 easy sensory activities you can do at home with kitchen stuff",
+        "format_notes": "5-slide Canva carousel. Simple graphics, warm colours, TW branding. Each slide = 1 activity (e.g., frozen fruit in a zip bag, pasta in a tray, ice cubes with food colouring). Final slide: 'Want more? Come explore with us — link in bio.'",
+        "why_this": "Value-first content builds trust and gets saved/shared. Parents search for home activity ideas constantly. Positions Jade as knowledgeable and generous, not just selling. Saves are the #1 signal Instagram uses to boost reach.",
+        "expected_outcome": {
+          "reach": "200-600 views. Carousels get saved more than Reels — saves boost algorithmic reach over time.",
+          "conversion": "Indirect. Builds trust and positions TW as the local sensory expert. Parents who save your tips are pre-qualified leads.",
+          "timeline": "Post 1 carousel per week or every 2 weeks.",
+          "compound_effect": "After 8-10 tip carousels, Jade becomes 'the sensory play person' in Farnham Instagram circles."
+        },
+        "distribution": {
+          "primary": "Instagram feed (carousel)",
+          "cross_post": "Adapt as a text post for Farnham Facebook groups (EXP-004). Share individual slides to Stories.",
+          "communities": "Post the tips (without branding) as a helpful comment in Facebook groups when parents ask for activity ideas."
+        },
+        "priority": "P1",
+        "serves_experiment": "EXP-003, EXP-004",
+        "effort": "30-45 mins (Canva has templates — search 'carousel tips')"
+      },
+      {
+        "id": "CS-004",
+        "type": "instagram_story_sequence",
+        "topic": "Jade's founder story — 'Why I started Tiny Whirlwinds'",
+        "format_notes": "3-5 Stories, talking to camera. Casual, unscripted, authentic. Can film holding her baby. Key beats: (1) I moved to Farnham with a new baby, (2) I looked for sensory classes and couldn't find what I wanted, (3) I built it myself, (4) Here's what makes it different. End with: 'Book a trial — link in bio.'",
+        "why_this": "The founder story is the #1 differentiator vs franchises. Parents book PEOPLE, not brands. Jade's story IS the marketing. Stories feel intimate and authentic — perfect for this.",
+        "expected_outcome": {
+          "reach": "50-150 Story views (typical for a small account). But Story viewers are your warmest audience — they already follow you.",
+          "conversion": "High intent — parents who watch all 5 stories are very interested. Direct path to bio link click.",
+          "timeline": "Do this ONCE in launch week. Pin the highlights as 'Our Story' for permanent visibility.",
+          "compound_effect": "Becomes a permanent highlight that every new follower watches. First impressions = personal connection."
+        },
+        "distribution": {
+          "primary": "Instagram Stories → save as Highlight 'Our Story'",
+          "cross_post": "Can adapt the talking points as the 'About' section copy for Happity, Google My Business, and website."
+        },
+        "priority": "P0",
+        "serves_experiment": "EXP-003, EXP-008",
+        "effort": "15-20 mins filming (no editing needed for Stories)"
+      },
+      {
+        "id": "CS-005",
+        "type": "instagram_post",
+        "topic": "Parent testimonial with class photo",
+        "format_notes": "Single image of a class moment (baby engaged in sensory play). Caption: direct parent quote (with permission and first name). e.g., 'We look forward to Thursdays now. It's become our favourite thing of the week — Sarah, mum to Ava (4 months)'. Warm, simple.",
+        "why_this": "Social proof is the most persuasive content type for a new business. Named testimonials carry 2x the weight of anonymous ones. Parents trust other parents more than any brand messaging.",
+        "expected_outcome": {
+          "reach": "150-400. Testimonial posts don't go viral but they convert — parents who see them are more likely to book.",
+          "conversion": "Directly drives booking consideration. This is 'closing' content, not 'awareness' content.",
+          "timeline": "Post 1 testimonial per week from launch onwards. Ask after every class.",
+          "compound_effect": "After 8-10 testimonial posts, any parent scrolling your grid sees overwhelming proof that other parents love it."
+        },
+        "distribution": {
+          "primary": "Instagram feed",
+          "cross_post": "Add testimonials to Google My Business (as reviews), Happity listing, and website."
+        },
+        "priority": "P0",
+        "serves_experiment": "EXP-002, EXP-003",
+        "effort": "10 mins (photo from class + caption from parent)"
+      },
+      {
+        "id": "CS-006",
+        "type": "instagram_story",
+        "topic": "Quick development fact — 'Did you know?' sensory/baby development micro-tip",
+        "format_notes": "Single Story slide. Text on branded background (Canva template). E.g., 'Did you know? Babies can distinguish light and dark from birth, but can't see colour clearly until 4 months. That's why our Stargazers class uses high-contrast patterns and soft coloured lights.' Keep it to 2-3 sentences.",
+        "why_this": "Positions Jade as knowledgeable without being preachy. Links development science to what TW classes actually do. Quick to create, educational, shareable. Parents screenshot and share tips that help them understand their baby.",
+        "expected_outcome": {
+          "reach": "40-100 Story views. Low reach but builds authority and trust with existing followers.",
+          "conversion": "Indirect — reinforces that TW classes are grounded in real development science, not just play.",
+          "timeline": "1-2 per week, interspersed with class Stories.",
+          "compound_effect": "Over time, Jade becomes the 'she really knows her stuff' local class leader."
+        },
+        "distribution": {
+          "primary": "Instagram Stories",
+          "cross_post": "Save as a Highlight called 'Baby Dev Tips'. Reuse as Facebook group posts."
+        },
+        "priority": "P1",
+        "serves_experiment": "EXP-003",
+        "effort": "5 mins per tip (Canva template, type text, post)"
+      },
+      {
+        "id": "CS-007",
+        "type": "instagram_reel",
+        "topic": "'What to expect at your first class' — walkthrough",
+        "format_notes": "30-45 second Reel. Jade walks through: arriving, the welcome, what happens in a session, how it ends. Can be voiceover over B-roll of the studio and class clips. Text overlays for key moments. Friendly, reassuring tone.",
+        "why_this": "First-class anxiety is the #1 barrier to booking for new parents. 'What if my baby cries? What do I wear? Will I know anyone?' A walkthrough removes all uncertainty. This is conversion content — it pushes people from 'interested' to 'booked'.",
+        "expected_outcome": {
+          "reach": "300-1,000 views. Longer Reels get less algorithmic push but this will be saved and shared by interested parents.",
+          "conversion": "High — this is the content that converts browsers into bookers. Link to booking in caption.",
+          "timeline": "Create in launch week. Pin to profile grid.",
+          "compound_effect": "Permanent resource. Every parent considering TW will watch this. Update each term if format changes."
+        },
+        "distribution": {
+          "primary": "Instagram Reels — pin to profile",
+          "cross_post": "Link to from website ('What to Expect' page if created). Share in Facebook groups when someone asks about baby classes."
+        },
+        "priority": "P0",
+        "serves_experiment": "EXP-003, EXP-008",
+        "effort": "45-60 mins (film walkthrough, edit in CapCut)"
+      },
+      {
+        "id": "CS-008",
+        "type": "local_facebook_group_post",
+        "topic": "Value post — sensory play ideas for rainy days",
+        "format_notes": "Text-only post in local Facebook groups. Conversational, helpful, NOT promotional. E.g., 'Rainy day with a 6-month-old... here are 3 things that kept us busy today: (1) Ice cubes in a zip bag on the highchair tray (2) Crinkly paper treasure basket (3) Torch + coloured cellophane on the ceiling. What are your rainy day go-tos?' Sign off: '— Jade (Tiny Whirlwinds)'.",
+        "why_this": "Builds Jade's presence in local groups as a helpful expert, not a spammer. When someone later asks 'any good baby classes?', Jade is already a known, trusted name. This is the groundwork for organic recommendations.",
+        "expected_outcome": {
+          "reach": "Depends on group size — Farnham groups typically 2-5K members. A helpful post might get 10-30 engagements.",
+          "conversion": "Not direct. This is relationship-building content. The conversion happens when someone recommends TW in a future thread.",
+          "timeline": "1-2 posts per week in local groups from launch onwards.",
+          "compound_effect": "After 6-8 helpful posts, Jade becomes a recognised name. When she eventually shares a class link, people already trust her."
+        },
+        "distribution": {
+          "primary": "Farnham Mums Facebook group, Surrey Mums, Farnham Community group",
+          "notes": "Check each group's rules about business posts. Many have 'promo Friday' — use those for direct class mentions."
+        },
+        "priority": "P1",
+        "serves_experiment": "EXP-004",
+        "effort": "10 mins per post"
+      },
+      {
+        "id": "CS-009",
+        "type": "google_my_business_post",
+        "topic": "Weekly class update with photo",
+        "format_notes": "Short update on Google Business Profile. 1 photo from class + 2-3 sentences: 'This week's Tiny Stargazers explored cloud dough and UV lights! We have trial spots available on Thursdays. Book at tinywhirlwinds.com.' Include a CTA button linking to booking.",
+        "why_this": "Google Business Posts appear in local search results and Maps. Most baby class competitors don't use them, so this is easy differentiation. Keeps the profile fresh and active, which improves local search ranking.",
+        "expected_outcome": {
+          "reach": "Low per post (20-50 views from search) but compounds over time as Google ranks the profile higher.",
+          "conversion": "Parents actively searching 'baby classes Farnham' see a living, active business. Booking link is right there.",
+          "timeline": "1 post per week from launch onwards.",
+          "compound_effect": "Consistent posting improves Google Maps ranking. After 3 months, TW should appear in the top 3 local results for baby class searches."
+        },
+        "distribution": {
+          "primary": "Google Business Profile",
+          "notes": "Takes 2 mins to post. Do it right after class while the photos are fresh."
+        },
+        "priority": "P1",
+        "serves_experiment": "EXP-002",
+        "effort": "5 mins per post"
+      },
+      {
+        "id": "CS-010",
+        "type": "instagram_reel",
+        "topic": "The gentle difference — 'What gentle sensory actually means'",
+        "format_notes": "15-20 second Reel. Soft music. Clips of calm, focused babies in the studio (not overstimulated). Text overlays: 'Small groups. Soft lights. Their pace, not ours.' End: 'Gentle sensory classes in Farnham. Link in bio.' This is the brand positioning Reel.",
+        "why_this": "Directly communicates the GENTLE positioning that differentiates TW from Hartbeeps ('too in your face') and overcrowded Baby Sensory. This is the content that makes a parent think 'that's what I want for my baby'. Serves the positioning identified in Growth Voice.",
+        "expected_outcome": {
+          "reach": "300-1,500 views. Emotional, aesthetic Reels perform well.",
+          "conversion": "Brand-defining content. Parents who resonate with 'gentle' self-select as the perfect customer.",
+          "timeline": "Post in first 2 weeks. This should be one of the pinned Reels on the profile.",
+          "compound_effect": "Defines the brand in parents' minds. Every future piece of content reinforces this positioning."
+        },
+        "distribution": {
+          "primary": "Instagram Reels — pin to profile",
+          "cross_post": "Use clips from this in Stories. The text overlays work as standalone Story slides too."
+        },
+        "priority": "P0",
+        "serves_experiment": "EXP-003",
+        "effort": "30 mins (film calm class moments, edit with soft music)"
+      }
+    ],
+
+    "anti_suggestions": [
+      {
+        "type": "TikTok",
+        "why_not": "Jade has limited time and no content creation experience. Splitting attention between Instagram AND TikTok will result in both being mediocre. Instagram is where Farnham mums are. Master one platform before adding another. Revisit TikTok in 6 months if Instagram is working."
+      },
+      {
+        "type": "Blog / SEO content",
+        "why_not": "Blog posts take 3-6 months to rank on Google. Jade needs bookings in 2-6 weeks. A blog is a good long-term investment but completely wrong for the pre-launch stage. Google My Business + Happity listing will handle search visibility for now. Consider a blog in Q3 2026."
+      },
+      {
+        "type": "Polished brand videos / professional photography",
+        "why_not": "Budget is £30-50. Professional photos cost £200-500. More importantly, polished content actually performs WORSE on Instagram than authentic, phone-filmed content. Parents want to see real classes, not a commercial. Save the professional shoot for when the franchise branding matters."
+      },
+      {
+        "type": "Email newsletter",
+        "why_not": "With 4 term bookings and ~90 Instagram followers, there's no email list to send to. An email sequence is a great retention tool later (term reminders, rebooking nudges, development tips). Not now. Build the audience first."
+      },
+      {
+        "type": "Paid Instagram/Facebook ads",
+        "why_not": "Not yet. Organic reach + local partnerships should be tested first. Ads with no social proof (few followers, few posts) convert poorly — parents see a sparse account and don't trust it. Build to 300+ followers and 20+ posts, THEN consider a £50 boosted post to Farnham parents. Revisit at end of Month 2."
+      },
+      {
+        "type": "Comparison content ('TW vs Baby Sensory')",
+        "why_not": "Never directly compare or criticise competitors by name. The baby class world in Farnham is tiny — everyone knows everyone. Negative positioning alienates more than it attracts. Let the GENTLE message speak for itself. Parents will make their own comparisons."
+      },
+      {
+        "type": "Daily posting / content calendar overload",
+        "why_not": "Jade is a solo founder with a baby. Committing to daily posts will last 5 days before burnout and guilt. 3 feed posts + Stories per week is sustainable. Consistency beats frequency. A 3x/week account that posts for 12 months beats a daily account that dies after 3 weeks."
+      },
+      {
+        "type": "LinkedIn content",
+        "why_not": "Jade's ICP (new mums in Farnham) is not on LinkedIn looking for baby classes. LinkedIn would only be relevant for franchise recruitment in the future. Not now."
+      }
+    ],
+
+    "90_day_content_calendar": {
+      "weeks_1_2": {
+        "label": "Launch Sprint",
+        "focus": "Establish presence, tell the story, show the product",
+        "key_content": [
+          "CS-004: Jade's founder story (Stories → Highlight)",
+          "CS-001: Studio transformation Reel",
+          "CS-010: Gentle sensory positioning Reel",
+          "CS-007: What to expect walkthrough Reel",
+          "CS-002: First baby reaction Reel (from launch classes)"
+        ],
+        "notes": "Front-load the foundational content. Pin CS-010, CS-007, and the launch Reel to the profile grid. These are the first things any visitor sees."
+      },
+      "weeks_3_4": {
+        "label": "Proof & Trust",
+        "focus": "Social proof, testimonials, community building",
+        "key_content": [
+          "CS-005: 2x parent testimonial posts",
+          "CS-002: 2x baby reaction Reels",
+          "CS-003: First 'home sensory tips' carousel",
+          "CS-008: First helpful Facebook group post",
+          "CS-009: First Google Business post"
+        ],
+        "notes": "Start asking for Google reviews. Begin Facebook group engagement (help first, promote later)."
+      },
+      "weeks_5_8": {
+        "label": "Rhythm & Reach",
+        "focus": "Settle into weekly cadence, expand to local channels",
+        "key_content": [
+          "3x/week feed posts rotating: 1 Reel (reaction/setup), 1 testimonial, 1 carousel/tip",
+          "CS-006: 1-2 development tips per week in Stories",
+          "CS-008: 1-2 Facebook group posts per week",
+          "CS-009: Weekly Google Business post"
+        ],
+        "notes": "By now the rhythm should feel manageable. If it doesn't, drop to 2 feed posts/week. Consistency > volume."
+      },
+      "weeks_9_12": {
+        "label": "Compound & Optimise",
+        "focus": "Double down on what's working, start collecting video testimonials",
+        "key_content": [
+          "Continue weekly cadence",
+          "Ask 2-3 parents for video testimonials (15-second phone clips: 'What do you love about TW?')",
+          "Create a Reel compilation of best baby reaction moments from the term",
+          "If classes are filling: create 'waitlist' urgency content (genuine, not manufactured)",
+          "If classes aren't filling: increase Facebook group engagement and consider one £50 boosted Instagram post"
+        ],
+        "notes": "Review what content type got the most saves, shares, and DMs. Do more of that. Review which channel (Instagram, Facebook, Google, partnerships) drove the most bookings. Double down on the winner."
+      }
+    }
+  }
+}

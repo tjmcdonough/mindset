@@ -1,0 +1,314 @@
+{
+  "org_id": "tinywhirlwinds",
+  "company_name": "Tiny Whirlwinds",
+  "report_type": "market-intel",
+  "generated_at": "2026-02-13T08:46:00Z",
+  "analyst_notes": "Market intel compiled from web research, franchise directories, Mumsnet/Reddit parent forums, and booking platform data.",
+
+  "search_results": [
+    {
+      "query": "UK baby toddler activity class market size",
+      "key_finding": "No single authoritative market size for baby activity classes exists. The broader UK baby products market grew 8% in 2023 (Euromonitor). The baby sensory classes sub-market is estimated at several hundred million dollars globally (DataInsightsMarket 2025-2033 report).",
+      "sources": ["euromonitor.com", "datainsightsmarket.com", "researchandmarkets.com"]
+    },
+    {
+      "query": "Baby Sensory franchise scale and costs",
+      "key_finding": "Baby Sensory runs 1,500+ weekly classes across 30+ countries. UK has 30+ Toddler Sense franchisees. Franchise fee £15-25k. Founded by Dr Lin Day with 35+ years experience.",
+      "sources": ["kidseducationfranchise.com", "femalefranchise.co.uk", "totalfranchise.co.uk"]
+    },
+    {
+      "query": "Hartbeeps franchise",
+      "key_finding": "Hartbeeps franchise fee is £6,000 inc VAT. Multi-sensory music-based classes. Lower barrier to entry than Baby Sensory. Previously operated in Farnham/Wrecclesham but may have closed locally.",
+      "sources": ["totalfranchise.co.uk", "hartbeeps.com"]
+    },
+    {
+      "query": "Local competitors Farnham Surrey",
+      "key_finding": "Active competitors: Lullababy (Farnham, Wrecclesham, Normandy), Tots Play (Farnham & Alton), Jo Jingles (Farnham), Baby Sensory (Basingstoke/Alton/Farnham area). Happity lists multiple classes in Farnham from £3-£15.",
+      "sources": ["happity.co.uk", "lullababy.co.uk", "totsplay.co.uk", "jojingles.com"]
+    },
+    {
+      "query": "Parent sentiment - Mumsnet/Reddit",
+      "key_finding": "Polarised views. Common complaints: overcrowded classes (20+ babies), overstimulation, poor equipment, classes feel 'half-arsed'. Positive: developmental benefits, social connection for mums, worth it for structure. Key theme: quality of individual class leader matters more than brand.",
+      "sources": ["mumsnet.com (multiple threads)", "reddit.com/r/BabyBumpsandBeyondAu"]
+    }
+  ],
+
+  "market_size": {
+    "uk_baby_activity_classes": {
+      "estimated_value": "£200-400M annually (estimated)",
+      "confidence": "low",
+      "notes": "No authoritative single figure exists. Estimate based on: ~650k births/year in UK, ~60% of parents attend at least one paid class, average spend £500-1000/year on classes. Market is fragmented across thousands of small operators and franchises.",
+      "growth_rate": "5-8% annually post-COVID",
+      "growth_drivers": [
+        "Post-COVID parenting class boom — parents re-engaging with in-person activities",
+        "Increased awareness of early childhood development / sensory stimulation",
+        "Social media (Instagram/TikTok) driving aspirational parenting culture",
+        "Premiumisation — parents willing to pay more for quality experiences",
+        "Loneliness epidemic among new parents driving demand for community"
+      ],
+      "headwinds": [
+        "Falling UK birth rate (lowest in decades)",
+        "Cost of living crisis squeezing discretionary spend",
+        "Free alternatives (library groups, church groups, NHS baby groups)",
+        "Low barriers to entry creating oversupply in some areas"
+      ]
+    },
+    "sensory_class_segment": {
+      "status": "growing",
+      "notes": "Sensory classes are the fastest-growing sub-category within baby classes. Global market expected to reach several hundred million USD by 2033. Growth driven by parental awareness of sensory development, Instagram-friendly visual experiences, and franchise expansion.",
+      "uk_penetration": "High in urban/suburban areas, gaps remain in smaller towns like Farnham"
+    }
+  },
+
+  "competitors": [
+    {
+      "name": "Baby Sensory",
+      "type": "national_franchise",
+      "model": "franchise",
+      "franchise_fee": "£15,000-£25,000",
+      "ongoing_fees": "Monthly royalties (percentage of revenue)",
+      "scale": "1,500+ weekly classes globally, 30+ countries, 30+ UK Toddler Sense franchisees",
+      "class_pricing": "£6-8 per class (term booking), £48-60 per term typical",
+      "age_range": "0-13 months (Baby Sensory), 13-36 months (Toddler Sense)",
+      "strengths": ["Brand recognition", "Dr Lin Day credentials", "Proven lesson plans (40+)", "National marketing"],
+      "weaknesses": ["Overcrowding complaints on Mumsnet", "Overstimulation concerns", "Franchise model = less personal", "Generic feel"],
+      "local_presence": "Basingstoke, Alton & Farnham area — direct competitor",
+      "estimated_revenue_per_franchisee": "£20,000-£60,000/year depending on classes run"
+    },
+    {
+      "name": "Hartbeeps",
+      "type": "national_franchise",
+      "model": "franchise",
+      "franchise_fee": "£6,000 inc VAT",
+      "scale": "National UK coverage, expanding",
+      "class_pricing": "£6-9 per class",
+      "age_range": "0-5 years",
+      "strengths": ["Low franchise cost", "Creative/musical focus", "Good brand identity"],
+      "weaknesses": ["May have closed in Farnham area", "Less sensory-focused than Baby Sensory"],
+      "local_presence": "Previously Farnham/Wrecclesham — may be inactive locally (opportunity gap)"
+    },
+    {
+      "name": "Lullababy",
+      "type": "national_franchise",
+      "model": "franchise",
+      "franchise_fee": "Unknown (lower end)",
+      "scale": "Growing UK franchise network",
+      "class_pricing": "£7-10 per class",
+      "age_range": "0-24 months",
+      "strengths": ["EYFS-linked curriculum", "Baby yoga + sensory combined", "Active in Farnham"],
+      "weaknesses": ["Less brand recognition than Baby Sensory", "Smaller network"],
+      "local_presence": "Active in Aldershot, Farnham, Farnborough, Wrecclesham, Normandy — STRONG local competitor"
+    },
+    {
+      "name": "Tots Play",
+      "type": "national_franchise",
+      "model": "franchise",
+      "scale": "UK-wide franchise",
+      "class_pricing": "£7-10 per class",
+      "age_range": "0-5 years",
+      "strengths": ["All-in-one class (signing, yoga, sensory, massage, singing)", "Good value proposition"],
+      "weaknesses": ["Jack of all trades", "Less specialist sensory focus"],
+      "local_presence": "Active in Farnham & Alton — direct competitor"
+    },
+    {
+      "name": "Bloom Baby Classes",
+      "type": "national_franchise",
+      "model": "franchise",
+      "scale": "Growing — BFA member, Elite Franchise Top 100",
+      "class_pricing": "£8-12 per class",
+      "age_range": "0-15 months",
+      "strengths": ["Award-winning", "Premium positioning", "BFA accredited"],
+      "weaknesses": ["Narrower age range"],
+      "local_presence": "Unknown if active in Farnham — potential future entrant"
+    },
+    {
+      "name": "Jo Jingles",
+      "type": "national_franchise",
+      "model": "franchise",
+      "scale": "Long-established UK franchise",
+      "class_pricing": "£5-8 per class",
+      "age_range": "0-5 years",
+      "strengths": ["Music-focused", "Long track record", "Well-known brand"],
+      "weaknesses": ["Less sensory-specific", "Older brand feel"],
+      "local_presence": "Active in Farnham — indirect competitor (music-focused)"
+    },
+    {
+      "name": "Vivace Music School",
+      "type": "local_independent",
+      "model": "independent",
+      "class_pricing": "£6-10 per class",
+      "age_range": "0-5 years",
+      "strengths": ["Local presence in Fleet/Farnham/Yateley", "Music expertise"],
+      "weaknesses": ["Music-only focus"],
+      "local_presence": "Active — indirect competitor"
+    },
+    {
+      "name": "Free/Low-cost alternatives",
+      "type": "indirect",
+      "model": "community",
+      "class_pricing": "£0-3 per session",
+      "examples": ["Church toddler groups", "Library rhyme time", "Children's centres", "NCT groups"],
+      "notes": "Significant competition for budget-conscious parents. Happity shows Farnham classes from £3."
+    }
+  ],
+
+  "trends": [
+    {
+      "trend": "Post-COVID parenting class boom",
+      "impact": "high",
+      "description": "COVID lockdowns devastated the baby class industry (many franchisees went bust), but recovery has been strong. Parents who had babies during lockdown are especially eager for social/developmental activities. Happity campaigned successfully for baby classes to be on England's reopening roadmap. Demand now exceeds pre-COVID levels in many areas."
+    },
+    {
+      "trend": "NCT alternatives and community-seeking",
+      "impact": "high",
+      "description": "Baby classes are increasingly filling the role that NCT groups traditionally played — providing community for new parents. Many parents view regular classes as their primary social outlet during maternity leave. Classes that foster parent friendships retain better."
+    },
+    {
+      "trend": "Class booking platform consolidation",
+      "impact": "medium",
+      "description": "Platforms like Happity (2.6M parents/year), ClassForKids, BookWhen, and Pembee are becoming the discovery layer for baby classes. Being listed on Happity is increasingly essential for visibility. Hoop app closed, driving traffic to Happity."
+    },
+    {
+      "trend": "Instagram-driven class marketing",
+      "impact": "high",
+      "description": "Baby classes live or die by Instagram. Aesthetic setups, light shows, sensory stations photograph well. Parents share class photos creating organic word-of-mouth. Tiny Whirlwinds has NO social media — a critical gap."
+    },
+    {
+      "trend": "Premiumisation of baby experiences",
+      "impact": "medium",
+      "description": "Parents increasingly willing to pay premium (£10-15/class) for high-quality, intimate, well-designed experiences. Small class sizes and dedicated studios (like Tiny Whirlwinds) are a differentiator vs franchises in church halls."
+    },
+    {
+      "trend": "Franchise saturation concerns",
+      "impact": "medium",
+      "description": "Multiple franchise brands competing for same territories. Some areas have Baby Sensory + Hartbeeps + Tots Play + Bloom all within a few miles. Creates opportunity for differentiated independents."
+    },
+    {
+      "trend": "Sensory-specific demand growing",
+      "impact": "high",
+      "description": "Parents increasingly search specifically for 'sensory' classes rather than generic baby groups. Awareness of sensory processing, neurodivergence, and early development is driving demand for specialist sensory experiences."
+    },
+    {
+      "trend": "Falling UK birth rate",
+      "impact": "medium-negative",
+      "description": "UK birth rate at historic lows. Total addressable market shrinking in absolute terms, though spend-per-child is increasing. Competition for fewer babies intensifies."
+    }
+  ],
+
+  "customer_signals": [
+    {
+      "signal": "Overcrowding is the #1 complaint",
+      "source": "Mumsnet",
+      "detail": "Multiple threads complain about 20+ babies in classes. Parents feel babies are overstimulated. Classes that keep groups small (8-12) are highly valued. THIS IS TINY WHIRLWINDS' BIGGEST OPPORTUNITY — dedicated studio with controlled class sizes.",
+      "opportunity_score": 9
+    },
+    {
+      "signal": "Quality of class leader matters more than brand",
+      "source": "Mumsnet/Reddit",
+      "detail": "Parents consistently say the individual teacher makes or breaks the class. Franchise brand matters less than personal connection, warmth, and professionalism. Independents can absolutely compete on this.",
+      "opportunity_score": 8
+    },
+    {
+      "signal": "Parents question if classes are 'worth it'",
+      "source": "Mumsnet (multiple threads)",
+      "detail": "'Is baby sensory worth it?' is a recurring question. Price sensitivity is real (£7-15/class adds up). Parents want to feel the money is well-spent. Clear developmental framing (EYFS, milestones) helps justify cost.",
+      "opportunity_score": 7
+    },
+    {
+      "signal": "Social connection is the real product",
+      "source": "Mumsnet/Reddit",
+      "detail": "Many parents admit classes are 'more for the mum than the baby' at young ages. The social element — meeting other parents, getting out of the house, having structure to the week — is the core value. Classes that foster parent community retain better.",
+      "opportunity_score": 8
+    },
+    {
+      "signal": "Parents search: 'baby classes near me', 'sensory classes [town]', 'baby groups [town]'",
+      "source": "Search behaviour / Happity",
+      "detail": "Local SEO is critical. Parents search by location. Being visible on Google Maps, Happity, and local Facebook groups is essential for discovery.",
+      "opportunity_score": 8
+    },
+    {
+      "signal": "Poor equipment/production quality frustrates parents",
+      "source": "Mumsnet",
+      "detail": "Complaints about music played through phone speakers, half-hearted setups, dirty equipment. Parents paying £10+/class expect professional production values. Tiny Whirlwinds' dedicated studio with proper light shows and equipment is a strong differentiator.",
+      "opportunity_score": 7
+    },
+    {
+      "signal": "Free alternatives are the real competition",
+      "source": "Mumsnet",
+      "detail": "Multiple parents mention church groups (£1), library sessions (free), and home sensory play as alternatives. The paid class must clearly justify its premium through quality, expertise, and experience.",
+      "opportunity_score": 6
+    }
+  ],
+
+  "competitive_landscape": {
+    "summary": "The Farnham baby class market is moderately competitive with 3-4 direct competitors (Lullababy, Tots Play, Baby Sensory area franchise, Jo Jingles) plus free/low-cost alternatives. Most competitors are franchises operating from hired community halls on a rotating schedule. Tiny Whirlwinds has a genuine structural advantage: a dedicated sensory studio (unique in the area), which enables better production values, consistent environment, and controlled class sizes. The franchise competitors have brand recognition but suffer from the common franchise complaints (overcrowding, generic feel, variable quality). Hartbeeps appears to have exited the local market, creating a gap.",
+    "tiny_whirlwinds_position": "Independent operator with dedicated studio, premium positioning (£10-15/class), EYFS-aligned curriculum, tech-savvy founder. Currently under-marketed (no social media, limited online visibility) but strong product fundamentals.",
+    "key_competitive_advantages": [
+      "Dedicated sensory studio (vs hired community halls) — unique locally",
+      "Small class sizes (implied by studio format) — addresses #1 parent complaint",
+      "Founder with tech background — potential for tech-enabled growth, better booking/marketing",
+      "Independent = agile, personal, authentic (vs franchise formula)",
+      "EYFS & Birth to 5 Matters alignment gives educational credibility",
+      "Premium but fair pricing (£10/class term, £15 drop-in) — competitive with franchises"
+    ],
+    "key_vulnerabilities": [
+      "ZERO social media presence — existential gap for a B2C baby business",
+      "Solo operator — capacity ceiling, no cover for illness/holidays",
+      "Only 2 of 4 class types running — missing 15-36 month segment",
+      "Limited schedule (Mon/Thu/Fri) — no weekend classes for working parents",
+      "No Happity listing detected — missing key discovery platform",
+      "Pre/early-revenue — needs to prove unit economics and retention"
+    ],
+    "franchise_vs_independent_dynamics": {
+      "franchise_advantages": [
+        "Brand recognition and trust (parents Google 'Baby Sensory' by name)",
+        "Proven lesson plans and curriculum (40+ session plans)",
+        "National marketing and SEO investment",
+        "Training and ongoing support",
+        "Territory exclusivity"
+      ],
+      "independent_advantages": [
+        "No franchise fees (£6k-25k saved) or ongoing royalties (10-15% of revenue)",
+        "Full creative control — can innovate and respond to local feedback",
+        "Authentic personal brand — parents connect with the founder story",
+        "Can undercut on price OR invest savings into better experience",
+        "No territory restrictions — can expand freely",
+        "Tech-savvy founder can build own marketing/booking stack"
+      ],
+      "how_independents_win": "By being clearly BETTER than the franchise experience in ways that matter: smaller classes, better production values, genuine personal connection, Instagram-worthy environments, and leveraging local community (NCT groups, health visitors, word-of-mouth). The dedicated studio is a franchise-killer advantage — no franchise operator in a church hall can match it."
+    }
+  },
+
+  "seasonality": {
+    "pattern": "term-based with predictable cycles",
+    "details": [
+      {
+        "period": "September-October",
+        "demand": "highest",
+        "notes": "New term start. Biggest intake as babies born in spring/summer are now old enough. Post-summer parents eager to start activities. Key marketing window: August."
+      },
+      {
+        "period": "January",
+        "demand": "high",
+        "notes": "New Year resolution effect. Second biggest intake. Parents returning from Christmas break with motivation."
+      },
+      {
+        "period": "April-May",
+        "demand": "medium-high",
+        "notes": "Spring term. Steady but some drop-off as babies age out. Easter break disruption."
+      },
+      {
+        "period": "July-August",
+        "demand": "low",
+        "notes": "Summer holidays. Significant drop-off. Many classes don't run. Some operators offer 'summer specials' or outdoor sessions. Revenue gap needs planning for."
+      },
+      {
+        "period": "Half-terms",
+        "demand": "variable",
+        "notes": "Some parents want classes during half-term (no school-age siblings to manage), others are away. Flexible scheduling helps."
+      }
+    ],
+    "cash_flow_implication": "Term-based billing creates lumpy cash flow. Upfront term payment (Tiny Whirlwinds' model) helps but summer gap is real. Consider: summer holiday classes, birthday parties (already planned), outdoor pop-ups, or holiday camps to smooth revenue.",
+    "maternity_leave_cycle": "Many parents start classes when baby is 8-16 weeks old. Maternity leave typically ends at 9-12 months. This creates natural churn — need constant new intake. Classes for older babies (15-36mo) have different dynamics as parents return to work and childcare providers become the customer."
+  }
+}

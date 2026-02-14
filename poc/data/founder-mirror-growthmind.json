@@ -1,0 +1,92 @@
+{
+  "org_id": "growthmind_001",
+  "agent": "founder_mirror",
+  "generated_at": "2026-02-12T22:38:00Z",
+  "version": 1,
+  "insights": [
+    {
+      "insight_id": "mirror_001",
+      "type": "uncomfortable_truth",
+      "severity": "brutal",
+      "title": "You're Building a Growth Tool While Avoiding Growth",
+      "insight": "You said it yourself: 'I don't know growth. That's why I'm building it.' But four months in, you still have zero users. You've built auth, payments, Stripe, PropelAuth, event-driven architecture — a production-grade system that nobody has ever touched. You're using 'building the tool' as a socially acceptable way to avoid the thing that actually terrifies you: selling it to strangers.",
+      "evidence": "Product status: live since October 2025, 0 users. Tech stack includes 13 production dependencies (Next.js 16, Stripe, PropelAuth, Inngest, MongoDB). Founder confirmed: 'I haven't spoken to users properly yet.' Meanwhile, 15 founders on Reddit THIS WEEK are screaming for exactly what you built.",
+      "question_for_founder": "If Growthmind is supposed to tell founders to stop building and start validating — why haven't you followed your own product's advice?",
+      "what_to_do_about_it": "Close your code editor for 14 days. Not 'mostly close it.' Close it. Your only KPI for the next two weeks is: number of humans who have used Growthmind. Target: 5. Everything else is procrastination wearing a hoodie.",
+      "cognitive_bias": "builder's bias"
+    },
+    {
+      "insight_id": "mirror_002",
+      "type": "pattern_recognition",
+      "severity": "hard",
+      "title": "You ARE Signal #001",
+      "insight": "Your audience scan found 15 founders in the last month posting about the exact problem Growthmind solves. Signal sig_001: 'Solo founder with working AI SaaS product is desperate for first users.' Signal sig_007: 'SaaS founder with zero marketing knowledge openly asking for direction.' Read those descriptions again. That's not your customer. That's you. You are indistinguishable from the people you're trying to help.",
+      "evidence": "Audience Pulse signals sig_001 (score 92), sig_003 (score 90), sig_007 (score 90) describe founders with shipped products and zero traction — identical to Growthmind's current state. Founder's own stated challenge matches the #1 pain theme: 'Can't get first users / zero distribution.'",
+      "question_for_founder": "If you can't solve the 'zero users' problem for yourself, why would anyone trust your tool to solve it for them?",
+      "what_to_do_about_it": "Use this as fuel, not shame. Dogfood Growthmind on Growthmind. Run your own product through the diagnosis flow. Document everything. If it gives you a useful experiment, that's your first case study. If it doesn't, you've found your first critical bug. Either way, you win.",
+      "cognitive_bias": "confirmation bias"
+    },
+    {
+      "insight_id": "mirror_003",
+      "type": "blind_spot",
+      "severity": "hard",
+      "title": "Your 'Concierge MVP' Is Still a Building Activity",
+      "insight": "You just built a concierge MVP form on the site. That sounds like progress — it has the word 'MVP' in it, so it must be lean, right? But a form on a website that nobody visits is not concierge anything. Concierge means manually delivering value to a real human, face-to-face (or DM-to-DM). You built a form. You didn't have a conversation.",
+      "evidence": "Zero users confirmed. Concierge MVP form exists on site but no data on submissions or engagement. No analytics or feedback loop in place. The actual concierge model requires manual, high-touch delivery — not a web form.",
+      "question_for_founder": "When was the last time you personally helped a founder with their growth problem — not through a form, but through an actual conversation?",
+      "what_to_do_about_it": "Go to the r/SaaS thread where someone posted 'I have no idea how to market my SaaS' (sig_007). DM them. Offer to spend 20 minutes diagnosing their growth stage manually — no product, no form, just you and your brain. That's concierge. Record what you learn. Do it 5 times this week.",
+      "cognitive_bias": "builder's bias"
+    },
+    {
+      "insight_id": "mirror_004",
+      "type": "assumption_challenge",
+      "severity": "moderate",
+      "title": "Your Biggest Competitor Isn't an Agency — It's a Good Prompt",
+      "insight": "Your market intel correctly identifies ChatGPT as the highest competitive threat. But you haven't confronted what that really means. A founder can open ChatGPT right now and say 'I have a SaaS with zero users, diagnose my growth stage and give me 3 experiments for this week' — and get a decent answer for free. Your moat isn't the diagnosis. Your moat has to be something ChatGPT literally cannot do: accountability, persistence, and compounding learning over time. But you can't prove any of that with zero users.",
+      "evidence": "Market intel: ChatGPT rated 'high' threat level. Competitive moat assessment explicitly states 'founders can approximate Growthmind's output with careful prompting.' No experiment outcome data exists to create the learning flywheel identified as a key defensibility lever.",
+      "question_for_founder": "If a founder tried both Growthmind and a well-crafted ChatGPT prompt today, what would Growthmind do better? Can you answer that with evidence, not theory?",
+      "what_to_do_about_it": "Run a head-to-head test. Take one of those Reddit founders, give them both Growthmind's output and a ChatGPT-generated plan. Ask which they'd actually follow. The answer will either validate your differentiation or reveal that you need to build something ChatGPT genuinely can't replicate.",
+      "cognitive_bias": "optimism bias"
+    },
+    {
+      "insight_id": "mirror_005",
+      "type": "cognitive_bias",
+      "severity": "moderate",
+      "title": "You Keep Researching Because Research Feels Like Progress",
+      "insight": "You now have a Company Seed, Growth Voice, Growth Pulse, Market Intel, and Audience Pulse — beautifully structured JSON documents with competitive analysis, ICP definitions, and brand voice guidelines. You know your market inside out. But knowledge without action is just sophisticated procrastination. Every hour you spend refining your positioning document is an hour you didn't spend DMing one of those 15 founders who need your help RIGHT NOW.",
+      "evidence": "Five comprehensive data files generated in a single day (2026-02-12). Growth Pulse confidence went from 32 to 68 — but that increase came entirely from founder self-reporting, not market validation. Zero fields improved from actual user data.",
+      "question_for_founder": "How many more documents do you need before you feel 'ready' to talk to a stranger about Growthmind?",
+      "what_to_do_about_it": "Set a rule: for every hour spent on research/planning/building, you must spend one hour on outreach. Not 'I'll do outreach later.' The same day. Track it. If you find yourself generating another strategy document instead of sending a DM, that's the bias talking.",
+      "cognitive_bias": "analysis paralysis"
+    },
+    {
+      "insight_id": "mirror_006",
+      "type": "uncomfortable_truth",
+      "severity": "gentle",
+      "title": "Your Origin Story Is Powerful — But Only If You Finish Writing It",
+      "insight": "Your brand story is genuinely compelling: founder who wasted 6 months and built the tool he wished existed. That's the kind of story that makes other founders trust you instantly. But right now the story has no ending. 'I built the thing' is chapter one. 'And then 50 founders used it and here's what happened' is the chapter that makes people care. Without that chapter, you're just another founder with a landing page and a dream.",
+      "evidence": "Growth Voice brand_story references the 6-month learning journey. Proof points include 'founder_story' and 'market_gap' but no 'user_outcome' proof point exists. Audience Pulse shows founders who would relate to this story (sig_003: '22 products, $0 revenue' — same energy).",
+      "question_for_founder": "A year from now, what do you want the next sentence of your founder story to be?",
+      "what_to_do_about_it": "Write down the ending you want. 'Within 2 weeks, 5 founders used Growthmind and [X] happened.' Now work backwards from that. What's the first DM you need to send tonight?",
+      "cognitive_bias": "sunk cost"
+    },
+    {
+      "insight_id": "mirror_007",
+      "type": "pattern_recognition",
+      "severity": "hard",
+      "title": "The Circles Won't Stop Until Someone Else Is in the Loop",
+      "insight": "You told us you keep going in circles. Here's why: you're a solo founder with no external feedback loop. Every decision bounces around inside your own head — build this feature, no wait, fix the positioning, no wait, add a form, no wait, research competitors. The loop is closed. No new information enters. The only thing that breaks a closed loop is external signal: a real human saying 'this helped me' or 'this confused me' or 'I'd pay for this.'",
+      "evidence": "Founder confirmed: 'I keep going in circles.' Product has no feedback loop (has_feedback_loop: false). Zero users means zero external signal. Growth Pulse explicitly states: 'The circles you're going in will only break when you get external signal from actual humans using the product.'",
+      "question_for_founder": "What's one decision you've reversed more than twice in the last month? Would hearing from one real user have settled it?",
+      "what_to_do_about_it": "Find one founder tonight. Not five, not ten. One. Send them a DM: 'Hey, I built a free growth diagnosis tool for pre-PMF founders — would you try it and tell me if it's useful or rubbish? Takes 10 minutes.' One person. One conversation. That's how the circles stop.",
+      "cognitive_bias": "builder's bias"
+    }
+  ],
+  "meta": {
+    "foundation_reads": ["company-seed-growthmind.json", "growth-voice-growthmind.json"],
+    "event_context": ["audience-pulse-growthmind.json", "growth-pulse-growthmind.json", "market-intel-growthmind.json"],
+    "tone": "honest_friend",
+    "overall_severity": "hard",
+    "core_message": "You've built something real for a real problem. The evidence is overwhelming that your target audience exists and is desperate for help. But you're stuck in a build loop with zero external signal. Every insight here points to the same action: stop perfecting, start connecting. One conversation with one founder will teach you more than another week of building ever could."
+  }
+}

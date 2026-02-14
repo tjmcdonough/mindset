@@ -1,0 +1,199 @@
+{
+  "org_id": "growthmind_001",
+  "batch_id": "batch_2026-02-12_001",
+  "generated_at": "2026-02-12T22:38:00Z",
+  "batch_context": {
+    "stage": "validation",
+    "total_budget_hours": 15,
+    "allocated_hours": 14.5,
+    "week_of": "2026-02-17",
+    "key_constraint": "Zero users. Concierge MVP pivot (form → manual Growth Pulse delivery). Reddit active, LinkedIn/Twitter dormant. No AI-generated Reddit posts (get flagged). No asking for DMs in subs.",
+    "strategic_goal": "Get 5 founders through the concierge funnel (form fill → manual Growth Pulse delivery) to validate whether the output is valuable enough to retain/pay for."
+  },
+  "experiments": [
+    {
+      "id": "exp_001",
+      "status": "suggested",
+      "hypothesis": "We believe that responding to 10+ high-signal Reddit posts with genuinely helpful growth advice (no links, no pitches) will result in 3-5 inbound DMs from founders asking for more help, because the audience pulse shows founders in r/SaaS and r/startups are actively begging for growth frameworks and the best Reddit engagement is value-first with zero self-promotion.",
+      "experiment_type": "acquisition",
+      "channel": "reddit",
+      "priority": 1,
+      "estimated_effort": 4,
+      "success_threshold": "≥3 inbound DMs from founders who match ICP (pre-PMF, shipped product, stuck on growth) within 7 days of starting engagement.",
+      "prepared_assets": [
+        "Bookmark the 10 highest-signal threads from audience pulse (sig_001, sig_003, sig_007, sig_006, sig_010, sig_015, sig_008, sig_002, sig_005, sig_004)",
+        "Write a 'first 10 users' mini-framework (3-4 paragraphs) that you can adapt per thread — NOT copy-paste",
+        "Prepare a simple Google Form link for the concierge MVP (keep in Reddit profile bio, not in comments)"
+      ],
+      "instructions": [
+        "Each evening, spend 30-40 min finding 2-3 posts in r/SaaS, r/startups, or r/EntrepreneurRideAlong where a founder is stuck on first users, marketing, or growth strategy",
+        "Write a thoughtful, personalised comment (150-300 words) with specific, actionable advice. Reference their specific product/situation. No generic tips.",
+        "DO NOT include any links. DO NOT mention Growthmind. DO NOT ask them to DM you.",
+        "If the advice naturally leads to 'I've been building something for this exact problem' — save that for IF they DM you first.",
+        "Track each comment: subreddit, post title, your comment link, any replies/DMs received",
+        "When someone DMs you asking for more help, transition to experiment exp_002 (concierge offer)"
+      ],
+      "duration": "7 days",
+      "risk_level": "low",
+      "rationale": "Reddit is Tom's active channel and audience pulse found 10 high-value signals scoring 70-92. The key learning from Tom's experience: AI-generated posts get flagged, and asking for DMs backfires. Pure value-giving with zero promotion is the only play. This experiment tests whether authentic expertise-sharing creates enough pull to generate inbound interest — the healthiest acquisition signal possible."
+    },
+    {
+      "id": "exp_002",
+      "status": "suggested",
+      "hypothesis": "We believe that offering 5 Reddit-sourced founders a free, manually-delivered Growth Pulse report (concierge MVP) in exchange for 20 min of their time will result in at least 3 completing the process and 2 saying 'I'd pay for this', because the audience pulse shows these founders are desperate for personalised growth guidance and currently have no affordable alternative.",
+      "experiment_type": "activation",
+      "channel": "reddit",
+      "priority": 1,
+      "estimated_effort": 4,
+      "success_threshold": "≥3 founders complete the full concierge flow (form fill → Tom delivers Growth Pulse → founder reads it). ≥2 give unsolicited positive feedback or say they'd pay.",
+      "prepared_assets": [
+        "Simple intake form (Google Form or Tally): company name, URL, what stage they think they're at, biggest growth challenge, what they've tried, how many users they have",
+        "Growth Pulse delivery template: a structured doc/email that includes stage diagnosis, top 3 assumptions to test, and 2 recommended experiments — manually written by Tom using Growthmind's methodology",
+        "Short follow-up message template for after delivery: 'Was this useful? What surprised you? Would you pay for this weekly?'",
+        "Tracking spreadsheet: Name, Source thread, Form submitted (Y/N), Pulse delivered (Y/N), Feedback, WTP signal"
+      ],
+      "instructions": [
+        "When a founder DMs you from exp_001 (or you identify a high-pain founder from Reddit), respond conversationally about their challenge",
+        "After 2-3 messages, offer: 'I'm building a growth tool for exactly this — would you be up for being an early tester? Fill out a 2-min form, and I'll send you a personalised growth diagnosis for free.'",
+        "When they fill the form, spend 30-45 min manually creating their Growth Pulse using Growthmind's methodology (stage diagnosis + assumption interrogation + 2 experiments)",
+        "Deliver via email or DM. Keep it to 1 page / ~500 words. Quality over quantity.",
+        "Follow up 48 hours after delivery with the feedback questions",
+        "Record ALL feedback verbatim — this is your first user research data"
+      ],
+      "duration": "7-10 days (overlaps with exp_001)",
+      "risk_level": "low",
+      "rationale": "This IS the concierge MVP. It validates three things simultaneously: (1) whether founders will complete the intake, (2) whether the Growth Pulse output is valuable enough to generate a reaction, and (3) whether willingness to pay exists. Each manual delivery also teaches Tom what the AI product needs to actually produce. This is the most important experiment in the batch."
+    },
+    {
+      "id": "exp_003",
+      "status": "suggested",
+      "hypothesis": "We believe that posting one authentic 'build in public' story on r/SaaS about the specific mistake of spending 6 months building before talking to users will result in 50+ upvotes and 5+ DMs/comments from founders who relate, because the audience pulse shows this exact pain theme ('going in circles / no growth framework') is the 3rd most common frustration and Tom's own story mirrors it perfectly.",
+      "experiment_type": "acquisition",
+      "channel": "reddit",
+      "priority": 2,
+      "estimated_effort": 2,
+      "success_threshold": "≥50 upvotes, ≥10 comments, ≥3 DMs from ICP-matching founders within 72 hours of posting.",
+      "prepared_assets": [
+        "Draft a 400-600 word post: 'I spent 6 months building a product nobody asked for. Here's exactly what I got wrong.' — written personally by Tom, NOT AI-generated",
+        "Include specific numbers: months wasted, money spent on agency, the moment of realisation",
+        "End with a question to the community, NOT a pitch: 'What was your 'oh shit' moment when you realised you were building the wrong thing?'",
+        "Have the concierge form ready in bio for anyone who checks your profile"
+      ],
+      "instructions": [
+        "Write the post yourself. Handwrite it if it helps — it MUST sound human, vulnerable, and specific. Reddit detects and punishes AI-written content.",
+        "Post on a Tuesday or Wednesday evening (peak r/SaaS engagement)",
+        "Respond to EVERY comment within the first 2 hours — Reddit's algorithm rewards early engagement",
+        "Do NOT mention Growthmind in the post or comments unless someone specifically asks what you're building",
+        "If someone asks 'what are you building now?' — give a 1-sentence answer and offer to share more via DM",
+        "Track: upvotes, comments, DMs, profile visits (if Reddit shows), any concierge form fills"
+      ],
+      "duration": "3 days (post + engage + measure)",
+      "risk_level": "medium",
+      "rationale": "Tom's personal story IS the market's story. The audience pulse shows 'built 22 products $0 revenue' got massive engagement. Tom's version ('6 months building, 0 users') is the same archetype. Reddit rewards vulnerability and specificity. This simultaneously builds Tom's credibility, tests message-market fit, and generates inbound leads for the concierge MVP. Medium risk because a poorly-written post can die or attract trolls."
+    },
+    {
+      "id": "exp_004",
+      "status": "suggested",
+      "hypothesis": "We believe that reaching out to 5 founders from the high-value audience pulse signals (sig_001, sig_003, sig_007, sig_002, sig_006) via Reddit comment (not DM) with specific, detailed advice tailored to their exact situation will result in at least 2 responding positively and 1 becoming a concierge MVP user, because these founders posted 1-4 weeks ago and are likely still stuck on the same problems.",
+      "experiment_type": "acquisition",
+      "channel": "reddit",
+      "priority": 2,
+      "estimated_effort": 1.5,
+      "success_threshold": "≥2 out of 5 respond positively to the comment. ≥1 engages further (DM or follow-up question). ≥1 fills concierge form.",
+      "prepared_assets": [
+        "For each of the 5 signals, prepare a tailored comment (200-400 words) with specific advice for THEIR situation — not generic tips",
+        "Reference details from their original post to show you actually read it",
+        "For sig_003 (22 products, $0): framework for choosing which product to focus on",
+        "For sig_001 (AI contract scanner, no users): specific advice on where contract professionals hang out online",
+        "For sig_007 (no idea how to market): stage-appropriate first steps"
+      ],
+      "instructions": [
+        "Check each thread is still active (not locked/archived). Reddit posts lock after 6 months, these are all <4 weeks old so should be fine.",
+        "Post your comment on the original thread. Late replies on popular threads still get notifications to the OP.",
+        "If the post is >2 weeks old and has 100+ comments, the comment might get buried — in that case, skip it and find a newer thread from the same founder",
+        "DO NOT DM them unprompted. Wait for them to engage with your comment first.",
+        "Track: which signals you engaged, response (Y/N), sentiment, any DM conversion"
+      ],
+      "duration": "5 days",
+      "risk_level": "low",
+      "rationale": "The audience pulse already identified these founders as high-value signals (scores 82-92). They publicly asked for help. Responding with genuine expertise is the lowest-risk, highest-signal way to start conversations. Even if they don't convert, the comments serve as public social proof of Tom's expertise for anyone browsing those threads later."
+    },
+    {
+      "id": "exp_005",
+      "status": "suggested",
+      "hypothesis": "We believe that updating the Growthmind.ai landing page to feature a single clear CTA — 'Get your free Growth Pulse (takes 2 min)' with the concierge intake form — will result in a higher form completion rate than the current signup flow, because the current site has auth/payment flows but zero users, suggesting the ask is too big for cold traffic and a free diagnostic is a lower-friction entry point.",
+      "experiment_type": "activation",
+      "channel": "website",
+      "priority": 3,
+      "estimated_effort": 1.5,
+      "success_threshold": "Landing page updated with concierge CTA. ≥1 form fill from organic/Reddit traffic within 7 days. Baseline established for future conversion measurement.",
+      "prepared_assets": [
+        "New hero CTA copy: 'Get Your Free Growth Pulse — tell us about your startup in 2 minutes, and we'll send you a personalised growth diagnosis within 48 hours.'",
+        "Embed or link to the same intake form used in exp_002",
+        "Add a brief 'What you'll get' section: '1. Your real growth stage (Idea / Validation / Early Traction), 2. Your riskiest assumption, 3. Your first experiment to run this week'",
+        "Remove or de-emphasise pricing/signup for now — the concierge is the product"
+      ],
+      "instructions": [
+        "Make the landing page change. Keep it simple — this is a content/copy change, NOT a rebuild. 30 min max.",
+        "Ensure the form works end-to-end: fill → Tom gets notification → Tom can deliver",
+        "Add basic tracking: can you see how many people visit vs how many fill the form? Even a simple Tally form gives you submission counts.",
+        "Update your Reddit profile bio to point to growthmind.ai (which now has the concierge CTA)",
+        "DO NOT spend more than 1.5 hours on this. Resist the urge to redesign. Copy change + form embed only."
+      ],
+      "duration": "1 day to implement, then ongoing measurement",
+      "risk_level": "low",
+      "rationale": "The current site has full auth and payment flows but zero users — classic over-engineering for the stage. The concierge pivot needs to be reflected on the site. Anyone who checks Tom's Reddit profile will land here. A simple, low-friction 'get a free diagnosis' CTA aligns the website with the concierge experiment and removes the 'create account + pick plan' friction that's killing conversion at zero-trust stage."
+    },
+    {
+      "id": "exp_006",
+      "status": "suggested",
+      "hypothesis": "We believe that scheduling and completing 3 user interviews (15-20 min each) with pre-PMF founders from Reddit or Indie Hackers will result in at least 2 insights that change our understanding of what founders actually want from a growth tool, because Tom has never spoken to users and every assumption in the Company Seed is unvalidated by real customer conversations.",
+      "experiment_type": "activation",
+      "channel": "reddit",
+      "priority": 1,
+      "estimated_effort": 3,
+      "success_threshold": "≥3 interviews completed. ≥2 surprising insights documented (things Tom didn't expect). ≥1 direct quote usable for marketing copy.",
+      "prepared_assets": [
+        "Interview script (5 questions max): 1) What's your biggest growth challenge right now? 2) What have you tried so far? 3) How did that go? 4) If you could wave a magic wand, what would a growth tool do for you? 5) Would you pay $20/mo for something that gave you a personalised weekly growth experiment plan?",
+        "Google Doc or Notion page to record answers verbatim",
+        "Calendly or simple scheduling link for 15-min slots",
+        "Outreach message: 'Hey — I'm a founder building a growth tool for early-stage startups. Would you be up for a 15-min call? I'll share everything I've learned about getting first users in return. No pitch, just a conversation.'"
+      ],
+      "instructions": [
+        "Identify 8-10 founders from Reddit threads (use audience pulse signals + new threads from exp_001)",
+        "Send outreach via Reddit DM (this is 1:1, not in-sub, so DM is fine here)",
+        "Offer value exchange: 'I'll share my framework for first-user acquisition in return for 15 min of your time'",
+        "Run interviews on Zoom/Google Meet. Record if they consent. Take notes during.",
+        "After each interview, write a 3-sentence summary: what surprised you, what confirmed your assumptions, what you'd change",
+        "After 3 interviews, write a 1-paragraph synthesis: what patterns are emerging?",
+        "Feed insights back into the concierge Growth Pulse (exp_002) to improve the output"
+      ],
+      "duration": "7 days",
+      "risk_level": "low",
+      "rationale": "Growth Pulse flagged 'no user conversations' as the #1 critical issue. Tom admitted he hasn't spoken to users properly. Every other experiment in this batch gets better if informed by real user insights. Interviews also build relationships that can convert to concierge users. This is not optional — it's foundational. The 3-hour estimate includes outreach, scheduling, and conducting 3 calls."
+    }
+  ],
+  "batch_summary": {
+    "total_experiments": 6,
+    "total_estimated_hours": 16,
+    "priority_1_hours": 11,
+    "priority_2_hours": 3.5,
+    "priority_3_hours": 1.5,
+    "if_time_is_short": "Drop exp_004 (1.5h) and exp_005 can be done in 30 min instead of 1.5h. Priority 1 experiments (exp_001 + exp_002 + exp_006) are non-negotiable — they are the validation trifecta: engage, deliver, learn.",
+    "experiment_types": {
+      "acquisition": 3,
+      "activation": 3,
+      "retention": 0,
+      "monetization": 0,
+      "referral": 0
+    },
+    "strategic_logic": "This batch is entirely focused on the validation gap: zero users, zero conversations, zero feedback. Every experiment either (a) starts a conversation with an ICP founder, (b) delivers the concierge MVP to test value, or (c) learns from direct user input. There are no retention/monetization/referral experiments because there's nobody to retain, monetize, or ask for referrals yet. Those come in batch 2, after we have 5+ founders through the concierge funnel.",
+    "key_dependencies": [
+      "exp_001 (Reddit engagement) feeds leads into exp_002 (concierge delivery) and exp_006 (interviews)",
+      "exp_003 (build-in-public post) is independent but may also feed into exp_002",
+      "exp_004 (audience pulse outreach) is independent",
+      "exp_005 (landing page) should be done early so Reddit profile link works for all other experiments"
+    ],
+    "recommended_sequence": "Day 1: exp_005 (update landing page, 1h). Days 1-7: exp_001 (daily Reddit engagement) + exp_006 (schedule and run interviews) + exp_004 (audience pulse outreach). Days 3-10: exp_002 (deliver concierge Growth Pulse to anyone who engages). Day 4-5: exp_003 (build-in-public post)."
+  }
+}

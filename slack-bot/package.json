@@ -1,0 +1,49 @@
+{
+  "name": "growthmind-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "build": "next build",
+    "start": "next start -p 3001",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint && yarn typecheck",
+    "prepare": "husky || true"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@mantine/core": "^8.3.14",
+    "@mantine/hooks": "^8.3.14",
+    "@tabler/icons-react": "^3.36.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.34.0",
+    "next": "16.1.6",
+    "postcss": "^8.5.6",
+    "postcss-preset-mantine": "^1.18.0",
+    "postcss-simple-vars": "^7.0.1",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write",
+      "eslint --fix",
+      "tsc-files --noEmit"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.13",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "16.1.6",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.8.1",
+    "tsc-files": "^1.1.4",
+    "typescript": "5.9.3"
+  },
+  "packageManager": "yarn@4.12.0"
+}

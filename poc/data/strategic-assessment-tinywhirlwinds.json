@@ -1,0 +1,212 @@
+{
+  "org_id": "tinywhirlwinds",
+  "report_type": "strategic-assessment",
+  "generated_at": "2026-02-13T09:55:00Z",
+  "version": "1.0",
+
+  "demand_scorecard": {
+    "overall_score": 68,
+    "dimensions": [
+      {
+        "dimension": "Problem Urgency",
+        "score": 72,
+        "rationale": "New parents feel isolated and actively seek structured activities during maternity leave. It's not life-or-death, but the emotional need is real and time-sensitive — babies age out of classes quickly. Parents search proactively ('baby classes near me'). The need renews every cohort of new births."
+      },
+      {
+        "dimension": "Market Size",
+        "score": 55,
+        "rationale": "Farnham is a small affluent town in Surrey. The local addressable market is limited to parents within a ~15-minute drive radius. UK births are ~650k/year but Farnham's catchment is maybe 500-800 babies at any time. Enough to sustain a solo operator comfortably, but a natural ceiling exists without geographic expansion. Franchise ambitions would unlock this."
+      },
+      {
+        "dimension": "Competitive Differentiation",
+        "score": 75,
+        "rationale": "Dedicated sensory studio is a genuine structural advantage — no local competitor has one. Small class sizes address the #1 parent complaint (overcrowding). GENTLE positioning carves a distinct lane vs Hartbeeps' theatrics and Baby Sensory's clinical feel. Independent founder story beats franchise anonymity. However, the differentiation only works if communicated — currently invisible due to zero marketing."
+      },
+      {
+        "dimension": "ICP Clarity",
+        "score": 80,
+        "rationale": "Crystal clear ICP: new mums on maternity leave in Farnham/Surrey with babies 0-15 months, seeking developmental activities and community. Jade IS her own ICP — she built what she couldn't find. Age-banded classes (Stargazers 0-6mo, Explorers 6-15mo) show good segmentation. Easy to find and reach through local channels."
+      },
+      {
+        "dimension": "Willingness to Pay",
+        "score": 70,
+        "rationale": "Farnham is affluent Surrey — parents here spend on baby activities. £10/class term pricing is competitive with franchises (£6-12/class). £15 drop-in is at the premium end but justified by studio quality. 4 term bookings pre-launch suggests willingness exists. However, free alternatives (library groups, church groups at £1-3) are genuine competition for some segments."
+      },
+      {
+        "dimension": "Timing",
+        "score": 75,
+        "rationale": "Strong timing. Post-COVID parenting class demand exceeds pre-COVID levels. Sensory classes are the fastest-growing sub-category. Hartbeeps may have exited Farnham (gap in market). Instagram-driven discovery is at peak for this category. Launching before the spring/summer term cycle gives time to build before the critical September intake. Only headwind: falling UK birth rate long-term."
+      }
+    ]
+  },
+
+  "swot": {
+    "strengths": [
+      {
+        "item": "Dedicated sensory studio",
+        "detail": "Only operator in Farnham with a purpose-built space. Enables consistent setup, professional production values (light shows, sound, tactile stations), and controlled class sizes. Franchises in church halls cannot match this."
+      },
+      {
+        "item": "Founder-market fit",
+        "detail": "Jade is her own ICP — a Farnham mum who built what she couldn't find. This authenticity is unchallengeable by franchises. She's also proven she can deliver — confident by session 4, great feedback."
+      },
+      {
+        "item": "GENTLE positioning fills a gap",
+        "detail": "Parents report Hartbeeps is 'too in your face'. Baby Sensory classes are overcrowded. A calm, intimate, well-produced sensory experience is genuine white space in Farnham."
+      },
+      {
+        "item": "Tech background (Dexla)",
+        "detail": "Jade has co-founded a tech company. This means she can build her own booking systems, automate marketing, use data — advantages most baby class operators don't have. Currently underleveraged."
+      },
+      {
+        "item": "Validated product",
+        "detail": "Trial classes with 6-10 attendees went well. Babies stayed engaged. Parents gave great feedback. The class itself works — this is the hardest part for a service business."
+      },
+      {
+        "item": "Competitive pricing with premium experience",
+        "detail": "£10/class (term) is in line with franchises but delivers a superior experience. No franchise fees eating into margins."
+      }
+    ],
+    "weaknesses": [
+      {
+        "item": "Zero marketing presence",
+        "detail": "Instagram started 2 days ago. No Facebook, no Happity listing detected, no Google My Business optimisation, no local partnerships. In a business where Instagram IS the discovery channel, this is the critical gap."
+      },
+      {
+        "item": "Solo operator with no backup",
+        "detail": "Jade will run classes even when sick. This is admirable but unsustainable. One serious illness = cancelled classes = refunds + reputation damage. No assistant, no substitute teacher."
+      },
+      {
+        "item": "Marketing skill gap",
+        "detail": "Jade's #1 frustration is marketing. She has no experience with social media content creation, SEO, or local outreach. The product is great but nobody knows about it."
+      },
+      {
+        "item": "Limited class portfolio",
+        "detail": "Only 2 of 4 planned class types are active. Active Adventurers not mapped. Parties listed on website but not ready (needs removing). Limited to Mon/Thu/Fri — no weekends."
+      },
+      {
+        "item": "Pre-revenue with unknown unit economics",
+        "detail": "Only 4 term bookings. Studio costs (rent, equipment, utilities) are fixed. Need to understand breakeven — how many classes per week at what fill rate covers costs."
+      }
+    ],
+    "opportunities": [
+      {
+        "item": "Local partnership network",
+        "detail": "Health visitors, NCT groups, children's centres, GP surgeries, midwives — all interact with new parents. A single health visitor recommendation can fill a class. Jade acknowledged this is a good idea but hasn't started."
+      },
+      {
+        "item": "Hartbeeps exit from Farnham",
+        "detail": "Hartbeeps appears to have closed locally. Their former customers need somewhere to go. Parents who found Hartbeeps 'too much' are TW's exact ICP."
+      },
+      {
+        "item": "Instagram-ready product",
+        "detail": "Light shows, colourful sensory stations, baby reactions — this content practically creates itself. One viral Reel of a baby's face in the light show could fill classes for a term."
+      },
+      {
+        "item": "Franchise model long-term",
+        "detail": "If Jade proves the model in Farnham, the dedicated-studio franchise concept is genuinely differentiated from hall-based franchises. Entry fees of £10-15k with lower ongoing costs than Baby Sensory could be compelling."
+      },
+      {
+        "item": "Weekend and holiday classes",
+        "detail": "No weekend classes currently. Working parents and dads are an untapped segment. Holiday specials could smooth the summer revenue gap."
+      },
+      {
+        "item": "Happity and Google Maps",
+        "detail": "Getting listed on Happity (2.6M parents/year) and optimising Google My Business would provide passive discovery. Parents actively search these platforms."
+      }
+    ],
+    "threats": [
+      {
+        "item": "Established franchise competition",
+        "detail": "Lullababy, Tots Play, Baby Sensory, and Jo Jingles all operate in the Farnham area. They have brand recognition, proven curricula, and national marketing. A new independent needs to fight harder for attention."
+      },
+      {
+        "item": "Falling UK birth rate",
+        "detail": "Birth rate at historic lows means the total addressable market is shrinking. Competition for fewer babies intensifies. Mitigated by affluent area (spend per child increasing)."
+      },
+      {
+        "item": "Cost of living pressure",
+        "detail": "£10-15/class is discretionary spend. Some parents may choose free alternatives (library groups, church groups). Farnham's affluence provides some insulation."
+      },
+      {
+        "item": "Franchise territory encroachment",
+        "detail": "Bloom Baby Classes, a growing premium franchise, could enter the Farnham area. New franchise entrants could appear at any time."
+      },
+      {
+        "item": "Solo operator burnout",
+        "detail": "Running classes, marketing, admin, cleaning the studio, developing new sessions — all on one person who is also a new mum. Burnout risk is real and would kill the business."
+      }
+    ]
+  },
+
+  "verdict": {
+    "decision": "CONDITIONAL GO",
+    "confidence": 0.75,
+    "summary": "Tiny Whirlwinds has strong product-market fit fundamentals: a validated class experience, genuine competitive differentiation (dedicated studio, gentle positioning), a clear ICP, and favourable timing. The product works — trial classes went well and the founder is confident in delivery. The business WILL work if people know about it. The conditional element is entirely about marketing execution and operational resilience. Jade needs to solve two problems in the next 90 days: (1) make Tiny Whirlwinds visible to Farnham parents, and (2) establish a backup plan for when she can't teach.",
+    "conditions": [
+      {
+        "condition": "Fill first 3 classes to 8+ attendees within 6 weeks of launch",
+        "rationale": "Proves the marketing can work, not just the product. If classes aren't filling after 6 weeks of active effort, something fundamental needs to change (pricing, positioning, location, or marketing approach).",
+        "deadline": "6 weeks post-launch (approx. end of March 2026)"
+      },
+      {
+        "condition": "Establish at least 3 local referral partnerships",
+        "rationale": "Health visitors, NCT, children's centres, local cafes — these are the channels that fill local baby classes. Instagram alone won't do it. Need warm, trusted referrals.",
+        "deadline": "End of first term (approx. April 2026)"
+      },
+      {
+        "condition": "Identify and train a backup class leader",
+        "rationale": "Solo operator risk is the single biggest threat to business continuity. Even a part-time assistant who can cover illness/holidays removes the existential risk.",
+        "deadline": "End of first quarter (approx. May 2026)"
+      },
+      {
+        "condition": "Achieve 60%+ term-on-term rebooking rate",
+        "rationale": "Retention proves the product creates genuine value. If parents don't rebook, the class isn't delivering. A healthy baby class should see 60-75% rebooking (accounting for natural age-out).",
+        "deadline": "End of second term"
+      }
+    ]
+  },
+
+  "risk_flags": [
+    {
+      "severity": "red",
+      "flag": "Solo operator with no contingency",
+      "detail": "Jade's stated position — 'I'll run classes even when sick, only cancel if hospitalised' — is a liability, not a strength. One bad flu = miserable experience for parents and babies. One injury = cancelled term = refunds and reputation damage. This needs solving urgently.",
+      "mitigation": "Recruit and train a backup teacher within 3 months. Even a friend/family member who can run a simplified session is better than nothing. Budget £50-100/session for cover."
+    },
+    {
+      "severity": "red",
+      "flag": "Marketing capability gap",
+      "detail": "Marketing is the #1 frustration and the #1 business need. The product is invisible. Instagram started 2 days ago. No local partnerships. No Google presence. A great product that nobody knows about is a failed business.",
+      "mitigation": "Commit to a simple, repeatable marketing routine (see experiments). Consider a part-time social media helper (local uni student, £10-12/hr, 3-5 hrs/week). Use Canva templates to reduce content creation friction."
+    },
+    {
+      "severity": "yellow",
+      "flag": "Website has inaccurate information",
+      "detail": "Parties are listed as 'Coming Soon' but aren't ready. Active Adventurers is listed but not mapped. '100+ babies' claim may be aspirational rather than accurate. Inaccurate information erodes trust.",
+      "mitigation": "Remove Parties page immediately. Clearly mark Active Adventurers as 'Opening Soon — join waitlist'. Verify or remove the 100+ babies claim."
+    },
+    {
+      "severity": "yellow",
+      "flag": "Unknown unit economics",
+      "detail": "Studio rent, equipment costs, insurance, booking platform fees — the fixed cost base is unknown. Need to model: at what fill rate does each class break even? How many classes per week are needed to cover all costs?",
+      "mitigation": "Build a simple spreadsheet: fixed monthly costs vs revenue at 50%, 75%, 100% class fill rates. Know the breakeven number."
+    },
+    {
+      "severity": "yellow",
+      "flag": "Franchise ambition may distract from launch execution",
+      "detail": "Jade's vision is a multi-town franchise. This is exciting but dangerous at pre-launch — franchise thinking (brand guidelines, scalable systems, territory planning) can distract from the immediate job: filling classes in Farnham.",
+      "mitigation": "Park franchise planning until Farnham is proven (3+ terms, consistently full classes, profitable). Document what works for future replication, but focus all energy on the local launch."
+    },
+    {
+      "severity": "yellow",
+      "flag": "No weekend or evening classes",
+      "detail": "Mon/Thu/Fri only excludes working parents, dads who work weekdays, and families where both parents want to attend. This limits the addressable market.",
+      "mitigation": "Add one Saturday morning class once weekday classes are consistently filling. Test demand before committing to a full weekend schedule."
+    }
+  ],
+
+  "local_business_context": {
+    "note": "This assessment is calibrated for a pre-launch local service business, not a tech startup. The relevant benchmarks are: (1) Can she fill classes consistently? (2) Do parents rebook? (3) Does word-of-mouth grow? (4) Is it profitable at a sustainable workload? The franchise ambition is a long-term upside but irrelevant if the first venue doesn't work. Everything flows from proving it in Farnham first."
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "org_id": "timberpos_001",
+  "agent": "interrogation",
+  "mode": "pre-interrogation",
+  "collected_at": "2026-02-13T10:51:00Z",
+  "confidence": "pre-interrogation",
+  "note": "This is a pre-interrogation run for outbound prospecting. Questions are generated but flagged as 'questions that would unlock higher confidence'. All downstream analysis proceeds with available data and stated assumptions.",
+
+  "foundation_coverage": {
+    "data_points_found": 47,
+    "data_points_missing": 18,
+    "coverage_percentage": 72,
+    "already_answered": [
+      "What the product does (booking + payments for barbers/salons)",
+      "Current traction numbers (2,400 impressions, 17 clicks, 1 user, 0 paying)",
+      "Competitive landscape (Fresha, SQUIRE, Booksy, Square, Vagaro)",
+      "Primary ICP (independent barbers and salon owners)",
+      "Current distribution channels (Reddit outreach, SEO attempts)",
+      "Product stage (MVP live, pre-revenue)",
+      "Key differentiator (no app download for clients)",
+      "Brand confusion issue (timber = lumber in search)"
+    ]
+  },
+
+  "questions": {
+    "must_answer": [
+      {
+        "id": "q_001",
+        "question": "How much time per week are you spending on Timber right now — is this full-time, or are you building alongside a day job?",
+        "context": "We need to calibrate every recommendation to your actual availability. A 10hr/week side project gets a very different growth plan than a full-time commitment.",
+        "maps_to": "company_seed.execution_capacity",
+        "gap_type": "resources",
+        "would_unlock": "Realistic experiment design, timeline calibration, effort budgets"
+      },
+      {
+        "id": "q_002",
+        "question": "What's your monthly budget for Timber (hosting, tools, marketing) — and how many months of runway do you have at that rate?",
+        "context": "Some of our recommendations involve paid directories, small ad tests, or tools. We need to know if $50/month or $500/month is the right frame.",
+        "maps_to": "company_seed.funding.runway",
+        "gap_type": "resources",
+        "would_unlock": "Channel prioritisation, paid vs organic balance, urgency of revenue"
+      },
+      {
+        "id": "q_003",
+        "question": "You mentioned 'a few users' using it free for feedback — what specific feedback have they given you? What do they love, and what's broken or missing?",
+        "context": "This is the closest thing you have to product-market fit signal. Their words matter more than any market research.",
+        "maps_to": "company_seed.product_status.feedback",
+        "gap_type": "product_reality",
+        "would_unlock": "Product-market fit assessment, feature prioritisation, messaging from real user language"
+      },
+      {
+        "id": "q_004",
+        "question": "Have you walked into any barbershops in person to demo Timber? If yes, what happened? If no, what's holding you back?",
+        "context": "Multiple data sources say barbers buy from face-to-face demos and peer recommendations — not from websites. Your answer tells us whether the biggest growth lever is accessible to you.",
+        "maps_to": "company_seed.distribution_attempts",
+        "gap_type": "distribution",
+        "would_unlock": "Local sales viability, founder comfort with direct sales, geographic strategy"
+      },
+      {
+        "id": "q_005",
+        "question": "Why did you choose to build a barber/salon booking tool specifically? Do you have any connection to the industry — are you a barber, know barbers, or frequent a particular shop?",
+        "context": "In this market, trust and personal connection drive adoption. If you have even one barbershop relationship, that changes our entire strategy.",
+        "maps_to": "company_seed.founder_market_fit",
+        "gap_type": "motivation",
+        "would_unlock": "Founder-market fit score, local sales strategy, authenticity of outreach"
+      }
+    ],
+    "should_answer": [
+      {
+        "id": "q_006",
+        "question": "Your website is built as a single-page app (SPA) — was that a deliberate choice, or would you be open to switching to server-side rendering? How much rework would that take you?",
+        "context": "Your SPA architecture means Google can't index your pages. You've built city and industry landing pages that nobody can find. This is the single biggest technical blocker to any SEO strategy.",
+        "maps_to": "company_seed.tech_stack",
+        "gap_type": "product_reality",
+        "would_unlock": "SEO feasibility timeline, technical effort estimation"
+      },
+      {
+        "id": "q_007",
+        "question": "Have you considered changing the name from 'Timber'? When someone Googles 'TimberPOS', the results are dominated by lumber industry POS systems.",
+        "context": "This isn't a vanity question — it's a distribution question. Your brand name is actively fighting you in search. We want to know if rebranding is on the table before we build a strategy around the current name.",
+        "maps_to": "company_seed.brand",
+        "gap_type": "positioning",
+        "would_unlock": "Brand strategy, SEO keyword planning, long-term positioning"
+      },
+      {
+        "id": "q_008",
+        "question": "What does your payment processing look like — do you handle payments directly, integrate with Stripe/Square, or is that still being built?",
+        "context": "Payments integration is a major factor in this market. Fresha monetises through payment processing fees. Your pricing model depends on this.",
+        "maps_to": "company_seed.product_status.payments",
+        "gap_type": "product_reality",
+        "would_unlock": "Revenue model clarity, competitive positioning vs Fresha's free model"
+      }
+    ],
+    "could_answer": [
+      {
+        "id": "q_009",
+        "question": "What does success look like for you in 90 days? A specific number of paying customers? Revenue target? Something else?",
+        "context": "We want to build a roadmap toward YOUR definition of success, not a generic one.",
+        "maps_to": "company_seed.goals",
+        "gap_type": "goals",
+        "would_unlock": "Goal-aligned strategy, milestone definition"
+      },
+      {
+        "id": "q_010",
+        "question": "Are you based in the US or UK? (Asking because local barbershop outreach is our top recommendation and we'd tailor it to your geography.)",
+        "context": "Market dynamics differ by region. US has Fresha/SQUIRE/Booksy dominance. UK has different competitive dynamics.",
+        "maps_to": "company_seed.founders[0].location",
+        "gap_type": "resources",
+        "would_unlock": "Geographic strategy, local market analysis, event recommendations"
+      }
+    ]
+  },
+
+  "delivery_message": "Hey — we've been digging into Timber and the barber/salon booking market. Before sharing our full analysis, a few questions that would sharpen our recommendations significantly:\n\n1. How much time per week are you spending on Timber — full-time or alongside a day job?\n\n2. What's your monthly budget, and how long can you sustain it?\n\n3. You mentioned free users giving feedback — what specifically have they said? What do they love vs what's missing?\n\n4. Have you done any in-person demos at barbershops? If not, what's stopping you?\n\n5. What's your personal connection to the barber/salon industry?\n\nThese 5 would help us the most. If you have a minute, also helpful:\n- Would you consider switching from SPA to server-side rendering?\n- Is rebranding from 'Timber' on the table?\n- How does your payment processing work?",
+
+  "status": "pre-interrogation-bypass",
+  "assumptions_used_for_downstream": [
+    "Founder is working part-time (~15-20 hrs/week) based on Reddit posting patterns",
+    "Budget is minimal — bootstrapped, likely <$100/month on tools",
+    "No in-person barbershop outreach has been done (no mention of it anywhere)",
+    "No personal connection to barber industry (would have been mentioned if existed)",
+    "SPA architecture was a technical default, not a deliberate SEO decision",
+    "Founder is US-based (Reddit posting times, English language, no UK signals)",
+    "Payment processing exists but details unknown",
+    "90-day goal is likely 5-10 paying customers based on Reddit aspirations"
+  ],
+  "remaining_gaps": [
+    "Exact time commitment and runway",
+    "Real user feedback (the most valuable missing data point)",
+    "Geographic location",
+    "Technical willingness to rebuild for SEO",
+    "Openness to rebrand",
+    "Revenue model / pricing details",
+    "Personal motivation and industry connection"
+  ]
+}

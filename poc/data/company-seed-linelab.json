@@ -1,0 +1,381 @@
+{
+  "org_id": "linelab_001",
+  "company_name": "LineLab",
+  "website_url": "https://www.linelab.io",
+  "logo_url": null,
+  "business_idea": "Production system modeling software that uses MIT-developed analytical methods (extended queueing theory + mathematical optimization) to model, simulate, and optimize complex manufacturing systems — replacing slow, expensive discrete-event simulation with rapid, accurate, transparent results for scale-up decisions, cost prediction, and capacity planning.",
+  "stage_summary": "early-traction-crossing-chasm",
+  "founder_summary": "2-person founding team, both MIT-affiliated. Scott Nill — Co-founder & CTO, MIT PhD, Greater Chicago Area. Developed core queueing theory technology during MIT research. Previous: MIT Sloan School of Management lecturer. Larissa Nietner — Co-founder, based in Cambridge MA. Previous: STEMgem, MIT Sloan School of Management, MIT. Co-authored Winter Simulation Conference 2023 paper. Both present at industry conferences (WSC, Paris Air Show, Solving for Scale Summit). Quote from Scott: 'We are currently debugging our scale-up strategy / crossing the chasm.'",
+  "founders": [
+    {
+      "name": "Scott Nill",
+      "role": "Co-founder & CTO",
+      "location": "Greater Chicago Area",
+      "linkedin": "https://www.linkedin.com/in/snill/",
+      "education": "MIT PhD",
+      "background": "Developed LineLab's core analytical technology during MIT research. Lecturer at MIT Advanced Manufacturing and Design program. Published at Winter Simulation Conference 2023.",
+      "source": "linkedin, rocketreach, handwiki"
+    },
+    {
+      "name": "Larissa Nietner",
+      "role": "Co-founder",
+      "location": "Cambridge, MA",
+      "linkedin": "https://www.linkedin.com/in/nietner/",
+      "education": "MIT",
+      "background": "Previous roles at STEMgem, MIT Sloan School of Management, MIT. Co-authored WSC 2023 paper on foundry operations modeling. Presented at WSC on modeling fab concepts for InchFab.",
+      "source": "linkedin, rocketreach"
+    }
+  ],
+  "founder_name": "Scott Nill",
+  "founder_role": "Co-founder & CTO",
+  "founded_date": "2021",
+  "launch_date": "2021",
+  "product_status": {
+    "launch_stage": "post-validation-scaling",
+    "has_working_product": true,
+    "has_landing_page": true,
+    "has_signup_flow": false,
+    "has_payment_flow": false,
+    "has_onboarding": null,
+    "has_analytics": null,
+    "has_users": true,
+    "user_count": null,
+    "has_feedback_loop": true,
+    "product_completeness": "mature-product-refining-gtm",
+    "biggest_product_gap": "Go-to-market and scale-up strategy — the product works and has enterprise customers, but they're struggling to cross the chasm from early adopters to mainstream market",
+    "ux_observations": [
+      "Professional, clean website with clear value propositions and quantified customer outcomes (4.9x ROI, 32% cost avoidance, $6M/yr savings)",
+      "Demo-request model (no self-serve signup) — typical enterprise B2B sales motion",
+      "Case studies page with validation data adds credibility",
+      "Insights/blog section with deep technical content positions them as thought leaders",
+      "Customer logos include Boeing, Hadrian, MIT, GKN Aerospace — impressive for a startup",
+      "No pricing page visible — enterprise sales model with custom quotes",
+      "Desktop software (Windows/macOS) — not a cloud SaaS product",
+      "Website is content-rich but could better communicate the 'why now' urgency"
+    ],
+    "product_improvement_suggestions": [
+      "Consider a self-serve trial or freemium tier to widen the top of funnel",
+      "Add customer testimonials with named individuals for social proof",
+      "Create ROI calculator on the website to let prospects self-qualify",
+      "Develop content marketing targeting specific verticals (aerospace, green tech, semiconductors) to drive inbound",
+      "Consider a cloud/SaaS version to reduce friction in the buying process",
+      "Build a community around the 'Solving for Scale' brand — events, newsletter, podcast"
+    ],
+    "meta": {
+      "source": "tier1_public",
+      "collected_at": "2026-02-13T08:07:00Z",
+      "confirmed_by_user": false
+    }
+  },
+  "primary_icp": "Manufacturing engineers, operations leaders, and program managers at growth-stage hardware/deep-tech companies and large manufacturers who need to model, optimize, and de-risk production scale-up decisions — especially in aerospace, semiconductors, green tech, and advanced mobility",
+  "pain_points": [
+    "Discrete-event simulation is too slow, expensive, and opaque for early-stage production planning",
+    "Spreadsheet-based cost models can't capture dynamic production behavior (queuing, variability, utilization)",
+    "Weeks of back-and-forth between simulation models and spreadsheets for a single answer",
+    "No optimization — DES only gives point answers requiring trial and error",
+    "Companies overspend on production systems due to inability to model cost drivers transparently",
+    "Critical scale-up decisions made on gut feeling or simplistic models, leading to costly mistakes",
+    "Existing tools require extensive setup time and expertise in Monte Carlo simulation"
+  ],
+  "pivot_indicators": [],
+  "pivot_history": [],
+  "industry": "Manufacturing Software / Industrial Engineering / Production Optimization",
+  "headcount": "2",
+  "headcount_source": "rocketreach (LineLab employs 2 employees: Larissa Nietner and Scott Nill)",
+  "tech_stack": [
+    "Desktop application (Windows, macOS)",
+    "Mathematical optimization solver",
+    "Queueing theory models (extended)",
+    "Proprietary analytical engine"
+  ],
+  "social_presence": {
+    "linkedin": "active",
+    "linkedin_url": "https://www.linkedin.com/company/linelab-software",
+    "twitter": null,
+    "github": null,
+    "product_hunt": null,
+    "crunchbase": null,
+    "reddit": "active",
+    "reddit_username": "blechie",
+    "instagram": null,
+    "handwiki": "https://handwiki.org/wiki/Software:LineLab"
+  },
+  "funding_stage": "unknown",
+  "total_raised": null,
+  "competitors": [
+    {
+      "name": "AnyLogic",
+      "type": "Discrete-event simulation software",
+      "differentiation": "LineLab is analytical (not Monte Carlo), faster, more accurate, with built-in optimization"
+    },
+    {
+      "name": "Arena (Rockwell Automation)",
+      "type": "Discrete-event simulation",
+      "differentiation": "LineLab doesn't require capacity as input — it optimizes it"
+    },
+    {
+      "name": "FlexSim",
+      "type": "3D simulation software",
+      "differentiation": "LineLab focuses on analytical accuracy over 3D visualization"
+    },
+    {
+      "name": "Siemens Tecnomatix",
+      "type": "Enterprise manufacturing simulation",
+      "differentiation": "LineLab is faster to set up, more transparent, and can optimize thousands of variables simultaneously"
+    },
+    {
+      "name": "Simio",
+      "type": "Simulation and scheduling",
+      "differentiation": "LineLab's analytical approach eliminates Monte Carlo uncertainty"
+    },
+    {
+      "name": "ProModel",
+      "type": "Process simulation",
+      "differentiation": "LineLab handles full system optimization in a single solve vs iterative simulation"
+    },
+    {
+      "name": "Excel/Spreadsheet models",
+      "type": "DIY cost modeling",
+      "differentiation": "LineLab captures dynamic behavior that spreadsheets fundamentally cannot"
+    }
+  ],
+  "key_customers": [
+    "Boeing",
+    "Hadrian",
+    "MIT",
+    "GKN Aerospace",
+    "Sidewalk Labs (Alphabet)",
+    "University of Queensland",
+    "Running Tide"
+  ],
+  "academic_validation": {
+    "publications": [
+      "Nietner, Larissa; Gould, Parker; Nill, Scott. 'A case study for modeling the economics of foundry operations' — Proceedings of the 2023 Winter Simulation Conference (WSC '23)"
+    ],
+    "university_affiliations": ["MIT"],
+    "events": ["Solving for Scale Summit (co-founded with MIT and NextGen Industry Group)", "Paris Air Show 2023"]
+  },
+  "customer_intelligence": {
+    "persona": {
+      "role": "VP of Manufacturing / Director of Operations / Manufacturing Engineer / Program Manager at hardware companies scaling production",
+      "company_size": "Growth-stage hardware startups (50-500) and large manufacturers (1000+)",
+      "industry": "Aerospace, defense, semiconductors, green tech, climate tech, advanced mobility, eVTOL, biopharmaceuticals",
+      "geo": "Primarily US (Chicago HQ area), with European presence (Berlin-based co-founder). Customers appear US-centric.",
+      "demographics": "Technical decision-makers responsible for production scale-up, cost estimation, and capacity planning. Mix of engineers and business leaders.",
+      "meta": [
+        {
+          "field": "persona",
+          "source": "tier1_public",
+          "source_detail": "linelab.io website, case studies, and HandWiki article",
+          "confidence": "high",
+          "collected_at": "2026-02-13T08:07:00Z",
+          "last_updated_by": "ai",
+          "last_updated_at": "2026-02-13T08:07:00Z",
+          "confirmed_by_user": false
+        }
+      ]
+    },
+    "problem": {
+      "pain_point": "Production scale-up decisions for complex manufacturing are made with inadequate tools — either slow/expensive simulation or simplistic spreadsheets — leading to costly overinvestment, missed production targets, and delayed time-to-market",
+      "trigger_event": "Company receives funding or mandate to scale production of a new technology and needs to dimension the factory, estimate costs, and de-risk the investment before breaking ground",
+      "current_workaround": "Discrete-event simulation (AnyLogic, FlexSim, Arena), Excel spreadsheet models, consulting firms, or gut-feel estimation",
+      "urgency": "high",
+      "additional_pain_points": [
+        "DES takes weeks to set up and only gives point answers with no optimization",
+        "No transparency into cost drivers — simulation is a black box",
+        "Can't explore trade-offs rapidly during early concept phase when decisions have highest leverage"
+      ],
+      "meta": [
+        {
+          "field": "problem",
+          "source": "tier1_public",
+          "source_detail": "linelab.io website content, insights articles, and case studies",
+          "confidence": "high",
+          "collected_at": "2026-02-13T08:07:00Z",
+          "last_updated_by": "ai",
+          "last_updated_at": "2026-02-13T08:07:00Z",
+          "confirmed_by_user": false
+        }
+      ]
+    },
+    "validation": {
+      "active_users": "has-enterprise-customers",
+      "aha_moment": "Seeing a complete production system model with cost drivers, optimization, and sensitivity analysis generated in minutes instead of weeks — with 0.64% accuracy vs actual production data",
+      "reaching_aha": "Product demo where LineLab models their specific production scenario and shows insights they couldn't get from existing tools",
+      "time_to_first_value": "Minutes to build a model from spreadsheet inputs; single solve for full optimization",
+      "qualitative_feedback": [
+        "Customers valued: fast model creation, no guesswork vs simulation, differentiated handling of variation and hidden costs, detailed cost breakouts, ability to model across maturity levels"
+      ],
+      "returning_unprompted": null,
+      "nps_score": null,
+      "meta": [
+        {
+          "field": "validation",
+          "source": "tier1_public",
+          "source_detail": "linelab.io demo page customer feedback bullets and case study results",
+          "confidence": "high",
+          "collected_at": "2026-02-13T08:07:00Z",
+          "last_updated_by": "ai",
+          "last_updated_at": "2026-02-13T08:07:00Z",
+          "confirmed_by_user": false
+        }
+      ]
+    },
+    "traction": {
+      "acquisition_source": "enterprise-sales-and-referrals",
+      "acquisition_sources": [
+        "Direct enterprise sales (demo requests)",
+        "MIT academic network and alumni",
+        "Industry events (Paris Air Show, Solving for Scale Summit)",
+        "LinkedIn content marketing",
+        "Referrals from existing customers (Boeing, Hadrian, etc.)"
+      ],
+      "unprompted_referrals": null,
+      "feature_requests": [],
+      "retention_signals": "Multiple named enterprise customers with quantified outcomes suggests repeat/expanding usage",
+      "meta": [
+        {
+          "field": "traction",
+          "source": "tier1_public",
+          "source_detail": "Customer logos on homepage, case studies, LinkedIn activity",
+          "confidence": "medium",
+          "collected_at": "2026-02-13T08:07:00Z",
+          "last_updated_by": "ai",
+          "last_updated_at": "2026-02-13T08:07:00Z",
+          "confirmed_by_user": false
+        }
+      ]
+    },
+    "monetization": {
+      "willingness_to_pay": "proven-enterprise-customers-paying",
+      "price_range": {
+        "current": null,
+        "min": null,
+        "max": null,
+        "currency": "USD",
+        "interval": "unknown",
+        "notes": "Enterprise pricing, not publicly listed. Likely annual license or per-seat model given desktop software nature. Competitors in this space range from $10k-$100k+ per year."
+      },
+      "buyer_vs_user": "Buyer is likely VP/Director level; users are manufacturing engineers and analysts",
+      "competitors_considered": [
+        "AnyLogic ($25k-$150k/yr)",
+        "FlexSim ($10k-$50k/yr)",
+        "Arena/Rockwell ($15k-$100k/yr)",
+        "Siemens Tecnomatix (enterprise pricing)",
+        "In-house Excel models (free but limited)",
+        "Consulting firms ($50k-$500k per engagement)"
+      ],
+      "why_chose_you": "Speed (minutes vs weeks), accuracy (0.64% error), built-in optimization (thousands of variables), transparency (full sensitivity analysis), and ease of setup (spreadsheet to model)",
+      "why_passed_on": null,
+      "revenue_model": "Enterprise software license — likely annual subscription or perpetual license with maintenance. Demo-first sales process.",
+      "meta": [
+        {
+          "field": "monetization",
+          "source": "tier2_inferred",
+          "source_detail": "No public pricing; inferred from enterprise sales model, competitor landscape, and desktop software delivery",
+          "confidence": "low",
+          "collected_at": "2026-02-13T08:07:00Z",
+          "last_updated_by": "ai",
+          "last_updated_at": "2026-02-13T08:07:00Z",
+          "confirmed_by_user": false
+        }
+      ]
+    }
+  },
+  "founder_context": {
+    "crossing_the_chasm_note": "Founder explicitly stated they are 'debugging our scale-up strategy / crossing the chasm'. This indicates: (1) product is validated with early adopters (Boeing, Hadrian, etc.), (2) challenge is moving from visionary early adopters to pragmatic mainstream buyers, (3) likely need to productize sales process, build repeatable GTM, and possibly move toward self-serve or lighter-touch sales for mid-market.",
+    "reddit_username": "blechie",
+    "reddit_context": "Active in r/berlinstartups discussing German tax/employment law for US-incorporated companies with founders in Germany — confirms distributed US/Germany team structure"
+  },
+  "enrichment_summary": {
+    "tier1_fields": 18,
+    "tier1_total": 20,
+    "tier2_fields": 3,
+    "tier2_total": 10,
+    "tier3_fields": 1,
+    "tier3_total": 10,
+    "overall_confidence": 0.65,
+    "last_enriched_at": "2026-02-13T08:07:00Z"
+  },
+  "identity_meta": [
+    {
+      "field": "company_name",
+      "source": "tier1_public",
+      "source_detail": "linelab.io website, HandWiki, LinkedIn",
+      "confidence": "high",
+      "collected_at": "2026-02-13T08:07:00Z",
+      "last_updated_by": "ai",
+      "last_updated_at": "2026-02-13T08:07:00Z",
+      "confirmed_by_user": false
+    },
+    {
+      "field": "business_idea",
+      "source": "tier1_public",
+      "source_detail": "linelab.io homepage and insights articles",
+      "confidence": "high",
+      "collected_at": "2026-02-13T08:07:00Z",
+      "last_updated_by": "ai",
+      "last_updated_at": "2026-02-13T08:07:00Z",
+      "confirmed_by_user": false
+    },
+    {
+      "field": "founder_name",
+      "source": "tier1_public",
+      "source_detail": "LinkedIn profile (snill), linelab.io Solving for Scale article identifies Scott Nill as CTO and co-founder",
+      "confidence": "high",
+      "collected_at": "2026-02-13T08:07:00Z",
+      "last_updated_by": "ai",
+      "last_updated_at": "2026-02-13T08:07:00Z",
+      "confirmed_by_user": false
+    },
+    {
+      "field": "founded_date",
+      "source": "tier1_public",
+      "source_detail": "HandWiki states initial release 2021",
+      "confidence": "high",
+      "collected_at": "2026-02-13T08:07:00Z",
+      "last_updated_by": "ai",
+      "last_updated_at": "2026-02-13T08:07:00Z",
+      "confirmed_by_user": false
+    },
+    {
+      "field": "stage_summary",
+      "source": "tier3_founder",
+      "source_detail": "Founder stated 'debugging our scale-up strategy / crossing the chasm'",
+      "confidence": "high",
+      "collected_at": "2026-02-13T08:07:00Z",
+      "last_updated_by": "founder",
+      "last_updated_at": "2026-02-13T08:07:00Z",
+      "confirmed_by_user": true
+    },
+    {
+      "field": "headcount",
+      "source": "tier2_inferred",
+      "source_detail": "LinkedIn shows 58 followers, 'co-founder' title implies at least 2 founders, HandWiki developer listed as 'Advanced Analytics'",
+      "confidence": "low",
+      "collected_at": "2026-02-13T08:07:00Z",
+      "last_updated_by": "ai",
+      "last_updated_at": "2026-02-13T08:07:00Z",
+      "confirmed_by_user": false
+    },
+    {
+      "field": "funding_stage",
+      "source": "tier2_inferred",
+      "source_detail": "No Crunchbase presence found; no funding announcements. Could be bootstrapped or quietly funded.",
+      "confidence": "low",
+      "collected_at": "2026-02-13T08:07:00Z",
+      "last_updated_by": "ai",
+      "last_updated_at": "2026-02-13T08:07:00Z",
+      "confirmed_by_user": false
+    }
+  ],
+  "version": 1,
+  "change_log": [
+    {
+      "timestamp": "2026-02-13T08:07:00Z",
+      "action": "initial_enrichment",
+      "details": "AI enrichment from linelab.io website (homepage, features, demo, case studies, insights), HandWiki article, LinkedIn profiles, Reddit user profile (blechie), and web search. Key sources: company website, HandWiki, Winter Simulation Conference 2023 publication, Solving for Scale Summit article.",
+      "by": "ai"
+    }
+  ]
+}

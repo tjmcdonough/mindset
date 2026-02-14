@@ -1,0 +1,130 @@
+{
+  "org_id": "timberpos_001",
+  "agent": "domain-expert",
+  "collected_at": "2026-02-13T10:45:00Z",
+  "confidence": "pre-interrogation",
+  "industry": "Barbershop & Salon Services",
+  "industry_overview": {
+    "description": "The barbershop and salon industry encompasses independent barbers, multi-chair barbershops, hair salons, med spas, nail salons, and beauty service providers. In the US alone, there are ~1.2 million beauty salons and ~180,000 barbershops. The industry is dominated by small, independent operators — most barbershops have 1-5 chairs.",
+    "annual_revenue_us": "~$65 billion (hair care services), ~$6 billion (barbershops specifically)",
+    "business_model_types": [
+      "Booth/chair rental — barbers rent a chair and run their own business (increasingly common)",
+      "Commission-based — shop owner takes % of each barber's revenue",
+      "Owner-operator — one person owns and operates, maybe 1-2 employees",
+      "Franchise — chains like Sport Clips, Great Clips (different market, enterprise software)"
+    ]
+  },
+  "how_they_buy_software": {
+    "decision_maker": "The barber/salon owner themselves — usually a single person making all business decisions",
+    "discovery_methods": [
+      "Word of mouth from other barbers (by far the #1 method)",
+      "Recommendation in Facebook group",
+      "Saw another barber using it",
+      "Google search when frustrated with current tool",
+      "Recommended by barber supply store or distributor"
+    ],
+    "evaluation_process": "Extremely fast and informal. Try it for 5 minutes. If it's confusing, delete it. If it works, keep using it. No RFP, no committee, no demo calls. Self-serve or nothing.",
+    "budget": "$0-50/month typical willingness to pay. Many prefer free tools. Will pay more if it directly makes them money (e.g., reduces no-shows, brings new clients).",
+    "switching_triggers": [
+      "Current software raised prices",
+      "Getting charged hidden fees (especially payment processing %)",
+      "Customer support is unresponsive",
+      "Clients complaining about having to download an app",
+      "Another barber recommended something better",
+      "Software went down during peak hours"
+    ],
+    "key_insight": "Barbers don't 'buy software' — they adopt tools that other barbers tell them about. The sales process is 100% trust-based and peer-driven. No amount of SEO or content marketing will overcome a lack of social proof from real barbers."
+  },
+  "daily_operations": {
+    "typical_day": "Open shop → check bookings → serve walk-ins and scheduled clients → manage payments (cash, card, Venmo/CashApp) → end of day: count tips, track revenue",
+    "pain_points": {
+      "booking": [
+        "No-shows are the #1 pain — a missed appointment = lost income for a chair-rental barber",
+        "Walk-in vs appointment balance — many shops do both, hard to manage",
+        "Clients booking and not showing up, especially new clients",
+        "Managing multiple stylists' schedules on one system"
+      ],
+      "payments": [
+        "Payment processing fees eat into thin margins",
+        "Cash vs card tracking",
+        "Tips management — splitting, tracking, tax reporting",
+        "Deposits to reduce no-shows but clients resist pre-paying"
+      ],
+      "marketing": [
+        "Building a client base when you're new",
+        "Getting clients to rebook regularly",
+        "Competing with the shop down the street",
+        "Instagram is essential but time-consuming"
+      ],
+      "business_management": [
+        "Tracking income for taxes (many are 1099/self-employed)",
+        "Managing product inventory",
+        "Handling reviews and reputation",
+        "Chair rental negotiations and payments"
+      ]
+    }
+  },
+  "what_good_looks_like": {
+    "description": "The best salon/barber software feels invisible — it just works. It loads fast on a phone, clients can book without friction, payments process instantly, and the barber never has to think about the tech.",
+    "examples": [
+      "Fresha: free, simple, gets out of the way. Massive adoption because barbers tell other barbers 'it's free and it works.'",
+      "Booksy: strong in barber niche, good mobile app, clients can discover barbers through the marketplace",
+      "Square: trusted, simple hardware + software combo, barbers already know the brand"
+    ],
+    "what_timber_needs_to_match": [
+      "Instant mobile experience — must work perfectly on phones (barbers don't use desktops)",
+      "3-tap booking for clients — any more and they'll abandon",
+      "Reliable payment processing",
+      "SMS/text reminders for appointments (reduces no-shows by 30-40%)",
+      "Simple reporting (how much did I make today/this week/this month)"
+    ]
+  },
+  "industry_jargon": {
+    "terms": {
+      "chair rental": "Barber rents a chair/station in someone else's shop",
+      "booth rental": "Same as chair rental",
+      "commission": "% of revenue shared with shop owner",
+      "walk-in": "Client who arrives without an appointment",
+      "no-show": "Client who booked but didn't come — biggest pain point",
+      "fade": "Popular haircut style",
+      "lineup / edge-up": "Hairline grooming service",
+      "book": "Schedule an appointment",
+      "chair time": "Time spent on a client (efficiency metric)",
+      "ticket average": "Average revenue per client visit",
+      "rebook rate": "% of clients who schedule their next appointment before leaving"
+    }
+  },
+  "regulatory_context": {
+    "licensing": "Barbers and cosmetologists require state licensing in the US. Each state has a Board of Barber Examiners.",
+    "payment_processing": "PCI compliance required for card processing. Many small shops still prefer cash.",
+    "data_privacy": "CCPA/GDPR considerations for client data storage",
+    "health_regulations": "State sanitation requirements, especially post-COVID"
+  },
+  "trends": [
+    "Booth rental model growing rapidly — independent barbers need their own tools, not the shop's system",
+    "Mobile-first everything — many barbers manage their entire business from their phone",
+    "Instagram as the primary portfolio and marketing channel",
+    "Rise of 'barber influencers' — popular barbers with 100K+ followers drive product adoption",
+    "AI-powered scheduling and chatbot booking emerging",
+    "Contactless/mobile payments becoming standard",
+    "Subscription haircuts (monthly membership models) growing",
+    "Gen Z barbers expect modern, app-like UX — won't tolerate clunky legacy tools"
+  ],
+  "critical_assessment_for_timber": {
+    "summary": "Timber is entering one of the most well-served verticals in all of SaaS. The barbershop/salon market has no shortage of booking tools — it has a shortage of trust, distribution, and deep understanding. The founder has identified real pain points (booking friction, poor support) but these alone won't win in a market where Fresha is free and SQUIRE has $160M in funding.",
+    "what_could_work": [
+      "Hyper-local approach — become THE booking tool in one city/region through direct relationships",
+      "Barber influencer partnership — get one popular barber to use and advocate for Timber",
+      "Chair-rental-first features — build specifically for independent booth renters, not shop owners",
+      "Superior mobile experience — if the product is genuinely 10x better on mobile, word will spread",
+      "Community building — create value for barbers beyond the software (content, networking, education)"
+    ],
+    "what_won't_work": [
+      "SEO as primary channel — too slow, too competitive, and the site isn't even indexable",
+      "Generic 'we're simpler' positioning — everyone claims this",
+      "Trying to serve all beauty verticals at once — dilutes focus and messaging",
+      "Pitching VCs with 0 revenue and 0 paying users",
+      "Competing on features alone — the incumbents will always have more features"
+    ]
+  }
+}

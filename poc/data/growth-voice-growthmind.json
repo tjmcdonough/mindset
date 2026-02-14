@@ -1,0 +1,247 @@
+{
+  "org_id": "growthmind_001",
+  "version": 1,
+  "last_evolved": "2026-02-12",
+  "evolution_trigger": "initial_seeding",
+  "brand": {
+    "voice_personality": "The sharp friend who sold their startup, learned everything the hard way, and now won't let you make the same mistakes. Direct without being cruel. Warm without being soft. Thinks most growth advice is recycled garbage and isn't afraid to say so. Talks like a founder who's been in the trenches, not a consultant who's read about them.",
+    "traits": [
+      "Blunt but empathetic — says the hard thing because they care, not to flex",
+      "Battle-scarred optimist — knows most startups fail but believes yours doesn't have to",
+      "Anti-bullshit — allergic to jargon, frameworks-for-frameworks-sake, and 'best practices' without context",
+      "Curious interrogator — asks the question you've been avoiding",
+      "Scrappy and resourceful — respects bootstrappers, side-hustlers, and builders over pitch-deck founders"
+    ],
+    "archetype": "The Veteran Operator — not the guru on the mountain, but the founder one table over at the coworking space who's already made every mistake you're about to make",
+    "tone_rules": [
+      "Lead with the problem, not the product. If someone doesn't feel seen in the first sentence, you've lost them.",
+      "Use 'you' more than 'we'. This is about them, not us.",
+      "Short sentences hit harder. Use them for pain points and CTAs.",
+      "Questions > statements when challenging assumptions. 'Are you sure that's a distribution problem and not a positioning problem?' beats 'You have a positioning problem.'",
+      "Swear sparingly but don't sanitise. 'That's a shit metric' lands harder than 'That metric may not be optimal.'",
+      "Numbers over adjectives. '$15k burned' beats 'significant investment'. '6 months wasted' beats 'considerable time'.",
+      "Never promise outcomes. Promise a better process.",
+      "Use founder language: burn rate, runway, PMF, ramen profitable — not 'customer acquisition cost optimisation'.",
+      "Humour is dry, self-deprecating, and rooted in shared pain. Never punny. Never dad-joke."
+    ],
+    "forbidden_patterns": [
+      "Never say 'revolutionise', 'disrupt', 'game-changing', 'cutting-edge', 'next-generation', or 'unlock your potential'",
+      "Never use 'we leverage AI to...' — say what the AI actually does",
+      "No fake urgency: 'Limited spots!' or 'Don't miss out!' — founders see through this instantly",
+      "No corporate passive voice: 'Growth was achieved' → 'You grew 3x'",
+      "Never claim to replace the founder's judgment — we sharpen it, not replace it",
+      "No 'comprehensive solution' or 'end-to-end platform' — these mean nothing",
+      "Avoid 'startup ecosystem' and 'entrepreneurial journey' — cringe",
+      "Never patronise: 'Even non-technical founders can...' — assume competence",
+      "No listicle energy: '7 Ways To Hack Your Growth' is for content farms, not us",
+      "Never compare directly to ChatGPT by name — differentiate through capability, not shade"
+    ],
+    "audience_tone_variations": {
+      "technical_founders": "More direct, less hand-holding. Reference shipping, deploys, and iteration cycles. Respect their ability to build — challenge their ability to validate. Light sarcasm welcome.",
+      "non_technical_founders": "Same directness, but translate growth concepts without being condescending. Use analogies from business, not engineering. More emphasis on 'you don't need to hire a growth team yet'.",
+      "second_time_founders": "Skip the 101. Acknowledge they know the game. Focus on what's different this time — new market, new assumptions, new traps. Peer-to-peer tone.",
+      "agency_burned_founders": "Lead with empathy. They're bruised. Validate the frustration before pivoting to what's different. Don't sell hard — let the free assessment do the talking.",
+      "indie_hackers_and_makers": "Most casual tone. Community language. Reference building in public, MRR milestones, and the gap between 'cool product' and 'product people pay for'. This is the core tribe."
+    }
+  },
+  "messaging": {
+    "one_liner": "Growthmind interrogates your assumptions before you burn another month testing the wrong thing.",
+    "elevator_pitch": "Most pre-PMF founders misdiagnose where they actually are. They think they have a traffic problem when they have a positioning problem. They think they need ads when they need five more customer conversations. Growthmind is an AI growth system that starts by questioning your assumptions — not confirming them. It diagnoses your real growth stage, then runs personalised weekly experiments so you stop guessing and start compounding. Think of it as the growth co-founder you can't afford yet, for $20 a month.",
+    "brand_story": "Thomas McDonough spent six months doing growth the way everyone tells you to. He read the blogs. Tried the playbooks. Burned money on an agency that treated his pre-PMF startup like a Series B company. Nothing worked — because he was solving the wrong problem the entire time. He'd built a product nobody asked for, then tried to growth-hack his way to caring customers. The problem wasn't his funnel. It was his assumptions. So he built the tool he wished existed on month one: something that would've grabbed him by the shoulders and said 'Stop. Before you spend another dollar — are you even sure people want this?' That's Growthmind. It doesn't start with tactics. It starts with the uncomfortable questions. Because the fastest path to product-market fit isn't more experiments — it's the right experiments, run in the right order, at the right stage.",
+    "value_proposition_pillars": [
+      {
+        "pillar": "Interrogation Before Action",
+        "description": "Every other tool starts with 'here's what to do.' Growthmind starts with 'wait — what are you assuming?' It challenges your hypotheses about your market, your customer, and your stage before you waste another cycle.",
+        "proof": "80% of pre-PMF founders misdiagnose their growth stage. We catch that before you build on a broken foundation."
+      },
+      {
+        "pillar": "Stage-Aware Growth System",
+        "description": "Idea-stage founders don't need A/B tests. Early-traction founders don't need another landing page. Growthmind diagnoses where you actually are (Idea / Validation / Early Traction) and adapts everything to that reality.",
+        "proof": "The same advice that grows a post-PMF company will kill a pre-PMF one. Stage matters more than tactics."
+      },
+      {
+        "pillar": "Personalised Weekly Experiments",
+        "description": "Not a library of 500 tactics. A curated, sequenced experiment plan built around your specific product, market, and growth stage — delivered weekly so you actually execute instead of drowning in options.",
+        "proof": "Generic playbooks fail because context is everything. Your pricing experiment is different from theirs. Your audience lives in different places."
+      },
+      {
+        "pillar": "Growth Team for the Price of a Lunch",
+        "description": "Fractional CMOs cost $5-15k/month. Agencies cost more and care less. Growthmind gives pre-PMF founders structured growth intelligence starting at $20/mo — because the companies that need growth help most can afford it least.",
+        "proof": "The average pre-PMF founder burns $15k+ on agencies before realising they needed validation, not marketing."
+      }
+    ],
+    "positioning_statement": "For pre-PMF founders who are tired of guessing, Growthmind is the AI growth system that interrogates your assumptions, diagnoses your real growth stage, and runs personalised weekly experiments — so you stop burning months on the wrong tactics and start finding product-market fit with intention. Unlike generic AI tools, agencies, or playbooks, Growthmind was built by a founder who wasted six months doing it the hard way, specifically for founders who can't afford to.",
+    "taglines": [
+      "Stop guessing. Start interrogating.",
+      "The growth co-founder you can't afford yet. ($20/mo.)",
+      "Question everything. Especially your assumptions.",
+      "Built by a founder who burned six months so you don't have to.",
+      "Your assumptions are expensive. Let's stress-test them.",
+      "Growth intelligence for founders who don't have a growth team.",
+      "PMF isn't found by accident. It's diagnosed."
+    ]
+  },
+  "icp": {
+    "primary_persona": {
+      "name": "Alex the Builder",
+      "role": "Solo technical founder or technical co-founder (CEO/CTO hybrid) at a pre-PMF startup",
+      "company_stage": "Pre-PMF — has a product (or MVP), maybe some early users, but hasn't found consistent pull. Revenue under $5k MRR. Team of 1-3. Self-funded or pre-seed. 3-18 months in.",
+      "frustrations": [
+        "Built something cool but can't figure out why people aren't buying/staying",
+        "Tried generic growth advice from Twitter/blogs — none of it accounts for their specific situation",
+        "Burned $5-15k on an agency or freelancer who ran a playbook designed for post-PMF companies",
+        "Knows they need to 'talk to users' but doesn't know how to turn conversations into growth decisions",
+        "Feels stuck between 'keep building features' and 'figure out distribution' — paralysed by options",
+        "Exhausted from being founder + marketer + sales + support — growth falls to the bottom of the pile",
+        "Suspects they might be solving the wrong problem but doesn't know how to validate that suspicion",
+        "Sees other founders growing on Twitter/LinkedIn and assumes they're doing something wrong"
+      ],
+      "goals": [
+        "Find product-market fit before runway runs out",
+        "Get a structured, repeatable approach to growth that doesn't require hiring",
+        "Know what stage they're actually at so they stop applying wrong-stage tactics",
+        "Run experiments weekly without spending all week figuring out what to test",
+        "Stop second-guessing every growth decision",
+        "Get to $10k MRR with confidence that it's repeatable, not a fluke"
+      ],
+      "objections": [
+        "I can just use ChatGPT for free — why pay for this?",
+        "Another AI tool? I've been burned by overpromising AI products before.",
+        "I don't have time for another tool — I barely have time to build.",
+        "Growth advice doesn't work for my niche/market — it's too specific.",
+        "$200/mo is a lot when I'm pre-revenue.",
+        "How is this different from reading First 1000 Users or Lean Startup?"
+      ],
+      "where_they_hang_out": [
+        "Indie Hackers (forum + Twitter community)",
+        "Hacker News (Show HN, Ask HN)",
+        "Twitter/X — startup/founder Twitter, build-in-public crowd",
+        "Reddit: r/startups, r/SaaS, r/EntrepreneurRideAlong, r/indiehackers",
+        "Product Hunt (both as launchers and lurkers)",
+        "Niche Slack/Discord communities (e.g., Lenny's community, demand curve, GenAI builders)",
+        "Y Combinator forums and Startup School",
+        "Dev-adjacent communities: DEV.to, Lobsters, specific subreddits"
+      ]
+    },
+    "secondary_personas": [
+      {
+        "name": "Maria the Non-Technical Founder",
+        "role": "Business/domain-expert founder with an outsourced or no-code MVP",
+        "key_difference": "Less comfortable with experimentation frameworks. More likely to have burned money on agencies because she outsourced growth like she outsourced dev. Needs more guidance on what to test, not just what to question. Higher anxiety about 'doing it wrong.'",
+        "messaging_emphasis": "You don't need a technical co-founder or a growth team. You need the right questions and a system."
+      },
+      {
+        "name": "Sam the Second-Timer",
+        "role": "Experienced founder on company #2 or #3, knows the game but facing a new market",
+        "key_difference": "Doesn't need convincing that assumptions matter — already knows. Wants speed and structure. Less price-sensitive. More likely to start at $200/mo Growth tier. Values the diagnostic because they know what happens when you skip it.",
+        "messaging_emphasis": "You know the playbook doesn't transfer. New market, new assumptions. Let's stress-test them fast."
+      },
+      {
+        "name": "The Tiny Team",
+        "role": "2-5 person team with no dedicated growth/marketing person",
+        "key_difference": "Has some traction but growing chaotically. Founder is still doing growth as a side task. Needs to systematise before they hire. Team buy-in matters — might share the dashboard with a co-founder.",
+        "messaging_emphasis": "Structure your growth before you hire for it. Growthmind gives your team a system so your first growth hire walks into clarity, not chaos."
+      }
+    ],
+    "anti_persona": {
+      "description": "Post-PMF companies with established growth teams, Series B+ startups with dedicated marketing departments, agencies looking for client tools, founders who want a 'done for you' service, companies spending $50k+/mo on paid acquisition, anyone who says 'just scale what's working' — because that means they've already found PMF and don't need us.",
+      "why_not": "Growthmind is built for the messy, uncertain, pre-PMF phase. Once you've found PMF and need to scale, you need execution tools (Amplitude, Mixpanel, a real growth team), not a diagnostic system. Serving post-PMF companies would dilute the product, confuse the messaging, and turn us into another generic growth platform. We'd rather be the best tool for 100k pre-PMF founders than a mediocre tool for everyone."
+    },
+    "audience_keywords": [
+      "product-market fit",
+      "pre-PMF",
+      "finding PMF",
+      "growth experiments",
+      "startup growth",
+      "solo founder growth",
+      "indie hacker growth",
+      "founder-led growth",
+      "pre-seed growth",
+      "validate startup idea",
+      "startup assumptions",
+      "growth stage diagnosis",
+      "alternative to growth agency",
+      "AI growth advisor",
+      "weekly growth experiments",
+      "bootstrap growth strategy",
+      "stop guessing startup",
+      "early-stage growth system",
+      "growth without a growth team",
+      "founder burnout growth"
+    ]
+  },
+  "product": {
+    "features": [
+      {
+        "name": "Assumption Interrogation Engine",
+        "description": "AI-driven questioning system that systematically challenges your beliefs about your market, customer, problem, and solution before you run a single experiment. Not a chatbot — a structured diagnostic.",
+        "why_it_matters": "Most founders optimise for the wrong metric because they never questioned the assumption underneath it."
+      },
+      {
+        "name": "Growth Stage Diagnosis",
+        "description": "Classifies your company into Idea, Validation, or Early Traction based on real signals — not vanity metrics or vibes. Updates as you progress.",
+        "why_it_matters": "Running Early Traction tactics at the Idea stage is the #1 way pre-PMF founders waste time and money."
+      },
+      {
+        "name": "Personalised Weekly Experiments",
+        "description": "Each week, Growthmind delivers 1-3 experiments tailored to your stage, product, and market — with clear hypotheses, execution steps, and success criteria.",
+        "why_it_matters": "Founders don't fail from lack of ideas. They fail from too many ideas and no prioritisation framework."
+      },
+      {
+        "name": "Free Growth Assessment",
+        "description": "No-signup diagnostic that tells you your likely growth stage, top assumption risks, and first recommended experiment. Value before paywall.",
+        "why_it_matters": "Proves Growthmind's value in 5 minutes. Founders don't trust tools — they trust results."
+      },
+      {
+        "name": "Experiment Tracker & Learning Log",
+        "description": "Track what you ran, what you learned, and how your assumptions evolved. Builds a compounding knowledge base about your market.",
+        "why_it_matters": "The experiment you ran three months ago informs the one you should run today. Without a log, you're repeating mistakes."
+      },
+      {
+        "name": "Stage Progression Alerts",
+        "description": "Growthmind detects when your signals suggest you've moved stages and recalibrates your experiment plan automatically.",
+        "why_it_matters": "The transition from Validation to Early Traction is where most founders stall because they don't realise the game changed."
+      }
+    ],
+    "jobs_to_be_done": [
+      "When I've built an MVP but have no users, help me figure out if the problem is the product, the audience, or my positioning — before I waste months guessing.",
+      "When I'm getting some traffic but nobody's converting, help me diagnose whether it's a messaging problem, a product problem, or an audience problem.",
+      "When I'm doing everything myself and have no growth team, give me a structured weekly plan so growth doesn't fall off my plate.",
+      "When I've burned money on an agency that didn't work, help me understand what went wrong and what to try next — without burning more money.",
+      "When I'm stuck between 'keep building' and 'start marketing', help me figure out which one actually matters right now.",
+      "When I see other founders growing and don't know what I'm doing wrong, show me where I actually am and what 'good' looks like for my stage.",
+      "When I have too many growth ideas and can't prioritise, give me the one experiment that will teach me the most this week."
+    ],
+    "pricing_positioning": "Growthmind uses a 'prove it first' pricing model. The free assessment delivers real value with zero commitment — because founders who've been burned by agencies don't trust promises, they trust proof. The $20/mo Starter tier is deliberately priced below the pain threshold — less than a founder's daily coffee budget — so trying Growthmind is a no-brainer even at pre-revenue. The $200/mo Growth tier is for founders with enough traction to invest seriously, and it's still 95% cheaper than the cheapest fractional CMO. The pricing ladder matches the founder's journey: free when you're exploring, cheap when you're validating, still affordable when you're growing.",
+    "proof_points": [
+      {
+        "type": "founder_story",
+        "content": "Built by Thomas McDonough after wasting 6 months and thousands on the wrong growth tactics for his own startup. Growthmind exists because he needed it and it didn't exist."
+      },
+      {
+        "type": "market_gap",
+        "content": "No existing tool combines assumption interrogation + stage diagnosis + personalised experiments at a price point accessible to pre-PMF founders. Agencies charge $5-15k/mo. Fractional CMOs start at $3k/mo. ChatGPT is free but unstructured. Growthmind sits in the gap."
+      },
+      {
+        "type": "industry_stat",
+        "content": "80% of pre-PMF founders misdiagnose their growth stage, leading to an average of 6 months of misdirected effort. (Internal research from founder interviews.)"
+      },
+      {
+        "type": "market_signal",
+        "content": "The $280B AI funding boom has flooded the market with AI tools, but most are built for scale-ups. Pre-PMF founders are underserved and increasingly vocal about it in communities like Indie Hackers and Hacker News."
+      },
+      {
+        "type": "competitive_whitespace",
+        "content": "ChatGPT/Claude is the highest competitive threat by usage, but founders consistently report that generic AI gives generic advice. Growthmind's interrogation-first approach produces contextual, stage-appropriate recommendations that generic AI cannot."
+      }
+    ]
+  },
+  "evolution_log": [
+    {
+      "date": "2026-02-12",
+      "trigger": "initial_seeding",
+      "changes": "Full brand identity document generated from Company Seed and Market Intelligence data. All four sections populated: brand voice, messaging, ICP, and product.",
+      "confidence": "high — based on detailed founder input and competitive analysis"
+    }
+  ]
+}

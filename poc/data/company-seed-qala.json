@@ -1,0 +1,280 @@
+{
+  "org_id": "qala_001",
+  "company_name": "Qala",
+  "legal_name": "QALA AG",
+  "website_url": "https://letsqala.com",
+  "logo_url": null,
+  "business_idea": "Source-level data observability and compliance platform that delivers real-time data visibility, classification, lineage tracking, and policy enforcement — embedding continuous governance directly into the software development lifecycle without disrupting developer workflows.",
+  "stage_summary": "pre-seed-funded",
+  "founder_summary": "Three co-founders — David Scott Turner (CEO), Carl Strempel, and Bruno Soares — who previously co-founded Imburse Payments, a global enterprise payments platform acquired by Duck Creek Technologies (US insurance software provider). Decades of combined experience building secure, compliant systems in regulated industries.",
+  "founders": [
+    {
+      "name": "David Scott Turner",
+      "role": "Co-Founder & CEO",
+      "linkedin_url": "https://www.linkedin.com/in/davidjoelscottturner/",
+      "location": null,
+      "education": null,
+      "background": "Previously co-founded Imburse Payments (acquired by Duck Creek Technologies). Experience in regulated industries and enterprise payments.",
+      "previous_companies": ["Imburse Payments"]
+    },
+    {
+      "name": "Carl Strempel",
+      "role": "Co-Founder",
+      "linkedin_url": "https://www.linkedin.com/in/carl-strempel-a2406a32/",
+      "location": "Zurich, Switzerland",
+      "education": null,
+      "background": "Previously CFO & Co-Founder at Imburse Payments (acquired by Duck Creek Technologies).",
+      "previous_companies": ["Imburse Payments"]
+    },
+    {
+      "name": "Bruno Soares",
+      "role": "Co-Founder & CTO",
+      "linkedin_url": "https://www.linkedin.com/in/bsoares/",
+      "location": null,
+      "education": null,
+      "background": "Previously Chief Product Officer. Co-founded Imburse Payments (acquired by Duck Creek Technologies).",
+      "previous_companies": ["Imburse Payments"]
+    }
+  ],
+  "founded_date": "2024",
+  "launch_date": null,
+  "product_status": {
+    "launch_stage": "pre-launch-with-demos",
+    "has_working_product": true,
+    "has_landing_page": true,
+    "has_signup_flow": false,
+    "has_payment_flow": false,
+    "has_onboarding": null,
+    "has_analytics": null,
+    "has_users": null,
+    "user_count": null,
+    "has_feedback_loop": null,
+    "product_completeness": "core-built-demo-stage",
+    "biggest_product_gap": "No public signup or self-serve; demo/book-a-demo CTA only — suggests product is in controlled early access or pre-GA",
+    "ux_observations": [
+      "Framer-based website — polished marketing site",
+      "CTAs are 'See Qala in Action' and 'Book a demo' — no self-serve",
+      "Claims 'Up and running in under 30 minutes'",
+      "Built-in enforcement for GDPR, DORA, EU AI Act, SOC2, ISO 27001, PCI DSS"
+    ],
+    "pricing_model": "Transparent pricing claimed ('Predictable costs with no hidden fees - try before you buy') but no public pricing page found",
+    "meta": {
+      "source": "tier1_public",
+      "collected_at": "2026-02-13T08:57:00Z",
+      "confirmed_by_user": false
+    }
+  },
+  "primary_icp": "Engineering teams, compliance teams, CISOs, and security officers at scale-ups, fintechs, SaaS companies, and SMEs operating in regulated industries who need real-time data visibility and continuous compliance",
+  "pain_points": [
+    "Data landscape is a black box — teams can't map the full extent of their data",
+    "Compliance is reactive — scrambling to patch gaps before audits",
+    "Manual evaluations become outdated by the time they're completed",
+    "Engineering and compliance teams lose time piecing together data flow pictures",
+    "Lack of real-time clarity creates security risks and slows compliance with GDPR, DORA, EU AI Act",
+    "Existing tools provide periodic snapshots, not continuous monitoring"
+  ],
+  "industry": "Data Governance / Data Observability / Compliance Infrastructure",
+  "headquarters": "Zurich, Switzerland",
+  "locations": ["Switzerland", "Portugal", "United Kingdom"],
+  "headcount": "1-10",
+  "headcount_source": "Crunchbase (1-10 employees)",
+  "tech_stack": null,
+  "email_domain": "qalatech.io",
+  "social_presence": {
+    "linkedin_company": "https://www.linkedin.com/company/qala-technologies",
+    "twitter": null,
+    "github": null,
+    "product_hunt": null,
+    "crunchbase": "https://www.crunchbase.com/organization/qala",
+    "rocketreach": "https://rocketreach.co/qala-technologies-profile_b6edbb6fc6d99c73"
+  },
+  "funding_stage": "pre-seed",
+  "total_raised": "€1.7M (~$2M USD)",
+  "funding_rounds": [
+    {
+      "round": "Pre-Seed",
+      "amount": "€1.7M",
+      "amount_usd": "~$2M",
+      "date": "2025-10",
+      "lead_investors": ["QBIT Capital", "Haatch"],
+      "other_investors": ["Backbone Ventures", "ROI Ventures", "SICTIC angels"],
+      "source": "https://www.eu-startups.com/2025/10/investors-back-zurich-based-qala-with-e1-7-million-to-strengthen-enterprise-data-governance-in-the-ai-era/"
+    }
+  ],
+  "competitors": [
+    {
+      "name": "Collibra",
+      "category": "Data Governance / Data Catalog",
+      "notes": "Traditional data governance platform; periodic snapshots not real-time"
+    },
+    {
+      "name": "Alation",
+      "category": "Data Catalog / Data Governance",
+      "notes": "Data intelligence platform; mentioned as traditional competitor"
+    },
+    {
+      "name": "Immuta",
+      "category": "Data Security / Access Control",
+      "notes": "Mentioned directly as traditional competitor in TechFundingNews article"
+    },
+    {
+      "name": "BigID",
+      "category": "Data Security / Privacy",
+      "notes": "Data intelligence for privacy, security, and governance"
+    },
+    {
+      "name": "Securiti",
+      "category": "Data Security / Privacy Compliance",
+      "notes": "AI-powered data+AI governance"
+    },
+    {
+      "name": "OneTrust",
+      "category": "Privacy / GRC",
+      "notes": "Trust intelligence platform; privacy and compliance"
+    },
+    {
+      "name": "Monte Carlo",
+      "category": "Data Observability",
+      "notes": "Data observability focused on data quality/reliability rather than compliance"
+    }
+  ],
+  "competitive_positioning": "Qala differentiates by embedding governance at the source (code, APIs, pipelines) for continuous real-time compliance, vs traditional tools that provide periodic snapshots and sit at the edge. 'Shift-left' model for data compliance. Only Swiss startup in the European data governance wave.",
+  "key_features": [
+    "Real-time data visibility at source",
+    "Live data mapping — real-time mapping of data flows and topologies",
+    "Data lineage — trace origins to downstream systems",
+    "AI/NLP-powered automated classification and labeling",
+    "Policy enforcement and continuous audit",
+    "System topology visualization",
+    "Shift-left compliance model",
+    "30-minute integration with no rewrites"
+  ],
+  "regulations_supported": ["GDPR", "DORA", "EU AI Act", "SOC2", "ISO 27001", "PCI DSS"],
+  "target_industries": ["SaaS", "Fintech", "Software Services", "SMEs"],
+  "target_roles": ["CISOs", "Information Security Officers", "Compliance Teams", "Security Teams", "Engineering Teams", "CTOs"],
+  "customer_intelligence": {
+    "persona": {
+      "role": "CISO / Head of Compliance / CTO at regulated scale-up or fintech",
+      "company_size": "Scale-ups and SMEs in regulated industries",
+      "industry": "Fintech, SaaS, Software Services",
+      "geo": "Europe (initially Switzerland, expanding EU-wide)",
+      "meta": [
+        {
+          "field": "persona",
+          "source": "tier1_public",
+          "source_detail": "letsqala.com solutions pages and press coverage",
+          "confidence": "high",
+          "collected_at": "2026-02-13T08:57:00Z",
+          "last_updated_by": "ai",
+          "last_updated_at": "2026-02-13T08:57:00Z",
+          "confirmed_by_user": false
+        }
+      ]
+    },
+    "problem": {
+      "pain_point": "Enterprises have no real-time visibility into what data they handle, where it lives, and how it flows — making compliance reactive, manual, and outdated by completion",
+      "trigger_event": "Failed audit, data breach scare, new regulation (DORA, EU AI Act), or scaling to new markets requiring compliance proof",
+      "current_workaround": "Manual data mapping, spreadsheet-based compliance tracking, periodic audits with Collibra/Alation-style tools",
+      "urgency": "high",
+      "meta": [
+        {
+          "field": "problem",
+          "source": "tier1_public",
+          "source_detail": "letsqala.com homepage and EU-Startups article",
+          "confidence": "high",
+          "collected_at": "2026-02-13T08:57:00Z",
+          "last_updated_by": "ai",
+          "last_updated_at": "2026-02-13T08:57:00Z",
+          "confirmed_by_user": false
+        }
+      ]
+    },
+    "validation": {
+      "active_users": null,
+      "aha_moment": null,
+      "time_to_first_value": "Under 30 minutes to integrate (per website claim)",
+      "qualitative_feedback": [],
+      "nps_score": null,
+      "meta": []
+    },
+    "monetization": {
+      "willingness_to_pay": null,
+      "price_range": null,
+      "revenue_model": "Unknown — 'Transparent pricing' and 'try before you buy' mentioned but no public pricing",
+      "buyer_vs_user": "Buyer: CISO/VP Engineering/Head of Compliance. User: Engineering and compliance teams",
+      "competitors_considered": ["Collibra", "Alation", "Immuta", "BigID", "OneTrust"],
+      "meta": []
+    }
+  },
+  "enrichment_summary": {
+    "tier1_fields": 22,
+    "tier1_total": 25,
+    "tier2_fields": 5,
+    "tier2_total": 10,
+    "tier3_fields": 0,
+    "tier3_total": 10,
+    "overall_confidence": 0.75,
+    "last_enriched_at": "2026-02-13T08:57:00Z"
+  },
+  "identity_meta": [
+    {
+      "field": "company_name",
+      "source": "tier1_public",
+      "source_detail": "letsqala.com website and Crunchbase",
+      "confidence": "high",
+      "collected_at": "2026-02-13T08:57:00Z",
+      "last_updated_by": "ai",
+      "last_updated_at": "2026-02-13T08:57:00Z",
+      "confirmed_by_user": false
+    },
+    {
+      "field": "founders",
+      "source": "tier1_public",
+      "source_detail": "EU-Startups article, TechFundingNews article, Crunchbase, LinkedIn profiles",
+      "confidence": "high",
+      "collected_at": "2026-02-13T08:57:00Z",
+      "last_updated_by": "ai",
+      "last_updated_at": "2026-02-13T08:57:00Z",
+      "confirmed_by_user": false
+    },
+    {
+      "field": "funding",
+      "source": "tier1_public",
+      "source_detail": "EU-Startups (Oct 29 2025), TechFundingNews, BeBeez, FoundersToday, Vestbee — all confirmed €1.7M pre-seed",
+      "confidence": "high",
+      "collected_at": "2026-02-13T08:57:00Z",
+      "last_updated_by": "ai",
+      "last_updated_at": "2026-02-13T08:57:00Z",
+      "confirmed_by_user": false
+    },
+    {
+      "field": "headcount",
+      "source": "tier2_inferred",
+      "source_detail": "Crunchbase lists 1-10; distributed across Switzerland, Portugal, UK",
+      "confidence": "medium",
+      "collected_at": "2026-02-13T08:57:00Z",
+      "last_updated_by": "ai",
+      "last_updated_at": "2026-02-13T08:57:00Z",
+      "confirmed_by_user": false
+    },
+    {
+      "field": "social_presence",
+      "source": "tier2_inferred",
+      "source_detail": "LinkedIn company page found (qala-technologies). No Twitter/GitHub/ProductHunt found via search.",
+      "confidence": "medium",
+      "collected_at": "2026-02-13T08:57:00Z",
+      "last_updated_by": "ai",
+      "last_updated_at": "2026-02-13T08:57:00Z",
+      "confirmed_by_user": false
+    }
+  ],
+  "version": 1,
+  "change_log": [
+    {
+      "timestamp": "2026-02-13T08:57:00Z",
+      "action": "initial_enrichment",
+      "details": "Full GrowthMind Company Seed enrichment from letsqala.com website, EU-Startups, TechFundingNews, Crunchbase, LinkedIn, RocketReach. Three co-founders identified (all ex-Imburse Payments). Pre-seed funding of €1.7M confirmed from multiple sources. No public pricing, Twitter, GitHub, or Product Hunt presence found.",
+      "by": "ai"
+    }
+  ]
+}

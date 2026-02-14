@@ -1,0 +1,215 @@
+{
+  "org_id": "timberpos_001",
+  "agent": "channel-finder",
+  "collected_at": "2026-02-13T10:45:00Z",
+  "confidence": "pre-interrogation",
+  "directories_and_listings": {
+    "software_directories": [
+      {
+        "name": "G2",
+        "url": "https://www.g2.com/categories/salon-management",
+        "listed": false,
+        "priority": "high",
+        "action": "Create profile immediately — this is where businesses compare software"
+      },
+      {
+        "name": "Capterra",
+        "url": "https://www.capterra.com/salon-software/",
+        "listed": false,
+        "priority": "high",
+        "action": "List ASAP — Capterra is a major discovery channel for salon software"
+      },
+      {
+        "name": "GetApp",
+        "url": "https://www.getapp.com/operations-management-software/scheduling/",
+        "listed": false,
+        "priority": "high"
+      },
+      {
+        "name": "Software Advice",
+        "url": "https://www.softwareadvice.com/beauty-salon/",
+        "listed": false,
+        "priority": "high"
+      },
+      {
+        "name": "SoftwareWorld",
+        "url": "https://www.softwareworld.co/best-barbershop-software/",
+        "listed": false,
+        "priority": "medium"
+      },
+      {
+        "name": "Product Hunt",
+        "url": "https://www.producthunt.com",
+        "listed": false,
+        "priority": "medium",
+        "action": "Plan a launch — can generate initial buzz and backlinks"
+      },
+      {
+        "name": "AppSumo",
+        "url": "https://appsumo.com",
+        "listed": false,
+        "priority": "medium",
+        "action": "Consider a lifetime deal to build initial user base quickly"
+      }
+    ],
+    "startup_directories": [
+      {
+        "name": "BetaList",
+        "url": "https://betalist.com",
+        "priority": "medium"
+      },
+      {
+        "name": "SaaSHub",
+        "url": "https://www.saashub.com",
+        "priority": "medium"
+      },
+      {
+        "name": "AlternativeTo",
+        "url": "https://alternativeto.net",
+        "priority": "medium",
+        "action": "List as alternative to Fresha, Booksy, Square Appointments"
+      }
+    ]
+  },
+  "trade_associations": [
+    {
+      "name": "American Barber Association",
+      "url": "https://americanbarber.org",
+      "type": "industry association",
+      "relevance": "high — leading source of professional recognition for barbers",
+      "opportunity": "Sponsorship, partnership, advertising in their communications"
+    },
+    {
+      "name": "Professional Beauty Association (PBA)",
+      "url": "https://www.probeauty.org",
+      "type": "non-profit membership org",
+      "relevance": "high — networking for salon professionals and barbers"
+    },
+    {
+      "name": "International SalonSpa Business Network (ISBN)",
+      "url": "varies",
+      "type": "business network",
+      "relevance": "medium — focuses on salon chains and managers",
+      "opportunity": "Annual conference for salon chain owners"
+    },
+    {
+      "name": "Associated Hair Professionals",
+      "url": "https://www.associatedhairprofessionals.com",
+      "type": "professional association",
+      "relevance": "medium — directory of industry resources"
+    },
+    {
+      "name": "National Association of Barbers",
+      "type": "association",
+      "relevance": "medium"
+    }
+  ],
+  "trade_publications": [
+    {
+      "name": "Modern Salon",
+      "url": "https://www.modernsalon.com",
+      "type": "trade magazine",
+      "relevance": "high"
+    },
+    {
+      "name": "Barber Magazine",
+      "type": "trade publication",
+      "relevance": "high"
+    },
+    {
+      "name": "American Salon",
+      "url": "https://www.americansalon.com",
+      "type": "trade magazine",
+      "relevance": "high"
+    },
+    {
+      "name": "Behind the Chair",
+      "url": "https://behindthechair.com",
+      "type": "content platform / industry publication",
+      "relevance": "high — widely read by stylists and salon owners"
+    },
+    {
+      "name": "Salon Today",
+      "url": "https://www.salontoday.com",
+      "type": "trade publication",
+      "relevance": "medium"
+    }
+  ],
+  "events_and_conferences": [
+    {
+      "name": "International Barber Convention",
+      "type": "annual conference",
+      "opportunity": "Booth, demo, networking"
+    },
+    {
+      "name": "Bronner Bros International Beauty Show",
+      "type": "trade show",
+      "relevance": "high — massive event for Black hair professionals"
+    },
+    {
+      "name": "Premiere Beauty Shows",
+      "type": "regional trade shows",
+      "relevance": "medium"
+    },
+    {
+      "name": "Local barber expos",
+      "type": "local events",
+      "relevance": "high — more accessible for a bootstrapped founder",
+      "opportunity": "Low-cost booth, direct demos, collect signups"
+    }
+  ],
+  "distribution_channels": {
+    "highest_priority": [
+      {
+        "channel": "Direct local sales (walk into barbershops)",
+        "cost": "Free (time only)",
+        "expected_conversion": "Medium-high if product is good",
+        "why": "Reddit commenter suggested this — it's the most effective strategy for this market segment. Barbers trust face-to-face over online ads."
+      },
+      {
+        "channel": "Facebook Groups for barbers/salon owners",
+        "cost": "Free",
+        "expected_conversion": "Medium",
+        "why": "This is where the ICP actually hangs out and asks for recommendations"
+      },
+      {
+        "channel": "Instagram content + DMs",
+        "cost": "Free (time only)",
+        "expected_conversion": "Medium",
+        "why": "Barbers live on Instagram — showing the product in action via Reels could drive signups"
+      }
+    ],
+    "medium_priority": [
+      {
+        "channel": "Barber supply stores (partnerships)",
+        "why": "Every barber visits their supply store — co-marketing opportunity"
+      },
+      {
+        "channel": "Cosmetology/barber schools",
+        "why": "Catch barbers when they're choosing their first software"
+      },
+      {
+        "channel": "Referral program (barber refers barber)",
+        "why": "Barbers know other barbers — word of mouth is #1 in this industry"
+      }
+    ],
+    "low_priority_for_now": [
+      {
+        "channel": "SEO",
+        "why": "SPA isn't indexable, new domain has no authority, takes 6-12 months. Fix the technical issues first, then invest."
+      },
+      {
+        "channel": "Paid ads (Google, Instagram, Facebook)",
+        "why": "Too expensive for a bootstrapped solo founder competing against incumbents with huge ad budgets"
+      }
+    ]
+  },
+  "competitor_presence": {
+    "fresha": "Listed on all major directories, strong SEO, marketplace with built-in discovery",
+    "booksy": "Listed everywhere, App Store presence, paid ads, barber influencer partnerships",
+    "squire": "Strong Instagram presence, barber community events, direct sales team",
+    "glossgenius": "Strong Instagram/TikTok, influencer marketing, product-led growth",
+    "square": "Everywhere — retail stores, hardware, online, partnerships"
+  },
+  "key_insight": "Timber is currently invisible. Not listed on any software directory. No social media presence. No community engagement outside Reddit (which is the wrong community). The founder needs to get listed on G2/Capterra immediately, start posting on Instagram, and engage in Facebook barber groups. Most importantly: walk into local barbershops with a tablet and demo the product."
+}

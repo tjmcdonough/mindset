@@ -1,0 +1,1647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GreenOnion — Growth Diagnosis | GrowthMind</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+  
+  :root {
+    --bg: #09090b;
+    --surface: #111114;
+    --surface2: #18181d;
+    --surface3: #1f1f26;
+    --border: #27272f;
+    --border-light: #35354a;
+    --text: #eaeaf0;
+    --text-secondary: #a0a0b8;
+    --text-muted: #6b6b80;
+    --accent: #6366f1;
+    --accent-light: #818cf8;
+    --accent-glow: rgba(99,102,241,0.15);
+    --green: #10b981;
+    --green-soft: #34d399;
+    --green-bg: rgba(16,185,129,0.08);
+    --green-border: rgba(16,185,129,0.2);
+    --yellow: #f59e0b;
+    --yellow-bg: rgba(245,158,11,0.08);
+    --yellow-border: rgba(245,158,11,0.2);
+    --red: #ef4444;
+    --red-bg: rgba(239,68,68,0.08);
+    --red-border: rgba(239,68,68,0.2);
+    --blue: #3b82f6;
+    --blue-bg: rgba(59,130,246,0.08);
+    --purple: #a855f7;
+    --purple-bg: rgba(168,85,247,0.08);
+    --cyan: #06b6d4;
+    --orange: #f97316;
+    --orange-bg: rgba(249,115,22,0.08);
+    --orange-border: rgba(249,115,22,0.2);
+  }
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .page { max-width: 900px; margin: 0 auto; padding: 0 32px; }
+  
+  .hero {
+    padding: 80px 0 64px;
+    text-align: center;
+    position: relative;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-light), transparent);
+  }
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-light);
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    line-height: 1.05;
+    margin-bottom: 16px;
+    background: linear-gradient(180deg, #ffffff 20%, #a0a0c0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .hero-tagline {
+    font-size: 18px;
+    color: var(--text-secondary);
+    max-width: 640px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+  }
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+  .hero-stat { text-align: center; }
+  .hero-stat-value {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--green-soft);
+    line-height: 1;
+  }
+  .hero-stat-value.accent { color: var(--accent-light); }
+  .hero-stat-value.yellow { color: var(--yellow); }
+  .hero-stat-value.cyan { color: var(--cyan); }
+  .hero-stat-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    margin-top: 6px;
+  }
+
+  .section {
+    padding: 64px 0;
+    position: relative;
+  }
+  .section + .section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  }
+  .section-num {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-light);
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+  }
+  .section-desc {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin-bottom: 36px;
+    max-width: 640px;
+  }
+
+  .overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .overview-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+  }
+  .overview-card.full { grid-column: 1 / -1; }
+  .ov-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .ov-value {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  .ov-value.small { font-size: 13px; font-weight: 400; color: var(--text-secondary); }
+
+  .founder {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+  }
+  .f-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--green), #059669);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 18px;
+    flex-shrink: 0;
+    color: white;
+  }
+  .f-name { font-size: 16px; font-weight: 700; }
+  .f-role { font-size: 12px; color: var(--accent-light); margin-bottom: 6px; }
+  .f-bio { font-size: 12px; color: var(--text-secondary); line-height: 1.6; }
+  .f-tags { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 4px; }
+  .f-tag {
+    font-size: 10px;
+    padding: 2px 8px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text-muted);
+  }
+
+  .score-block {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 40px;
+    margin-bottom: 28px;
+  }
+  .ring-wrap {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+  }
+  .ring-wrap svg {
+    width: 150px;
+    height: 150px;
+    transform: rotate(-90deg);
+  }
+  .ring-track { fill: none; stroke: var(--surface3); stroke-width: 10; }
+  .ring-fill { fill: none; stroke-width: 10; stroke-linecap: round; }
+  .ring-center {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .ring-num { font-size: 40px; font-weight: 900; line-height: 1; }
+  .ring-label { font-size: 12px; color: var(--text-muted); }
+  .score-text h3 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+  .score-text p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
+  .verdict-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 14px;
+    padding: 5px 14px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .v-pos { background: var(--green-bg); color: var(--green-soft); border: 1px solid var(--green-border); }
+
+  .dim-list { display: flex; flex-direction: column; gap: 14px; }
+  .dim {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 22px;
+  }
+  .dim-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .dim-name { font-size: 14px; font-weight: 600; }
+  .dim-score { font-size: 18px; font-weight: 800; }
+  .dim-bar {
+    height: 6px;
+    background: var(--surface3);
+    border-radius: 100px;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+  .dim-bar-fill { height: 100%; border-radius: 100px; }
+  .dim-note { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+  .c-green { color: var(--green-soft); }
+  .c-yellow { color: var(--yellow); }
+  .c-red { color: var(--red); }
+  .bg-green { background: var(--green); }
+  .bg-yellow { background: var(--yellow); }
+  .bg-red { background: var(--red); }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .col-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+  }
+  .col-card h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .col-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .col-card li {
+    font-size: 13px;
+    color: var(--text-secondary);
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.55;
+  }
+  .col-card li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+  }
+  .green-dots li::before { background: var(--green); }
+  .red-dots li::before { background: var(--red); }
+  .blue-dots li::before { background: var(--blue); }
+  .yellow-dots li::before { background: var(--yellow); }
+
+  .insight {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 28px 24px;
+    margin-bottom: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+  .insight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 3px;
+  }
+  .insight.i-crit::before { background: var(--red); }
+  .insight.i-high::before { background: var(--yellow); }
+  .insight.i-med::before { background: var(--blue); }
+  .insight.i-pos::before { background: var(--green); }
+  .insight-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 10px;
+  }
+  .insight-title { font-size: 17px; font-weight: 700; }
+  .insight-sev {
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    flex-shrink: 0;
+  }
+  .sev-c { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
+  .sev-h { background: var(--yellow-bg); color: var(--yellow); border: 1px solid var(--yellow-border); }
+  .sev-m { background: var(--blue-bg); color: var(--blue); border: 1px solid rgba(59,130,246,0.2); }
+  .sev-p { background: var(--green-bg); color: var(--green-soft); border: 1px solid var(--green-border); }
+  .insight-body {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  .insight-q {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 14px;
+    color: var(--accent-light);
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+  .insight-action {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    padding: 12px 16px;
+    background: var(--green-bg);
+    border: 1px solid var(--green-border);
+    border-radius: 8px;
+  }
+  .insight-action strong { color: var(--green-soft); }
+  .insight-bias {
+    margin-top: 12px;
+    display: inline-flex;
+    padding: 3px 10px;
+    background: var(--purple-bg);
+    border: 1px solid rgba(168,85,247,0.15);
+    border-radius: 100px;
+    font-size: 11px;
+    color: var(--purple);
+  }
+
+  .bright-spot {
+    background: var(--surface);
+    border: 1px solid var(--green-border);
+    border-radius: 10px;
+    padding: 22px;
+    margin-bottom: 12px;
+  }
+  .bright-spot h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--green-soft);
+    margin-bottom: 6px;
+  }
+  .bright-spot p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  .exp {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 12px;
+  }
+  .exp-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+    gap: 12px;
+  }
+  .exp-name { font-size: 15px; font-weight: 700; }
+  .exp-pri {
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+  }
+  .p0 { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
+  .p1 { background: var(--yellow-bg); color: var(--yellow); border: 1px solid var(--yellow-border); }
+  .p2 { background: var(--blue-bg); color: var(--blue); border: 1px solid rgba(59,130,246,0.2); }
+  .exp-hyp {
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 14px;
+    line-height: 1.6;
+  }
+  .exp-row {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .exp-row span { color: var(--text-muted); }
+  .exp-row strong { color: var(--text); font-weight: 600; }
+  .exp-success {
+    font-size: 12px;
+    padding: 10px 14px;
+    background: var(--surface2);
+    border-radius: 6px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+  .exp-success b { color: var(--green-soft); font-weight: 600; }
+  .exp-kill {
+    font-size: 12px;
+    padding: 10px 14px;
+    background: var(--red-bg);
+    border: 1px solid var(--red-border);
+    border-radius: 6px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-top: 8px;
+  }
+  .exp-kill b { color: var(--red); font-weight: 600; }
+
+  .comp {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 12px;
+  }
+  .comp-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .comp-name { font-size: 16px; font-weight: 700; }
+  .comp-their { font-size: 12px; color: var(--text-muted); font-style: italic; }
+  .comp-counter {
+    font-size: 14px;
+    color: var(--accent-light);
+    font-weight: 500;
+    margin-bottom: 14px;
+    line-height: 1.5;
+  }
+  .comp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .comp-cell {
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .comp-win {
+    background: var(--green-bg);
+    border: 1px solid var(--green-border);
+  }
+  .comp-win .cc-label { color: var(--green-soft); font-weight: 700; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+  .comp-lose {
+    background: var(--red-bg);
+    border: 1px solid var(--red-border);
+  }
+  .comp-lose .cc-label { color: var(--red); font-weight: 700; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+  .comp-cell p { color: var(--text-secondary); }
+
+  .anti-exp {
+    background: var(--surface);
+    border: 1px solid var(--red-border);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 10px;
+  }
+  .anti-exp h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--red);
+    margin-bottom: 4px;
+  }
+  .anti-exp p {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  .road-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+  }
+  .road-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+  }
+  .road-period {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent-light);
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .road-theme {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .road-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .road-card li {
+    font-size: 12px;
+    color: var(--text-secondary);
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .road-card li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent-light);
+    font-size: 11px;
+  }
+
+  .one-thing {
+    background: linear-gradient(135deg, #13102a 0%, #0f1525 100%);
+    border: 1px solid rgba(99,102,241,0.25);
+    border-radius: 14px;
+    padding: 52px 48px;
+    text-align: center;
+    margin: 8px 0 0;
+  }
+  .ot-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--accent-light);
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .one-thing h3 {
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 16px;
+    background: linear-gradient(180deg, #fff 0%, #a5b4fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .one-thing p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    max-width: 620px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  .q-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 32px 1fr auto;
+    gap: 14px;
+    align-items: start;
+  }
+  .q-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--surface3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent-light);
+    flex-shrink: 0;
+  }
+  .q-text { font-size: 14px; line-height: 1.6; }
+  .q-why { font-size: 12px; color: var(--text-muted); margin-top: 4px; line-height: 1.5; }
+  .q-pri {
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .qp-c { background: var(--red-bg); color: var(--red); }
+  .qp-h { background: var(--yellow-bg); color: var(--yellow); }
+  .qp-m { background: var(--blue-bg); color: var(--blue); }
+
+  .market-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .market-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+    text-align: center;
+  }
+  .m-val {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--cyan);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .m-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+  .m-detail {
+    font-size: 11px;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+
+  .content-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+    margin-bottom: 12px;
+  }
+  .content-card h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .content-card .cc-type {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent-light);
+    margin-bottom: 8px;
+  }
+  .content-card p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  .channel-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+  }
+  .channel-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+  }
+  .channel-card h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .channel-card p {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+  .channel-card .ch-pri {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .ch-high { background: var(--green-bg); color: var(--green-soft); }
+  .ch-med { background: var(--yellow-bg); color: var(--yellow); }
+
+  .risk-flag {
+    background: var(--surface);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 14px;
+    align-items: start;
+  }
+  .risk-flag.rf-red { border: 1px solid var(--red-border); }
+  .risk-flag.rf-yellow { border: 1px solid var(--yellow-border); }
+  .rf-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+  .rf-red-icon { background: var(--red-bg); }
+  .rf-yellow-icon { background: var(--yellow-bg); }
+  .rf-title { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+  .rf-text { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+  .rf-fix { font-size: 12px; color: var(--green-soft); margin-top: 6px; line-height: 1.5; }
+
+  .footer {
+    padding: 48px 0;
+    text-align: center;
+    position: relative;
+  }
+  .footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  }
+  .footer-brand { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
+  .footer-sub { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
+  .footer-disc {
+    font-size: 11px;
+    color: var(--text-muted);
+    max-width: 540px;
+    margin: 0 auto;
+    line-height: 1.6;
+    opacity: 0.5;
+  }
+
+  /* PMF callout */
+  .pmf-callout {
+    background: linear-gradient(135deg, rgba(16,185,129,0.08) 0%, rgba(6,182,212,0.06) 100%);
+    border: 1px solid var(--green-border);
+    border-radius: 14px;
+    padding: 32px 36px;
+    margin-bottom: 20px;
+  }
+  .pmf-callout .pmf-quote {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--green-soft);
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+  .pmf-callout p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  @media (max-width: 768px) {
+    .page { padding: 0 20px; }
+    .hero h1 { font-size: 36px; }
+    .hero-stats { gap: 24px; }
+    .overview-grid, .two-col, .comp-grid, .channel-grid { grid-template-columns: 1fr; }
+    .road-grid { grid-template-columns: 1fr; }
+    .market-grid { grid-template-columns: 1fr; }
+    .score-block { flex-direction: column; text-align: center; }
+    .q-card { grid-template-columns: 28px 1fr; }
+    .q-pri { grid-column: 2; }
+    .one-thing { padding: 36px 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ════════════ HERO ════════════ -->
+<div class="hero">
+  <div class="hero-eyebrow">🧠 GrowthMind — Growth Diagnosis</div>
+  <h1>GreenOnion</h1>
+  <p class="hero-tagline">An AI listing image generator that turns one product photo into 9 professional Amazon images in 30 seconds — with zero prompts. You have real PMF signals, a massive market, and you're dramatically underpriced. Here's the playbook.</p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-value">7.5</div>
+      <div class="hero-stat-label">Growth Score</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-value" style="color:var(--green-soft)">POSITIVE</div>
+      <div class="hero-stat-label">Verdict</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-value cyan">9</div>
+      <div class="hero-stat-label">Paying Customers</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-value accent">8/10</div>
+      <div class="hero-stat-label">Founder-Market Fit</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ OVERVIEW ════════════ -->
+<div class="section">
+  <div class="section-num">01 — Company Profile</div>
+  <div class="section-title">What We Found</div>
+  <div class="section-desc">Everything below was researched automatically from public sources — your website, HN posts, product analysis, and market data. 18 AI agents, zero manual input.</div>
+  
+  <div class="overview-grid">
+    <div class="overview-card full">
+      <div class="ov-label">Product</div>
+      <div class="ov-value">AI listing image generator for Amazon, Etsy, and Shopify sellers. Upload one product photo → get 9 professional listing images in 30–60 seconds. Zero prompts. Automatic brand matching. Amazon-compliant outputs (white BG, 1600px+). Also generates product ads, social posts, and lifestyle scenes.</div>
+    </div>
+    <div class="overview-card">
+      <div class="ov-label">Stage</div>
+      <div class="ov-value">Pre-Seed / Bootstrapped</div>
+      <div class="ov-value small" style="margin-top:4px;">9 paying customers in ~1 month. First customer bought highest tier immediately.</div>
+    </div>
+    <div class="overview-card">
+      <div class="ov-label">Founded</div>
+      <div class="ov-value">Late 2025 · Repositioned to Ecommerce Jan 2026</div>
+    </div>
+    <div class="overview-card">
+      <div class="ov-label">Pricing</div>
+      <div class="ov-value">$19 / $49 / $149 per month</div>
+      <div class="ov-value small" style="margin-top:4px;">~$1.19 per 9-image set at Enterprise. Closest competitor charges $510/mo.</div>
+    </div>
+    <div class="overview-card">
+      <div class="ov-label">Location</div>
+      <div class="ov-value">Athens, Greece · Solo Founder</div>
+    </div>
+    <div class="overview-card full">
+      <div class="ov-label">Technical Architecture</div>
+      <div class="ov-value small">8-step pipeline: Upload → Describe → Analyze → Design Plans → Generate Copy → Edit Copy → Configure → Generate Images. Multi-model orchestration with layered prompts. Constrained outputs for 95%+ usability rate. This is product engineering, not prompt engineering.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ FOUNDER ════════════ -->
+<div class="section">
+  <div class="section-num">02 — Founding Team</div>
+  <div class="section-title">Who's Building This</div>
+  <div class="section-desc">Auto-researched from HN, LinkedIn, Twitter, and public sources.</div>
+  
+  <div class="founder">
+    <div class="f-avatar">NF</div>
+    <div>
+      <div class="f-name">Nikos Fertakis</div>
+      <div class="f-role">Founder & Solo Builder</div>
+      <div class="f-bio"><strong>Head of Product, International Marketplace at Skroutz</strong> — Greece's largest ecommerce marketplace & price comparison platform. ML education from UCL (University College London) + software engineering from University of Athens. Co-host of Papers We Love Athens. HN member since 2012 (466 karma). Understands seller pain from the platform side — rare and valuable founder-market fit.</div>
+      <div class="f-tags">
+        <span class="f-tag">Head of Product @ Skroutz</span>
+        <span class="f-tag">ML / UCL</span>
+        <span class="f-tag">Solo Founder</span>
+        <span class="f-tag">Bootstrapped</span>
+        <span class="f-tag">Papers We Love</span>
+        <span class="f-tag">HN Native (2012)</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ PMF SIGNAL ════════════ -->
+<div class="section">
+  <div class="section-num">03 — The PMF Signal You're Underestimating</div>
+  <div class="section-title">When a Customer Wants to Cry, Pay Attention</div>
+  
+  <div class="pmf-callout">
+    <div class="pmf-quote">"One customer wanted to cry when they saw the results."</div>
+    <p>This is not a "nice to have" reaction. This is deep pain being solved. In the Rahul Vohra (Superhuman) PMF framework, the question is: would users be "very disappointed" without the product? An emotional relief response — tears — suggests you've crossed that threshold. Sample size is small (1 of 9), but this kind of signal is rare and precious. Most startups would kill for it. Your first customer also bought the highest tier immediately. That's not price shopping — that's "shut up and take my money." These are the signs that something real is happening.</p>
+  </div>
+</div>
+
+<!-- ════════════ MARKET ════════════ -->
+<div class="section">
+  <div class="section-num">04 — Market Intelligence</div>
+  <div class="section-title">The Landscape</div>
+  <div class="section-desc">You're sitting in a massive market with a greenfield sub-category. No one owns "Amazon listing image generator" yet.</div>
+  
+  <div class="market-grid">
+    <div class="market-card">
+      <div class="m-val">9.7M</div>
+      <div class="m-label">Amazon Sellers</div>
+      <div class="m-detail">1.9–2.5M active, 60%+ of Amazon sales from third-party</div>
+    </div>
+    <div class="market-card">
+      <div class="m-val">$500M+</div>
+      <div class="m-label">AI Product Photography</div>
+      <div class="m-detail">Emerging market, growing rapidly. Displacement of freelancers.</div>
+    </div>
+    <div class="market-card">
+      <div class="m-val">$1B+</div>
+      <div class="m-label">Freelance Design Displacement</div>
+      <div class="m-detail">Fiverr/Upwork designers: $50–500 per listing. Agencies: $1K–3K.</div>
+    </div>
+  </div>
+  
+  <div class="overview-card full" style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:22px;margin-top:0;">
+    <div class="ov-label">Why This Market Timing Is Perfect</div>
+    <div class="ov-value small">
+      Amazon sellers are <strong style="color:var(--green-soft)">already spending $200–500/mo on tool stacks</strong> (Helium 10, Jungle Scout, PPC tools). They're buyers. A+ Content adoption is growing — Amazon is pushing brands to use it. AI image quality is improving fast, making "good enough" outputs genuinely professional. And the biggest signal: <strong style="color:var(--cyan)">Ecomtent validates the market at $510/mo</strong> while you're charging $149. The market exists. The buyers exist. The price tolerance exists. You just need to capture it.
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ DEMAND SCORE ════════════ -->
+<div class="section">
+  <div class="section-num">05 — Demand Scorecard</div>
+  <div class="section-title">Where You Stand — Honestly</div>
+  <div class="section-desc">Six dimensions scored individually. Overall: 7.5/10. This is a genuinely strong position — with specific, fixable weaknesses.</div>
+  
+  <div class="score-block">
+    <div class="ring-wrap">
+      <svg viewBox="0 0 140 140">
+        <circle class="ring-track" cx="70" cy="70" r="60" />
+        <circle class="ring-fill" cx="70" cy="70" r="60" stroke="var(--green)" stroke-dasharray="377" stroke-dashoffset="95" />
+      </svg>
+      <div class="ring-center">
+        <div class="ring-num" style="color:var(--green-soft)">7.5</div>
+        <div class="ring-label">/ 10</div>
+      </div>
+    </div>
+    <div class="score-text">
+      <h3>Strong Foundation, Clear Path Forward</h3>
+      <p>You have a working product with real PMF signals, in a massive market, with unusually strong founder-market fit. The score is held back by two fixable problems: you're dramatically underpriced (signalling low value), and you're a solo founder with a day job competing against funded teams. Neither of these is fatal. The product is 8/10. The market is 9/10. Fix the pricing and distribution, and this score jumps to 8.5+.</p>
+      <div class="verdict-pill v-pos">✦ Verdict: POSITIVE — Strong Potential</div>
+    </div>
+  </div>
+  
+  <div class="dim-list">
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Product Quality</span>
+        <span class="dim-score c-green">80</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-green" style="width:80%"></div></div>
+      <div class="dim-note">Zero-prompt UX is a genuine differentiator. Full 9-image pipeline is a complete solution. 30-second generation, 95%+ usability rate. Fast time-to-value with no onboarding friction. The 8-step pipeline is real product engineering.</div>
+    </div>
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Market Opportunity</span>
+        <span class="dim-score c-green">90</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-green" style="width:90%"></div></div>
+      <div class="dim-note">Massive TAM (10M+ ecommerce sellers). Tool-buying audience already spending $200-500/mo. Ecomtent validates pricing at $510/mo. Greenfield sub-category — no dominant "Amazon listing image generator" exists yet.</div>
+    </div>
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Traction</span>
+        <span class="dim-score c-yellow">60</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-yellow" style="width:60%"></div></div>
+      <div class="dim-note">9 paying customers in ~1 month with minimal marketing is promising. First customer bought highest tier. Emotional customer reaction. But very early — no retention data, no conversion metrics, no case studies on website.</div>
+    </div>
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Founder-Market Fit</span>
+        <span class="dim-score c-green">80</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-green" style="width:80%"></div></div>
+      <div class="dim-note">Head of Product at Greece's largest marketplace + ML from UCL = excellent alignment. Understands seller pain from the platform side. Slight penalty for Greece → US Amazon seller market distance, and solo + day job constraint.</div>
+    </div>
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Defensibility</span>
+        <span class="dim-score c-yellow">50</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-yellow" style="width:50%"></div></div>
+      <div class="dim-note">API-dependent and prompt-based at the core — but the 8-step workflow, brand matching system, and zero-prompt UX are real moats. The "just prompts" framing undersells this. Jasper.ai proved that curation + workflow IS the moat. Build data on what converts by category and you have a defensible advantage no one else has.</div>
+    </div>
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Pricing Strategy</span>
+        <span class="dim-score c-red">30</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-red" style="width:30%"></div></div>
+      <div class="dim-note">Dramatically underpriced. $1.19/listing vs Ecomtent at ~$20/SKU. Your closest competitor charges 20x more. At $149/mo you're leaving 3-5x revenue on the table. Worse: low pricing signals low value to sophisticated buyers. This is the single easiest fix in your entire business.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ THE ONE THING ════════════ -->
+<div class="section" style="padding-bottom:32px">
+  <div class="one-thing">
+    <div class="ot-label">⚡ The One Thing</div>
+    <h3>Raise Your Prices 3x This Week.<br>Your Closest Competitor Charges 20x More.</h3>
+    <p>At $149/mo for Enterprise, you're charging $1.19 per 9-image set. Ecomtent charges $510/mo. Freelancers charge $300–500 per listing. Agencies charge $1K–3K. You're not just underpriced — you're priced so low it signals "toy" instead of "professional tool." Jasper.ai built a $1.5B company on "just prompts." Stripe is "just an API wrapper." Your 8-step pipeline, zero-prompt UX, and 95%+ usability rate are real product engineering. Price accordingly. New Enterprise: $399/mo minimum. Watch what happens — hint: nothing bad.</p>
+  </div>
+</div>
+
+<!-- ════════════ FOUNDER MIRROR ════════════ -->
+<div class="section">
+  <div class="section-num">06 — Founder Mirror</div>
+  <div class="section-title">The Honest Truths</div>
+  <div class="section-desc">These are the insights you need to hear. Evidence-based, designed to challenge the assumptions that are holding you back. We're being direct because the foundation is genuinely strong.</div>
+  
+  <div class="insight i-crit">
+    <div class="insight-head">
+      <span class="insight-title">"Just Prompts" Is Self-Sabotaging — Stop Saying It</span>
+      <span class="insight-sev sev-c">Critical</span>
+    </div>
+    <div class="insight-body">In your HN post, you openly worried about defensibility because your product is "just prompts over APIs." This framing is actively damaging. Jasper.ai built a $1.5B company on prompt engineering. Stripe is "just an API wrapper" around bank APIs. Google is "just PageRank." Your 8-step pipeline (analyze → plan → copy → configure → generate) producing 95%+ usable, Amazon-compliant, brand-consistent output with zero user prompting — that's a workflow moat. Your ML background from UCL and marketplace experience from Skroutz are baked into this product in ways that aren't obvious from outside.</div>
+    <div class="insight-q">"Anyone can call an API. Nobody else is producing 9 brand-consistent, Amazon-compliant images from one phone photo with zero prompts. That's not commodity — that's product engineering."</div>
+    <div class="insight-action"><strong>Action:</strong> Remove "just prompts" from your vocabulary and your public communications. Replace it with: "8-step AI pipeline with constrained outputs." When investors or customers ask about defensibility, talk about the workflow, the brand matching system, the compliance engine, and the data you're accumulating on what converts.</div>
+    <div class="insight-bias">🧠 Imposter syndrome — technical founders undervalue their own product engineering because they can see the "simple" building blocks</div>
+  </div>
+  
+  <div class="insight i-crit">
+    <div class="insight-head">
+      <span class="insight-title">You're Leaving 3–5x Revenue on the Table Every Month</span>
+      <span class="insight-sev sev-c">Critical</span>
+    </div>
+    <div class="insight-body">Your Enterprise tier is $149/mo for ~125 generations. Ecomtent charges $510/mo for 25 SKUs. That's a 20x price difference per unit. Amazon sellers already pay $200–500/mo for their tool stack. Freelance designers charge $300–500 per single listing. Even at $399/mo, you'd still be 99% cheaper than a human designer. Underpricing doesn't just limit revenue — it signals to serious buyers that the product isn't serious.</div>
+    <div class="insight-action"><strong>Action:</strong> This week, update pricing: Starter $49/mo (10 products), Growth $149/mo (30 products), Scale $399/mo (100 products), Agency $799/mo (unlimited + white-label). Grandfather existing customers. New customers pay the new price. Measure conversion rate — we predict it stays flat or improves.</div>
+    <div class="insight-bias">🧠 Builder's discount — you see the cost of production ($0.10/image), not the value of the output ($300+ per listing replaced)</div>
+  </div>
+  
+  <div class="insight i-high">
+    <div class="insight-head">
+      <span class="insight-title">Your Website Has Zero Social Proof</span>
+      <span class="insight-sev sev-h">High</span>
+    </div>
+    <div class="insight-body">You have a customer who "wanted to cry" when they saw the results, and a customer who bought the highest tier immediately. Neither story is on your website. No testimonials, no case studies, no before/after showcases, no customer logos. Your product is inherently visual — before/after images would be the most compelling content possible. Yet the homepage has none.</div>
+    <div class="insight-action"><strong>Action:</strong> Today: email your 9 customers. Ask for a quote and permission to use their before/after images. Add a testimonial section to your homepage this week. The "wanted to cry" story should be above the fold.</div>
+  </div>
+
+  <div class="insight i-high">
+    <div class="insight-head">
+      <span class="insight-title">Side Project or Real Business — You Need to Choose</span>
+      <span class="insight-sev sev-h">High</span>
+    </div>
+    <div class="insight-body">You're Head of Product at Skroutz (a demanding senior role) while building GreenOnion on the side. With 9 customers and real PMF signals, the constraint is now distribution, not product. But distribution requires time you don't have. At current pace (~2–3 customers/week), you'll hit 50 customers in 4–5 months. With full-time focus + $10K/mo marketing, you could hit 100 in 2 months. The market window is 12–18 months before Canva/Adobe add comparable features.</div>
+    <div class="insight-q">"Either outcome is fine — a profitable side project at $5K MRR or a venture-scale business at $50K+ MRR. But trying to do both half-heartedly means you'll be too slow for the opportunity and too distracted for Skroutz."</div>
+    <div class="insight-action"><strong>Action:</strong> Set a decision point: if you hit 50 paying customers within 90 days, that's your signal to go full-time. If not, optimize for profitable side project. Either way, decide — don't drift.</div>
+    <div class="insight-bias">🧠 Optionality trap — keeping the day job feels safe, but the opportunity cost compounds every month</div>
+  </div>
+
+  <div class="insight i-med">
+    <div class="insight-head">
+      <span class="insight-title">Your Best Content Asset Is Visual — Use It</span>
+      <span class="insight-sev sev-m">Medium</span>
+    </div>
+    <div class="insight-body">GreenOnion's output is inherently visual and instantly impressive. A messy phone photo → 9 professional images in 30 seconds is an irresistible demo. Yet you're marketing with text posts on HN. Every piece of content should be a before/after transformation. This is the kind of product that sells itself on sight — if people can see it.</div>
+    <div class="insight-action"><strong>Action:</strong> Create 5 before/after showcases across product categories (kitchen, beauty, supplements, electronics, toys). Use them everywhere: homepage, Reddit, YouTube shorts, Facebook groups. Show, don't tell.</div>
+  </div>
+</div>
+
+<!-- ════════════ BRIGHT SPOTS ════════════ -->
+<div class="section">
+  <div class="section-num">07 — What's Working</div>
+  <div class="section-title">The Things You're Undervaluing</div>
+  <div class="section-desc">A 7.5/10 score means a lot is already right. These are your superpowers — lean into them.</div>
+  
+  <div class="bright-spot">
+    <h4>✦ Zero-Prompt UX Is a Genuine Moat</h4>
+    <p>Ecomtent requires prompts. Midjourney requires prompting skill. Photoroom requires manual editing. Your product works with one upload and zero instructions. For Amazon sellers who are merchants, not designers, this is transformative. Don't underestimate how rare "it just works" is in AI tooling.</p>
+  </div>
+  <div class="bright-spot">
+    <h4>✦ Your Skroutz Background Is an Unfair Advantage</h4>
+    <p>You understand marketplace dynamics from the platform side — what makes listings convert, what sellers struggle with, how search ranking works. Most AI image tool founders are engineers guessing at ecommerce. You've lived it. This domain knowledge is baked into your product design in ways competitors can't easily replicate.</p>
+  </div>
+  <div class="bright-spot">
+    <h4>✦ 9 Paying Customers With Zero Marketing Is Remarkable</h4>
+    <p>One HN post. No paid acquisition. No sales team. No content marketing. And 9 people are paying you money. Your first customer bought the highest tier immediately. This is organic pull — the product is solving a real problem. The constraint is distribution, not demand. That's the best problem to have.</p>
+  </div>
+  <div class="bright-spot">
+    <h4>✦ The Complete 9-Image Pipeline Is a Real Product</h4>
+    <p>Competitors offer single-image generation or require building the listing image-by-image. You deliver a complete, cohesive 9-image set (Hero, Value Prop, Features, Lifestyle, Detail, Comparison, etc.) that's ready to upload to Amazon. This is a finished workflow, not a feature. It's the difference between "a tool" and "a solution."</p>
+  </div>
+</div>
+
+<!-- ════════════ SWOT ════════════ -->
+<div class="section">
+  <div class="section-num">08 — Strategic Analysis</div>
+  <div class="section-title">SWOT</div>
+  
+  <div class="two-col">
+    <div class="col-card green-dots">
+      <h4><span style="color:var(--green)">▲</span> Strengths</h4>
+      <ul>
+        <li>Zero-prompt UX — genuine differentiator vs all competitors</li>
+        <li>Complete 9-image pipeline — solution, not just a tool</li>
+        <li>30-second generation — fastest time-to-value in category</li>
+        <li>95%+ usability rate — outputs are production-ready</li>
+        <li>Founder-market fit: Head of Product at major marketplace + ML from UCL</li>
+        <li>Emotional PMF signal — customer "wanted to cry"</li>
+        <li>Automatic brand matching (logo, colors, fonts, voice)</li>
+      </ul>
+    </div>
+    <div class="col-card red-dots">
+      <h4><span style="color:var(--red)">▼</span> Weaknesses</h4>
+      <ul>
+        <li>Dramatically underpriced — signals low value, limits growth</li>
+        <li>Solo founder with demanding day job — time constraint is real</li>
+        <li>Zero social proof on website — no testimonials, case studies, or before/afters</li>
+        <li>Greece-based — timezone/cultural distance from US Amazon seller market</li>
+        <li>No conversion data from customers — can't prove ROI to prospects</li>
+        <li>Brand name "GreenOnion" doesn't communicate value proposition</li>
+      </ul>
+    </div>
+    <div class="col-card blue-dots">
+      <h4><span style="color:var(--blue)">◆</span> Opportunities</h4>
+      <ul>
+        <li>3–5x price increase — immediate MRR multiplier, validated by Ecomtent at $510/mo</li>
+        <li>YouTube Amazon seller influencers — untapped, high-leverage channel</li>
+        <li>Agency/brand tier ($799/mo) — manage multiple brands, higher ARPU</li>
+        <li>Data moat — track which layouts/styles convert by product category</li>
+        <li>Amazon Seller Central integration — switching cost + distribution</li>
+        <li>Expand within ecommerce: Amazon → Etsy → Shopify → Walmart</li>
+        <li>Helium 10 / Jungle Scout partnership — existing distribution to 1M+ sellers</li>
+      </ul>
+    </div>
+    <div class="col-card yellow-dots">
+      <h4><span style="color:var(--yellow)">◆</span> Threats</h4>
+      <ul>
+        <li>Pic Copilot (Alibaba) — free, massive ecommerce data moat</li>
+        <li>Ecomtent — better funded, enterprise-positioned, further along</li>
+        <li>Amazon native AI tools — platform risk if they build this in</li>
+        <li>Canva/Adobe — if they add ecommerce-specific workflows (12–18mo)</li>
+        <li>AI quality commoditization — underlying models improve, lowering barrier</li>
+        <li>Single founder risk — bus factor of 1</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ COMPETITORS ════════════ -->
+<div class="section">
+  <div class="section-num">09 — Competitive Landscape</div>
+  <div class="section-title">Know What You're Up Against</div>
+  <div class="section-desc">You're positioned between Ecomtent (enterprise, $510/mo) and Photoroom (general-purpose, $10-30/mo). Own the middle: Amazon-specific, affordable, zero-friction.</div>
+  
+  <div class="comp">
+    <div class="comp-head">
+      <span class="comp-name">vs. Ecomtent</span>
+      <span class="comp-their">$510/mo · 25 SKUs · GEO optimization · Enterprise-focused</span>
+    </div>
+    <div class="comp-counter">"Ecomtent validates your market at 20x your price. They require prompts. You don't. They target enterprises. You can own the SMB seller — the segment they're ignoring."</div>
+    <div class="comp-grid">
+      <div class="comp-cell comp-win"><div class="cc-label">You Win When</div><p>SMB seller with 10–100 SKUs who needs speed and simplicity, not enterprise features. Zero-prompt UX beats prompt-required workflows for non-technical sellers.</p></div>
+      <div class="comp-cell comp-lose"><div class="cc-label">You Lose When</div><p>Enterprise brand needing GEO optimization for RUFUS/COSMO, marketplace integrations, and a sales team to hold their hand. Don't compete here — yet.</p></div>
+    </div>
+  </div>
+  
+  <div class="comp">
+    <div class="comp-head">
+      <span class="comp-name">vs. Pic Copilot (Alibaba)</span>
+      <span class="comp-their">Free · Alibaba-backed · Ecommerce conversion data</span>
+    </div>
+    <div class="comp-counter">"Free and dangerous. But Pic Copilot is general ecommerce, not Amazon-specific. No 9-image sets. No A+ Content compliance. No brand matching. You compete on workflow completeness, not price."</div>
+    <div class="comp-grid">
+      <div class="comp-cell comp-win"><div class="cc-label">You Win When</div><p>Seller needs Amazon-compliant, brand-consistent full listing sets — not one-off images. The complete workflow is something Pic Copilot doesn't offer.</p></div>
+      <div class="comp-cell comp-lose"><div class="cc-label">You Lose When</div><p>Seller just needs a quick background swap or single product image. Don't fight for single-image use cases — that's Pic Copilot/Photoroom territory.</p></div>
+    </div>
+  </div>
+  
+  <div class="comp">
+    <div class="comp-head">
+      <span class="comp-name">vs. Photoroom</span>
+      <span class="comp-their">$43M Series B · 10K+ sellers · $10–30/mo · Mobile-first</span>
+    </div>
+    <div class="comp-counter">"Photoroom is a photo editor. GreenOnion is a listing generator. They make one image look better. You create an entire listing from scratch. Different products for different problems."</div>
+    <div class="comp-grid">
+      <div class="comp-cell comp-win"><div class="cc-label">You Win When</div><p>Seller needs a complete listing — all 9 images with copy, infographics, and lifestyle shots. Photoroom requires the seller to design each image manually.</p></div>
+      <div class="comp-cell comp-lose"><div class="cc-label">You Lose When</div><p>Seller wants fine-grained control over individual images or already has a design workflow. Photoroom's editing tools are more flexible.</p></div>
+    </div>
+  </div>
+  
+  <div class="comp">
+    <div class="comp-head">
+      <span class="comp-name">vs. Canva / Adobe</span>
+      <span class="comp-their">Massive distribution · AI features growing · 12–18mo threat window</span>
+    </div>
+    <div class="comp-counter">"They'll eventually add Amazon templates — but they'll be general-purpose, not Amazon-optimized. Your 12–18 month window is to build brand, community, and data moat. Mailchimp survived Salesforce by owning the SMB segment. Be the Mailchimp of Amazon listing images."</div>
+    <div class="comp-grid">
+      <div class="comp-cell comp-win"><div class="cc-label">You Win When</div><p>You've built deep Amazon-specific intelligence: A9 optimization, category-specific templates, conversion data, Seller Central integration. Go deeper, not broader.</p></div>
+      <div class="comp-cell comp-lose"><div class="cc-label">You Lose When</div><p>You stay surface-level and Canva adds a "one-click Amazon listing" feature with their existing distribution. Speed is everything.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ EXPERIMENTS ════════════ -->
+<div class="section">
+  <div class="section-num">10 — Growth Experiments</div>
+  <div class="section-title">7 Experiments to 10x Your Customer Base</div>
+  <div class="section-desc">Sequenced by impact. Experiments 1–2 should happen this week. Designed for a solo founder with limited time.</div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">1. Price Increase — 3x Enterprise Tier</span>
+      <span class="exp-pri p0">P0 · Do This First</span>
+    </div>
+    <div class="exp-hyp">"Raising Enterprise from $149 → $399/mo will NOT reduce conversion rate — because Ecomtent charges $510/mo, freelancers charge $300+, and serious sellers don't trust cheap tools."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>2 weeks</strong> <span>Effort:</span> <strong>1 hour</strong> <span>Budget:</span> <strong>$0</strong></div>
+    <div class="exp-success"><b>Success:</b> Same or better conversion rate at 2.5–3x price. Immediate 2–3x MRR lift.</div>
+    <div class="exp-kill"><b>Kill signal:</b> If conversion drops >50% after 2 weeks, roll back. Grandfather existing customers regardless.</div>
+  </div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">2. "Wanted to Cry" Social Proof Blitz</span>
+      <span class="exp-pri p0">P0 · Do This First</span>
+    </div>
+    <div class="exp-hyp">"Adding emotional customer testimony + before/after images to the homepage will increase free trial signups 20%+."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>1 day</strong> <span>Effort:</span> <strong>3 hours</strong> <span>Budget:</span> <strong>$0</strong></div>
+    <div class="exp-success"><b>Success:</b> Free trial signup rate increases 15–30%. Social proof section visible above the fold.</div>
+  </div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">3. Reddit Seeding — r/FulfillmentByAmazon</span>
+      <span class="exp-pri p1">P1 · High Impact</span>
+    </div>
+    <div class="exp-hyp">"Authentic before/after posts showing AI-generated Amazon listings will drive 20+ free trial signups from Reddit in 1 week."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>1 week</strong> <span>Effort:</span> <strong>2 hours</strong> <span>Budget:</span> <strong>$0</strong></div>
+    <div class="exp-success"><b>Success:</b> 20+ signups from Reddit. Post format: "I've been experimenting with AI for my listings — here are the results" with side-by-side images.</div>
+    <div class="exp-kill"><b>Kill signal:</b> Post gets downvoted as self-promotion. Adapt tone, try again with more value-first framing.</div>
+  </div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">4. YouTube Influencer Outreach</span>
+      <span class="exp-pri p1">P1 · High Impact</span>
+    </div>
+    <div class="exp-hyp">"One YouTube review from a mid-tier Amazon seller channel (10–50K subs) will drive 50+ signups and 10–40 paying customers."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>4–6 weeks</strong> <span>Effort:</span> <strong>2 hrs/week</strong> <span>Budget:</span> <strong>$500–1,000</strong></div>
+    <div class="exp-success"><b>Success:</b> 50+ signups within 2 weeks of video. 10+ convert to paid.</div>
+  </div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">5. "I Replaced My $400 Fiverr Designer" Campaign</span>
+      <span class="exp-pri p1">P1 · High Impact</span>
+    </div>
+    <div class="exp-hyp">"Content targeting sellers who currently hire Fiverr designers will convert at high rate — it speaks to quantifiable savings."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>2 weeks</strong> <span>Effort:</span> <strong>3 hours</strong> <span>Budget:</span> <strong>$0</strong></div>
+    <div class="exp-success"><b>Success:</b> 10+ conversions. Post in Facebook groups: "I replaced my $400 Fiverr designer with AI — here's the comparison."</div>
+  </div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">6. Category-Specific Landing Pages</span>
+      <span class="exp-pri p2">P2 · SEO Foundation</span>
+    </div>
+    <div class="exp-hyp">"Pages like 'Amazon Kitchen Product Listing Images' will rank for low-competition keywords and drive organic traffic within 3 months."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>2 weeks to create, 3 months to measure</strong> <span>Effort:</span> <strong>8 hours</strong> <span>Budget:</span> <strong>$0</strong></div>
+    <div class="exp-success"><b>Success:</b> 5 category pages live. 2–5x organic traffic within 3 months.</div>
+  </div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">7. Agency Partnership Pilot</span>
+      <span class="exp-pri p2">P2 · Revenue Multiplier</span>
+    </div>
+    <div class="exp-hyp">"Amazon listing agencies would white-label GreenOnion to increase their margins. Each agency = 10–50 SKUs/month."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>4 weeks</strong> <span>Effort:</span> <strong>2 hrs/week</strong> <span>Budget:</span> <strong>$0</strong></div>
+    <div class="exp-success"><b>Success:</b> 2+ agency partnerships signed. Each generating $500–2K MRR.</div>
+  </div>
+</div>
+
+<!-- ════════════ STOP DOING ════════════ -->
+<div class="section">
+  <div class="section-num">11 — Stop Doing These Things</div>
+  <div class="section-title">The Anti-Experiments</div>
+  <div class="section-desc">Things that feel productive but would waste your limited time right now.</div>
+
+  <div class="anti-exp">
+    <h4>🚫 Don't expand beyond ecommerce</h4>
+    <p>Amazon alone has 1.9M+ active sellers. You have 9 customers. Expanding to "general marketing images" puts you against Canva with no advantage. Go deeper into ecommerce (Amazon → Etsy → Shopify), not broader.</p>
+  </div>
+  <div class="anti-exp">
+    <h4>🚫 Don't worry about defensibility at 9 customers</h4>
+    <p>The moat question is for 1,000 customers, not 9. Right now, execution speed IS the moat. Every week you spend debating defensibility is a week your competitors spend acquiring customers.</p>
+  </div>
+  <div class="anti-exp">
+    <h4>🚫 Don't build an AppSumo lifetime deal</h4>
+    <p>LTD customers are deal-seekers, not your ICP. They'll drain support resources, leave bad reviews when expectations aren't met, and never convert to recurring revenue. You don't need volume — you need the RIGHT customers at the RIGHT price.</p>
+  </div>
+  <div class="anti-exp">
+    <h4>🚫 Don't run paid ads yet</h4>
+    <p>With no testimonials, no conversion data, and no proven funnel, paid ads will burn cash. Fix social proof and pricing first. Then test $500 of Google Ads on "Amazon listing image generator" with proper tracking.</p>
+  </div>
+</div>
+
+<!-- ════════════ CONTENT STRATEGY ════════════ -->
+<div class="section">
+  <div class="section-num">12 — Content Strategy</div>
+  <div class="section-title">What to Create & Where to Post It</div>
+  <div class="section-desc">Your product is inherently visual. Every piece of content should include a before/after transformation. Show, don't tell.</div>
+
+  <div class="content-card">
+    <div class="cc-type">P0 · Before/After Showcase · 30 min each</div>
+    <h4>Product Transformation Gallery</h4>
+    <p>5 category-specific before/after showcases: messy phone photo → 9 professional images. Kitchen products, beauty, supplements, electronics, toys. Use everywhere — homepage, Reddit, YouTube shorts, Facebook groups, Twitter. This is your #1 content type. Visual proof sells better than words.</p>
+  </div>
+  <div class="content-card">
+    <div class="cc-type">P0 · Customer Story · 2 hours</div>
+    <h4>The "Wanted to Cry" Customer Story</h4>
+    <p>Deep-dive on your most emotional customer reaction. Before/after images, the problem they were facing, the moment they saw results. This becomes your homepage testimonial, your email signature, your Reddit post hook. One real story beats a thousand feature descriptions.</p>
+  </div>
+  <div class="content-card">
+    <div class="cc-type">P1 · SEO Blog Posts · 2 hours each</div>
+    <h4>Amazon Listing Education Content</h4>
+    <p>"How to create A+ Content that converts." "9 image types every Amazon listing needs." "Why professional images increase conversion 33%." Position GreenOnion as the authority. Capture long-tail search traffic. Target: "Amazon listing image generator", "AI Amazon product images", "A+ Content generator."</p>
+  </div>
+  <div class="content-card">
+    <div class="cc-type">P1 · Build in Public · 15 min/week</div>
+    <h4>Continue the HN/Twitter Narrative</h4>
+    <p>Weekly updates: customer count, learnings, product updates. "I built an AI tool and got my first 100 customers" narrative arc. #buildinpublic on Twitter, progress posts on IndieHackers. Builds personal brand and organic discovery among builders who also sell on Amazon.</p>
+  </div>
+  <div class="content-card">
+    <div class="cc-type">P1 · Comparison Content · 1 hour</div>
+    <h4>"DIY vs Designer vs AI: Amazon Listing Images Compared"</h4>
+    <p>Side-by-side comparison of: Fiverr designer ($400, 3 days) vs. Midjourney (requires prompting skill) vs. GreenOnion ($4.90, 30 seconds). Show real results. Post as blog + Reddit + YouTube short. Makes the value proposition undeniable.</p>
+  </div>
+</div>
+
+<!-- ════════════ CHANNELS ════════════ -->
+<div class="section">
+  <div class="section-num">13 — Channel Recommendations</div>
+  <div class="section-title">Where Your Customers Actually Are</div>
+  <div class="section-desc">Amazon sellers are tool-buyers who trust peer recommendations, YouTube reviews, and Reddit communities. Meet them there.</div>
+
+  <div class="channel-grid">
+    <div class="channel-card">
+      <h4>📺 YouTube Influencers</h4>
+      <p>Amazon seller channels (Kevin King, Jungle Scout, etc.). One sponsored review = 50–200 signups. $500–5K per video. Best ROI for paid acquisition in this market.</p>
+      <span class="ch-pri ch-high">Highest Priority</span>
+    </div>
+    <div class="channel-card">
+      <h4>💬 Reddit Communities</h4>
+      <p>r/FulfillmentByAmazon, r/AmazonFBA. Authentic before/after posts. Value-first, not promotional. The Photoroom thread proves sellers discuss AI image tools here.</p>
+      <span class="ch-pri ch-high">Highest Priority</span>
+    </div>
+    <div class="channel-card">
+      <h4>👥 Facebook Groups</h4>
+      <p>Amazon FBA groups (100K+ members). Share results, answer listing image questions. Partner with admins for tool spotlights. High-trust environment.</p>
+      <span class="ch-pri ch-high">Highest Priority</span>
+    </div>
+    <div class="channel-card">
+      <h4>🔍 SEO / Content</h4>
+      <p>"Amazon listing image generator" — low competition. "A+ Content generator" — medium. Category-specific pages for long-tail. Compounding organic growth.</p>
+      <span class="ch-pri ch-high">Highest Priority</span>
+    </div>
+    <div class="channel-card">
+      <h4>🤝 Agency Partnerships</h4>
+      <p>Amazon listing agencies would white-label your tool. Each agency = 10–50 SKUs/month. 10 agencies = $5K–20K MRR. Low CAC, high LTV.</p>
+      <span class="ch-pri ch-med">Medium Priority</span>
+    </div>
+    <div class="channel-card">
+      <h4>🛍️ Tool Directories</h4>
+      <p>Carbon6, Jungle Scout ecosystem, seller tool comparison sites. Get listed on aggregator sites. Shopify App Store when ready. Built-in distribution.</p>
+      <span class="ch-pri ch-med">Medium Priority</span>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ ROADMAP ════════════ -->
+<div class="section">
+  <div class="section-num">14 — 90-Day Roadmap</div>
+  <div class="section-title">What to Do Next</div>
+  
+  <div class="road-grid">
+    <div class="road-card">
+      <div class="road-period">Days 1–30</div>
+      <div class="road-theme">Price & Prove</div>
+      <ul>
+        <li>Raise prices 3x this week (grandfather existing)</li>
+        <li>Add "wanted to cry" testimonial to homepage today</li>
+        <li>Email all 9 customers for quotes + before/afters</li>
+        <li>Create 5 category before/after showcases</li>
+        <li>Post authentic results in r/FulfillmentByAmazon</li>
+        <li>Start build-in-public thread on Twitter</li>
+        <li>Begin YouTube influencer outreach (3–5 channels)</li>
+      </ul>
+    </div>
+    <div class="road-card">
+      <div class="road-period">Days 31–60</div>
+      <div class="road-theme">Scale Acquisition</div>
+      <ul>
+        <li>Target: 30+ paying customers</li>
+        <li>First YouTube influencer review live</li>
+        <li>Active in 3+ Facebook Amazon seller groups</li>
+        <li>5 category-specific landing pages for SEO</li>
+        <li>Launch "Fiverr displacement" content campaign</li>
+        <li>Begin agency partnership outreach (10 agencies)</li>
+        <li>Customer conversion tracking implemented</li>
+      </ul>
+    </div>
+    <div class="road-card">
+      <div class="road-period">Days 61–90</div>
+      <div class="road-theme">Decide & Double Down</div>
+      <ul>
+        <li>Target: 50+ customers, $15K+ MRR</li>
+        <li>Decision point: full-time or profitable side project</li>
+        <li>2+ agency partnerships generating revenue</li>
+        <li>SEO traffic starting from category pages</li>
+        <li>Conversion data from customers (before/after metrics)</li>
+        <li>Explore Helium 10 / Jungle Scout integration</li>
+        <li>If 50+ customers → plan full-time transition</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ RISK FLAGS ════════════ -->
+<div class="section">
+  <div class="section-num">15 — Risk Flags</div>
+  <div class="section-title">What Could Slow You Down</div>
+  
+  <div class="risk-flag rf-red">
+    <div class="rf-icon rf-red-icon">🔴</div>
+    <div>
+      <div class="rf-title">Pic Copilot is free and Alibaba-backed</div>
+      <div class="rf-text">You can't compete on price with free. If Pic Copilot improves Amazon-specific features, it could eat the bottom of your market.</div>
+      <div class="rf-fix">→ Fix: Compete on workflow (complete 9-image sets), compliance (Amazon-specific), and UX (zero prompts). Never compete on price.</div>
+    </div>
+  </div>
+  <div class="risk-flag rf-red">
+    <div class="rf-icon rf-red-icon">🔴</div>
+    <div>
+      <div class="rf-title">Amazon could build this natively</div>
+      <div class="rf-text">Amazon is already adding AI features to Seller Central. If they build listing image generation, third-party tools lose their core value prop.</div>
+      <div class="rf-fix">→ Fix: Move fast. Build brand, community, and data moat before Amazon moves. Amazon historically moves slowly on seller tools and often partners first.</div>
+    </div>
+  </div>
+  <div class="risk-flag rf-red">
+    <div class="rf-icon rf-red-icon">🔴</div>
+    <div>
+      <div class="rf-title">Solo founder + day job = growth ceiling</div>
+      <div class="rf-text">Head of Product at Skroutz is a demanding role. Building GreenOnion on the side caps your growth rate at 2–3 customers/week while competitors move faster.</div>
+      <div class="rf-fix">→ Fix: Set a clear decision point (50 customers = go full-time). Until then, maximize leverage: automate everything, focus only on highest-impact activities.</div>
+    </div>
+  </div>
+  <div class="risk-flag rf-yellow">
+    <div class="rf-icon rf-yellow-icon">🟡</div>
+    <div>
+      <div class="rf-title">AI quality commoditization</div>
+      <div class="rf-text">Underlying models (DALL-E, Flux, Midjourney) improve every quarter. What's impressive today becomes table stakes in 6 months.</div>
+      <div class="rf-fix">→ Fix: Your moat isn't the model — it's the workflow. Build switching costs: saved brand templates, conversion data, integration with seller tools.</div>
+    </div>
+  </div>
+  <div class="risk-flag rf-yellow">
+    <div class="rf-icon rf-yellow-icon">🟡</div>
+    <div>
+      <div class="rf-title">No retention data yet</div>
+      <div class="rf-text">9 customers in 1 month means no churn data. If month-2 retention is below 70%, the PMF signal is weaker than it appears.</div>
+      <div class="rf-fix">→ Fix: Track religiously. Set up churn alerts. Call every customer who cancels. Month-2 retention > 80% = real PMF.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ QUESTIONS ════════════ -->
+<div class="section">
+  <div class="section-num">16 — Unlock Questions</div>
+  <div class="section-title">10 Questions That Sharpen Everything</div>
+  <div class="section-desc">Our confidence is already high, but your answers would push it higher and unlock calibrated, specific recommendations. 15 minutes of honesty sharpens every insight above.</div>
+  
+  <div class="q-card">
+    <div class="q-num">1</div>
+    <div>
+      <div class="q-text">What are the actual unit economics? How much does it cost you per generation (API calls, compute)?</div>
+      <div class="q-why">If your cost per 9-image set is $0.50, pricing at $1.19 is dangerously thin margin. At $0.10, you have pricing power you're not using.</div>
+    </div>
+    <span class="q-pri qp-c">Critical</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">2</div>
+    <div>
+      <div class="q-text">How many hours per week are you spending on GreenOnion — and at what point would you leave Skroutz?</div>
+      <div class="q-why">A 10hr/week side project gets a very different growth plan than a full-time commitment. This changes every recommendation.</div>
+    </div>
+    <span class="q-pri qp-c">Critical</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">3</div>
+    <div>
+      <div class="q-text">Of your 9 paying customers — what tier are they on, and what product categories are they selling?</div>
+      <div class="q-why">Knowing your ICP (by tier and category) lets us target the exact right audience instead of "all Amazon sellers."</div>
+    </div>
+    <span class="q-pri qp-c">Critical</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">4</div>
+    <div>
+      <div class="q-text">What's your free trial → paid conversion rate? How many free signups turn into paying customers?</div>
+      <div class="q-why">If it's >10%, your product sells itself and the play is pure distribution. If it's <5%, there's an activation problem to fix first.</div>
+    </div>
+    <span class="q-pri qp-c">Critical</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">5</div>
+    <div>
+      <div class="q-text">Have any customers shared before/after conversion data from their Amazon listings?</div>
+      <div class="q-why">"Our click-through rate went up 40% after switching to GreenOnion images" would be the most powerful marketing asset possible.</div>
+    </div>
+    <span class="q-pri qp-h">High</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">6</div>
+    <div>
+      <div class="q-text">Are you aware of Ecomtent ($510/mo), Pic Copilot (free, Alibaba), and Photoroom ($43M funded)?</div>
+      <div class="q-why">Your positioning strategy depends on knowing exactly who you're up against. Ecomtent especially — they validate your market at 20x your price.</div>
+    </div>
+    <span class="q-pri qp-h">High</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">7</div>
+    <div>
+      <div class="q-text">Have you tried raising prices? What happened when the first customer bought the $149 tier instantly?</div>
+      <div class="q-why">If someone buys your most expensive tier without hesitation, that's a price signal. They expected to pay more.</div>
+    </div>
+    <span class="q-pri qp-h">High</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">8</div>
+    <div>
+      <div class="q-text">What's the "wanted to cry" customer's full story? What were they doing before GreenOnion?</div>
+      <div class="q-why">This story — with their permission — could be your #1 marketing asset. The emotional arc from pain to relief is irresistible.</div>
+    </div>
+    <span class="q-pri qp-h">High</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">9</div>
+    <div>
+      <div class="q-text">Would you be open to a Helium 10 or Jungle Scout integration/partnership?</div>
+      <div class="q-why">These tools have 1M+ seller users. An integration puts you in front of your exact ICP with zero marketing spend.</div>
+    </div>
+    <span class="q-pri qp-m">Medium</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">10</div>
+    <div>
+      <div class="q-text">What does success look like for you in 12 months? $10K MRR side project? $100K MRR full-time? Acquisition?</div>
+      <div class="q-why">The strategy is very different for each. We want to optimize for YOUR definition of success.</div>
+    </div>
+    <span class="q-pri qp-m">Medium</span>
+  </div>
+</div>
+
+<!-- ════════════ FOOTER ════════════ -->
+<div class="footer">
+  <div class="footer-brand">🧠 GrowthMind.ai</div>
+  <div class="footer-sub">Diagnosed by GrowthMind.ai — 18 AI agents, one growth diagnosis</div>
+  <div class="footer-disc">This report was generated by GrowthMind's AI growth diagnosis system from publicly available data. Growth Score: 7.5/10 (pre-interrogation). Answer the 10 questions above to unlock even more specific, calibrated recommendations. Report date: February 13, 2026.</div>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,283 @@
+{
+  "org_id": "linelab_001",
+  "version": 1,
+  "last_evolved": "2026-02-13",
+  "evolution_trigger": "initial_seeding",
+  "brand": {
+    "voice_personality": "The MIT-trained engineer who left the lab to solve real factory problems — and is quietly frustrated that the manufacturing world still relies on tools from the 1990s. Authoritative without being academic. Precise without being dry. Speaks the language of production floors and boardrooms equally. Believes deeply that better math leads to better decisions, and that manufacturers deserve tools that respect their time.",
+    "traits": [
+      "Quietly confident — lets results speak first, then explains the science behind them",
+      "Engineering-precise — quantifies everything, avoids vague claims, shows the math",
+      "Pragmatic idealist — knows manufacturing is messy, builds tools that work in the mess",
+      "Respectfully impatient — frustrated by how much time and money the industry wastes on outdated methods, but channels it into building better alternatives",
+      "Intellectually generous — shares deep knowledge freely (insights, events, publications) because educating the market is part of the mission"
+    ],
+    "archetype": "The Applied Scientist — not an ivory tower academic, not a slick enterprise sales rep, but the MIT researcher who walked into a factory, saw the gap between theory and practice, and decided to close it with software",
+    "tone_rules": [
+      "Lead with the outcome, then reveal the method. '32% cost reduction' before 'extended queueing theory.'",
+      "Use concrete manufacturing language: yield, throughput, cycle time, WIP, utilization, cost drivers — not generic business jargon.",
+      "Quantify relentlessly. '$6M/yr in savings' not 'significant cost reduction.' '0.64% error' not 'highly accurate.'",
+      "Respect the audience's intelligence. These are engineers and operations leaders — don't oversimplify, don't add fluff.",
+      "Contrast explicitly. 'Weeks → minutes.' 'Trial-and-error → optimization.' 'Black box → full transparency.' Make the gap visceral.",
+      "Use 'your' factory, 'your' production system — make it specific to them, not abstract.",
+      "Confidence without arrogance. State capabilities plainly: 'LineLab optimizes thousands of variables simultaneously.' No exclamation marks needed.",
+      "Academic credibility is a feature, not a personality. Reference MIT and publications naturally, never as a flex.",
+      "When explaining the technology, use analogies from the audience's world: 'Think of it as a GPS for your production system — it doesn't just show where you are, it shows the optimal route.'"
+    ],
+    "forbidden_patterns": [
+      "Never say 'digital twin' unless the customer uses it first — LineLab is analytically distinct from simulation-based twins",
+      "Never say 'AI-powered' or 'machine learning' — the core tech is mathematical optimization and queueing theory, not ML",
+      "No 'revolutionary', 'game-changing', 'disruptive', 'next-generation', or 'cutting-edge' — let the 4.9x ROI speak for itself",
+      "Never disparage simulation directly — position LineLab as complementary or as a faster alternative, not a replacement",
+      "No 'easy to use' or 'user-friendly' — instead show time-to-value: 'model built in minutes from your existing spreadsheet data'",
+      "Avoid 'Industry 4.0', 'smart factory', 'digital transformation' — overused terms that signal buzzword compliance, not real capability",
+      "Never promise outcomes without qualification — 'customers have seen up to 32% cost avoidance' not 'you will save 32%'",
+      "No 'comprehensive platform' or 'end-to-end solution' — be specific about what LineLab models and optimizes",
+      "Never use 'just' to minimize complexity — respect that production systems are genuinely hard problems",
+      "Avoid startup/VC language ('scale', 'disrupt', 'pivot') when talking to enterprise customers — speak their operational language"
+    ],
+    "audience_tone_variations": {
+      "manufacturing_engineers": "Most technical. Speak in their units: cycle times, utilization rates, WIP levels, yield curves. Show the math connection. They'll want to know how queueing theory applies to their specific topology. Respect their deep domain knowledge.",
+      "operations_leaders_vp_director": "Outcome-driven. Lead with cost, throughput, and time-to-decision. They care about de-risking capital allocation, not the underlying equations. Use case studies and ROI numbers prominently.",
+      "program_managers": "Schedule and budget oriented. Emphasize speed of analysis (minutes vs weeks), cost prediction accuracy, and ability to evaluate scenarios rapidly during concept phase when decisions have maximum leverage.",
+      "c_suite_ceo_coo": "Strategic framing. Production system design as a competitive advantage. LineLab as risk mitigation for scale-up investments. Boeing and Hadrian as reference points. Keep it to 3 bullet points and an ROI number.",
+      "academic_researchers": "Peer-to-peer. Reference the Winter Simulation Conference paper, extended queueing theory foundations, and MIT lineage. They appreciate methodological rigor and will evaluate the science, not the marketing."
+    }
+  },
+  "messaging": {
+    "one_liner": "LineLab models, optimizes, and de-risks production systems in minutes — not the weeks that simulation requires.",
+    "elevator_pitch": "Every manufacturer scaling production faces the same problem: the tools for modeling factory cost and throughput are either too slow (discrete-event simulation takes weeks), too simplistic (spreadsheets can't capture dynamic behavior), or too opaque (no one can explain why the model says what it says). LineLab replaces all three with MIT-developed analytical methods that model your entire production system, optimize thousands of variables simultaneously, and show you exactly where cost comes from — in minutes, not months. Boeing, Hadrian, and GKN Aerospace already use it to make scale-up decisions with confidence. The math is rigorous. The results are transparent. And you don't need a simulation PhD to use it.",
+    "brand_story": "LineLab was born at MIT, where Scott Nill and his co-founders spent years studying why manufacturers consistently overspend on production systems. The answer wasn't that manufacturers were bad at planning — it was that the available tools forced them into bad trade-offs. Discrete-event simulation is powerful but takes weeks to set up and gives you point answers with no optimization. Spreadsheets are fast but fundamentally can't capture how variability, queuing, and utilization interact in a real factory. And consulting firms charge hundreds of thousands of dollars to tell you what a good model could show in minutes. So the LineLab team did something different: they extended queueing theory — the same math that designs telecom networks and hospital systems — to handle the full complexity of multi-product, multi-step manufacturing. Then they wrapped it in optimization, so LineLab doesn't just model your factory — it tells you the optimal configuration. The result: Boeing used it to save millions. Hadrian used it to plan their manufacturing expansion. MIT uses it in their own research. LineLab is what happens when rigorous science meets the messy reality of building things at scale.",
+    "value_proposition_pillars": [
+      {
+        "pillar": "Minutes, Not Weeks",
+        "description": "LineLab builds production system models from your existing spreadsheet data and solves them analytically — no Monte Carlo simulation, no weeks of iteration. Full system optimization in a single solve.",
+        "proof": "Customers report model creation in minutes from existing data, compared to weeks for discrete-event simulation setup."
+      },
+      {
+        "pillar": "Optimize, Don't Simulate",
+        "description": "Simulation gives you point answers and requires trial-and-error. LineLab optimizes thousands of variables simultaneously — capacity, staffing, inventory, throughput — to find the best configuration, not just a feasible one.",
+        "proof": "LineLab's mathematical optimization explores solution spaces that would require thousands of simulation runs to approximate."
+      },
+      {
+        "pillar": "Transparent Cost Drivers",
+        "description": "Every result comes with full sensitivity analysis showing exactly which variables drive cost, where hidden expenses lurk, and how changes propagate through the system. No black boxes.",
+        "proof": "Customers report 32% cost avoidance from identifying cost drivers that were invisible in their previous models."
+      },
+      {
+        "pillar": "Proven at Enterprise Scale",
+        "description": "Built on MIT research, validated at Boeing, Hadrian, GKN Aerospace, and published at the Winter Simulation Conference. The science is peer-reviewed. The results are production-tested.",
+        "proof": "4.9x ROI, 32% cost avoidance, $6M/yr savings reported by customers. 0.64% accuracy vs actual production data."
+      }
+    ],
+    "positioning_statement": "For manufacturing engineers, operations leaders, and program managers at companies scaling production, LineLab is the production system modeling software that uses MIT-developed analytical methods to model, optimize, and de-risk factory decisions in minutes — not the weeks that discrete-event simulation requires. Unlike simulation tools (AnyLogic, FlexSim, Arena) that give slow, opaque point-answers requiring trial-and-error, LineLab optimizes thousands of variables simultaneously with full cost transparency, proven at Boeing, Hadrian, and GKN Aerospace.",
+    "taglines": [
+      "Model your factory. Optimize everything. Know your costs.",
+      "The math your factory has been missing.",
+      "Production decisions, de-risked.",
+      "From spreadsheet to optimized factory — in minutes.",
+      "Stop simulating. Start optimizing.",
+      "MIT science. Factory-floor results.",
+      "Your production system, solved."
+    ]
+  },
+  "icp": {
+    "primary_persona": {
+      "name": "The Scale-Up Engineer",
+      "role": "VP of Manufacturing / Director of Operations / Senior Manufacturing Engineer at a company scaling production of a new technology",
+      "company_stage": "Growth-stage hardware company (50-500 employees) or division of a large manufacturer (1000+) in the process of dimensioning, costing, or expanding production capacity. Has budget authority or strong influence over capital planning decisions. Industry: aerospace, defense, semiconductors, green tech, climate tech, advanced mobility, eVTOL, biopharmaceuticals.",
+      "frustrations": [
+        "DES models take weeks to build and only answer one question at a time — no optimization",
+        "Spreadsheet cost models can't capture how variability, queuing, and utilization actually interact",
+        "Simulation is a black box — can't explain to leadership why the model recommends what it recommends",
+        "Consultants charge $200k+ for analyses that are outdated by the time they deliver",
+        "Critical scale-up investment decisions ($10M-$500M+) made on insufficient modeling",
+        "No tool handles the early concept phase well — when decisions have maximum leverage but data is sparse",
+        "Every scenario analysis requires another simulation run, another week, another budget request",
+        "Production costs consistently exceed estimates because models can't capture hidden cost drivers"
+      ],
+      "goals": [
+        "Dimension and cost a new production system with confidence before committing capital",
+        "Identify and eliminate cost drivers before they're built into the factory",
+        "Explore hundreds of trade-off scenarios rapidly during the concept phase",
+        "Get transparent, explainable results that leadership and investors trust",
+        "Reduce time from 'we need a new factory' to 'here's the optimal design' from months to days",
+        "De-risk production scale-up by modeling across maturity levels and uncertainty ranges"
+      ],
+      "objections": [
+        "We've invested heavily in our simulation capability (AnyLogic/FlexSim) — why switch?",
+        "How accurate can an analytical model be compared to high-fidelity simulation?",
+        "Our production systems are too complex/unique for a general-purpose tool",
+        "We need 3D visualization for stakeholder buy-in — does LineLab do that?",
+        "How does this integrate with our existing PLM/MES/ERP systems?",
+        "We have a simulation team already — this would make them redundant",
+        "Queueing theory is for telecoms — how does it apply to manufacturing?"
+      ],
+      "where_they_hang_out": [
+        "Industry conferences: Paris Air Show, IMTS, Automate, Winter Simulation Conference",
+        "LinkedIn (primary professional network for manufacturing leaders)",
+        "Professional societies: SME, ASME, INFORMS, IIE",
+        "MIT alumni and research networks",
+        "Industry-specific Slack/Teams groups for manufacturing engineering",
+        "Webinars from Deloitte, McKinsey, and industry analysts on manufacturing strategy",
+        "Trade publications: Manufacturing Engineering, IndustryWeek, The Fabricator"
+      ]
+    },
+    "secondary_personas": [
+      {
+        "name": "The R&D Program Manager",
+        "role": "Program manager at a defense or aerospace prime responsible for production planning of new platforms",
+        "key_difference": "More focused on schedule risk and cost prediction for proposals and milestones than ongoing optimization. Needs to justify production estimates to government customers. Values auditability and traceability of assumptions.",
+        "messaging_emphasis": "Defensible production cost estimates in hours, not months. Every assumption documented. Every cost driver traceable."
+      },
+      {
+        "name": "The Hardware Startup COO",
+        "role": "Operations lead at a venture-backed hardware startup (Series A-C) building their first production line",
+        "key_difference": "Less simulation experience — coming from spreadsheets and gut feel. More budget-conscious. Needs to convince board and investors that production plans are credible. First-time factory builder.",
+        "messaging_emphasis": "You're building your first factory. Get it right the first time. LineLab gives you the production modeling capability of a Boeing — without their simulation team."
+      },
+      {
+        "name": "The Academic Researcher",
+        "role": "Manufacturing systems researcher or professor at a top engineering university",
+        "key_difference": "Evaluates on methodological rigor, not ROI. Potential pathway to student adoption and future enterprise champions. Values publications and reproducibility.",
+        "messaging_emphasis": "Extended queueing theory meets real-world manufacturing complexity. Peer-reviewed. Published at WSC. Used in MIT's own research."
+      }
+    ],
+    "anti_persona": {
+      "description": "Job shops with <10 machines and no scale-up plans. Companies satisfied with their existing simulation workflow and not facing time pressure. Process industries (continuous flow: oil, chemicals, food) where queueing theory doesn't apply. Companies looking for MES, ERP, scheduling, or shop-floor execution software. Anyone who wants 3D factory visualization as the primary output. Consultants who would resell LineLab as a service without understanding the methodology.",
+      "why_not": "LineLab's value is in modeling complex, multi-product discrete manufacturing systems at scale — particularly during the high-leverage concept and planning phases. Small shops don't have the complexity to benefit. Process industries have different physics. Companies needing execution tools (MES/ERP) are solving a different problem. Serving these would dilute the product and confuse the market position."
+    },
+    "audience_keywords": [
+      "production system modeling",
+      "manufacturing cost estimation",
+      "factory planning software",
+      "discrete event simulation alternative",
+      "production scale-up",
+      "manufacturing capacity planning",
+      "factory cost optimization",
+      "production system design",
+      "manufacturing throughput analysis",
+      "queueing theory manufacturing",
+      "factory dimensioning",
+      "production cost drivers",
+      "manufacturing investment de-risk",
+      "scale-up manufacturing",
+      "production line optimization",
+      "factory cost model",
+      "manufacturing scenario analysis",
+      "capacity planning software",
+      "production system optimization",
+      "aerospace manufacturing planning",
+      "defense production modeling",
+      "green tech manufacturing",
+      "semiconductor fab planning",
+      "eVTOL production scale-up"
+    ]
+  },
+  "product": {
+    "features": [
+      {
+        "name": "Analytical Production System Modeling",
+        "description": "Model complex multi-product, multi-step manufacturing systems using extended queueing theory — capturing variability, utilization, WIP, and throughput dynamics that spreadsheets miss, without the setup time of DES.",
+        "jtbd": "When I need to understand how my production system actually behaves under real-world variability, give me an accurate model in minutes from my existing data.",
+        "why_it_matters": "Spreadsheets assume static averages. Simulation takes weeks. LineLab captures dynamic production behavior analytically — accurately and fast."
+      },
+      {
+        "name": "Mathematical Optimization Engine",
+        "description": "Simultaneously optimize thousands of variables — capacity, staffing, inventory, throughput targets — to find the best system configuration, not just a feasible one.",
+        "jtbd": "When I'm designing a new production line, don't just tell me if my plan works — tell me the optimal plan across all the variables I can control.",
+        "why_it_matters": "DES gives point answers requiring trial-and-error. LineLab solves for the optimum directly."
+      },
+      {
+        "name": "Transparent Cost Decomposition",
+        "description": "Full breakdown of where cost comes from in your production system — labor, equipment, WIP, overhead — with sensitivity analysis showing which variables drive total cost.",
+        "jtbd": "When leadership asks 'why does this factory cost $200M?', I need to show exactly where every dollar goes and what levers we have to reduce it.",
+        "why_it_matters": "Customers report 32% cost avoidance from finding cost drivers invisible in other tools."
+      },
+      {
+        "name": "Rapid Scenario Analysis",
+        "description": "Evaluate hundreds of what-if scenarios — different volumes, product mixes, technology maturity levels, staffing models — in the time it takes simulation to run one.",
+        "jtbd": "When I'm in the concept phase and need to explore trade-offs quickly, let me test every scenario that matters before we commit to a design.",
+        "why_it_matters": "The concept phase is when decisions have maximum leverage. Speed of analysis directly translates to better decisions."
+      },
+      {
+        "name": "Spreadsheet-to-Model Workflow",
+        "description": "Build production system models directly from your existing spreadsheet data — process times, routings, demand profiles. No simulation expertise required.",
+        "jtbd": "When I already have production data in spreadsheets, don't make me learn a new modeling paradigm — work with what I have.",
+        "why_it_matters": "Removes the #1 barrier to adoption: setup time and specialized expertise requirements of DES tools."
+      },
+      {
+        "name": "Maturity-Aware Modeling",
+        "description": "Model production systems across technology readiness and manufacturing maturity levels — accounting for yield improvement curves, learning effects, and uncertainty ranges.",
+        "jtbd": "When I'm scaling a new technology from prototype to full production, model how costs and performance change as we learn and mature.",
+        "why_it_matters": "Most tools assume steady-state production. LineLab models the full journey from early production to mature operations."
+      }
+    ],
+    "jobs_to_be_done": [
+      "When we receive funding to build a new factory, help me dimension and cost it accurately before we break ground — so we don't overspend by 30%.",
+      "When I need to justify a $100M+ production investment to the board, give me transparent, defensible numbers — not a simulation black box.",
+      "When our DES team says the analysis will take 6 weeks, help me get directionally correct answers in a day so we can make time-critical decisions.",
+      "When we're evaluating 3 different production architectures, help me compare them on cost, throughput, and risk — simultaneously, not sequentially.",
+      "When leadership asks 'what happens if demand doubles?', help me answer in minutes with full cost implications — not 'we'll need to run another simulation.'",
+      "When I suspect we're over-investing in buffer inventory or redundant capacity, show me exactly where the waste is and what the optimal configuration looks like.",
+      "When I'm writing a proposal with production cost estimates for a government customer, give me traceable, auditable numbers I can defend."
+    ],
+    "pricing_positioning": "Enterprise software pricing model — demo-first sales process reflecting the high-value, high-consideration nature of production system planning decisions. Not publicly listed, consistent with the competitive landscape (AnyLogic $25-150k/yr, FlexSim $10-50k/yr, consulting engagements $50-500k). LineLab's value proposition supports premium pricing: a single production decision improved by LineLab can save millions. The ROI math is unambiguous — customers report 4.9x ROI and $6M/yr savings.",
+    "proof_points": [
+      {
+        "type": "customer_result",
+        "content": "4.9x ROI reported by enterprise customers using LineLab for production system optimization."
+      },
+      {
+        "type": "customer_result",
+        "content": "32% cost avoidance achieved through identification of hidden cost drivers invisible in simulation and spreadsheet models."
+      },
+      {
+        "type": "customer_result",
+        "content": "$6M/yr savings from optimized production system configuration at a major manufacturer."
+      },
+      {
+        "type": "accuracy",
+        "content": "0.64% error vs actual production data — analytical accuracy that matches or exceeds high-fidelity simulation."
+      },
+      {
+        "type": "customer_logos",
+        "content": "Trusted by Boeing, Hadrian, GKN Aerospace, MIT, Sidewalk Labs (Alphabet), University of Queensland, and Running Tide."
+      },
+      {
+        "type": "academic_validation",
+        "content": "Peer-reviewed publication at the 2023 Winter Simulation Conference. Built on MIT research in the Advanced Manufacturing and Design program."
+      },
+      {
+        "type": "event_credibility",
+        "content": "Co-founded the Solving for Scale Summit with MIT and NextGen Industry Group. Presented at Paris Air Show 2023."
+      }
+    ],
+    "competitive_differentiation": [
+      {
+        "competitor": "Discrete-Event Simulation (AnyLogic, FlexSim, Arena, Simio, ProModel)",
+        "lineLab_advantage": "Analytical vs Monte Carlo: faster (minutes vs weeks), deterministic (no run-to-run variance), built-in optimization (vs trial-and-error), and transparent (full sensitivity analysis vs black box). DES is powerful for detailed operational analysis; LineLab excels at system-level design and cost optimization."
+      },
+      {
+        "competitor": "Siemens Tecnomatix",
+        "lineLab_advantage": "Faster setup, more transparent results, mathematical optimization of thousands of variables simultaneously. Tecnomatix is deeply integrated into Siemens PLM ecosystem; LineLab is vendor-agnostic and purpose-built for production system economics."
+      },
+      {
+        "competitor": "Excel / Spreadsheet Models",
+        "lineLab_advantage": "Spreadsheets assume static averages and cannot capture queueing, variability, or utilization dynamics — the exact factors that cause production systems to cost more than planned. LineLab works from spreadsheet data but models the physics that spreadsheets fundamentally cannot."
+      },
+      {
+        "competitor": "Management Consulting Firms",
+        "lineLab_advantage": "Consultants charge $200-500k per engagement and deliver static reports. LineLab gives the manufacturing team a persistent, re-runnable model they own — for a fraction of the cost, with faster iteration and full transparency."
+      }
+    ]
+  },
+  "evolution_log": [
+    {
+      "date": "2026-02-13",
+      "trigger": "initial_seeding",
+      "changes": "Full brand identity document generated from Company Seed data. All four sections populated: brand voice, messaging, ICP, and product positioning. Calibrated for crossing-the-chasm stage — messaging bridges technical credibility (MIT, queueing theory) with pragmatic buyer outcomes (ROI, cost savings, speed).",
+      "confidence": "high — based on detailed company seed with enterprise customer validation and quantified outcomes"
+    }
+  ]
+}

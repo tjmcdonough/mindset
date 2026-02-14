@@ -1,0 +1,337 @@
+{
+  "org_id": "qala_001",
+  "company_name": "Qala",
+  "report_type": "market_intel",
+  "generated_at": "2026-02-13T09:00:00Z",
+  "generated_by": "ai",
+  "version": 1,
+
+  "market_sizing": {
+    "data_observability": {
+      "market_size_2024_usd": "2.6B",
+      "market_size_2030_usd": "5.2B-5.5B",
+      "cagr": "11.6%-12.4%",
+      "sources": [
+        "Research and Markets: $2.6B (2024) → $5.2B (2030), 12.4% CAGR",
+        "Grand View Research: $2.1B (2023) → $4.7B (2030), 12.2% CAGR",
+        "Mordor Intelligence: $3.15B (2025) → $5.45B (2030), 11.6% CAGR"
+      ],
+      "key_drivers": ["AI/ML pipeline monitoring", "data quality demands", "regulatory compliance", "cloud migration complexity"],
+      "notes": "Market is maturing from pure data quality monitoring toward compliance-integrated observability — aligns with Qala's positioning"
+    },
+    "data_governance": {
+      "market_size_2024_usd": "3.5B-4.4B",
+      "market_size_2030_usd": "9.6B-15.1B",
+      "cagr": "18.9%-21.7%",
+      "sources": [
+        "Grand View Research: $3.35B (2023) → $12.66B (2030), 21.7% CAGR",
+        "Mordor Intelligence: $3.91B (2025) → $9.62B (2030), 19.7% CAGR",
+        "Fortune Business Insights: $4.44B (2024) → $18.07B (2032), 18.9% CAGR",
+        "Research and Markets: $15.1B by 2030"
+      ],
+      "key_drivers": ["GDPR enforcement escalation", "DORA compliance (Jan 2025)", "EU AI Act (Aug 2025 phased)", "data catalog as governance hub"],
+      "notes": "Fastest-growing adjacent market. Data catalog taking center stage as governance backbone per Research and Markets."
+    },
+    "data_classification": {
+      "market_size_2023_usd": "1.44B",
+      "cagr": "35.1%",
+      "sources": [
+        "Grand View Research: $1.44B (2023), 35.1% CAGR 2024-2030",
+        "Mordor Intelligence: North America 41% share in 2024, Asia-Pacific fastest at 22.5% CAGR"
+      ],
+      "key_drivers": ["GDPR continuous verification shift", "DORA mandating continuous data classification for financial sector", "AI Act requiring data lineage for high-risk AI systems", "explosion of unstructured data"],
+      "notes": "Extremely fast-growing niche. DORA specifically shifts compliance from scheduled audits to continuous verification — directly validates Qala's real-time approach."
+    },
+    "total_addressable_market_estimate": {
+      "combined_tam_2030": "$20B-30B",
+      "qala_serviceable_market": "Intersection of data observability + classification + governance for regulated European SMEs/scale-ups. Estimated SAM: $1B-2B by 2030",
+      "notes": "Qala sits at the convergence of three growing markets. The compliance-driven classification segment (35% CAGR) is the strongest tailwind."
+    }
+  },
+
+  "competitors": [
+    {
+      "name": "Collibra",
+      "category": "Data Intelligence / Governance Platform",
+      "hq": "Brussels, Belgium / New York, US",
+      "founded": 2008,
+      "funding_total": "$596M",
+      "valuation": "$5.5B+ (2024)",
+      "revenue_estimate": "$400M-500M ARR (est.)",
+      "employees": "~1,500",
+      "positioning": "Enterprise data intelligence cloud. Leader in Forrester Wave Enterprise Data Catalogs Q3 2024. Full-stack governance: catalog, lineage, quality, privacy, access.",
+      "pricing": "Enterprise pricing, typically $200K-$1M+ ACV",
+      "recent_moves": "Acquired Raito (data access governance startup) June 2025. IPO rumored but not confirmed. Named Google and Databricks Partner of the Year.",
+      "strengths": ["Market leader brand", "Deep enterprise penetration", "Broad platform", "European roots"],
+      "weaknesses": ["Heavy implementation", "Periodic snapshot model", "Expensive for SMEs", "Slow to adopt real-time approaches"],
+      "threat_to_qala": "high — but targets different segment (large enterprise vs Qala's scale-up focus)"
+    },
+    {
+      "name": "Alation",
+      "category": "Data Intelligence / Data Catalog",
+      "hq": "Redwood City, US",
+      "founded": 2012,
+      "funding_total": "$340M",
+      "valuation": "$1.7B (2024)",
+      "revenue_estimate": "$109M ARR (2024, per Latka)",
+      "employees": "~629",
+      "positioning": "Data intelligence platform focused on data catalog and metadata management. Strong in data search and discovery.",
+      "pricing": "Enterprise, ~$100K-$500K ACV",
+      "recent_moves": "Continued expansion into governance and AI data management",
+      "strengths": ["Strong catalog UX", "Good enterprise traction", "AI-powered metadata"],
+      "weaknesses": ["US-centric", "Limited real-time compliance", "Not source-level approach"],
+      "threat_to_qala": "medium"
+    },
+    {
+      "name": "BigID",
+      "category": "Data Security / Privacy / Classification",
+      "hq": "New York, US / Tel Aviv, Israel",
+      "founded": 2016,
+      "funding_total": "$320M",
+      "valuation": "$1.25B",
+      "revenue_estimate": "$100M+ ARR (passed $100M March 2024)",
+      "employees": "~500",
+      "positioning": "Data intelligence for privacy, security, and governance. ML-driven data discovery and classification. Strong GDPR/CCPA positioning.",
+      "pricing": "Modular pricing, $100K-$500K+ ACV",
+      "recent_moves": "Raised $60M in Feb 2024 led by Riverwood Capital. Expanding DSPM (Data Security Posture Management) capabilities.",
+      "strengths": ["Best-in-class data discovery/classification", "Strong privacy compliance", "ML-driven approach"],
+      "weaknesses": ["Scan-based not source-level", "Complex deployment", "Point-in-time snapshots"],
+      "threat_to_qala": "high — closest competitor in classification/compliance space"
+    },
+    {
+      "name": "Securiti",
+      "category": "Data + AI Governance / Privacy",
+      "hq": "San Jose, US",
+      "founded": 2019,
+      "funding_total": "$156M",
+      "valuation": "Acquired by Veeam",
+      "revenue_estimate": "$75.9M (Oct 2024, per Latka)",
+      "employees": "~942",
+      "positioning": "AI-powered Data+AI Command Center. Unified data privacy, security, governance, and compliance. Fast-growing challenger.",
+      "pricing": "Platform pricing, modular",
+      "recent_moves": "Acquired by Veeam (data protection giant). Rapid revenue growth from $19.8M (2021) → $75.9M (2024).",
+      "strengths": ["Fast growth", "AI-native architecture", "Broad platform", "Now backed by Veeam resources"],
+      "weaknesses": ["Post-acquisition integration risk", "May deprioritize standalone governance", "US-focused"],
+      "threat_to_qala": "medium — acquisition may shift focus away from pure governance"
+    },
+    {
+      "name": "OneTrust",
+      "category": "Privacy / Trust Intelligence / GRC",
+      "hq": "Atlanta, US",
+      "founded": 2016,
+      "funding_total": "$710M",
+      "valuation": "$4.5B (2023, down from $5.3B peak)",
+      "revenue_estimate": "~$500M ARR (2024 target)",
+      "employees": "~2,500",
+      "positioning": "Trust intelligence platform. Privacy management leader. Expanding into data governance, AI governance, ESG.",
+      "pricing": "Modular, $50K-$1M+ ACV depending on modules",
+      "recent_moves": "Exploring potential PE sale as of late 2025. Expanding AI governance capabilities. Partnered with Collibra for catalog integration.",
+      "strengths": ["Largest privacy platform", "Massive customer base (14,000+)", "Regulatory intelligence database", "Strong brand"],
+      "weaknesses": ["Privacy-first not data-engineering-first", "Bloated platform", "Potential PE sale creates uncertainty", "Not developer-friendly"],
+      "threat_to_qala": "medium — different buyer (legal/privacy vs engineering)"
+    },
+    {
+      "name": "Monte Carlo",
+      "category": "Data Observability",
+      "hq": "San Francisco, US",
+      "founded": 2019,
+      "funding_total": "$236M",
+      "valuation": "$1.6B (2022 Series D)",
+      "revenue_estimate": "$50M-80M ARR (est.)",
+      "employees": "~300",
+      "positioning": "Pioneer of data observability. Focused on data quality, reliability, and pipeline monitoring. Not compliance-focused.",
+      "pricing": "Usage-based, starting ~$50K ACV",
+      "recent_moves": "Expanding into data lineage and AI observability",
+      "strengths": ["Category creator for data observability", "Strong data engineering community", "Good integrations"],
+      "weaknesses": ["Not compliance/governance focused", "US-centric", "Quality-focused not classification-focused"],
+      "threat_to_qala": "medium — overlaps on observability but not on compliance/classification"
+    },
+    {
+      "name": "Immuta",
+      "category": "Data Security / Access Governance",
+      "hq": "Boston, US",
+      "founded": 2015,
+      "funding_total": "$267M",
+      "valuation": "$1B (2022)",
+      "revenue_estimate": "$40M-60M ARR (est.)",
+      "employees": "~163 (Dec 2024, down from peak)",
+      "positioning": "Data access governance and security. Policy-based access control for cloud data platforms.",
+      "pricing": "Platform licensing, $100K-$500K ACV",
+      "recent_moves": "Employee count declining (163 from ~350 peak), suggesting headwinds. Expanding cost governance capabilities.",
+      "strengths": ["Strong access control technology", "Good Snowflake/Databricks integrations", "Policy-as-code approach"],
+      "weaknesses": ["Narrower scope (access only)", "Declining headcount signals challenges", "Not real-time classification"],
+      "threat_to_qala": "low-medium — narrow overlap"
+    },
+    {
+      "name": "Informatica",
+      "category": "Data Management / Integration / Governance",
+      "hq": "Redwood City, US",
+      "founded": 1993,
+      "funding_total": "Public company (was), acquired Nov 2025",
+      "valuation": "$8B (Salesforce acquisition)",
+      "revenue_estimate": "$1.5B+ annual revenue",
+      "employees": "~5,000",
+      "positioning": "Legacy data management giant. Broad platform: integration, quality, governance, catalog, MDM.",
+      "pricing": "Enterprise, $500K-$10M+ deals",
+      "recent_moves": "Acquired by Salesforce for $8B (Nov 2025) after failed $7B attempt in April 2024. Major consolidation signal.",
+      "strengths": ["Massive installed base", "Comprehensive platform", "Now part of Salesforce ecosystem"],
+      "weaknesses": ["Legacy architecture", "Slow innovation", "Post-acquisition uncertainty", "Not developer-friendly"],
+      "threat_to_qala": "low — completely different segment and approach"
+    },
+    {
+      "name": "Atlan",
+      "category": "Data Catalog / Active Metadata",
+      "hq": "New York, US / India",
+      "founded": 2019,
+      "funding_total": "$206M",
+      "valuation": "$750M (2024)",
+      "revenue_estimate": "$30M-50M ARR (est.)",
+      "employees": "~400",
+      "positioning": "Modern data catalog and active metadata platform. Developer-friendly, positioned as the 'GitHub for data teams'.",
+      "pricing": "Usage-based, more accessible than legacy tools. Starting ~$30K ACV",
+      "recent_moves": "Series C from Insight Partners and Meritech. Strong community-led growth.",
+      "strengths": ["Modern UX", "Developer-friendly", "Active metadata approach", "Strong growth"],
+      "weaknesses": ["Catalog-focused not compliance-focused", "Less mature governance", "Limited European presence"],
+      "threat_to_qala": "medium — similar modern approach but different focus (catalog vs compliance)"
+    }
+  ],
+
+  "competitive_landscape_summary": {
+    "market_structure": "Fragmented and consolidating. Large incumbents (Informatica, Collibra, OneTrust) serve enterprises. Newer players (Monte Carlo, Atlan, BigID) target modern data stacks. No dominant player in real-time source-level compliance.",
+    "consolidation_signals": [
+      "Salesforce acquired Informatica for $8B (Nov 2025) — biggest data governance M&A ever",
+      "Veeam acquired Securiti — data protection meets data governance",
+      "Collibra acquired Raito (data access governance, June 2025)",
+      "OneTrust exploring PE sale (late 2025)",
+      "Collibra IPO rumored but not confirmed"
+    ],
+    "white_space_for_qala": "Source-level, real-time, developer-friendly compliance for European regulated scale-ups. No competitor currently offers continuous governance embedded at the code/API/pipeline level for SMEs. This is a genuine gap."
+  },
+
+  "trend_analysis": {
+    "shift_left_data_compliance": {
+      "status": "emerging_gaining_traction",
+      "evidence": [
+        "Dataversity 2025: 'More organizations focused on implementing robust data governance policies that enforced security and compliance without restricting data access'",
+        "Gartner: 75% of world's population under modern privacy regulation by end 2024 — driving proactive approaches",
+        "DORA (Jan 2025) explicitly mandates continuous verification, not periodic audits",
+        "DevSecOps shift-left pattern well-established in security; now extending to data compliance",
+        "SG Analytics: 'shift towards more sophisticated and proactive data governance frameworks'"
+      ],
+      "assessment": "Strong tailwind for Qala. The concept is proven in security (DevSecOps), now migrating to data governance. DORA explicitly requires continuous monitoring, validating the shift-left thesis. However, market education still needed — most buyers still think in periodic audit terms."
+    },
+    "source_level_vs_scan_based": {
+      "is_real_differentiator": true,
+      "evidence": [
+        "BigID, Securiti, OneTrust all use scan-based approaches — periodic discovery sweeps",
+        "Scan-based creates point-in-time snapshots that are outdated by next deployment",
+        "DORA and AI Act both emphasize continuous monitoring, not periodic",
+        "Reddit/HN signal: 'observability is still fragmented even with unified platform marketing' (r/devops, June 2025)",
+        "Source-level approach aligns with how engineering teams already work (CI/CD, infrastructure-as-code)"
+      ],
+      "assessment": "Genuine differentiator. Source-level is architecturally superior for continuous compliance. However, Qala must prove this translates to faster time-to-compliance and lower TCO vs scan-based. The key question buyers ask: 'Does it actually reduce our compliance burden, or just shift it to developers?'"
+    },
+    "regulatory_drivers": {
+      "gdpr": {
+        "status": "mature_enforcement_escalating",
+        "notes": "GDPR enforcement fines exceeded €4.5B cumulative. DPAs becoming more aggressive. 60% of European enterprises now use compliance software. Continuous compliance becoming expectation, not luxury."
+      },
+      "dora": {
+        "status": "newly_effective_high_urgency",
+        "effective_date": "2025-01-17",
+        "notes": "Digital Operational Resilience Act mandates ICT risk management for all EU financial entities. Requires continuous monitoring of data flows, third-party risk, and operational resilience. Directly drives demand for real-time data observability. Covers banks, insurers, investment firms, crypto providers, and their critical ICT service providers."
+      },
+      "ai_act": {
+        "status": "phased_implementation",
+        "timeline": "Prohibited practices: Feb 2025. High-risk AI: Aug 2025 onward.",
+        "notes": "Requires data lineage, bias documentation, and transparency for high-risk AI. Creates new demand for data classification (what data trained which model) and governance (was consent obtained). Qala's lineage tracking directly relevant."
+      },
+      "combined_assessment": "Perfect storm of regulation for Qala. GDPR is table stakes, DORA creates urgent new demand in fintech/banking (Qala's target), and AI Act will drive the next wave of data governance investment. European companies have no choice but to invest."
+    }
+  },
+
+  "customer_signals": {
+    "pain_points_from_community": [
+      {
+        "source": "r/devops (June 2025)",
+        "signal": "Observability in 2025 is 'still fragmented, even with all the unified platform marketing'. Teams looking at different dashboards and different data.",
+        "relevance": "Validates Qala's unified, source-level approach"
+      },
+      {
+        "source": "r/dataengineering (Nov 2025)",
+        "signal": "Data engineers evolving role: 'principles rather than tools resonates — modelling, observability, lineage, understanding business context'",
+        "relevance": "Market maturity signal. Engineers want integrated observability, not more point tools."
+      },
+      {
+        "source": "r/Observability (Feb 2025)",
+        "signal": "Buzz around data observability growing, especially with AI pipelines. Challenge is operationalizing it.",
+        "relevance": "Market awareness growing; execution gap exists."
+      },
+      {
+        "source": "Ataccama blog/community",
+        "signal": "Data lineage + metadata overlays as key for root cause analysis. Manual data mapping still prevalent.",
+        "relevance": "Confirms pain point of manual data mapping that Qala solves."
+      }
+    ],
+    "buyer_search_patterns": {
+      "data_engineers": ["data observability tools", "data lineage automation", "data quality monitoring", "pipeline monitoring"],
+      "dpos_compliance": ["GDPR compliance automation", "DORA compliance tools", "data classification software", "continuous compliance monitoring"],
+      "cisos": ["data security posture management", "sensitive data discovery", "data flow mapping", "automated data governance"]
+    }
+  },
+
+  "european_vs_us_dynamics": {
+    "regulatory_advantage_europe": "Europe leads globally in data regulation (GDPR, DORA, AI Act, Data Act, DGA). This creates structurally higher demand for compliance tools in EU vs US.",
+    "market_share": "North America holds ~41% of data classification market (2024). Europe is second but fastest-growing due to regulatory density.",
+    "european_vendor_gap": "Most data governance vendors are US-based (BigID, Securiti, OneTrust, Monte Carlo, Alation, Immuta, Atlan). Collibra is the only major European player. Qala as Swiss company has natural advantages: data sovereignty, proximity to EU regulators, GDPR-native thinking.",
+    "enterprise_adoption": "60% of European enterprises have adopted compliance software (2025). ~45% of large organizations say regulatory risks now shape digital transformation budgets.",
+    "key_insight": "European companies increasingly prefer European vendors for data governance due to data sovereignty concerns, Schrems II implications, and trust in local regulatory understanding. Qala's Swiss HQ is a meaningful competitive advantage.",
+    "swiss_advantage": "Switzerland seen as neutral, privacy-respecting jurisdiction. Swiss companies trusted by EU firms. Strong fintech ecosystem (Zurich, Zug) provides natural customer base."
+  },
+
+  "strategic_assessment": {
+    "market_timing": "excellent",
+    "timing_rationale": "DORA just went live (Jan 2025), AI Act phasing in (2025), GDPR enforcement escalating. European regulated companies face a compliance crunch in 2025-2026. Qala arrives at exactly the right moment.",
+    "differentiation_strength": "strong",
+    "differentiation_rationale": "Source-level, real-time, shift-left approach is genuinely novel vs scan-based incumbents. Developer-friendly positioning (30-min setup) contrasts with heavy enterprise deployments. European HQ is advantage in EU market. However, must prove this at scale with real customers.",
+    "key_risks": [
+      "Category education: buyers may not yet understand source-level vs scan-based distinction",
+      "Enterprise vs SME pricing tension: regulated industries tend to be large enterprises that prefer big vendors",
+      "Incumbents could add real-time capabilities (Collibra, BigID likely to respond)",
+      "Small team (1-10) limits go-to-market velocity",
+      "Pre-revenue with no public customers yet"
+    ],
+    "key_opportunities": [
+      "DORA creates 22,000+ financial entities needing continuous compliance in EU",
+      "AI Act will drive massive new demand for data lineage and classification",
+      "European vendor gap — market wants local alternatives to US tools",
+      "Consolidation (Informatica/Salesforce, Securiti/Veeam) creates uncertainty that benefits nimble startups",
+      "OneTrust potential PE sale may disrupt mid-market customers",
+      "Developer-first approach can drive bottom-up adoption in engineering teams"
+    ],
+    "comparable_exits": [
+      {"company": "Informatica", "acquirer": "Salesforce", "value": "$8B", "date": "Nov 2025"},
+      {"company": "Securiti", "acquirer": "Veeam", "value": "undisclosed (est. $300M-500M)", "date": "2025"},
+      {"company": "Raito", "acquirer": "Collibra", "value": "undisclosed", "date": "June 2025"}
+    ]
+  },
+
+  "meta": {
+    "sources_consulted": [
+      "Grand View Research", "Mordor Intelligence", "Research and Markets", "Fortune Business Insights",
+      "Tracxn", "CB Insights", "Crunchbase", "PitchBook", "GetLatka", "Sacra",
+      "TechCrunch", "Calcalist", "EU-Startups", "Contrary Research",
+      "Reddit (r/devops, r/dataengineering, r/Observability)",
+      "Dataversity", "SG Analytics", "Cloud Security Alliance",
+      "Market Data Forecast", "Global Growth Insights"
+    ],
+    "confidence": "medium-high",
+    "limitations": [
+      "Revenue estimates for private companies are approximations from secondary sources",
+      "Market sizing varies significantly across research firms — ranges provided",
+      "Community signals are qualitative, not statistically representative",
+      "Competitor pricing is estimated from public sources and industry norms"
+    ],
+    "last_updated": "2026-02-13T09:00:00Z"
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "org_id": "tinywhirlwinds",
+  "company_name": "Tiny Whirlwinds",
+  "website_url": "https://tinywhirlwinds.com",
+  "business_idea": "Baby and toddler sensory classes (0-36 months) offering multi-sensory experiences including music, light shows, tactile play, and messy-safe sensory stations. Classes are inspired by EYFS & Birth to 5 Matters frameworks. Based in Farnham, Surrey, UK with a dedicated sensory studio.",
+  "stage_summary": "PRE-LAUNCH. Solo founder, trial classes completed (6-10 attendees per session), official launch in 2 weeks. 4 term bookings so far. Two class types active (Tiny Stargazers 0-6mo, Little Explorers 6-15mo). Active Adventurers planned but not yet mapped. Parties to be REMOVED from website. Instagram launched 2 days ago. Marketing is founder's #1 frustration — no experience. Long-term vision: franchise model across multiple towns.",
+  
+  "interrogation_answers": {
+    "answered_at": "2026-02-13T09:50:00Z",
+    "answered_by": "founder_voice_note",
+    "fill_rates": "Trial classes: 6-10 people per session. 4 term bookings so far. Official launch in 2 weeks.",
+    "financials": "Unknown — hasn't officially launched yet. Pre-revenue.",
+    "acquisition_channels": "Instagram (started 2 days ago), leaflets in local cafes, local hospital, nurseries. No digital marketing experience.",
+    "retention": "Unknown — hasn't completed first term yet.",
+    "social_media_blocker": "Just started Instagram 2 days ago. Only 1 post. Launch reel going out today. Not a deliberate absence — just brand new.",
+    "growth_ambitions": "FRANCHISE model. Wants to be a 'renowned sensory and messy class' brand. Combine magical experiences with developmental milestones (EYFS). Eventually franchise to different towns. But fits around family life first.",
+    "coming_soon_timeline": "Active Adventurers: not yet mapped, will open once current classes are full. Parties: REMOVE from website — not ready.",
+    "local_partnerships": "None yet. Hasn't connected with health visitors, NCT groups, children's centres. Acknowledged it's a good idea and wants to start outreach.",
+    "competitor_switching": "Spoke to mums from Baby Sensory. Good classes are always fully booked. Hartbeeps gets mixed feedback — 'too in your face', too much stimulation for babies. TW positioning as GENTLE sensory — mums feel connected, babies feel supported.",
+    "solo_operator_risk": "Will run classes even when sick. Only cancels if hospitalised. Takes days off on weekends.",
+    "working_well": "Class delivery — was nervous first few sessions but confident by 4th class. Great feedback from mums. Babies stayed engaged entire time. Classes ran smoothly.",
+    "frustrating": "Marketing. No experience, doesn't know what she's doing. Feels overwhelmed by Instagram Reels, TikTok content, getting followers, driving website signups. This is her #1 pain point."
+  },
+
+  "founders": [
+    {
+      "name": "Jade McDonough",
+      "role": "Founder",
+      "location": "Farnham, Surrey, UK",
+      "linkedin": "https://www.linkedin.com/in/je-mcdonough/",
+      "education": "University of Surrey",
+      "background": "Co-Founder & CEO at Dexla (tech/product background). Started Tiny Whirlwinds after becoming a new mum and identifying a gap in sensory class provision in Farnham. Previously London-based with 500+ LinkedIn connections.",
+      "source": "tinywhirlwinds.com/about, LinkedIn search snippets"
+    }
+  ],
+  "founder_name": "Jade McDonough",
+  "founder_role": "Founder",
+  "founded_date": null,
+  "launch_date": null,
+
+  "product_status": {
+    "launch_stage": "operating",
+    "has_working_product": true,
+    "has_landing_page": true,
+    "has_signup_flow": true,
+    "has_payment_flow": true,
+    "has_users": true,
+    "user_count": "100+ babies (per website claim)",
+    "product_completeness": 0.6,
+    "biggest_product_gap": "Only 2 of 4 class types are currently running (Active Adventurers and Parties marked 'Coming Soon'). Limited schedule (Mon/Thu/Fri only).",
+    "ux_observations": [
+      "Clean, professional website with clear class descriptions and pricing",
+      "Booking handled via external Pembee platform (tinywhirlwinds.pembee.app)",
+      "Three pricing tiers: Trial £7, Term Pass £10/class, Drop-In £15/class",
+      "No team/staff page beyond founder story on About page",
+      "No blog or content marketing present",
+      "No visible social media links on website"
+    ],
+    "product_improvement_suggestions": [
+      "Add social media presence (Instagram is critical for baby/parenting niche)",
+      "Launch Active Adventurers and Parties classes to capture older age groups",
+      "Add a blog with parenting/sensory development content for SEO",
+      "Consider weekend classes for working parents",
+      "Add photo gallery or video content showing class environment",
+      "Implement referral program to drive word-of-mouth growth"
+    ]
+  },
+
+  "primary_icp": "New parents (primarily mothers) of babies and toddlers aged 0-36 months in Farnham and surrounding Surrey/Hampshire areas, seeking developmental activities and community connection.",
+  "pain_points": [
+    "New parents feeling isolated and seeking community",
+    "Parents wanting structured developmental activities for babies",
+    "Lack of sensory-focused classes in the Farnham area",
+    "Parents unsure how to support infant development at home",
+    "Need for safe, messy-play environments not possible at home"
+  ],
+  "industry": "Children's Education & Activities / Early Years Development",
+  "headcount": 1,
+  "headcount_source": "Website analysis (solo founder, no team page, no other staff mentioned)",
+
+  "tech_stack": [
+    "Custom website (likely Next.js or similar - returns 404 pages with SPA-style routing)",
+    "Pembee (booking and payment platform)",
+    "Stripe (via Pembee for payment processing)"
+  ],
+
+  "social_presence": {
+    "linkedin_company": null,
+    "linkedin_founder": "https://www.linkedin.com/in/je-mcdonough/",
+    "instagram": "https://www.instagram.com/tinywhirlwinds",
+    "instagram_followers": 90,
+    "instagram_posts": 1,
+    "instagram_status": "dormant — 1 'coming soon' post, 90 followers, 38 following",
+    "facebook": null,
+    "twitter": null,
+    "tiktok": null,
+    "reddit": null,
+    "github": null,
+    "product_hunt": null,
+    "notes": "No social media presence found for Tiny Whirlwinds. No social links on website. This is a significant gap for a B2C baby/parenting business."
+  },
+
+  "funding_stage": "bootstrapped",
+  "total_raised": null,
+
+  "competitors": [
+    {
+      "name": "Baby Sensory (Basingstoke, Alton & Farnham)",
+      "type": "direct",
+      "differentiation": "National franchise with established brand recognition. Covers Farnham area. Award-winning programme."
+    },
+    {
+      "name": "Lullababy (Aldershot, Farnham & Farnborough)",
+      "type": "direct",
+      "differentiation": "Offers baby development classes linked to EYFS. Covers sensory play to baby yoga. Established local presence."
+    },
+    {
+      "name": "Hartbeeps (Farnham area)",
+      "type": "direct",
+      "differentiation": "National franchise offering multi-sensory classes. Previously operated in Farnham/Wrecclesham but may have closed locally."
+    },
+    {
+      "name": "Tots Play (Farnham & Alton)",
+      "type": "direct",
+      "differentiation": "Combines baby signing, yoga, sensory play, massage, and singing in one class. Franchise model."
+    },
+    {
+      "name": "Vivace Music School (Fleet, Farnham, Yateley)",
+      "type": "indirect",
+      "differentiation": "Music-focused baby classes with sensory elements. Published a comparison article of local sensory classes."
+    }
+  ],
+
+  "customer_intelligence": {
+    "persona": "First-time mother aged 25-38, on maternity leave, living in Farnham/Surrey area, seeking baby development activities and social connection with other parents.",
+    "problem": "New parents want to support their baby's cognitive and sensory development but lack knowledge, resources, and community. Home environment limits messy/sensory play.",
+    "validation": "Testimonials on website from satisfied parents. 100+ babies served claim. Active booking system with multiple weekly classes.",
+    "traction": "100+ babies served (website claim). Multiple classes running per week across Mon/Thu/Fri. 5-star parent rating claimed.",
+    "monetization": "Per-class pricing: £7 trial, £10/class term pass, £15 drop-in. Revenue model is recurring term bookings."
+  },
+
+  "enrichment_summary": {
+    "tier_1_website": {
+      "fields_found": 15,
+      "fields_missing": 2,
+      "confidence": 0.9
+    },
+    "tier_2_search": {
+      "fields_found": 8,
+      "fields_missing": 5,
+      "confidence": 0.6
+    },
+    "tier_3_deep_research": {
+      "fields_found": 4,
+      "fields_missing": 8,
+      "confidence": 0.4
+    },
+    "overall_confidence": 0.6,
+    "notes": "Very limited external footprint. No Crunchbase, no social media, no press coverage found. Company appears to be a very early-stage local business. Founder identified as Jade McDonough with a tech background (Dexla, University of Surrey) — this is notable as it suggests potential for tech-enabled scaling. LinkedIn profile found but not confirmed as the exact same person (location listed as London on LinkedIn vs Farnham on website, though Surrey/London overlap is common).",
+    "enrichment_date": "2026-02-13",
+    "searches_performed": 10
+  }
+}

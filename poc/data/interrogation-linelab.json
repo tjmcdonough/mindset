@@ -1,0 +1,103 @@
+{
+  "org_id": "linelab_001",
+  "generated_at": "2026-02-13T08:11:00Z",
+  "generated_by": "interrogation-agent",
+  "checkpoints": [
+    {
+      "checkpoint_id": "cp_001",
+      "field_targeted": "customer_intelligence.monetization.price_range",
+      "question": "What does your pricing look like right now — annual license, per-seat, usage-based? And roughly what range are your contracts landing at?",
+      "why_it_matters": "Pricing model and ACV are the single biggest input to diagnosing whether the GTM bottleneck is sales efficiency, market sizing, or packaging. Without this, any revenue projection is guesswork.",
+      "priority": "critical",
+      "expected_answer_type": "text"
+    },
+    {
+      "checkpoint_id": "cp_002",
+      "field_targeted": "funding_stage",
+      "question": "Are you bootstrapped, or have you raised? If funded, what stage and how much runway do you have?",
+      "why_it_matters": "Determines whether the scale-up strategy should optimise for capital efficiency (bootstrap) or growth rate (funded). Changes every recommendation about hiring, marketing spend, and sales motion.",
+      "priority": "critical",
+      "expected_answer_type": "text"
+    },
+    {
+      "checkpoint_id": "cp_003",
+      "field_targeted": "customer_intelligence.traction.acquisition_source",
+      "question": "Of your current customers (Boeing, Hadrian, GKN, etc.) — how did each deal actually start? Inbound demo request, warm intro, conference meeting, MIT connection?",
+      "why_it_matters": "Reveals the real acquisition channel. If every deal came through MIT network, the 'crossing the chasm' problem is really a channel dependency problem — very different diagnosis than a messaging or positioning issue.",
+      "priority": "critical",
+      "expected_answer_type": "text"
+    },
+    {
+      "checkpoint_id": "cp_004",
+      "field_targeted": "customer_intelligence.monetization.buyer_vs_user",
+      "question": "Who actually signs the contract? Is it the manufacturing engineer who uses the tool, or does it go up to a VP/Director? How many people are typically involved in the buying decision?",
+      "why_it_matters": "Enterprise sales cycle length and conversion rate depend entirely on whether you're selling to the user or selling through the user to a budget holder. This shapes the entire GTM playbook.",
+      "priority": "critical",
+      "expected_answer_type": "text"
+    },
+    {
+      "checkpoint_id": "cp_005",
+      "field_targeted": "headcount",
+      "question": "How big is the team right now? How many on product/eng vs. sales/GTM?",
+      "why_it_matters": "A 3-person team with zero dedicated sales is a fundamentally different problem than a 10-person team with 2 AEs who can't close. Determines whether the bottleneck is capacity or strategy.",
+      "priority": "high",
+      "expected_answer_type": "text"
+    },
+    {
+      "checkpoint_id": "cp_006",
+      "field_targeted": "product_status.user_count",
+      "question": "How many active customers/accounts do you have right now, and what's your ARR (or annual revenue run rate)?",
+      "why_it_matters": "The gap between 3 customers and 15 customers at this stage tells us whether the problem is pipeline generation, conversion, or expansion. ARR calibrates every growth recommendation.",
+      "priority": "high",
+      "expected_answer_type": "number"
+    },
+    {
+      "checkpoint_id": "cp_007",
+      "field_targeted": "customer_intelligence.validation.returning_unprompted",
+      "question": "Are your existing customers expanding usage — buying more seats, modelling more lines, renewing without pushback? Or is it more one-and-done project work?",
+      "why_it_matters": "If customers aren't expanding, the chasm problem might actually be a retention/value-realisation problem. Net revenue retention is the #1 signal for whether to invest in acquisition or activation.",
+      "priority": "high",
+      "expected_answer_type": "text"
+    },
+    {
+      "checkpoint_id": "cp_008",
+      "field_targeted": "customer_intelligence.traction",
+      "question": "What does your sales pipeline look like right now? Roughly how many active conversations, and what's a typical deal cycle from first call to signed contract?",
+      "why_it_matters": "Pipeline size and velocity tell us whether you need more top-of-funnel or better conversion. A 9-month sales cycle vs. a 3-month cycle completely changes the scaling playbook.",
+      "priority": "high",
+      "expected_answer_type": "text"
+    },
+    {
+      "checkpoint_id": "cp_009",
+      "field_targeted": "customer_intelligence.monetization.why_passed_on",
+      "question": "Think about deals you've lost or that went cold — what was the reason? Price, internal politics, 'not now', chose a competitor, couldn't prove ROI?",
+      "why_it_matters": "Lost deal analysis is the fastest way to identify the real chasm barrier. If it's always 'not now', it's a urgency/trigger problem. If it's price, it's packaging. If it's politics, it's champion enablement.",
+      "priority": "high",
+      "expected_answer_type": "text"
+    },
+    {
+      "checkpoint_id": "cp_010",
+      "field_targeted": "product_status.has_signup_flow",
+      "question": "Have you considered (or tried) any kind of self-serve entry point — free trial, freemium tier, open-source model builder? What's your thinking on PLG vs. pure enterprise sales?",
+      "why_it_matters": "For crossing the chasm, the friction of 'request a demo' may be filtering out the pragmatist majority who want to try before they buy. Understanding your stance here shapes the GTM recommendation.",
+      "priority": "medium",
+      "expected_answer_type": "text"
+    },
+    {
+      "checkpoint_id": "cp_011",
+      "field_targeted": "customer_intelligence.persona.industry",
+      "question": "If you had to pick ONE vertical to own completely in the next 12 months, which would it be and why? Aerospace? Semiconductors? Climate tech?",
+      "why_it_matters": "Crossing the chasm requires a beachhead. Trying to serve all verticals simultaneously is the classic chasm trap. The answer reveals whether there's already a natural wedge forming.",
+      "priority": "medium",
+      "expected_answer_type": "text"
+    },
+    {
+      "checkpoint_id": "cp_012",
+      "field_targeted": "customer_intelligence.traction.acquisition_sources",
+      "question": "What's your current marketing spend and effort? Any content, ads, events, or outbound — or is it all organic/referral right now?",
+      "why_it_matters": "If there's zero marketing spend and all growth is organic, that's actually a good sign — means there's untapped demand to capture. But it also means we need to model what intentional spend could unlock.",
+      "priority": "medium",
+      "expected_answer_type": "text"
+    }
+  ]
+}

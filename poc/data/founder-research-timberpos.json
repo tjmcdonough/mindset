@@ -1,0 +1,85 @@
+{
+  "org_id": "timberpos_001",
+  "agent": "founder-research",
+  "collected_at": "2026-02-13T10:45:00Z",
+  "confidence": "pre-interrogation",
+  "founders": [
+    {
+      "name": "Unknown",
+      "reddit_username": "Timberpos",
+      "reddit_account_created": "~January 2026 (inferred from first activity)",
+      "role": "Founder (solo)",
+      "location": "Unknown",
+      "linkedin": null,
+      "twitter": null,
+      "education": null,
+      "previous_companies": null,
+      "background": "Unknown — no public digital footprint beyond Reddit",
+      "personality_signals": {
+        "coachability": "high — actively asks for feedback, acknowledges when advice is right ('You're probably right with me selling features rather than pin pointing the pain')",
+        "engagement_style": "responsive, polite, grateful — replies to most comments on their thread",
+        "sales_approach": "starting manual outreach, willing to give product away free for feedback",
+        "self_awareness": "moderate — knows they have a traction problem but initially relied too heavily on SEO",
+        "technical_ability": "likely high — built working product as solo founder",
+        "business_experience": "likely low — classic first-time founder mistakes (SEO-first, broad positioning, pitching VCs with 0 revenue)"
+      },
+      "reddit_activity": {
+        "subreddits_active": ["r/SaaS", "r/startups_promotion", "r/AskReddit"],
+        "posts": [
+          {
+            "subreddit": "r/SaaS",
+            "title": "Launched my SaaS 1.5 months ago — 1 active user (non-paying). Need help with traction & SEO strategy",
+            "url": "https://www.reddit.com/r/SaaS/comments/1qj1xl2/",
+            "date": "~2026-01-22",
+            "upvotes": 9,
+            "comments": 94,
+            "key_quotes": [
+              "I built a payments and booking platform for barbers, hair salons, med spas and nails.",
+              "Some of the issues I've been noticing business owners complain about is friction of booking for customers due to having to download an app or sign up. Another one is customer service.",
+              "I have a few users who I'm letting use free and taking feedback from them.",
+              "Thanks for the insight. You're probably right with me selling features rather than pin pointing the pain and solving the issue for the customer.",
+              "Right now I am also in tandem doing manual reach out in my niche."
+            ]
+          },
+          {
+            "subreddit": "r/startups_promotion",
+            "title": "I'm a VC (can verify). Pitch me.",
+            "type": "comment",
+            "date": "~2026-01-22",
+            "pitch_text": "Timber is a lightweight POS + booking + payments platform for small service businesses (barbers, salons, spas) that currently rely on clunky legacy software or multiple disconnected tools. Instead of forcing them into expensive all-in-one systems, Timber gives them one clean, easy-to-use platform that handles bookings, payments, and customer management without the overhead."
+          },
+          {
+            "subreddit": "r/AskReddit",
+            "title": "What's something you've given up to get to where you are now?",
+            "type": "post",
+            "date": "~2026-01-31",
+            "note": "Generic AskReddit post — possibly karma farming or genuine engagement"
+          }
+        ],
+        "total_karma": "low (new account)",
+        "account_age": "~3-4 weeks"
+      }
+    }
+  ],
+  "team_assessment": {
+    "size": 1,
+    "gaps": [
+      "No sales/BD person — founder doing all outreach alone",
+      "No marketing expertise evident — SEO-first strategy with SPA is a fundamental technical marketing error",
+      "No design/brand expertise — 'TimberPOS' branding creates confusion",
+      "No industry connections — founder doesn't appear to have barbershop/salon background"
+    ],
+    "strengths": [
+      "Can build and ship product solo",
+      "Willing to do manual outreach",
+      "Receptive to feedback and willing to iterate",
+      "Active engagement with community"
+    ]
+  },
+  "risk_factors": [
+    "Anonymous founder — no verifiable identity or track record",
+    "Very new Reddit account created around the same time as product launch",
+    "No visible network or community in the beauty/salon industry",
+    "Solo founder in a market dominated by well-funded teams"
+  ]
+}

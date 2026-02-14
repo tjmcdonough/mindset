@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tiny Whirlwinds — Growth Diagnosis | GrowthMind</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+  
+  :root {
+    --bg: #09090b;
+    --surface: #111114;
+    --surface2: #18181d;
+    --surface3: #1f1f26;
+    --border: #27272f;
+    --border-light: #35354a;
+    --text: #eaeaf0;
+    --text-secondary: #a0a0b8;
+    --text-muted: #6b6b80;
+    --accent: #a855f7;
+    --accent-light: #c084fc;
+    --accent-glow: rgba(168,85,247,0.15);
+    --green: #10b981;
+    --green-soft: #34d399;
+    --green-bg: rgba(16,185,129,0.08);
+    --green-border: rgba(16,185,129,0.2);
+    --yellow: #f59e0b;
+    --yellow-bg: rgba(245,158,11,0.08);
+    --yellow-border: rgba(245,158,11,0.2);
+    --red: #ef4444;
+    --red-bg: rgba(239,68,68,0.08);
+    --red-border: rgba(239,68,68,0.2);
+    --blue: #3b82f6;
+    --blue-bg: rgba(59,130,246,0.08);
+    --purple: #a855f7;
+    --purple-bg: rgba(168,85,247,0.08);
+    --cyan: #06b6d4;
+    --warm: #f97316;
+    --warm-light: #fb923c;
+    --warm-bg: rgba(249,115,22,0.08);
+    --warm-border: rgba(249,115,22,0.2);
+    --rose: #f472b6;
+    --rose-bg: rgba(244,114,182,0.08);
+    --rose-border: rgba(244,114,182,0.2);
+    --lavender: #c4b5fd;
+    --sage: #86efac;
+  }
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .page { max-width: 900px; margin: 0 auto; padding: 0 32px; }
+  
+  /* ─── Hero ─── */
+  .hero {
+    padding: 80px 0 64px;
+    text-align: center;
+    position: relative;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-light), transparent);
+  }
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-light);
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    line-height: 1.05;
+    margin-bottom: 16px;
+    background: linear-gradient(180deg, #ffffff 20%, #e9d5ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .hero-tagline {
+    font-size: 18px;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+  }
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+  .hero-stat { text-align: center; }
+  .hero-stat-value {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1;
+  }
+  .hero-stat-value.score { color: var(--warm-light); }
+  .hero-stat-value.go { color: var(--green-soft); }
+  .hero-stat-value.conf { color: var(--accent-light); }
+  .hero-stat-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    margin-top: 6px;
+  }
+  
+  /* ─── Sections ─── */
+  .section { padding: 64px 0; position: relative; }
+  .section + .section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  }
+  .section-num {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-light);
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+  }
+  .section-desc {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin-bottom: 36px;
+    max-width: 640px;
+  }
+  
+  /* ─── Overview Cards ─── */
+  .overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .overview-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+  }
+  .overview-card.full { grid-column: 1 / -1; }
+  .ov-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .ov-value { font-size: 15px; font-weight: 600; line-height: 1.5; }
+  .ov-value.small { font-size: 13px; font-weight: 400; color: var(--text-secondary); }
+  
+  /* ─── Founder Card ─── */
+  .founder {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 28px;
+    display: flex;
+    gap: 20px;
+  }
+  .f-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--warm));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 20px;
+    flex-shrink: 0;
+    color: white;
+  }
+  .f-name { font-size: 18px; font-weight: 700; }
+  .f-role { font-size: 12px; color: var(--accent-light); margin-bottom: 8px; }
+  .f-bio { font-size: 13px; color: var(--text-secondary); line-height: 1.7; }
+  .f-tags { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .f-tag {
+    font-size: 10px;
+    padding: 3px 10px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text-muted);
+  }
+  
+  /* ─── Market Cards ─── */
+  .market-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .market-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+    text-align: center;
+  }
+  .m-val {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .m-val.purple { color: var(--accent-light); }
+  .m-val.orange { color: var(--warm-light); }
+  .m-val.green { color: var(--green-soft); }
+  .m-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+  .m-detail { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+  
+  /* ─── Score Ring ─── */
+  .score-block {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 40px;
+    margin-bottom: 28px;
+  }
+  .ring-wrap {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+  }
+  .ring-wrap svg { width: 150px; height: 150px; transform: rotate(-90deg); }
+  .ring-track { fill: none; stroke: var(--surface3); stroke-width: 10; }
+  .ring-fill { fill: none; stroke-width: 10; stroke-linecap: round; }
+  .ring-center {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .ring-num { font-size: 40px; font-weight: 900; line-height: 1; }
+  .ring-label { font-size: 12px; color: var(--text-muted); }
+  .score-text h3 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+  .score-text p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
+  .verdict-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 14px;
+    padding: 5px 14px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .v-cgo { background: var(--yellow-bg); color: var(--yellow); border: 1px solid var(--yellow-border); }
+  
+  /* ─── Dimension Bars ─── */
+  .dim-list { display: flex; flex-direction: column; gap: 14px; }
+  .dim {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 22px;
+  }
+  .dim-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+  .dim-name { font-size: 14px; font-weight: 600; }
+  .dim-score { font-size: 18px; font-weight: 800; }
+  .dim-bar { height: 6px; background: var(--surface3); border-radius: 100px; overflow: hidden; margin-bottom: 8px; }
+  .dim-bar-fill { height: 100%; border-radius: 100px; }
+  .dim-note { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+  .c-green { color: var(--green-soft); }
+  .c-yellow { color: var(--yellow); }
+  .c-orange { color: var(--warm-light); }
+  .bg-green { background: linear-gradient(90deg, #10b981, #34d399); }
+  .bg-yellow { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+  .bg-orange { background: linear-gradient(90deg, #f97316, #fb923c); }
+  .bg-purple { background: linear-gradient(90deg, #a855f7, #c084fc); }
+  
+  /* ─── Two Column ─── */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .col-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+  }
+  .col-card h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .col-card ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .col-card li {
+    font-size: 13px;
+    color: var(--text-secondary);
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.55;
+  }
+  .col-card li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+  }
+  .green-dots li::before { background: var(--green); }
+  .red-dots li::before { background: var(--red); }
+  .blue-dots li::before { background: var(--blue); }
+  .yellow-dots li::before { background: var(--yellow); }
+  .orange-dots li::before { background: var(--warm); }
+  .purple-dots li::before { background: var(--purple); }
+  .rose-dots li::before { background: var(--rose); }
+  
+  /* ─── One Thing ─── */
+  .one-thing {
+    background: linear-gradient(135deg, #1a0f2e 0%, #1a1025 50%, #15101f 100%);
+    border: 1px solid rgba(168,85,247,0.25);
+    border-radius: 14px;
+    padding: 52px 48px;
+    text-align: center;
+    margin: 8px 0 0;
+  }
+  .ot-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--accent-light);
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .one-thing h3 {
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 16px;
+    background: linear-gradient(180deg, #fff 0%, #e9d5ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .one-thing p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    max-width: 620px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+  
+  /* ─── SWOT ─── */
+  .swot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  
+  /* ─── Insight Cards (Founder Mirror) ─── */
+  .insight {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 28px 24px;
+    margin-bottom: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+  .insight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 3px;
+  }
+  .insight.i-high::before { background: var(--warm); }
+  .insight.i-med::before { background: var(--accent); }
+  .insight.i-low::before { background: var(--green); }
+  .insight-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 10px;
+  }
+  .insight-title { font-size: 17px; font-weight: 700; }
+  .insight-sev {
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    flex-shrink: 0;
+  }
+  .sev-h { background: var(--warm-bg); color: var(--warm); border: 1px solid var(--warm-border); }
+  .sev-m { background: var(--purple-bg); color: var(--purple); border: 1px solid rgba(168,85,247,0.2); }
+  .sev-l { background: var(--green-bg); color: var(--green-soft); border: 1px solid var(--green-border); }
+  .insight-body {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  .insight-q {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 14px;
+    color: var(--accent-light);
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+  .insight-action {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    padding: 12px 16px;
+    background: var(--green-bg);
+    border: 1px solid var(--green-border);
+    border-radius: 8px;
+  }
+  .insight-action strong { color: var(--green-soft); }
+  .insight-bias {
+    margin-top: 12px;
+    display: inline-flex;
+    padding: 3px 10px;
+    background: var(--rose-bg);
+    border: 1px solid var(--rose-border);
+    border-radius: 100px;
+    font-size: 11px;
+    color: var(--rose);
+  }
+  
+  /* ─── Experiments ─── */
+  .exp {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 12px;
+  }
+  .exp-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; gap: 12px; }
+  .exp-name { font-size: 15px; font-weight: 700; }
+  .exp-pri {
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+  }
+  .p0 { background: var(--warm-bg); color: var(--warm); border: 1px solid var(--warm-border); }
+  .p1 { background: var(--purple-bg); color: var(--purple); border: 1px solid rgba(168,85,247,0.2); }
+  .p2 { background: var(--blue-bg); color: var(--blue); border: 1px solid rgba(59,130,246,0.2); }
+  .exp-hyp {
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 14px;
+    line-height: 1.6;
+  }
+  .exp-row { display: flex; gap: 24px; flex-wrap: wrap; font-size: 12px; margin-bottom: 10px; }
+  .exp-row span { color: var(--text-muted); }
+  .exp-row strong { color: var(--text); font-weight: 600; }
+  .exp-success {
+    font-size: 12px;
+    padding: 10px 14px;
+    background: var(--surface2);
+    border-radius: 6px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+  .exp-success b { color: var(--green-soft); font-weight: 600; }
+  
+  /* ─── Content Strategy ─── */
+  .content-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+    margin-bottom: 12px;
+  }
+  .content-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+  .content-type {
+    font-size: 10px;
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: var(--rose-bg);
+    color: var(--rose);
+    border: 1px solid var(--rose-border);
+  }
+  .content-title { font-size: 15px; font-weight: 700; }
+  .content-body { font-size: 13px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 10px; }
+  .content-outcome {
+    font-size: 12px;
+    padding: 10px 14px;
+    background: var(--surface2);
+    border-radius: 6px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+  .content-outcome b { color: var(--accent-light); font-weight: 600; }
+  
+  /* ─── Channel Cards ─── */
+  .channel-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .channel-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+  }
+  .channel-name { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+  .channel-impact {
+    font-size: 10px;
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+  }
+  .ci-high { background: var(--green-bg); color: var(--green-soft); }
+  .ci-med { background: var(--yellow-bg); color: var(--yellow); }
+  .ci-low { background: var(--surface3); color: var(--text-muted); }
+  .channel-desc { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+  
+  /* ─── Competitive Positioning ─── */
+  .pos-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 12px;
+  }
+  .pos-title { font-size: 16px; font-weight: 700; margin-bottom: 6px; color: var(--accent-light); }
+  .pos-subtitle { font-size: 12px; color: var(--text-muted); margin-bottom: 14px; }
+  .pos-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+  .pos-cell {
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+  }
+  .pos-tw { background: var(--accent-glow); border: 1px solid rgba(168,85,247,0.3); }
+  .pos-tw .pc-label { color: var(--accent-light); font-weight: 700; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+  .pos-comp { background: var(--surface2); border: 1px solid var(--border); }
+  .pos-comp .pc-label { color: var(--text-muted); font-weight: 700; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+  .pos-cell p { color: var(--text-secondary); }
+  
+  /* ─── Roadmap ─── */
+  .road-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+  .road-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+  }
+  .road-period {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent-light);
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .road-theme { font-size: 15px; font-weight: 700; margin-bottom: 16px; }
+  .road-card ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .road-card li {
+    font-size: 12px;
+    color: var(--text-secondary);
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .road-card li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent-light);
+    font-size: 11px;
+  }
+  .road-success {
+    margin-top: 14px;
+    font-size: 11px;
+    padding: 10px 12px;
+    background: var(--green-bg);
+    border: 1px solid var(--green-border);
+    border-radius: 6px;
+    color: var(--green-soft);
+    line-height: 1.5;
+  }
+  
+  /* ─── Pillar Grid ─── */
+  .pillar-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .pillar {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+  }
+  .pillar h4 { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--accent-light); }
+  .pillar p { font-size: 13px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 10px; }
+  .pillar-proof { font-size: 11px; color: var(--green-soft); font-weight: 500; }
+  
+  /* ─── Footer ─── */
+  .footer {
+    padding: 48px 0;
+    text-align: center;
+    position: relative;
+  }
+  .footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  }
+  .footer-brand { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
+  .footer-sub { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
+  .footer-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+    padding: 12px 28px;
+    background: linear-gradient(135deg, var(--accent), var(--warm));
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .footer-cta:hover { opacity: 0.9; }
+  .footer-disc {
+    font-size: 11px;
+    color: var(--text-muted);
+    max-width: 540px;
+    margin: 0 auto;
+    line-height: 1.6;
+    opacity: 0.5;
+  }
+
+  /* ─── Warm Callout ─── */
+  .warm-callout {
+    background: linear-gradient(135deg, rgba(168,85,247,0.06) 0%, rgba(249,115,22,0.06) 100%);
+    border: 1px solid rgba(168,85,247,0.15);
+    border-radius: 10px;
+    padding: 20px 24px;
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+  .warm-callout strong { color: var(--accent-light); }
+
+  @media (max-width: 768px) {
+    .page { padding: 0 20px; }
+    .hero h1 { font-size: 36px; }
+    .hero-stats { gap: 24px; }
+    .overview-grid, .two-col, .pillar-grid, .swot-grid, .channel-grid, .pos-grid { grid-template-columns: 1fr; }
+    .road-grid { grid-template-columns: 1fr; }
+    .market-grid { grid-template-columns: 1fr; }
+    .score-block { flex-direction: column; text-align: center; }
+    .one-thing { padding: 36px 24px; }
+    .founder { flex-direction: column; align-items: center; text-align: center; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ════════════ HERO ════════════ -->
+<div class="hero">
+  <div class="hero-eyebrow">✨ GrowthMind — Growth Diagnosis</div>
+  <h1>Tiny Whirlwinds</h1>
+  <p class="hero-tagline">Farnham's only dedicated baby sensory studio. Gentle, developmental, magical — and about to launch something wonderful.</p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-value score">68</div>
+      <div class="hero-stat-label">Demand Score</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-value go">CONDITIONAL GO</div>
+      <div class="hero-stat-label">Verdict</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-value score">75</div>
+      <div class="hero-stat-label">Differentiation</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-value conf">75%</div>
+      <div class="hero-stat-label">Confidence</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ 01 COMPANY PROFILE ════════════ -->
+<div class="section">
+  <div class="section-num">01 — Company Profile</div>
+  <div class="section-title">What We Found</div>
+  <div class="section-desc">Everything below was researched from your website, booking platform, local directories, parent forums, and competitor analysis.</div>
+  
+  <div class="overview-grid">
+    <div class="overview-card full">
+      <div class="ov-label">Business</div>
+      <div class="ov-value">Baby and toddler sensory classes (0–36 months) offering multi-sensory experiences — music, light shows, tactile play, and messy-safe sensory stations. Designed around EYFS & Birth to 5 Matters frameworks. Based in a dedicated sensory studio in Farnham, Surrey.</div>
+    </div>
+    <div class="overview-card">
+      <div class="ov-label">Stage</div>
+      <div class="ov-value">Pre-Launch</div>
+      <div class="ov-value small" style="margin-top:4px;">Official launch in 2 weeks. 4 term bookings. Trial classes complete with great feedback.</div>
+    </div>
+    <div class="overview-card">
+      <div class="ov-label">Pricing</div>
+      <div class="ov-value">£7 trial · £10/class term · £15 drop-in</div>
+    </div>
+    <div class="overview-card">
+      <div class="ov-label">Classes Running</div>
+      <div class="ov-value">Tiny Stargazers (0–6mo) · Little Explorers (6–15mo)</div>
+      <div class="ov-value small" style="margin-top:4px;">Active Adventurers & Parties planned but not yet ready</div>
+    </div>
+    <div class="overview-card">
+      <div class="ov-label">Schedule</div>
+      <div class="ov-value">Mon / Thu / Fri</div>
+      <div class="ov-value small" style="margin-top:4px;">No weekends yet — opportunity for working parents</div>
+    </div>
+    <div class="overview-card">
+      <div class="ov-label">Target Customer</div>
+      <div class="ov-value small">New parents (primarily mums on maternity leave) of babies 0–15 months in Farnham and surrounding Surrey/Hampshire, seeking developmental activities and community.</div>
+    </div>
+    <div class="overview-card">
+      <div class="ov-label">Tech & Booking</div>
+      <div class="ov-value small">Custom website · Pembee booking platform · Stripe payments</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ 02 FOUNDER ════════════ -->
+<div class="section">
+  <div class="section-num">02 — Founder Profile</div>
+  <div class="section-title">Who's Behind the Magic</div>
+  
+  <div class="founder">
+    <div class="f-avatar">JM</div>
+    <div>
+      <div class="f-name">Jade McDonough</div>
+      <div class="f-role">Founder · Farnham, Surrey</div>
+      <div class="f-bio">A tech founder turned baby class creator. Jade co-founded Dexla (a tech company) before becoming a mum and moving to Farnham. When she couldn't find the gentle, immersive sensory class she wanted for her own baby, she built it from scratch — designing a dedicated studio with professional light shows, curated sensory stations, and a curriculum grounded in early childhood development. She brings a rare combination: the systems-thinking of a tech founder with the empathy and warmth of a new mum who genuinely gets it.</div>
+      <div class="f-tags">
+        <span class="f-tag">University of Surrey</span>
+        <span class="f-tag">Co-Founder, Dexla</span>
+        <span class="f-tag">Tech Background</span>
+        <span class="f-tag">New Mum</span>
+        <span class="f-tag">Solo Founder</span>
+        <span class="f-tag">500+ LinkedIn</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ 03 MARKET INTEL ════════════ -->
+<div class="section">
+  <div class="section-num">03 — Market Intelligence</div>
+  <div class="section-title">The Landscape</div>
+  <div class="section-desc">The UK baby class market is growing, post-COVID demand is strong, and Farnham has room for a differentiated independent.</div>
+  
+  <div class="market-grid">
+    <div class="market-card">
+      <div class="m-val purple">£200-400M</div>
+      <div class="m-label">UK Baby Class Market</div>
+      <div class="m-detail">Estimated annual spend. Growing 5-8% post-COVID.</div>
+    </div>
+    <div class="market-card">
+      <div class="m-val orange">650K</div>
+      <div class="m-label">UK Births / Year</div>
+      <div class="m-detail">~60% of parents attend paid classes. Falling birth rate is a long-term headwind.</div>
+    </div>
+    <div class="market-card">
+      <div class="m-val green">2.6M</div>
+      <div class="m-label">Happity Parents/Year</div>
+      <div class="m-detail">The #1 baby class discovery platform. You're not listed yet.</div>
+    </div>
+  </div>
+  
+  <div class="warm-callout">
+    <strong>Local competitive landscape:</strong> 3–4 direct competitors in Farnham — Lullababy, Tots Play, Baby Sensory (franchise), and Jo Jingles. Most operate from hired community halls on rotating schedules. Hartbeeps appears to have exited the area (opportunity gap). Key insight from parent forums: <strong>overcrowding is the #1 complaint</strong> — your dedicated studio with small class sizes directly addresses this.
+  </div>
+
+  <div class="overview-card full" style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:22px;">
+    <div class="ov-label">Key Market Signals from Parent Forums</div>
+    <div class="ov-value small">
+      <strong style="color:var(--warm-light)">🗣 "Baby Sensory was so overcrowded"</strong> — Mumsnet threads consistently cite 20+ babies as the top frustration. Your studio solves this structurally.<br><br>
+      <strong style="color:var(--green-soft)">💛 "The teacher matters more than the brand"</strong> — Parents say the individual class leader makes or breaks it. Your personal warmth and delivery quality can beat any franchise script.<br><br>
+      <strong style="color:var(--accent-light)">☕ "It's more for the mum than the baby"</strong> — Community and social connection are the real product. Classes that foster parent friendships retain better.
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ 04 DEMAND SCORECARD ════════════ -->
+<div class="section">
+  <div class="section-num">04 — Demand Scorecard</div>
+  <div class="section-title">Is There a Market Worth Pursuing?</div>
+  <div class="section-desc">Six dimensions scored 0–100. Your overall demand score and the conditions attached to the GO verdict.</div>
+  
+  <div class="score-block">
+    <div class="ring-wrap">
+      <svg viewBox="0 0 140 140">
+        <circle class="ring-track" cx="70" cy="70" r="60" />
+        <circle class="ring-fill" cx="70" cy="70" r="60" stroke="var(--warm)" stroke-dasharray="377" stroke-dashoffset="120.6" />
+      </svg>
+      <div class="ring-center">
+        <div class="ring-num" style="color:var(--warm-light)">68</div>
+        <div class="ring-label">/ 100</div>
+      </div>
+    </div>
+    <div class="score-text">
+      <h3>Solid Foundations, Marketing-Dependent</h3>
+      <p>The product works, the market exists, and you have real competitive advantages. Your strongest dimension is ICP Clarity (80) — you know exactly who your customer is because you ARE her. The conditional element is entirely about visibility: Jade needs to make Tiny Whirlwinds findable by the parents who would love it.</p>
+      <div class="verdict-pill v-cgo">⚡ Verdict: CONDITIONAL GO</div>
+    </div>
+  </div>
+  
+  <div class="dim-list">
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">ICP Clarity</span>
+        <span class="dim-score c-green">80</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-green" style="width:80%"></div></div>
+      <div class="dim-note">Crystal clear: new mums on maternity leave in Farnham with babies 0–15 months. Jade IS her own ICP — she built what she couldn't find. Age-banded classes show good segmentation.</div>
+    </div>
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Competitive Differentiation</span>
+        <span class="dim-score c-green">75</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-green" style="width:75%"></div></div>
+      <div class="dim-note">Dedicated sensory studio is a genuine structural advantage — no local competitor has one. GENTLE positioning fills a real gap. But this only works if communicated — currently invisible.</div>
+    </div>
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Timing</span>
+        <span class="dim-score c-green">75</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-purple" style="width:75%"></div></div>
+      <div class="dim-note">Post-COVID baby class demand exceeds pre-COVID levels. Sensory classes are the fastest-growing sub-category. Hartbeeps may have exited Farnham. Strong launch window before September intake.</div>
+    </div>
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Problem Urgency</span>
+        <span class="dim-score c-yellow">72</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-yellow" style="width:72%"></div></div>
+      <div class="dim-note">New parents actively seek structured activities. Emotional need is real — isolation, developmental anxiety, desire for community. Parents search proactively. Need renews with every birth cohort.</div>
+    </div>
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Willingness to Pay</span>
+        <span class="dim-score c-yellow">70</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-yellow" style="width:70%"></div></div>
+      <div class="dim-note">Farnham is affluent Surrey — parents spend on baby activities. £10/class is competitive with franchises. Free alternatives (library groups at £0–3) are genuine competition for some segments.</div>
+    </div>
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Market Size</span>
+        <span class="dim-score c-orange">55</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-orange" style="width:55%"></div></div>
+      <div class="dim-note">Farnham's catchment is ~500–800 babies at any time within a 15-minute drive. Enough to sustain a solo operator, but a natural ceiling exists without geographic expansion. Franchise ambitions unlock this.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ 05 WHAT'S WORKING ════════════ -->
+<div class="section">
+  <div class="section-num">05 — Growth Pulse</div>
+  <div class="section-title">What's Working & What Needs Attention</div>
+  
+  <div class="two-col">
+    <div class="col-card green-dots">
+      <h4><span style="color:var(--green)">●</span> Working Beautifully</h4>
+      <ul>
+        <li>The class itself — trial sessions got great feedback. Babies stayed engaged. Jade was confident by session 4.</li>
+        <li>The studio — a purpose-built sensory space with light shows, sound, and tactile stations. No franchise in a church hall can match this.</li>
+        <li>GENTLE positioning — parents find Hartbeeps "too in your face" and Baby Sensory overcrowded. You're the calm, magical alternative.</li>
+        <li>Competitive pricing — £10/class with no franchise fees eating into margins.</li>
+        <li>Tech background (Dexla) — potential for automation and systems that no other local competitor has.</li>
+        <li>Founder-market fit — Jade IS the customer she's serving. Authenticity you can't fake.</li>
+      </ul>
+    </div>
+    <div class="col-card orange-dots">
+      <h4><span style="color:var(--warm)">●</span> Needs Attention</h4>
+      <ul>
+        <li>Zero marketing presence — Instagram started 2 days ago, no Facebook, no Happity, no Google Business Profile. In a business where Instagram IS the discovery channel, this is critical.</li>
+        <li>Solo operator with no backup — one illness = cancelled classes = refunds + reputation damage.</li>
+        <li>No local partnerships started — health visitors, NCT groups, and children's centres are the primary growth engine for baby classes.</li>
+        <li>Website has inaccurate info — Parties listed but not ready, "100+ babies" claim may be aspirational.</li>
+        <li>Only 2 of 4 class types running — missing the 15–36 month segment and no weekend classes.</li>
+        <li>Unknown unit economics — breakeven fill rate not calculated.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ 06 THE ONE THING ════════════ -->
+<div class="section" style="padding-bottom:32px">
+  <div class="one-thing">
+    <div class="ot-label">✨ The One Thing</div>
+    <h3>Get 20 New Parents Into Your Studio<br>in the Next 30 Days.</h3>
+    <p>Everything else flows from this. Bookings create revenue. Revenue creates sustainability. Full classes create word-of-mouth. Word-of-mouth creates more bookings. But the flywheel can't spin without those first parents in the room. Your class sells itself — the job is getting people through the door. Three actions: (1) Visit 5 local venues with leaflets this week. (2) Message your 4 existing parents with a "bring a friend" offer. (3) Post on Instagram 4x this week. That's it.</p>
+  </div>
+</div>
+
+<!-- ════════════ 07 SWOT ════════════ -->
+<div class="section">
+  <div class="section-num">07 — Strategic Analysis</div>
+  <div class="section-title">SWOT</div>
+  
+  <div class="swot-grid">
+    <div class="col-card green-dots">
+      <h4><span style="color:var(--green)">▲</span> Strengths</h4>
+      <ul>
+        <li>Dedicated sensory studio — only one in Farnham. Professional production values that church halls can't match.</li>
+        <li>Founder-market fit — Jade is her own ICP. Built what she couldn't find for her own baby.</li>
+        <li>GENTLE positioning fills a genuine gap between "too intense" and "too basic".</li>
+        <li>Tech background from Dexla — potential for systems and automation most operators can't build.</li>
+        <li>Validated product — trial classes worked, babies engaged, parents loved it.</li>
+        <li>No franchise fees eating margins — £10/class is competitive AND profitable.</li>
+      </ul>
+    </div>
+    <div class="col-card orange-dots">
+      <h4><span style="color:var(--warm)">▼</span> Weaknesses</h4>
+      <ul>
+        <li>Zero marketing presence — Instagram 2 days old, no Google, no directories, no partnerships.</li>
+        <li>Solo operator with no contingency — no backup teacher, no cover for illness.</li>
+        <li>Marketing is the #1 skill gap — Jade's biggest frustration and biggest need.</li>
+        <li>Limited class portfolio — only 2 of 4 types, no weekends.</li>
+        <li>Pre-revenue with unknown unit economics.</li>
+      </ul>
+    </div>
+    <div class="col-card blue-dots">
+      <h4><span style="color:var(--blue)">◆</span> Opportunities</h4>
+      <ul>
+        <li>Local partnerships — one health visitor recommendation can fill a class. None started yet.</li>
+        <li>Hartbeeps exit from Farnham — displaced parents need somewhere to go.</li>
+        <li>Instagram-ready product — light shows and baby reactions are inherently shareable content.</li>
+        <li>Franchise model long-term — dedicated-studio concept is genuinely different from hall-based franchises.</li>
+        <li>Weekend and holiday classes — untapped working parent segment.</li>
+        <li>Happity and Google Maps — passive discovery platforms with millions of parent searches.</li>
+      </ul>
+    </div>
+    <div class="col-card yellow-dots">
+      <h4><span style="color:var(--yellow)">◆</span> Threats</h4>
+      <ul>
+        <li>Established franchise competition — Lullababy, Tots Play, Baby Sensory all have brand recognition and national marketing.</li>
+        <li>Falling UK birth rate — fewer babies, more competition for each one.</li>
+        <li>Cost of living pressure — £10–15/class is discretionary spend.</li>
+        <li>Franchise territory encroachment — Bloom Baby Classes could enter Farnham.</li>
+        <li>Solo operator burnout — new mum + business + marketing overwhelm.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ 08 CONTENT STRATEGY ════════════ -->
+<div class="section">
+  <div class="section-num">08 — Content Strategy</div>
+  <div class="section-title">What to Post & Why</div>
+  <div class="section-desc">A simple, sustainable content plan designed for a solo founder with a baby. 3–4 hours per week maximum. Three feed posts plus Stories. Consistency beats perfection.</div>
+  
+  <div class="warm-callout">
+    <strong>Weekly rhythm:</strong> Batch-create on Sunday (1 hour). Schedule with Meta Business Suite. Post Mon/Wed/Fri. Engage 15 mins/day. Stories from class days — phone clips, no editing needed. Saturday: off. That's it. Do NOT try to do more.
+  </div>
+
+  <div class="content-card">
+    <div class="content-head">
+      <span class="content-title">🎬 Studio Transformation Reel</span>
+      <span class="content-type">P0 · Reel</span>
+    </div>
+    <div class="content-body">Empty room → sensory wonderland in 15 seconds. Timelapse of setup on your phone, speed up in CapCut. Shows the dedicated studio advantage no competitor can replicate.</div>
+    <div class="content-outcome"><b>Expected:</b> 200–800 views. Builds "wow" factor. 20 mins to create. Post in launch week.</div>
+  </div>
+
+  <div class="content-card">
+    <div class="content-head">
+      <span class="content-title">🥹 Baby Reaction Moments</span>
+      <span class="content-type">P0 · Reel</span>
+    </div>
+    <div class="content-body">5–10 second clips of babies seeing the light show or touching textures for the first time. Close-up, emotional music, text overlay. Highest-performing content in the parenting niche. Must have parent consent.</div>
+    <div class="content-outcome"><b>Expected:</b> 500–3,000 views. Most likely to generate DM enquiries. One local viral clip could fill a class. 10 mins to create.</div>
+  </div>
+
+  <div class="content-card">
+    <div class="content-head">
+      <span class="content-title">✨ "The Gentle Difference" Brand Reel</span>
+      <span class="content-type">P0 · Reel</span>
+    </div>
+    <div class="content-body">Soft music. Calm, focused babies. Text overlays: "Small groups. Soft lights. Their pace, not ours." This is the positioning Reel that communicates your GENTLE brand to parents who find other classes overwhelming.</div>
+    <div class="content-outcome"><b>Expected:</b> 300–1,500 views. Brand-defining. Pin to profile. Parents who resonate = perfect customers.</div>
+  </div>
+
+  <div class="content-card">
+    <div class="content-head">
+      <span class="content-title">🏠 "What to Expect" Walkthrough</span>
+      <span class="content-type">P0 · Reel</span>
+    </div>
+    <div class="content-body">30–45 second Reel: Jade walks through arriving, the welcome, what happens, how it ends. Removes first-class anxiety — the #1 barrier to booking for new parents.</div>
+    <div class="content-outcome"><b>Expected:</b> 300–1,000 views. High conversion — pushes "interested" to "booked". Pin to profile grid.</div>
+  </div>
+
+  <div class="content-card">
+    <div class="content-head">
+      <span class="content-title">🧊 "5 Sensory Activities at Home" Carousel</span>
+      <span class="content-type">P1 · Carousel</span>
+    </div>
+    <div class="content-body">5-slide Canva carousel with simple home sensory ideas (frozen fruit in zip bags, pasta trays, ice cubes with food colouring). Provides value even if they never book. Gets saved and shared — saves are the #1 Instagram algorithm signal.</div>
+    <div class="content-outcome"><b>Expected:</b> 200–600 views. High save rate. Builds trust. Positions Jade as the sensory expert in Farnham. 30 mins to create.</div>
+  </div>
+
+  <div class="content-card">
+    <div class="content-head">
+      <span class="content-title">💬 Parent Testimonial + Class Photo</span>
+      <span class="content-type">P0 · Post</span>
+    </div>
+    <div class="content-body">Single class photo with a named parent quote. "We look forward to Thursdays now. It's become our favourite thing of the week — Sarah, mum to Ava." Named testimonials carry 2x the weight of anonymous ones.</div>
+    <div class="content-outcome"><b>Expected:</b> 150–400 views. Directly drives booking consideration. Ask after every class. 10 mins to create.</div>
+  </div>
+
+  <div class="warm-callout" style="margin-top:12px">
+    <strong>What NOT to do:</strong> TikTok (wrong platform for Farnham mums), blog posts (take months to rank), professional photography (phone content performs better), daily posting (will burn out in 5 days), paid ads (build to 300+ followers first), or comparison content naming competitors (the baby class world in Farnham is tiny — everyone knows everyone).
+  </div>
+</div>
+
+<!-- ════════════ 09 CHANNEL FINDER ════════════ -->
+<div class="section">
+  <div class="section-num">09 — Channel Finder</div>
+  <div class="section-title">Where to Be Present</div>
+  <div class="section-desc">Directories, communities, and physical locations. Your fastest path to full classes isn't Instagram — it's the health visitor who recommends you to every new parent in Farnham.</div>
+  
+  <h4 style="font-size:14px;font-weight:700;color:var(--accent-light);margin-bottom:14px;">📋 Online Directories — Get Listed This Week</h4>
+  <div class="channel-grid" style="margin-bottom:24px;">
+    <div class="channel-card">
+      <div class="channel-name">Google Business Profile</div>
+      <span class="channel-impact ci-high">Critical</span>
+      <div class="channel-desc">Parents search "baby classes Farnham." Without this, you don't exist. Free. 2 hours to set up. Upload 10+ studio photos. Add booking link.</div>
+    </div>
+    <div class="channel-card">
+      <div class="channel-name">Happity</div>
+      <span class="channel-impact ci-high">Critical</span>
+      <div class="channel-desc">2.6M parents/year. The Rightmove of baby classes. Competitors are already listed. Your absence is a critical gap. Free to list. 30 mins.</div>
+    </div>
+    <div class="channel-card">
+      <div class="channel-name">Farnham Rocks</div>
+      <span class="channel-impact ci-med">High</span>
+      <div class="channel-desc">Local family directory. Well-indexed for Farnham searches. Free community listing. 15 mins.</div>
+    </div>
+    <div class="channel-card">
+      <div class="channel-name">Surrey Family Information Directory</div>
+      <span class="channel-impact ci-med">High</span>
+      <div class="channel-desc">Official Surrey County Council directory. Health visitors refer parents here. Free. Adds official credibility.</div>
+    </div>
+    <div class="channel-card">
+      <div class="channel-name">Surrey Mummy</div>
+      <span class="channel-impact ci-med">Medium</span>
+      <div class="channel-desc">Award-winning Surrey parent directory. Parents search and review activities here.</div>
+    </div>
+    <div class="channel-card">
+      <div class="channel-name">Netmums Local + Toddle About</div>
+      <span class="channel-impact ci-low">Quick Win</span>
+      <div class="channel-desc">Still used by parents. Good for SEO backlinks. 10 mins each. Batch these.</div>
+    </div>
+  </div>
+
+  <h4 style="font-size:14px;font-weight:700;color:var(--accent-light);margin-bottom:14px;">🤝 Communities — Help First, Promote Later</h4>
+  <div class="channel-grid" style="margin-bottom:24px;">
+    <div class="channel-card">
+      <div class="channel-name">NCT Farnham / Waverley</div>
+      <span class="channel-impact ci-high">Highest Value</span>
+      <div class="channel-desc">Concentrated pool of exact ICP. Contact the branch directly. Offer a free 15-min sensory taster at their next coffee morning.</div>
+    </div>
+    <div class="channel-card">
+      <div class="channel-name">Farnham Mums Facebook Groups</div>
+      <span class="channel-impact ci-high">High</span>
+      <div class="channel-desc">Join 5–8 local groups. Be helpful for 2 weeks. When someone asks "any good baby classes?" — then mention TW naturally.</div>
+    </div>
+    <div class="channel-card">
+      <div class="channel-name">Instagram Local Engagement</div>
+      <span class="channel-impact ci-med">Medium</span>
+      <div class="channel-desc">Follow Farnham businesses, parent accounts, baby photographers. Sarah Angel Photography lists local baby classes on her blog — contact her.</div>
+    </div>
+    <div class="channel-card">
+      <div class="channel-name">Nextdoor (Farnham)</div>
+      <span class="channel-impact ci-low">Quick Win</span>
+      <div class="channel-desc">Free business page. Post a friendly "new local business" intro. Neighbours trust Nextdoor recommendations.</div>
+    </div>
+  </div>
+
+  <h4 style="font-size:14px;font-weight:700;color:var(--accent-light);margin-bottom:14px;">📍 Physical Locations — Visit This Week</h4>
+  <div class="channel-grid">
+    <div class="channel-card">
+      <div class="channel-name">Farnham Health Centre</div>
+      <span class="channel-impact ci-high">Highest Impact</span>
+      <div class="channel-desc">Health visitors see EVERY new parent. One HV recommendation can fill a class. Visit in person. Introduce yourself. Leave 30 leaflets.</div>
+    </div>
+    <div class="channel-card">
+      <div class="channel-name">Frimley Park Hospital Maternity</div>
+      <span class="channel-impact ci-high">High</span>
+      <div class="channel-desc">Every parent leaving with a newborn passes the noticeboard. Ask reception about community board access.</div>
+    </div>
+    <div class="channel-card">
+      <div class="channel-name">Farnham Library (Vernon House)</div>
+      <span class="channel-impact ci-med">High</span>
+      <div class="channel-desc">Runs rhyme time sessions — parents there are proven activity-seekers. Free noticeboard. Leave leaflets.</div>
+    </div>
+    <div class="channel-card">
+      <div class="channel-name">Farnham Maltings + Baby-Friendly Cafés</div>
+      <span class="channel-impact ci-med">Medium</span>
+      <div class="channel-desc">Cultural hub with parent footfall. Scatter 5–10 leaflets across 4–5 cafés on a walk through town. 30 mins.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ 10 COMPETITIVE POSITIONING ════════════ -->
+<div class="section">
+  <div class="section-num">10 — Competitive Positioning</div>
+  <div class="section-title">Your Lane in the Market</div>
+  <div class="section-desc">You don't need to attack competitors. Just state your truth clearly. Parents will draw their own comparisons.</div>
+  
+  <div class="pos-card">
+    <div class="pos-title">Gentle vs High-Energy</div>
+    <div class="pos-subtitle">Where you sit on the intensity spectrum</div>
+    <div class="pos-grid">
+      <div class="pos-cell pos-comp">
+        <div class="pc-label">Lullababy</div>
+        <p>Gentle (yoga-adjacent) but lacks production values and wonder element</p>
+      </div>
+      <div class="pos-cell pos-tw">
+        <div class="pc-label">✨ Tiny Whirlwinds</div>
+        <p>Gentle but magical. Calm environment, professional light shows, intimate groups. Wonder without overwhelm.</p>
+      </div>
+      <div class="pos-cell pos-comp">
+        <div class="pc-label">Hartbeeps</div>
+        <p>High-energy, theatrical. Some parents love it. Others find it "too in your face" for babies.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pos-card">
+    <div class="pos-title">Indie vs Franchise</div>
+    <div class="pos-subtitle">Authenticity you can't replicate with a licensing agreement</div>
+    <div class="pos-grid">
+      <div class="pos-cell pos-tw">
+        <div class="pc-label">✨ Tiny Whirlwinds</div>
+        <p>No franchise fees (£6–25K saved). Full creative control. Founder story parents connect with. Agile.</p>
+      </div>
+      <div class="pos-cell pos-comp">
+        <div class="pc-label">Baby Sensory</div>
+        <p>National brand recognition. Proven lesson plans. But franchise formula = generic feel, variable quality.</p>
+      </div>
+      <div class="pos-cell pos-comp">
+        <div class="pc-label">Tots Play</div>
+        <p>All-in-one positioning (music + yoga + sensory). Jack-of-all-trades, less specialist.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pos-card">
+    <div class="pos-title">Studio vs Hired Hall</div>
+    <div class="pos-subtitle">Your biggest structural differentiator</div>
+    <div class="pos-grid">
+      <div class="pos-cell pos-tw" style="grid-column: 1 / -1;">
+        <div class="pc-label">✨ Tiny Whirlwinds — Dedicated Studio</div>
+        <p>Consistent environment every session. Professional lighting and sound. Always-ready sensory stations. Clean, purpose-designed, premium feel. When a parent walks into your studio and compares it to a church hall with portable speakers, the choice makes itself. <strong style="color:var(--accent-light)">SHOW this advantage everywhere.</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="warm-callout">
+    <strong>Your positioning in one sentence:</strong> "Farnham's only dedicated baby sensory studio. Small groups. Gentle approach. A space designed entirely for your baby's wonder." Put that everywhere. Website. Instagram bio. Leaflets. Say it until you're bored of it — you'll still be saying it when parents hear it for the first time.
+  </div>
+</div>
+
+<!-- ════════════ 11 GROWTH EXPERIMENTS ════════════ -->
+<div class="section">
+  <div class="section-num">11 — Growth Experiments</div>
+  <div class="section-title">8 Experiments to Fill Your Classes</div>
+  <div class="section-desc">Deliberately simple. None require marketing expertise. Designed for someone who's great at building things and connecting with people — but hasn't done "marketing" before.</div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">1. Health Visitor & Midwife Leaflet Drop</span>
+      <span class="exp-pri p0">P0 Before Launch</span>
+    </div>
+    <div class="exp-hyp">"If Jade visits local health centres with leaflets and introduces herself in person, at least 5 new enquiries will come from this channel within 4 weeks — because health professionals are the most trusted recommendation source for new parents."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>1 week setup + 4 weeks</strong> <span>Effort:</span> <strong>Low</strong> <span>Cost:</span> <strong>~£30–50</strong></div>
+    <div class="exp-success"><b>Success:</b> Leaflets at 5+ locations. 5+ enquiries. 2+ trial bookings from referrals.</div>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">2. Google My Business Launch</span>
+      <span class="exp-pri p0">P0 Before Launch</span>
+    </div>
+    <div class="exp-hyp">"If TW has a complete Google Business Profile with photos and reviews, it will appear in 'baby classes Farnham' searches — driving 3+ organic enquiries per month."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>2 hours to set up</strong> <span>Effort:</span> <strong>Low</strong> <span>Cost:</span> <strong>Free</strong></div>
+    <div class="exp-success"><b>Success:</b> Profile live and verified. Appearing in Maps within 2 weeks. 5+ reviews within first term.</div>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">3. Instagram Content Engine (30-Day Sprint)</span>
+      <span class="exp-pri p0">P0 Through Launch</span>
+    </div>
+    <div class="exp-hyp">"If Jade posts 3–4x per week for 30 days, the account will grow from ~90 to 300+ followers, generate 10+ DM enquiries, and become the primary discovery channel."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>30 days (then ongoing)</strong> <span>Effort:</span> <strong>3–4 hrs/week</strong> <span>Cost:</span> <strong>Free</strong></div>
+    <div class="exp-success"><b>Success:</b> 300+ followers. 10+ DM enquiries. 3+ bookings traceable to Instagram.</div>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">4. Launch Week "Bring a Friend" Offer</span>
+      <span class="exp-pri p0">P0 Launch Week</span>
+    </div>
+    <div class="exp-hyp">"If all 4 existing parents bring a friend to launch week, at least 1 friend will convert to a term booking — because word-of-mouth from a trusted friend is the highest-converting channel."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>Launch week + 2 weeks</strong> <span>Effort:</span> <strong>Very low</strong> <span>Cost:</span> <strong>£0</strong></div>
+    <div class="exp-success"><b>Success:</b> 3+ friends attend. 1+ converts to term booking. Make it permanent if it works.</div>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">5. Website Cleanup & SEO Quick Wins</span>
+      <span class="exp-pri p0">P0 Before Launch</span>
+    </div>
+    <div class="exp-hyp">"If the website is cleaned up (remove Parties, add Jade's story, add 'Farnham' to titles), conversion rate will improve and organic search will grow."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>2–4 hours</strong> <span>Effort:</span> <strong>Low</strong> <span>Cost:</span> <strong>Free</strong></div>
+    <div class="exp-success"><b>Success:</b> Parties removed. Jade's photo and story on homepage. "Farnham" in page titles. Instagram link added. Google Search Console set up.</div>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">6. Farnham Mums Facebook Group Presence</span>
+      <span class="exp-pri p1">P1 First Month</span>
+    </div>
+    <div class="exp-hyp">"If Jade becomes a helpful presence in local Facebook groups (not hard-selling), she'll receive organic recommendations when parents ask for baby class suggestions."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>Ongoing (20 mins/day)</strong> <span>Effort:</span> <strong>Low</strong> <span>Cost:</span> <strong>Free</strong></div>
+    <div class="exp-success"><b>Success:</b> 3+ groups joined. 1+ organic recommendation. 3+ bookings from Facebook groups.</div>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">7. Happity + Discovery Platform Listings</span>
+      <span class="exp-pri p1">P1 First Month</span>
+    </div>
+    <div class="exp-hyp">"If TW is listed on Happity and other free platforms with complete info and photos, it will receive passive discovery traffic and 2+ bookings per term."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>1 hour to set up</strong> <span>Effort:</span> <strong>Very low</strong> <span>Cost:</span> <strong>Free</strong></div>
+    <div class="exp-success"><b>Success:</b> Listed on Happity, Farnham Rocks, Surrey directory. Complete profiles with photos. 2+ platform bookings.</div>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">8. NCT Coffee Morning Taster Session</span>
+      <span class="exp-pri p1">P1 First Month</span>
+    </div>
+    <div class="exp-hyp">"If Jade hosts a free 15-min sensory taster at a local NCT or children's centre group, she'll convert 3+ attendees into trial bookings — because experiencing the product removes all purchase anxiety."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>1 session + 2 weeks</strong> <span>Effort:</span> <strong>Medium</strong> <span>Cost:</span> <strong>Free</strong></div>
+    <div class="exp-success"><b>Success:</b> 8+ parents attend. 3+ trial bookings. Builds reputation even if nobody books.</div>
+  </div>
+</div>
+
+<!-- ════════════ 12 FOUNDER MIRROR ════════════ -->
+<div class="section">
+  <div class="section-num">12 — Founder Mirror</div>
+  <div class="section-title">Honest Reflections</div>
+  <div class="section-desc">This isn't a performance review. It's a conversation with a friend who's been around the block and wants to see you succeed. Take what's useful, park what isn't.</div>
+  
+  <div class="insight i-high">
+    <div class="insight-head">
+      <span class="insight-title">You've built the hard thing. Now do the uncomfortable thing.</span>
+      <span class="insight-sev sev-h">Key Insight</span>
+    </div>
+    <div class="insight-body">Your classes work. Babies stay engaged, parents love it, you're confident by session 4. That's genuinely impressive — most people never get past the idea stage. But here's the tension: you've solved the product problem and now you're staring at the marketing problem, which feels completely different. Product is craft. Marketing feels like performance.</div>
+    <div class="insight-q">"If your best friend had a baby and moved to Farnham, how would you tell her about Tiny Whirlwinds? That's your marketing voice."</div>
+    <div class="insight-action"><strong>Reframe:</strong> Marketing a baby class isn't selling. It's helping isolated new mums find something wonderful you've built for them. Every time you don't post, a mum in Farnham is scrolling at 2am wondering what to do with her baby tomorrow — and she doesn't know you exist.</div>
+    <div class="insight-bias">🧠 Competence Bias — we gravitate to what we're good at (building) and avoid what feels unfamiliar (promoting)</div>
+  </div>
+
+  <div class="insight i-high">
+    <div class="insight-head">
+      <span class="insight-title">"I'll run classes even when sick" is a red flag, not a badge of honour.</span>
+      <span class="insight-sev sev-h">Important</span>
+    </div>
+    <div class="insight-body">We understand the instinct — you're building something precious. But: you run a class with a cold, a baby catches it, that parent doesn't come back. You push through an injury, deliver a subpar session, parents form their opinion based on your worst day. You burn out by month 4 and the business dies.</div>
+    <div class="insight-q">"Who in your life could learn to run a simplified version of your class? A friend, a fellow mum, someone from your NCT group?"</div>
+    <div class="insight-action"><strong>Action:</strong> Your job isn't to run every class. It's to make sure Tiny Whirlwinds runs every class. Find one person who can learn your format and cover for you. Start looking now, before you need them. Even a "class in a box" at 70% of your quality is better than cancelled.</div>
+    <div class="insight-bias">🧠 Heroic Founder Fallacy — the belief that the business needs YOU specifically to function at all times</div>
+  </div>
+
+  <div class="insight i-med">
+    <div class="insight-head">
+      <span class="insight-title">The franchise dream needs the Farnham proof first.</span>
+      <span class="insight-sev sev-m">Grounding</span>
+    </div>
+    <div class="insight-body">You want to build a renowned sensory brand across multiple towns. The market supports it. But right now you have 4 term bookings. Every ounce of energy spent on franchise thinking is an ounce not spent on filling Farnham classes. Baby Sensory was Dr Lin Day running classes from her living room. Your franchise dream depends on Farnham being a screaming success. That's where 100% of focus belongs.</div>
+    <div class="insight-action"><strong>Action:</strong> Write your franchise ideas in a "Future" doc. Close it. Don't open it for 6 months. Document what works in Farnham — that becomes your franchise operations manual, written in real time.</div>
+    <div class="insight-bias">🧠 Premature Scaling — the temptation to build for 10 locations when you haven't nailed 1</div>
+  </div>
+
+  <div class="insight i-med">
+    <div class="insight-head">
+      <span class="insight-title">You have a tech superpower you're not using.</span>
+      <span class="insight-sev sev-m">Encouraging</span>
+    </div>
+    <div class="insight-body">You co-founded Dexla. Most baby class operators use shared Facebook events and bank transfers. You can build automated email sequences, track fill rates in a dashboard, A/B test Instagram captions. That's playing a completely different game. Your tech background isn't separate from Tiny Whirlwinds — it's your unfair advantage.</div>
+    <div class="insight-action"><strong>Action:</strong> Set up a simple analytics tracker (even Google Sheets): enquiries, trials, conversions, rebookings, and source. Automate booking confirmations and review request emails. The franchises have HQ systems; you can build better ones.</div>
+  </div>
+
+  <div class="insight i-low">
+    <div class="insight-head">
+      <span class="insight-title">You're not behind. You're right on time.</span>
+      <span class="insight-sev sev-l">Reassuring</span>
+    </div>
+    <div class="insight-body">We hear it underneath everything: a feeling of being behind. Instagram should have started earlier. Partnerships should be in place. Here's the truth: you're a new mum who built a sensory studio from scratch, designed a curriculum, ran trial classes, got great feedback, and is launching a business in 2 weeks. The Instagram is 2 days old because you were busy building the actual business. That's the right order.</div>
+    <div class="insight-q">"What would you tell a friend in your exact situation — would you tell her she's behind, or would you tell her she's doing brilliantly?"</div>
+    <div class="insight-bias">🧠 Comparison Trap — seeing Baby Sensory's 1,500 classes and feeling you should be there already. They've had decades. You've had months.</div>
+  </div>
+</div>
+
+<!-- ════════════ 13 ROADMAP ════════════ -->
+<div class="section">
+  <div class="section-num">13 — 90-Day Roadmap</div>
+  <div class="section-title">What to Do Next</div>
+  
+  <div class="road-grid">
+    <div class="road-card">
+      <div class="road-period">Days 1–30</div>
+      <div class="road-theme">Launch & Be Visible</div>
+      <ul>
+        <li>Visit 5 local venues with leaflets (health centre, children's centre, NCT, 2 cafés)</li>
+        <li>Set up Google My Business with 10+ photos</li>
+        <li>List on Happity + Farnham Rocks</li>
+        <li>Post on Instagram 3–4x/week for 30 days</li>
+        <li>"Bring a friend free" offer to all 4 parents</li>
+        <li>Clean up website: remove Parties, add Jade's story, add "Farnham" to titles</li>
+        <li>LAUNCH and deliver brilliantly</li>
+      </ul>
+      <div class="road-success">✓ 8+ parents per class by week 4. 300+ Instagram followers. Google profile live with 2+ reviews.</div>
+    </div>
+    <div class="road-card">
+      <div class="road-period">Days 31–60</div>
+      <div class="road-theme">Fill & Retain</div>
+      <ul>
+        <li>Join 3+ local Facebook parent groups</li>
+        <li>Host a free taster at NCT coffee morning</li>
+        <li>Ask every parent for a Google review (target: 5+)</li>
+        <li>Collect video testimonials (phone clips)</li>
+        <li>Calculate actual breakeven fill rate</li>
+        <li>Build 1+ health visitor relationship</li>
+        <li>Track: what content drives bookings?</li>
+      </ul>
+      <div class="road-success">✓ Classes at 8–10 attendees. Trial-to-term conversion above 40%. Clear understanding of unit economics.</div>
+    </div>
+    <div class="road-card">
+      <div class="road-period">Days 61–90</div>
+      <div class="road-theme">Grow & Systemise</div>
+      <ul>
+        <li>If 80%+ full: add a new time slot or Active Adventurers waitlist</li>
+        <li>Identify and train a backup class leader</li>
+        <li>Build a simple parent CRM (Google Sheet)</li>
+        <li>Plan Term 2: dates, bookings, email existing parents first</li>
+        <li>Test one Saturday class if demand is there</li>
+        <li>Double down on winning channels, drop losers</li>
+        <li>Set up automated booking + review emails</li>
+      </ul>
+      <div class="road-success">✓ 60%+ rebooking rate. Waitlist forming. Backup teacher identified. Revenue covering costs.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ FOOTER ════════════ -->
+<div class="footer">
+  <div class="footer-brand">✨ GrowthMind</div>
+  <div class="footer-sub">Growth Diagnosis for Early-Stage Businesses</div>
+  <a href="https://growthmind.ai" class="footer-cta">Start Your Growth Journey →</a>
+  <div class="footer-disc">This report was generated by GrowthMind's AI growth diagnosis system from publicly available data, website analysis, competitor research, and founder voice input. Confidence: 75%. Report date: 13 February 2026. Jade — you've built something genuinely special. The only thing standing between you and a full, thriving business is this: tell people about it. Go fill those classes. 💜</div>
+</div>
+
+</div>
+</body>
+</html>

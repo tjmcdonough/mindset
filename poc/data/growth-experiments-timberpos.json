@@ -1,0 +1,308 @@
+{
+  "org_id": "timberpos_001",
+  "agent": "growth-experiments",
+  "prescribed_at": "2026-02-13T10:51:00Z",
+  "confidence": "pre-interrogation",
+
+  "bottleneck_addressed": "Distribution — total invisibility to target market + generic positioning",
+  "total_time_budget": "10-12 hours/week (estimated for solo founder, likely part-time)",
+
+  "experiments": [
+    {
+      "exp_id": "exp_001",
+      "name": "The Barbershop Blitz — 20 in-person demos in 30 days",
+      "hypothesis": "If we demo Timber face-to-face in 20 local barbershops, then at least 5 will sign up for a free trial, because barbers buy through trust and personal relationships, not websites",
+      "type": "acquisition",
+      "channel": "outreach",
+      "steps": [
+        "1. Identify 30 independent barbershops within 30 minutes of your location (Google Maps, Yelp)",
+        "2. Prioritise 1-3 chair shops (owner-operated, most likely to adopt new tools)",
+        "3. Walk in during a quiet time (Tuesday-Wednesday, 10-11am or 2-3pm)",
+        "4. Ask: 'Hey, I built a booking app — can I show you for 2 minutes? No pressure.'",
+        "5. Demo on your phone/tablet: show how a client books without downloading anything",
+        "6. If interested: set them up on the 14-day trial right there",
+        "7. Get their phone number for follow-up regardless of outcome",
+        "8. Ask: 'What booking tool do you use now? What do you hate about it?'",
+        "9. Log every conversation: objections, current tool, interest level, feedback"
+      ],
+      "success_criteria": [
+        { "metric": "Demos completed", "target": "20", "timeframe": "30 days" },
+        { "metric": "Free trial signups", "target": "5+", "timeframe": "30 days" },
+        { "metric": "Qualitative feedback logged", "target": "20 conversations documented", "timeframe": "30 days" }
+      ],
+      "kill_criteria": "If after 10 demos, 0 barbers showed any interest or all said 'I already use Fresha/Square and I'm happy', the product positioning needs fundamental rework.",
+      "timeline_days": 30,
+      "effort": { "hours_per_week": 4, "skills_needed": ["basic sales confidence", "ability to demo the product"] },
+      "risk": "Founder may be uncomfortable with cold in-person outreach. Barbers may be too busy to listen. Could get 20 rejections.",
+      "expected_outcome": "5-8 free trial signups, 20 logged conversations revealing real objections and needs. This data is worth more than 6 months of Reddit posting.",
+      "confidence": "high",
+      "time_to_signal": "quick",
+      "wave": 1,
+      "depends_on": [],
+      "minimum_viable_version": "Demo at 5 barbershops this week. If any show interest, continue to 20."
+    },
+    {
+      "exp_id": "exp_002",
+      "name": "Facebook Group Immersion — become a known face in barber communities",
+      "hypothesis": "If we actively engage in 3-5 Facebook barber groups for 4 weeks (helping, not selling), then barbers will start asking about Timber organically when we subtly mention it, because Facebook groups are the #1 community for barber software recommendations",
+      "type": "awareness",
+      "channel": "community",
+      "steps": [
+        "1. Join 5 Facebook barber groups: Barber Nation, Barbers Talk, Black Barber Connect, Salon Owners Club, Booth Renters & Suite Owners",
+        "2. For the first 2 weeks: ONLY help. Answer questions about booking, business tips, no-show strategies. Zero product mentions.",
+        "3. Week 3: When someone asks 'what booking app should I use?', mention Timber naturally with the differentiator: 'I built one where clients don't need to download anything — happy to show you'",
+        "4. Week 4: Share a short video showing the client booking experience (10 seconds, no app download)",
+        "5. Track: DMs received, questions asked, trial signups from Facebook referrals"
+      ],
+      "success_criteria": [
+        { "metric": "Genuine engagement (comments that get replies)", "target": "20+", "timeframe": "4 weeks" },
+        { "metric": "Inbound DMs asking about Timber", "target": "3+", "timeframe": "4 weeks" },
+        { "metric": "Trial signups from Facebook", "target": "2+", "timeframe": "4 weeks" }
+      ],
+      "kill_criteria": "If after 4 weeks of genuine engagement, zero barbers show interest in the product when mentioned, the value proposition may not resonate with this audience.",
+      "timeline_days": 30,
+      "effort": { "hours_per_week": 3, "skills_needed": ["basic social media", "barber industry knowledge (learn as you go)"] },
+      "risk": "Getting banned for self-promotion if too aggressive. Being ignored if the groups are inactive. Takes discipline to help-first for 2 weeks.",
+      "expected_outcome": "Establishes founder as a genuine community participant. 2-5 interested barbers. Deep understanding of what barbers actually talk about and need.",
+      "confidence": "medium",
+      "time_to_signal": "medium",
+      "wave": 1,
+      "depends_on": [],
+      "minimum_viable_version": "Join 2 groups, post 3 helpful comments this week. See if anyone engages."
+    },
+    {
+      "exp_id": "exp_003",
+      "name": "Directory Blitz — get listed everywhere in one weekend",
+      "hypothesis": "If we list Timber on G2, Capterra, GetApp, AlternativeTo, Product Hunt, SaaSHub, and BetaList, then we'll generate 50+ website visits and 2-3 signups per month from directory traffic, because these are where businesses actively compare booking software",
+      "type": "acquisition",
+      "channel": "partnerships",
+      "steps": [
+        "1. Create accounts on G2, Capterra, GetApp, Software Advice, AlternativeTo, SaaSHub, BetaList",
+        "2. Write a compelling listing: lead with 'no app download for clients' differentiator",
+        "3. Add screenshots, logo, pricing info, feature list",
+        "4. List as alternative to: Fresha, Booksy, Square Appointments, Vagaro",
+        "5. Ask your 1 existing user to leave a review on G2 and Capterra",
+        "6. Plan a Product Hunt launch for Week 4 (after you have 3-5 users for social proof)"
+      ],
+      "success_criteria": [
+        { "metric": "Listings live", "target": "7 directories", "timeframe": "7 days" },
+        { "metric": "Monthly visitors from directories", "target": "50+", "timeframe": "60 days" },
+        { "metric": "Reviews on G2/Capterra", "target": "1+", "timeframe": "30 days" }
+      ],
+      "kill_criteria": "Directories are a set-and-forget channel. No kill criteria — just maintain listings.",
+      "timeline_days": 7,
+      "effort": { "hours_per_week": 4, "skills_needed": ["copywriting", "basic design for screenshots"] },
+      "risk": "Low — this is table-stakes marketing that should have been done at launch. Only risk is if listings get rejected for being too new/thin.",
+      "expected_outcome": "Permanent passive discovery channel. Won't drive massive traffic alone but builds credibility and backlinks.",
+      "confidence": "high",
+      "time_to_signal": "medium",
+      "wave": 1,
+      "depends_on": [],
+      "minimum_viable_version": "List on G2 and Capterra this weekend. Add others next week."
+    },
+    {
+      "exp_id": "exp_004",
+      "name": "Homepage Rewrite — lead with the differentiator",
+      "hypothesis": "If we rewrite the homepage to lead with 'Your clients book in 10 seconds — no app download, no signup' instead of generic 'easiest booking software', then click-to-signup conversion will increase from ~6% to 15%+, because the no-download angle is the one genuine differentiator that resonates with the barber pain point",
+      "type": "activation",
+      "channel": "product",
+      "steps": [
+        "1. New headline: 'Your clients shouldn't need an app just to book a haircut.'",
+        "2. Sub-headline: 'Timber lets clients book in 10 seconds — no download, no signup. Just pick a time.'",
+        "3. Add a 15-second demo GIF showing the client booking experience",
+        "4. Add social proof (even if it's just '14-day free trial — join X barbers')",
+        "5. Clear CTA: 'Try free for 14 days — set up in 5 minutes'",
+        "6. Remove or deprioritise generic feature lists",
+        "7. A/B test if possible; otherwise just ship and measure before/after"
+      ],
+      "success_criteria": [
+        { "metric": "Click-to-signup conversion", "target": ">15%", "timeframe": "30 days after rewrite" },
+        { "metric": "Time on page", "target": "Increase by 50%+", "timeframe": "30 days" }
+      ],
+      "kill_criteria": "If conversion doesn't improve after 100+ visitors, the differentiator may not be compelling enough for homepage visitors.",
+      "timeline_days": 7,
+      "effort": { "hours_per_week": 3, "skills_needed": ["copywriting", "basic web design"] },
+      "risk": "Low — the current homepage isn't converting, so almost any change is an improvement.",
+      "expected_outcome": "Better conversion of the small traffic that does arrive. Sets up all other experiments for better funnel performance.",
+      "confidence": "high",
+      "time_to_signal": "quick",
+      "wave": 1,
+      "depends_on": [],
+      "minimum_viable_version": "Change just the headline and sub-headline. Takes 30 minutes."
+    },
+    {
+      "exp_id": "exp_005",
+      "name": "Instagram Proof-of-Concept — show the product in action",
+      "hypothesis": "If we create an Instagram account and post 3 short Reels per week showing the booking experience from a client's perspective, then we'll gain 200+ followers and 5+ DMs from barbers in 6 weeks, because barbers live on Instagram and short-form video is their native content format",
+      "type": "awareness",
+      "channel": "content",
+      "steps": [
+        "1. Create @timberpos (or better: @timberbooking) Instagram account",
+        "2. Film 10-second screen recordings: client opens link → picks time → done. No download.",
+        "3. Add text overlay: 'This is what YOUR clients see. No app. No signup. 10 seconds.'",
+        "4. Use hashtags: #barberlife #barbershop #barbersoftware #barberbusiness #barberbooking",
+        "5. Engage with barber content — comment genuinely on barber posts (not pitching)",
+        "6. DM barbers who post about booking frustrations (gently, not spammy)",
+        "7. Post 3x/week: booking demo, barber business tip, client experience"
+      ],
+      "success_criteria": [
+        { "metric": "Instagram followers", "target": "200+", "timeframe": "6 weeks" },
+        { "metric": "DMs from interested barbers", "target": "5+", "timeframe": "6 weeks" },
+        { "metric": "Trial signups attributed to Instagram", "target": "2+", "timeframe": "6 weeks" }
+      ],
+      "kill_criteria": "If after 6 weeks and 18+ posts, total engagement is under 50 likes and 0 DMs, Instagram may not be the right format for this product demo.",
+      "timeline_days": 42,
+      "effort": { "hours_per_week": 3, "skills_needed": ["basic video recording", "Instagram knowledge"] },
+      "risk": "Content creation takes time. Barbers may not follow a software account. Need to find the right content angle.",
+      "expected_outcome": "Instagram becomes a warm outreach channel and social proof mechanism. Barbers who see the product working are more likely to try it.",
+      "confidence": "medium",
+      "time_to_signal": "medium",
+      "wave": 2,
+      "depends_on": ["exp_004"],
+      "minimum_viable_version": "Post 1 Reel this week showing the client booking flow. See if any barbers engage."
+    },
+    {
+      "exp_id": "exp_006",
+      "name": "The First Paying Customer — convert free users to paid",
+      "hypothesis": "If we personally call/visit the existing free user(s) and offer a deeply discounted first 3 months ($10/month), then at least 1 will convert to paid, because the product is solving a real problem for them and the price barrier is minimal",
+      "type": "revenue",
+      "channel": "outreach",
+      "steps": [
+        "1. Contact every free user personally — phone call or in-person visit preferred",
+        "2. Ask: 'What do you love about Timber? What's missing? What would make you pay?'",
+        "3. Offer: 'I'd love to keep building this for barbers like you. Would $10/month for the first 3 months work? You'd be my first paying customer and I'll prioritise your feedback.'",
+        "4. If they say no: ask 'What would need to change for this to be worth paying for?'",
+        "5. If they say yes: celebrate. Get a testimonial. Ask for a referral.",
+        "6. Document everything — this is your most valuable data."
+      ],
+      "success_criteria": [
+        { "metric": "Paying customers", "target": "1", "timeframe": "14 days" },
+        { "metric": "Detailed product feedback documented", "target": "From all free users", "timeframe": "14 days" },
+        { "metric": "Testimonial or quote", "target": "1", "timeframe": "14 days" }
+      ],
+      "kill_criteria": "If your existing free users won't pay even $10/month after using the product, this is a serious product-market fit signal. Don't ignore it.",
+      "timeline_days": 14,
+      "effort": { "hours_per_week": 1, "skills_needed": ["conversation skills"] },
+      "risk": "Free user may churn when asked to pay. May lose the only user. That's okay — better to know now.",
+      "expected_outcome": "First revenue (even $10) is a milestone. More importantly: real feedback on willingness to pay and product value.",
+      "confidence": "medium",
+      "time_to_signal": "quick",
+      "wave": 1,
+      "depends_on": [],
+      "minimum_viable_version": "Send a message to your free user today asking for a 15-minute call."
+    },
+    {
+      "exp_id": "exp_007",
+      "name": "Barber Referral Seed — turn early users into evangelists",
+      "hypothesis": "If we offer early users 1 free month for every barber they refer who signs up, then each user will refer 1-2 barbers, because word-of-mouth is the #1 discovery method in the barber industry",
+      "type": "referral",
+      "channel": "product",
+      "steps": [
+        "1. Once you have 3+ active users, introduce a simple referral: 'Know another barber? If they sign up, you both get a free month.'",
+        "2. Make it dead simple: give each user a personal referral link",
+        "3. Follow up personally: 'Hey, do you know any other barbers who might want to try this?'",
+        "4. Track referral source for every new signup"
+      ],
+      "success_criteria": [
+        { "metric": "Referrals sent", "target": "5+", "timeframe": "30 days after launch" },
+        { "metric": "Referred signups", "target": "2+", "timeframe": "30 days" }
+      ],
+      "kill_criteria": "If users with referral incentive still won't refer, the product isn't creating enough value to talk about.",
+      "timeline_days": 30,
+      "effort": { "hours_per_week": 1, "skills_needed": ["basic product feature to generate referral links"] },
+      "risk": "Too early if you have <3 users. Don't build this before you have people to use it.",
+      "expected_outcome": "Slow but organic growth through barber-to-barber recommendations.",
+      "confidence": "medium",
+      "time_to_signal": "medium",
+      "wave": 2,
+      "depends_on": ["exp_001", "exp_006"],
+      "minimum_viable_version": "Just ask your existing user: 'Know any barbers who'd want to try this?' No tech needed."
+    },
+    {
+      "exp_id": "exp_008",
+      "name": "Local Barber Supply Store Partnership",
+      "hypothesis": "If we partner with 1-2 local barber supply stores to display a flyer or QR code, then we'll get 10+ scans and 2+ signups per month, because every barber visits their supply store regularly and trusts recommendations from there",
+      "type": "acquisition",
+      "channel": "partnerships",
+      "steps": [
+        "1. Identify 2-3 barber supply stores in your area",
+        "2. Visit and offer: 'I built a booking app for barbers. Can I leave some flyers? Happy to give your customers a discount.'",
+        "3. Create a simple flyer: QR code, 'Book clients without making them download an app', free trial link",
+        "4. Offer the store owner a referral bonus or free feature",
+        "5. Track signups from QR code (use UTM parameters)"
+      ],
+      "success_criteria": [
+        { "metric": "QR code scans", "target": "10+/month", "timeframe": "60 days" },
+        { "metric": "Signups from flyers", "target": "2+/month", "timeframe": "60 days" }
+      ],
+      "kill_criteria": "If supply stores won't display your material, or 0 scans after 60 days, this channel isn't viable in your area.",
+      "timeline_days": 60,
+      "effort": { "hours_per_week": 1, "skills_needed": ["basic design for flyer", "in-person pitch"] },
+      "risk": "Store owners may not want to promote software. Low traffic stores won't generate scans.",
+      "expected_outcome": "Small but steady local awareness channel. Builds legitimacy through physical presence.",
+      "confidence": "low",
+      "time_to_signal": "slow",
+      "wave": 3,
+      "depends_on": ["exp_001"],
+      "minimum_viable_version": "Visit 1 supply store this month and ask if you can leave 10 flyers."
+    }
+  ],
+
+  "contingencies": [
+    {
+      "if_fails": "exp_001",
+      "then_try": {
+        "name": "Online Demo Sessions — 'Free 15-min booking setup for barbers'",
+        "hypothesis": "If in-person demos aren't viable (wrong location, founder discomfort), offering free Zoom setup sessions to barbers found on Instagram/Facebook could produce similar validation results"
+      }
+    },
+    {
+      "if_fails": "exp_002",
+      "then_try": {
+        "name": "Reddit r/Barber targeted engagement",
+        "hypothesis": "If Facebook groups don't work (too spam-filtered, too competitive), Reddit r/Barber has 100K+ members and the founder already knows Reddit"
+      }
+    }
+  ],
+
+  "anti_experiments": [
+    {
+      "dont_do": "Invest any time in SEO content or blog posts",
+      "why": "Your site is a SPA that Google can't crawl. Writing blog posts is pouring water into a bucket with no bottom. Fix the technical architecture first, THEN consider SEO.",
+      "when_it_makes_sense": "After implementing SSR/pre-rendering AND having 20+ pages indexed by Google"
+    },
+    {
+      "dont_do": "Run paid ads (Google, Facebook, Instagram)",
+      "why": "With 0 paying customers, a <6% landing page conversion rate, and no social proof, paid ads will burn money. You'd be paying $5-15 per click to send people to a page that doesn't convert. Fix the funnel first.",
+      "when_it_makes_sense": "After 10+ paying customers, a conversion rate >15%, and at least 1 testimonial on the landing page"
+    },
+    {
+      "dont_do": "Build new features",
+      "why": "You don't have enough users to know what features matter. Every hour coding is an hour not spent talking to barbers. The product is good enough to demo — the problem is nobody's seeing it.",
+      "when_it_makes_sense": "After 10+ users have given specific feature requests that are blocking adoption"
+    },
+    {
+      "dont_do": "Pitch to VCs or apply to accelerators",
+      "why": "With 0 revenue and 1 user, you won't get funded, and the process will consume weeks of time better spent on customer development.",
+      "when_it_makes_sense": "After $5K+/month revenue and a clear growth trajectory"
+    },
+    {
+      "dont_do": "Expand to med spas, nail salons, or other verticals",
+      "why": "You haven't proven you can win ONE barber. Spreading across verticals dilutes your already-thin resources and makes your messaging even more generic.",
+      "when_it_makes_sense": "After 50+ paying barber customers and organic pull from other verticals"
+    },
+    {
+      "dont_do": "Attend conferences or trade shows",
+      "why": "Too expensive, too broad, and at your stage, 1:1 conversations are infinitely more valuable than 1:many exposure. Walk into barbershops instead.",
+      "when_it_makes_sense": "After 20+ customers and a polished demo setup with social proof"
+    }
+  ],
+
+  "resource_summary": {
+    "wave_1_hours_per_week": 12,
+    "wave_2_hours_per_week": 7,
+    "wave_3_hours_per_week": 5,
+    "fits_within_budget": true,
+    "notes": "Wave 1 is intense (12 hrs/week across 4 experiments) but front-loaded with the directory blitz and homepage rewrite being one-time efforts. After week 2, Wave 1 drops to ~7 hrs/week (demos + Facebook engagement + user conversion calls). All experiments are $0 budget — time only."
+  }
+}

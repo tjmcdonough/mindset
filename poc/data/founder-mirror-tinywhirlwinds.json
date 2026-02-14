@@ -1,0 +1,117 @@
+{
+  "org_id": "tinywhirlwinds",
+  "report_type": "founder-mirror",
+  "generated_at": "2026-02-13T09:55:00Z",
+  "version": "1.0",
+
+  "preamble": "Jade — this isn't a performance review. Think of it as a conversation with a friend who's been around the block with small businesses and wants to see you succeed. Some of this will feel obvious, some might sting a little, and some might unlock something. Take what's useful, park what isn't.",
+
+  "insights": [
+    {
+      "id": "MIRROR-001",
+      "title": "You've built the hard thing. Now do the uncomfortable thing.",
+      "severity": "high",
+      "tone": "supportive-challenge",
+      "observation": "Your classes work. Babies stay engaged, parents love it, you're confident by session 4. That's genuinely impressive — most people never get past the idea stage. But here's the tension: you've solved the product problem and now you're staring at the marketing problem, which feels completely different. Product is craft. Marketing feels like performance. And you hate it.",
+      "cognitive_bias": "Competence Bias — we gravitate towards what we're already good at (building, creating, delivering) and avoid what feels unfamiliar (putting ourselves out there, promoting, selling). The studio gets better; the Instagram stays empty.",
+      "reframe": "Marketing a baby class isn't about 'selling'. It's about helping isolated new mums find something wonderful that you've built for them. Every time you don't post, don't share, don't tell someone about your class — a mum in Farnham is scrolling at 2am wondering what to do with her baby tomorrow, and she doesn't know you exist. Marketing isn't bragging. It's a service.",
+      "reflection_questions": [
+        "If your best friend had a baby and moved to Farnham, how would you tell her about Tiny Whirlwinds? That's your marketing voice.",
+        "What specifically about marketing feels overwhelming — is it the tech, the content ideas, the fear of judgement, or just not knowing where to start?",
+        "Could you commit to 15 minutes a day on Instagram for 30 days, just to see what happens?"
+      ]
+    },
+    {
+      "id": "MIRROR-002",
+      "title": "The franchise dream needs the Farnham proof first.",
+      "severity": "medium",
+      "tone": "grounding",
+      "observation": "You want to build a renowned sensory brand across multiple towns. That's a brilliant long-term vision — and the market data supports it (franchise fees are £6-25k, the model scales). But right now, you have 4 term bookings and an Instagram account that's 2 days old. The franchise ambition can become a distraction if you start thinking about brand guidelines, territory maps, and scalable systems before you've proven that Farnham parents will consistently book and rebook.",
+      "cognitive_bias": "Premature Scaling Bias — the temptation to build for 10 locations when you haven't nailed 1. Common in founders with a tech background where 'think big, build to scale' is the default mode. In local services, the sequence is: prove it works → document what works → then replicate.",
+      "reframe": "Every franchise that works started as one brilliant location. Baby Sensory was Dr Lin Day running classes from her living room. Farnham IS your franchise proof — if you fill it, retain parents, and build a reputation, you have the playbook. If you half-focus on Farnham while thinking about expansion, you'll have neither.",
+      "reflection_questions": [
+        "What would 'Farnham is done' look like? What metrics would make you confident enough to think about town #2?",
+        "Are you spending any mental energy on franchise-stage problems (brand guidelines, licensing, territory) right now? If so, can you write them down, park them in a 'Future' doc, and forget them for 6 months?",
+        "What would it mean for the franchise dream if Farnham classes were consistently 50% full vs consistently waitlisted?"
+      ]
+    },
+    {
+      "id": "MIRROR-003",
+      "title": "You have a tech superpower you're not using.",
+      "severity": "medium",
+      "tone": "encouraging",
+      "observation": "You co-founded Dexla. You have a tech/product background. You built a website with a booking flow. Most baby class operators are using shared Facebook event pages and taking payments via bank transfer. You have a genuine competitive advantage in systems, automation, and data — and you're not leveraging it at all.",
+      "cognitive_bias": "Context Switching Blindspot — when we move from one domain (tech) to another (baby classes), we sometimes leave our best skills at the door because they don't feel 'relevant'. But the parent who builds an automated email nurture sequence, tracks class fill rates in a dashboard, and A/B tests Instagram captions is playing a completely different game from the competitor printing leaflets at the library.",
+      "reframe": "Your tech background isn't separate from Tiny Whirlwinds — it's your unfair advantage. Automate the boring stuff (booking confirmations, review requests, term reminders). Use data (which class times fill fastest? which age group has the longest waitlist?). Build a simple CRM (even a spreadsheet) tracking every parent from first enquiry to rebooking. The franchises have HQ systems; you can build better ones for your specific needs.",
+      "reflection_questions": [
+        "What are you doing manually right now that you could automate in an afternoon?",
+        "If you were advising a friend who ran baby classes and had no tech skills, what would you build for them?",
+        "Could you set up a simple analytics dashboard (even in Google Sheets) tracking: enquiries, trials, conversions, rebookings, and source?"
+      ]
+    },
+    {
+      "id": "MIRROR-004",
+      "title": "'I'll run classes even when sick' is a red flag, not a badge of honour.",
+      "severity": "high",
+      "tone": "direct-caring",
+      "observation": "You said you'd only cancel if hospitalised. I understand the instinct — you're building something precious, you don't want to let parents down, and there's no one else. But here's what happens: you run a class with a cold. A baby catches it. That parent doesn't come back. Or: you push through a back injury, deliver a subpar class, and the parents who came that week form their opinion of Tiny Whirlwinds based on your worst session. Or: you burn out by month 4 and the business dies.",
+      "cognitive_bias": "Heroic Founder Fallacy — the belief that the business needs YOU specifically to function at all times, combined with the sunk-cost feeling that every cancelled class is lost revenue. In reality, one cancelled class is a minor inconvenience. A burnt-out founder is a dead business.",
+      "reframe": "Your job isn't to run every class. Your job is to make sure Tiny Whirlwinds runs every class. That's a different thing. Finding one person — a friend, a fellow mum, a part-time assistant — who can learn your class format and cover for you isn't a luxury. It's business insurance. Start looking now, before you need them.",
+      "reflection_questions": [
+        "Who in your life could learn to run a simplified version of your class? A friend, a mum from your trial classes, someone from your NCT group?",
+        "What would happen to your 4 term-booked parents if you were ill for 2 weeks? How would that feel?",
+        "Could you create a 'class in a box' — a simplified session plan that someone else could deliver at 70% of your quality? 70% is better than cancelled."
+      ]
+    },
+    {
+      "id": "MIRROR-005",
+      "title": "Your positioning is stronger than you think — but only if you say it out loud.",
+      "severity": "medium",
+      "tone": "affirming",
+      "observation": "You articulated something powerful in your voice note: you're positioning against Hartbeeps ('too in your face') and against overcrowded Baby Sensory classes. Your offering is GENTLE sensory — intimate, calm, well-produced, in a dedicated studio. That's not just a preference, it's a genuinely differentiated market position. The problem? None of this is visible anywhere. It's not on your website, not on Instagram, not communicated to anyone outside your own head.",
+      "cognitive_bias": "Curse of Knowledge — you know exactly why TW is different because you designed it that way. But parents Googling 'baby sensory Farnham' can't tell the difference between you and any other class. They see: class name, price, times. The GENTLE story, the studio advantage, the anti-overcrowding promise — that needs to be front and centre.",
+      "reframe": "Your differentiation story in 3 sentences: 'Tiny Whirlwinds is Farnham's only dedicated baby sensory studio. Our classes are small, gentle, and designed so babies aren't overwhelmed — just wonderfully engaged. It's everything you wished baby classes could be.' Put that everywhere. Website header. Instagram bio. Leaflets. Your email signature. Say it until you're bored of it. You'll still be saying it when parents hear it for the first time.",
+      "reflection_questions": [
+        "If a parent asked 'why should I come to you instead of Baby Sensory?', could you answer in 15 seconds? Practise that.",
+        "Does your website currently communicate the GENTLE positioning? Or does it read like any other baby class?",
+        "What's the one visual that captures your brand? The darkened studio with soft lights? A baby calmly exploring textures? Find it and make it your hero image everywhere."
+      ]
+    },
+    {
+      "id": "MIRROR-006",
+      "title": "The partnerships you haven't started are your fastest path to full classes.",
+      "severity": "high",
+      "tone": "urgent-encouraging",
+      "observation": "You acknowledged that connecting with health visitors, NCT groups, and children's centres is a good idea — but you haven't done it yet. Here's the thing: in the baby class world, these aren't 'nice to have' partnerships. They're the primary growth engine. One health visitor who trusts you and recommends your class to new parents can fill your classes faster than 6 months of Instagram content. One NCT group visit can bring 8 parents through your door in a week.",
+      "cognitive_bias": "Networking Avoidance — common in people who are brilliant at building things but uncomfortable 'putting themselves out there' to strangers. The voice note told me everything: you can create an incredible sensory experience, but walking into a health centre and introducing yourself feels harder than any class you've ever planned.",
+      "reframe": "These aren't cold sales calls. You're a local mum with a genuine offering that helps the families these professionals support. Health visitors WANT to recommend good activities — it makes their job easier. You're not asking for a favour; you're offering a resource. Bring a leaflet, be yourself, and let the class do the talking.",
+      "reflection_questions": [
+        "What's the actual worst case if you walk into the health centre and introduce yourself? (Spoiler: they say 'leave some leaflets on the table'. That's it.)",
+        "Do you know any health visitors or midwives personally — even through your own pregnancy experience? That's your warm intro.",
+        "Could you commit to visiting ONE local partner this week? Just one. Then one more next week."
+      ]
+    },
+    {
+      "id": "MIRROR-007",
+      "title": "You're not behind. You're right on time.",
+      "severity": "low",
+      "tone": "reassuring",
+      "observation": "I want to name something I heard underneath your voice note: a feeling of being behind. Instagram should have started earlier. Partnerships should be in place. The website should be perfect. You should know marketing by now. Here's the truth: you're a new mum who built a sensory studio from scratch, designed a curriculum, ran trial classes, got great feedback, and is launching a business. In 2 weeks. The Instagram account is 2 days old because you were busy BUILDING THE ACTUAL BUSINESS. That's the right order.",
+      "cognitive_bias": "Comparison Trap — seeing established competitors (Baby Sensory with 1,500 classes, Hartbeeps with a national franchise) and feeling like you should already be where they are. They've had decades. You've had months. You're comparing your behind-the-scenes to their highlight reel.",
+      "reframe": "Baby Sensory started as one person running classes. Every franchise started as a founder in a room with an idea and a few parents. You have a dedicated studio (most franchisees don't), a tech background (most class operators don't), and a product that works (most businesses don't at this stage). You're not behind. The launch is in 2 weeks. Everything starts there.",
+      "reflection_questions": [
+        "What would you tell a friend in your exact situation — would you tell her she's behind, or would you tell her she's doing brilliantly?",
+        "What's ONE thing you're genuinely proud of about what you've built so far?",
+        "A year from now, what does 'this went well' look like? Not franchise-scale — just Farnham-scale."
+      ]
+    }
+  ],
+
+  "summary": {
+    "top_tension": "Builder vs Promoter — Jade is exceptional at creating the experience but avoidant of marketing it. The business will succeed or fail based on whether she can bridge this gap, either by learning the basics herself or by getting help.",
+    "biggest_unlock": "Local partnerships (health visitors, NCT, children's centres) are the fastest, cheapest, most natural growth channel and the one she hasn't started. One week of outreach could equal months of Instagram effort.",
+    "hidden_strength": "Tech/product background is a genuine competitive moat that's completely dormant. When activated, it could make TW the most operationally sophisticated baby class business in Surrey.",
+    "watch_out_for": "Burnout. New mum + solo operator + marketing overwhelm + franchise ambitions = too much for one person. The business needs to grow at a pace that Jade can sustain, not at the pace of her ambition.",
+    "one_thing": "If Jade does ONE thing this week: visit 3 local venues (health centre, children's centre, café with a parent corner) with leaflets and introduce herself. That single action will do more for the business than any amount of Instagram strategy."
+  }
+}

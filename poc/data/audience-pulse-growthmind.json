@@ -1,0 +1,412 @@
+{
+  "org_id": "growthmind_001",
+  "scan_date": "2026-02-12T21:20:00Z",
+  "channels_scanned": [
+    "reddit/r/startups",
+    "reddit/r/SaaS",
+    "reddit/r/Entrepreneur",
+    "reddit/r/EntrepreneurRideAlong",
+    "reddit/r/ycombinator",
+    "reddit/r/DigitalMarketing",
+    "reddit/r/microsaas",
+    "news.ycombinator.com",
+    "indiehackers.com"
+  ],
+  "channel_health": [
+    {
+      "channel": "reddit/r/SaaS",
+      "signal_density": "high",
+      "signal_quality": "high",
+      "notes": "Highest concentration of ICP-matching signals. Multiple posts per week from founders struggling with first users, marketing, and growth strategy. Very actionable."
+    },
+    {
+      "channel": "reddit/r/startups",
+      "signal_density": "medium",
+      "signal_quality": "high",
+      "notes": "Strong quality signals but lower volume. Posts tend to be more thoughtful and detailed. Great for finding desperate/high-pain founders."
+    },
+    {
+      "channel": "reddit/r/Entrepreneur",
+      "signal_density": "high",
+      "signal_quality": "medium",
+      "notes": "High volume but mixed quality. Many posts are from non-tech founders or lifestyle businesses. Need to filter for SaaS/tech ICP matches."
+    },
+    {
+      "channel": "reddit/r/ycombinator",
+      "signal_density": "low",
+      "signal_quality": "high",
+      "notes": "Lower volume but very high-quality technical founders. Distribution/growth struggles are a recurring theme."
+    },
+    {
+      "channel": "reddit/r/DigitalMarketing",
+      "signal_density": "medium",
+      "signal_quality": "medium",
+      "notes": "Good for catching agency-frustration signals. Founders venting about wasted marketing spend."
+    },
+    {
+      "channel": "news.ycombinator.com",
+      "signal_density": "low",
+      "signal_quality": "high",
+      "notes": "Occasional 'Ask HN' threads about startup viability and growth. High-quality technical founders but sparse relevant signals."
+    },
+    {
+      "channel": "indiehackers.com",
+      "signal_density": "medium",
+      "signal_quality": "medium",
+      "notes": "Good community discussions about scaling and growth struggles. Some content-marketing noise to filter through."
+    },
+    {
+      "channel": "twitter/x",
+      "signal_density": "unknown",
+      "signal_quality": "unknown",
+      "notes": "Twitter/X search results were sparse via web search. Would need direct API access or browser-based scraping for better signal capture."
+    }
+  ],
+  "signals": [
+    {
+      "id": "sig_001",
+      "source": "reddit/r/SaaS",
+      "url": "https://www.reddit.com/r/SaaS/comments/1qvp0tn/how_to_get_first_users/",
+      "title": "How to get first users",
+      "author": "unknown",
+      "posted_approx": "2026-02-05",
+      "content_summary": "Founder built an AI contract-scanning app over a month but hit a wall finding first users or beta testers. Has trust in the product but zero users.",
+      "intent": "seeking_help",
+      "pain_level": "high",
+      "icp_match_score": 0.95,
+      "authenticity_score": 0.95,
+      "actionability_score": 0.9,
+      "overall_signal_score": 92,
+      "ai_summary": "Solo founder with working AI SaaS product is desperate for first users/testers — classic pre-PMF distribution problem.",
+      "recommended_action": "Direct engagement: comment with empathy about the distribution gap, offer a framework for finding first 10 users. This person is the perfect candidate for Growthmind's growth diagnosis."
+    },
+    {
+      "id": "sig_002",
+      "source": "reddit/r/ycombinator",
+      "url": "https://www.reddit.com/r/ycombinator/comments/1qzz5op/built_multiple_ai_products_struggling_to_find/",
+      "title": "Built multiple AI products. Struggling to find distribution. What am I missing?",
+      "author": "unknown",
+      "posted_approx": "2026-02-08",
+      "content_summary": "Technical co-founder in Dubai built multiple production-ready AI products (B2B and consumer) over 12-18 months. Can ship in under a week but none have reached meaningful traction. Distribution is the bottleneck.",
+      "intent": "seeking_help",
+      "pain_level": "high",
+      "icp_match_score": 0.85,
+      "authenticity_score": 0.9,
+      "actionability_score": 0.85,
+      "overall_signal_score": 88,
+      "ai_summary": "Prolific AI builder with multiple shipped products has zero distribution/traction and is seeking help identifying the root cause.",
+      "recommended_action": "Engage with insight about the build-vs-distribute trap. This founder needs growth stage diagnosis — exactly what Growthmind offers. Could be a case study candidate."
+    },
+    {
+      "id": "sig_003",
+      "source": "reddit/r/startups",
+      "url": "https://www.reddit.com/r/startups/comments/1qcsznf/built_22_products_0_revenue_looking_for_a_reality/",
+      "title": "Built 22 products, $0 revenue. Looking for a reality check on whether I should focus or keep exploring",
+      "author": "unknown",
+      "posted_approx": "2026-01-14",
+      "content_summary": "Founder with profitable consulting biz used AI coding tools to ship 22 products in a year — zero revenue from any. Knows they optimized for shipping over validation. Wrestling with focus vs explore, B2B vs consumer, solo vs co-founder.",
+      "intent": "seeking_help",
+      "pain_level": "desperate",
+      "icp_match_score": 0.9,
+      "authenticity_score": 0.95,
+      "actionability_score": 0.85,
+      "overall_signal_score": 90,
+      "ai_summary": "Serial builder shipped 22 products with $0 revenue and is desperate for a framework to decide what to focus on — textbook Growthmind ICP.",
+      "recommended_action": "High-value engagement opportunity. Comment with framework for prioritization (validation scoring, ICP clarity). This person literally needs growth stage diagnosis and weekly experiment prescription."
+    },
+    {
+      "id": "sig_004",
+      "source": "reddit/r/startups",
+      "url": "https://www.reddit.com/r/startups/comments/1qx3962/marketing_a_product_i_will_not_promote_that_keeps/",
+      "title": "Marketing a product that keeps changing direction: Draining, inefficient, and feeling like 'fake work'",
+      "author": "unknown",
+      "posted_approx": "2026-02-06",
+      "content_summary": "Early-stage startup marketer feeling burnt out from constant pivots, zero budget, and no stable product narrative. Wants to shift from promotion to product strategy but feels stuck in a cycle of 'hustle without results'.",
+      "intent": "venting",
+      "pain_level": "high",
+      "icp_match_score": 0.7,
+      "authenticity_score": 0.95,
+      "actionability_score": 0.6,
+      "overall_signal_score": 72,
+      "ai_summary": "Startup employee experiencing burnout from directionless pivoting and zero-budget marketing — signals a team that desperately needs growth strategy.",
+      "recommended_action": "Indirect signal — the startup itself (not just this poster) needs Growthmind. Engage with empathy about the pivot treadmill; mention that structured growth experiments can replace constant pivoting."
+    },
+    {
+      "id": "sig_005",
+      "source": "reddit/r/DigitalMarketing",
+      "url": "https://www.reddit.com/r/DigitalMarketing/comments/1qndflh/spent_18k_on_a_marketing_agency_in_5_months/",
+      "title": "Spent 18k on a marketing agency in 5 months. Finally snapped and did it myself. Costs dropped 95%.",
+      "author": "unknown",
+      "posted_approx": "2026-01-27",
+      "content_summary": "Founder spent $18k on a marketing agency that delivered cookie-cutter work, no strategy, and blamed 'market conditions' for declining results. Switched to DIY with AI tools for $80/month and saw 35% engagement increase.",
+      "intent": "venting",
+      "pain_level": "high",
+      "icp_match_score": 0.75,
+      "authenticity_score": 0.9,
+      "actionability_score": 0.7,
+      "overall_signal_score": 78,
+      "ai_summary": "Founder wasted $18k on a useless marketing agency and discovered DIY AI tools are far more effective — validates the anti-agency pain point.",
+      "recommended_action": "Engage in thread validating the agency frustration. Position Growthmind as the middle ground: not an agency, not DIY chaos, but an AI system that gives you a structured growth plan."
+    },
+    {
+      "id": "sig_006",
+      "source": "reddit/r/SaaS",
+      "url": "https://www.reddit.com/r/SaaS/comments/1qwlrcj/how_to_scale_run_marketing_desperate_for_any_ideas/",
+      "title": "How to Scale/Run Marketing — Desperate for any Ideas?",
+      "author": "unknown",
+      "posted_approx": "2026-02-05",
+      "content_summary": "SaaS founder getting signups cheaply (<€2) but conversion to paid is catastrophic (<1%). Tried Google Ads, considering Meta. Self-describes as 'desperate' for marketing channel ideas.",
+      "intent": "seeking_help",
+      "pain_level": "desperate",
+      "icp_match_score": 0.85,
+      "authenticity_score": 0.9,
+      "actionability_score": 0.85,
+      "overall_signal_score": 87,
+      "ai_summary": "SaaS founder with a working product and cheap signups is desperate because conversion to paid is under 1% — needs growth experiment guidance.",
+      "recommended_action": "High-value signal. Engage with advice on conversion optimization and onboarding experiments. This founder needs structured weekly experiments — perfect Growthmind use case."
+    },
+    {
+      "id": "sig_007",
+      "source": "reddit/r/SaaS",
+      "url": "https://www.reddit.com/r/SaaS/comments/1qn38qu/i_have_no_idea_how_to_market_my_saas/",
+      "title": "I have no idea how to market my SaaS",
+      "author": "unknown",
+      "posted_approx": "2026-01-27",
+      "content_summary": "Founder openly admits having no idea whether to do paid ads, SEO, or social media to market their SaaS. Completely lost on marketing strategy.",
+      "intent": "seeking_help",
+      "pain_level": "high",
+      "icp_match_score": 0.9,
+      "authenticity_score": 0.9,
+      "actionability_score": 0.9,
+      "overall_signal_score": 90,
+      "ai_summary": "SaaS founder with zero marketing knowledge is asking for basic direction on how to market — ideal candidate for guided growth experiments.",
+      "recommended_action": "Direct engagement with a structured framework. This person would benefit enormously from Growthmind's growth stage diagnosis and prescribed experiments. Very high conversion potential."
+    },
+    {
+      "id": "sig_008",
+      "source": "reddit/r/SaaS",
+      "url": "https://www.reddit.com/r/SaaS/comments/1qn8sh3/i_made_a_really_good_product_but_i_dont_know_how/",
+      "title": "I made a really good product but I don't know how to market it!",
+      "author": "unknown",
+      "posted_approx": "2026-01-27",
+      "content_summary": "Founder built a simulated mock interview SaaS, knows their target customers, but has no marketing skills. Posting on Reddit, doing YouTube shorts, avoiding paid ads. Looking for basic marketing help.",
+      "intent": "seeking_help",
+      "pain_level": "moderate",
+      "icp_match_score": 0.85,
+      "authenticity_score": 0.9,
+      "actionability_score": 0.85,
+      "overall_signal_score": 82,
+      "ai_summary": "First-time SaaS founder with a shipped product and identified ICP but zero marketing skills — needs a growth system to guide experiments.",
+      "recommended_action": "Engage with practical advice about community-led growth. Mention that structured experimentation beats random tactics. Good fit for Growthmind's weekly experiment approach."
+    },
+    {
+      "id": "sig_009",
+      "source": "reddit/r/startups",
+      "url": "https://www.reddit.com/r/startups/comments/1qpjglv/never_take_advice_from_startup_mentors_and_gurus/",
+      "title": "Never take advice from startup mentors and gurus",
+      "author": "unknown",
+      "posted_approx": "2026-01-28",
+      "content_summary": "Frustrated founder ranting about fake startup mentors and incubator coaching being useless. Says only successful founders should advise. Clearly burned by bad advice.",
+      "intent": "venting",
+      "pain_level": "high",
+      "icp_match_score": 0.65,
+      "authenticity_score": 0.85,
+      "actionability_score": 0.5,
+      "overall_signal_score": 62,
+      "ai_summary": "Founder frustrated with useless startup mentors and coaching programs — signals distrust of human advisors, potential openness to AI-driven growth guidance.",
+      "recommended_action": "Monitor but don't engage directly (anti-advice sentiment could backfire). Use this signal to inform positioning: Growthmind is data-driven, not guru-driven."
+    },
+    {
+      "id": "sig_010",
+      "source": "reddit/r/startups",
+      "url": "https://www.reddit.com/r/startups/comments/1qybnuf/everyone_talks_about_iterating_the_product_with/",
+      "title": "Everyone talks about iterating the product with users, but how do you get those early users?",
+      "author": "unknown",
+      "posted_approx": "2026-02-07",
+      "content_summary": "Founder pointing out the chicken-and-egg problem: everyone says iterate with users, but nobody explains how to get those first users in the first place.",
+      "intent": "seeking_help",
+      "pain_level": "moderate",
+      "icp_match_score": 0.85,
+      "authenticity_score": 0.9,
+      "actionability_score": 0.8,
+      "overall_signal_score": 82,
+      "ai_summary": "Founder calling out the gap between 'iterate with users' advice and the reality of getting first users — a core pre-PMF pain point.",
+      "recommended_action": "Engage with specific first-user acquisition tactics. This is a great thread for thought leadership — Growthmind could share a framework for the first 10-20 users."
+    },
+    {
+      "id": "sig_011",
+      "source": "news.ycombinator.com",
+      "url": "https://news.ycombinator.com/item?id=46654726",
+      "title": "Ask HN: Is it still worth pursuing a software startup?",
+      "author": "unknown",
+      "posted_approx": "2026-01-29",
+      "content_summary": "HN discussion questioning whether software startups are still viable given AI cloning, app store mills, and big company competition. Existential growth anxiety.",
+      "intent": "seeking_help",
+      "pain_level": "moderate",
+      "icp_match_score": 0.7,
+      "authenticity_score": 0.85,
+      "actionability_score": 0.5,
+      "overall_signal_score": 65,
+      "ai_summary": "Technical founders questioning whether software startups are still viable in 2026 — signals broader anxiety about growth and competition.",
+      "recommended_action": "Lower priority for direct engagement but useful for content marketing. Write a blog post or thread response about how structured growth experimentation helps small teams compete."
+    },
+    {
+      "id": "sig_012",
+      "source": "news.ycombinator.com",
+      "url": "https://news.ycombinator.com/item?id=46979009",
+      "title": "Ask HN: If agentic AI is the future, why is every startup shipping a dashboard?",
+      "author": "unknown",
+      "posted_approx": "2026-02-11",
+      "content_summary": "Discussion about the gap between AI agent hype and the reality of shipping traditional dashboards. Founders questioning their approach to building AI-powered products.",
+      "intent": "other",
+      "pain_level": "mild",
+      "icp_match_score": 0.5,
+      "authenticity_score": 0.85,
+      "actionability_score": 0.4,
+      "overall_signal_score": 45,
+      "ai_summary": "HN founders debating AI product strategy — tangentially relevant as it signals confusion about what to build and how to grow AI startups.",
+      "recommended_action": "Low priority. Monitor for positioning insights — Growthmind itself is an 'agentic' growth tool, so this discourse is relevant to messaging."
+    },
+    {
+      "id": "sig_013",
+      "source": "indiehackers.com",
+      "url": "https://www.indiehackers.com/post/how-indie-hackers-scale-saas-faster-with-dedicated-dev-teams-in-2026-yEFEFlKc4h9yM2q2ckXG",
+      "title": "How Indie Hackers Scale SaaS Faster with Dedicated Dev Teams in 2026",
+      "author": "unknown",
+      "posted_approx": "2026-02-09",
+      "content_summary": "Discussion about indie hackers hitting a wall after initial traction — bugs stack up, scaling is scary, and founders spend more time firefighting than shipping.",
+      "intent": "other",
+      "pain_level": "moderate",
+      "icp_match_score": 0.7,
+      "authenticity_score": 0.6,
+      "actionability_score": 0.5,
+      "overall_signal_score": 55,
+      "ai_summary": "Indie Hackers discussion about the post-traction scaling struggle — relevant but likely content marketing rather than genuine signal.",
+      "recommended_action": "Low priority. The post itself may be promotional, but the comments could contain genuine founder struggles worth monitoring."
+    },
+    {
+      "id": "sig_014",
+      "source": "indiehackers.com",
+      "url": "https://www.indiehackers.com/post/services/rebuilding-after-his-arr-plummeted-by-600k-5QwCjGT6vlSdFsN0eXvY",
+      "title": "Rebuilding after his ARR plummeted by $600k",
+      "author": "unknown",
+      "posted_approx": "2026-02-10",
+      "content_summary": "Founder sharing their story of losing $600k in ARR and rebuilding. Discussion about growth mechanisms and recovery strategies.",
+      "intent": "other",
+      "pain_level": "high",
+      "icp_match_score": 0.5,
+      "authenticity_score": 0.8,
+      "actionability_score": 0.4,
+      "overall_signal_score": 50,
+      "ai_summary": "Founder recovering from $600k ARR loss shares growth mechanisms — more post-PMF than pre-PMF but shows the community craves growth guidance.",
+      "recommended_action": "Monitor for engagement opportunities in comments. Founders in the replies may be pre-PMF and looking for growth help."
+    },
+    {
+      "id": "sig_015",
+      "source": "reddit/r/SaaS",
+      "url": "https://www.reddit.com/r/SaaS/comments/1qc9c6y/for_founders_who_broke_through_the_first_10/",
+      "title": "For founders who broke through the 'first 10 customers' barrier, what actually worked?",
+      "author": "unknown",
+      "posted_approx": "2026-01-13",
+      "content_summary": "Discussion thread where founders share what actually worked to get their first 10 customers. Responses include manual outreach, LinkedIn DMs, Reddit engagement, and cold email.",
+      "intent": "seeking_help",
+      "pain_level": "moderate",
+      "icp_match_score": 0.9,
+      "authenticity_score": 0.85,
+      "actionability_score": 0.8,
+      "overall_signal_score": 83,
+      "ai_summary": "Founders sharing first-10-customer strategies — high-engagement thread full of pre-PMF founders seeking growth playbooks.",
+      "recommended_action": "Engage with a structured response about growth experiments. This thread's audience IS Growthmind's ICP. Consider sharing a mini-framework and linking to Growthmind."
+    }
+  ],
+  "high_value_signals": [
+    {
+      "signal_id": "sig_001",
+      "score": 92,
+      "reason": "Perfect ICP match: solo founder with shipped AI product, zero users, actively seeking help. Highest conversion potential."
+    },
+    {
+      "signal_id": "sig_003",
+      "score": 90,
+      "reason": "Built 22 products with $0 revenue — desperate for a framework to decide what to focus on. Textbook Growthmind use case."
+    },
+    {
+      "signal_id": "sig_007",
+      "score": 90,
+      "reason": "SaaS founder with zero marketing knowledge openly asking for direction. Would immediately benefit from growth stage diagnosis."
+    },
+    {
+      "signal_id": "sig_002",
+      "score": 88,
+      "reason": "Technical co-founder with multiple shipped AI products struggling with distribution. High-quality lead."
+    },
+    {
+      "signal_id": "sig_006",
+      "score": 87,
+      "reason": "Self-described 'desperate' SaaS founder with <1% conversion. Needs structured experimentation guidance."
+    },
+    {
+      "signal_id": "sig_015",
+      "score": 83,
+      "reason": "High-engagement thread full of pre-PMF founders discussing first-customer strategies. Audience IS the ICP."
+    },
+    {
+      "signal_id": "sig_010",
+      "score": 82,
+      "reason": "Founder articulating the core pre-PMF chicken-and-egg problem. Great thread for thought leadership."
+    },
+    {
+      "signal_id": "sig_008",
+      "score": 82,
+      "reason": "First-time SaaS founder with product and ICP clarity but zero marketing skills. Strong fit."
+    },
+    {
+      "signal_id": "sig_005",
+      "score": 78,
+      "reason": "Agency frustration signal with $18k wasted. Validates the anti-agency pain point in Growthmind's positioning."
+    },
+    {
+      "signal_id": "sig_004",
+      "score": 72,
+      "reason": "Startup employee burned out from directionless pivoting. The underlying company needs growth strategy."
+    }
+  ],
+  "pain_themes": [
+    {
+      "rank": 1,
+      "theme": "Can't get first users / zero distribution",
+      "frequency": "very_high",
+      "signal_ids": ["sig_001", "sig_002", "sig_003", "sig_010", "sig_015"],
+      "description": "The #1 pain point by far. Founders can build products quickly (especially with AI tools) but have no idea how to get their first users. The build-to-distribute gap is widening as AI makes building easier."
+    },
+    {
+      "rank": 2,
+      "theme": "No marketing knowledge / don't know where to start",
+      "frequency": "high",
+      "signal_ids": ["sig_007", "sig_008", "sig_006"],
+      "description": "Technical founders who shipped a product but are completely lost on marketing channels, strategy, and tactics. They don't know if they should do SEO, ads, content, or outreach."
+    },
+    {
+      "rank": 3,
+      "theme": "Going in circles / no growth framework",
+      "frequency": "high",
+      "signal_ids": ["sig_003", "sig_004", "sig_002"],
+      "description": "Founders stuck in a loop of building, pivoting, and trying random tactics without a systematic approach to growth. They lack a framework for prioritization and experimentation."
+    },
+    {
+      "rank": 4,
+      "theme": "Marketing agencies and mentors are useless",
+      "frequency": "moderate",
+      "signal_ids": ["sig_005", "sig_009"],
+      "description": "Strong distrust of traditional growth help — agencies deliver cookie-cutter work, mentors lack real experience. Creates an opening for AI-driven, data-backed growth guidance."
+    },
+    {
+      "rank": 5,
+      "theme": "Existential doubt about startup viability",
+      "frequency": "moderate",
+      "signal_ids": ["sig_011", "sig_003", "sig_004"],
+      "description": "Founders questioning whether it's even worth building startups in 2026 given competition, AI cloning, and market saturation. Underlying need: validation that their approach can work with the right strategy."
+    }
+  ],
+  "summary": "Scan of 9 channels across Reddit, Hacker News, and Indie Hackers found 15 signals with 10 scoring 70+ (high-value). The dominant pain theme is the build-to-distribute gap: founders can ship products faster than ever with AI tools, but have zero idea how to get first users. r/SaaS is the highest-signal-density channel for Growthmind's ICP, with multiple posts per week from founders who match perfectly (solo/small team, shipped product, zero traction, seeking growth help). The top 3 signals (scores 90-92) are founders who literally need exactly what Growthmind offers: a system that diagnoses their growth stage and prescribes weekly experiments. Agency frustration is a strong secondary theme that validates Growthmind's positioning as an AI alternative to expensive, ineffective agencies. Recommended immediate actions: (1) engage in r/SaaS 'how to get first users' and 'no idea how to market' threads with value-first content, (2) create a thought leadership post addressing the '22 products, $0 revenue' pattern, (3) set up ongoing monitoring of r/SaaS, r/startups, and r/ycombinator for real-time signal capture."
+}

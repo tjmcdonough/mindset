@@ -1,0 +1,109 @@
+{
+  "org_id": "qala_001",
+  "analysis_type": "interrogation_checkpoints",
+  "generated_at": "2026-02-13T09:02:00Z",
+  "version": 1,
+  "context": "Questions targeting information gaps that cannot be resolved through public research. Designed for experienced founders (ex-Imburse, successful exit to Duck Creek) — conversational but technically credible.",
+
+  "checkpoints": [
+    {
+      "checkpoint_id": "INT-001",
+      "field_targeted": "product_status",
+      "question": "Where's the product right now — are you running live with any design partners, or is it still demo-on-a-call? What's the gap between the demo and something a team could run in production?",
+      "why_it_matters": "The website says 'up and running in 30 minutes' but there's no signup flow, no self-serve, no visible customers. We need to understand if this is a working product with real data flowing through it or a polished demo. This determines whether growth advice should focus on product-market fit discovery or go-to-market acceleration.",
+      "priority": "critical"
+    },
+    {
+      "checkpoint_id": "INT-002",
+      "field_targeted": "pipeline_traction",
+      "question": "How many conversations are you in right now? Any LOIs, paid pilots, or design partners — and if so, what kind of companies are they? What's been the typical objection when deals stall?",
+      "why_it_matters": "Zero public customer evidence creates a trust vacuum (flagged in voice analysis). Understanding pipeline composition and conversion blockers tells us whether the problem is demand generation, sales process, or product readiness. The objection patterns reveal the real competitive landscape.",
+      "priority": "critical"
+    },
+    {
+      "checkpoint_id": "INT-003",
+      "field_targeted": "technical_architecture",
+      "question": "Help me understand the integration model — is Qala an SDK that developers embed, an agent that sits alongside services, or something that hooks into the CI/CD pipeline? When you say '30 minutes to integrate', what does that actually look like step-by-step?",
+      "why_it_matters": "The website claims source-level observability and fast integration but never explains the mechanism. SDK vs agent vs sidecar vs pipeline hook determines developer adoption friction, security posture, and scalability. This is also the technical differentiation that separates Qala from scan-based competitors like BigID — we need to articulate it clearly.",
+      "priority": "critical"
+    },
+    {
+      "checkpoint_id": "INT-004",
+      "field_targeted": "icp_prioritisation",
+      "question": "You mention fintech, SaaS, healthtech — but if you had to pick the one vertical and company profile where Qala lands fastest, who is it? What size company, what regulatory trigger, what role is your champion?",
+      "why_it_matters": "The current positioning targets everyone in regulated industries. At pre-seed with a small team, focus is everything. Knowing whether the beachhead is a 200-person Swiss fintech dealing with DORA or a 50-person healthtech worried about GDPR completely changes the GTM playbook, content strategy, and channel selection.",
+      "priority": "critical"
+    },
+    {
+      "checkpoint_id": "INT-005",
+      "field_targeted": "origin_story",
+      "question": "What happened at Imburse that made you think 'we need to build Qala'? Was there a specific compliance fire drill, a data mapping nightmare, or something during the Duck Creek acquisition that crystallised the problem?",
+      "why_it_matters": "The voice analysis flagged that the website has no founder story — it's impersonal. A concrete Imburse origin story is Qala's strongest trust signal at pre-seed. It answers 'why should I trust a company with no customers?' with 'because we lived this pain while building a company that got acquired.' This becomes the centrepiece of founder-led content.",
+      "priority": "high"
+    },
+    {
+      "checkpoint_id": "INT-006",
+      "field_targeted": "pricing_model",
+      "question": "You mention transparent pricing and 'try before you buy' on the site — what's the actual model you're thinking? Per-service monitored, per-data-volume, per-seat, platform fee? Have you tested any pricing with prospects yet?",
+      "why_it_matters": "No public pricing exists. The pricing model signals how Qala thinks about value delivery and determines land-and-expand mechanics. Per-service aligns with engineering teams (bottom-up), platform fee aligns with enterprise sales (top-down). Early pricing signals from real conversations are more valuable than any model we could propose.",
+      "priority": "high"
+    },
+    {
+      "checkpoint_id": "INT-007",
+      "field_targeted": "competitive_encounters",
+      "question": "When you're in conversations with prospects, who else are they looking at — or are you mostly competing against 'do nothing' and spreadsheets? Are Collibra or BigID showing up in the same deals, or are you finding greenfield?",
+      "why_it_matters": "Market intel shows the competitive landscape in theory, but reality on the ground may be completely different. If prospects aren't comparing Qala to BigID but to a compliance consultant and a spreadsheet, the messaging should attack the status quo, not incumbents. If BigID is in deals, we need sharp technical differentiation content.",
+      "priority": "high"
+    },
+    {
+      "checkpoint_id": "INT-008",
+      "field_targeted": "regulatory_demand_signal",
+      "question": "DORA went live January 2025 and the AI Act is phasing in — are you seeing inbound interest because of these regulations, or are you still having to educate prospects that continuous compliance is the new requirement?",
+      "why_it_matters": "The market intel identifies DORA and EU AI Act as massive tailwinds, but we don't know if the wind is actually blowing yet for a pre-seed startup. If prospects are coming inbound because of DORA panic, the GTM should be regulation-led content and SEO. If it's still an education game, we need thought leadership and longer sales cycles.",
+      "priority": "high"
+    },
+    {
+      "checkpoint_id": "INT-009",
+      "field_targeted": "runway_and_burn",
+      "question": "With €1.7M in the bank, what does the runway look like — are you planning to be capital-efficient and stretch to 24 months, or is there a plan to raise again in 12 months? What's the biggest cost centre right now?",
+      "why_it_matters": "Runway determines the urgency and ambition of the growth plan. If they have 24 months, we can plan methodical founder-led sales. If they need to show traction for a seed round in 12 months, every growth recommendation needs to be oriented toward demonstrable metrics (pipeline, pilots, ARR). The cost structure tells us where there's room to invest in growth.",
+      "priority": "high"
+    },
+    {
+      "checkpoint_id": "INT-010",
+      "field_targeted": "hiring_and_team",
+      "question": "The team is distributed across Switzerland, Portugal, and the UK — what are the next 2-3 hires you're planning? Are you looking for engineering depth, or is the priority a commercial hire to start building pipeline?",
+      "why_it_matters": "At 1-10 people, every hire reshapes the company. If the next hire is an engineer, the product isn't ready for market. If it's a salesperson or growth marketer, they believe the product is ready and need distribution. This tells us what growth levers are realistic in the next 6-12 months.",
+      "priority": "medium"
+    },
+    {
+      "checkpoint_id": "INT-011",
+      "field_targeted": "geography_strategy",
+      "question": "You're Swiss-based with team in Portugal and the UK — are you selling into Switzerland first, going broad across the EU, or is the UK also a target market? Does the Swiss HQ actually help you in sales conversations?",
+      "why_it_matters": "Market intel suggests Swiss/EU positioning is an advantage for data sovereignty, but we don't know if this is playing out in practice. Geographic focus affects language requirements, regulatory specificity, event strategy, and partnership opportunities. A Swiss fintech beachhead is a very different playbook from a pan-European launch.",
+      "priority": "medium"
+    },
+    {
+      "checkpoint_id": "INT-012",
+      "field_targeted": "channel_and_distribution",
+      "question": "How are your demo requests coming in today — is it founder network, LinkedIn outbound, events, investor intros? What's been the most effective channel so far, even if volumes are small?",
+      "why_it_matters": "At pre-seed, understanding which channels generate qualified interest (even a handful of conversations) reveals where to double down. If it's all founder network, the growth plan should systematise warm intros and founder-led sales. If LinkedIn content is working, we scale that. We need to know what's already working before recommending new channels.",
+      "priority": "medium"
+    }
+  ],
+
+  "meta": {
+    "total_checkpoints": 12,
+    "priority_breakdown": {
+      "critical": 4,
+      "high": 5,
+      "medium": 3
+    },
+    "design_notes": "Questions ordered by priority. Critical questions address the biggest unknowns that block any meaningful growth strategy. High-priority questions refine positioning and GTM. Medium questions inform execution details. All questions are open-ended to encourage detailed founder responses — avoid yes/no framing.",
+    "sources_informing_gaps": [
+      "company-seed-qala.json: no signup flow, no users, no pricing, no tech stack detail",
+      "market-intel-qala.json: strong theoretical positioning but no validation from real sales conversations",
+      "growth-voice-qala.json: trust vacuum from no customers/logos, missing origin story, impersonal voice"
+    ]
+  }
+}

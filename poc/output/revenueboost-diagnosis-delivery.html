@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Revenue Boost — Growth Diagnosis | GrowthMind</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+  
+  :root {
+    --bg: #09090b;
+    --surface: #111114;
+    --surface2: #18181d;
+    --surface3: #1f1f26;
+    --border: #27272f;
+    --border-light: #35354a;
+    --text: #eaeaf0;
+    --text-secondary: #a0a0b8;
+    --text-muted: #6b6b80;
+    --accent: #6366f1;
+    --accent-light: #818cf8;
+    --accent-glow: rgba(99,102,241,0.15);
+    --green: #10b981;
+    --green-soft: #34d399;
+    --green-bg: rgba(16,185,129,0.08);
+    --green-border: rgba(16,185,129,0.2);
+    --yellow: #f59e0b;
+    --yellow-bg: rgba(245,158,11,0.08);
+    --yellow-border: rgba(245,158,11,0.2);
+    --red: #ef4444;
+    --red-bg: rgba(239,68,68,0.08);
+    --red-border: rgba(239,68,68,0.2);
+    --blue: #3b82f6;
+    --blue-bg: rgba(59,130,246,0.08);
+    --purple: #a855f7;
+    --purple-bg: rgba(168,85,247,0.08);
+    --cyan: #06b6d4;
+    --orange: #f97316;
+    --orange-bg: rgba(249,115,22,0.08);
+    --orange-border: rgba(249,115,22,0.2);
+  }
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .page { max-width: 900px; margin: 0 auto; padding: 0 32px; }
+  
+  .hero {
+    padding: 80px 0 64px;
+    text-align: center;
+    position: relative;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-light), transparent);
+  }
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-light);
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    line-height: 1.05;
+    margin-bottom: 16px;
+    background: linear-gradient(180deg, #ffffff 20%, #a0a0c0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .hero-tagline {
+    font-size: 18px;
+    color: var(--text-secondary);
+    max-width: 640px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+  }
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+  .hero-stat { text-align: center; }
+  .hero-stat-value {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--green-soft);
+    line-height: 1;
+  }
+  .hero-stat-value.accent { color: var(--accent-light); }
+  .hero-stat-value.yellow { color: var(--yellow); }
+  .hero-stat-value.cyan { color: var(--cyan); }
+  .hero-stat-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    margin-top: 6px;
+  }
+
+  .section {
+    padding: 64px 0;
+    position: relative;
+  }
+  .section + .section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  }
+  .section-num {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-light);
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+  }
+  .section-desc {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin-bottom: 36px;
+    max-width: 640px;
+  }
+
+  .overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .overview-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+  }
+  .overview-card.full { grid-column: 1 / -1; }
+  .ov-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .ov-value {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  .ov-value.small { font-size: 13px; font-weight: 400; color: var(--text-secondary); }
+
+  .founder {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+  }
+  .f-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--orange), #ea580c);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 18px;
+    flex-shrink: 0;
+    color: white;
+  }
+  .f-name { font-size: 16px; font-weight: 700; }
+  .f-role { font-size: 12px; color: var(--accent-light); margin-bottom: 6px; }
+  .f-bio { font-size: 12px; color: var(--text-secondary); line-height: 1.6; }
+  .f-tags { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 4px; }
+  .f-tag {
+    font-size: 10px;
+    padding: 2px 8px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text-muted);
+  }
+
+  .score-block {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 40px;
+    margin-bottom: 28px;
+  }
+  .ring-wrap {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+  }
+  .ring-wrap svg {
+    width: 150px;
+    height: 150px;
+    transform: rotate(-90deg);
+  }
+  .ring-track { fill: none; stroke: var(--surface3); stroke-width: 10; }
+  .ring-fill { fill: none; stroke-width: 10; stroke-linecap: round; }
+  .ring-center {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .ring-num { font-size: 40px; font-weight: 900; line-height: 1; }
+  .ring-label { font-size: 12px; color: var(--text-muted); }
+  .score-text h3 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+  .score-text p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
+  .verdict-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 14px;
+    padding: 5px 14px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .v-cond { background: var(--orange-bg); color: var(--orange); border: 1px solid var(--orange-border); }
+
+  .dim-list { display: flex; flex-direction: column; gap: 14px; }
+  .dim {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 22px;
+  }
+  .dim-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .dim-name { font-size: 14px; font-weight: 600; }
+  .dim-score { font-size: 18px; font-weight: 800; }
+  .dim-bar {
+    height: 6px;
+    background: var(--surface3);
+    border-radius: 100px;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+  .dim-bar-fill { height: 100%; border-radius: 100px; }
+  .dim-note { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+  .c-green { color: var(--green-soft); }
+  .c-yellow { color: var(--yellow); }
+  .c-red { color: var(--red); }
+  .bg-green { background: var(--green); }
+  .bg-yellow { background: var(--yellow); }
+  .bg-red { background: var(--red); }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .col-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+  }
+  .col-card h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .col-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .col-card li {
+    font-size: 13px;
+    color: var(--text-secondary);
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.55;
+  }
+  .col-card li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+  }
+  .green-dots li::before { background: var(--green); }
+  .red-dots li::before { background: var(--red); }
+  .blue-dots li::before { background: var(--blue); }
+  .yellow-dots li::before { background: var(--yellow); }
+
+  .insight {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 28px 24px;
+    margin-bottom: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+  .insight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 3px;
+  }
+  .insight.i-crit::before { background: var(--red); }
+  .insight.i-high::before { background: var(--yellow); }
+  .insight.i-med::before { background: var(--blue); }
+  .insight.i-pos::before { background: var(--green); }
+  .insight-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 10px;
+  }
+  .insight-title { font-size: 17px; font-weight: 700; }
+  .insight-sev {
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    flex-shrink: 0;
+  }
+  .sev-c { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
+  .sev-h { background: var(--yellow-bg); color: var(--yellow); border: 1px solid var(--yellow-border); }
+  .sev-m { background: var(--blue-bg); color: var(--blue); border: 1px solid rgba(59,130,246,0.2); }
+  .sev-p { background: var(--green-bg); color: var(--green-soft); border: 1px solid var(--green-border); }
+  .insight-body {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  .insight-q {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 14px;
+    color: var(--accent-light);
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+  .insight-action {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    padding: 12px 16px;
+    background: var(--green-bg);
+    border: 1px solid var(--green-border);
+    border-radius: 8px;
+  }
+  .insight-action strong { color: var(--green-soft); }
+  .insight-bias {
+    margin-top: 12px;
+    display: inline-flex;
+    padding: 3px 10px;
+    background: var(--purple-bg);
+    border: 1px solid rgba(168,85,247,0.15);
+    border-radius: 100px;
+    font-size: 11px;
+    color: var(--purple);
+  }
+
+  .bright-spot {
+    background: var(--surface);
+    border: 1px solid var(--green-border);
+    border-radius: 10px;
+    padding: 22px;
+    margin-bottom: 12px;
+  }
+  .bright-spot h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--green-soft);
+    margin-bottom: 6px;
+  }
+  .bright-spot p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  .exp {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 12px;
+  }
+  .exp-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+    gap: 12px;
+  }
+  .exp-name { font-size: 15px; font-weight: 700; }
+  .exp-pri {
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+  }
+  .p0 { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
+  .p1 { background: var(--yellow-bg); color: var(--yellow); border: 1px solid var(--yellow-border); }
+  .p2 { background: var(--blue-bg); color: var(--blue); border: 1px solid rgba(59,130,246,0.2); }
+  .exp-hyp {
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 14px;
+    line-height: 1.6;
+  }
+  .exp-row {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .exp-row span { color: var(--text-muted); }
+  .exp-row strong { color: var(--text); font-weight: 600; }
+  .exp-success {
+    font-size: 12px;
+    padding: 10px 14px;
+    background: var(--surface2);
+    border-radius: 6px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+  .exp-success b { color: var(--green-soft); font-weight: 600; }
+  .exp-kill {
+    font-size: 12px;
+    padding: 10px 14px;
+    background: var(--red-bg);
+    border: 1px solid var(--red-border);
+    border-radius: 6px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-top: 8px;
+  }
+  .exp-kill b { color: var(--red); font-weight: 600; }
+
+  .comp {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 12px;
+  }
+  .comp-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .comp-name { font-size: 16px; font-weight: 700; }
+  .comp-their { font-size: 12px; color: var(--text-muted); font-style: italic; }
+  .comp-counter {
+    font-size: 14px;
+    color: var(--accent-light);
+    font-weight: 500;
+    margin-bottom: 14px;
+    line-height: 1.5;
+  }
+  .comp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .comp-cell {
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .comp-win {
+    background: var(--green-bg);
+    border: 1px solid var(--green-border);
+  }
+  .comp-win .cc-label { color: var(--green-soft); font-weight: 700; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+  .comp-lose {
+    background: var(--red-bg);
+    border: 1px solid var(--red-border);
+  }
+  .comp-lose .cc-label { color: var(--red); font-weight: 700; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+  .comp-cell p { color: var(--text-secondary); }
+
+  .anti-exp {
+    background: var(--surface);
+    border: 1px solid var(--red-border);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 10px;
+  }
+  .anti-exp h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--red);
+    margin-bottom: 4px;
+  }
+  .anti-exp p {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  .road-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+  }
+  .road-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+  }
+  .road-period {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent-light);
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .road-theme {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .road-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .road-card li {
+    font-size: 12px;
+    color: var(--text-secondary);
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .road-card li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent-light);
+    font-size: 11px;
+  }
+
+  .one-thing {
+    background: linear-gradient(135deg, #13102a 0%, #0f1525 100%);
+    border: 1px solid rgba(99,102,241,0.25);
+    border-radius: 14px;
+    padding: 52px 48px;
+    text-align: center;
+    margin: 8px 0 0;
+  }
+  .ot-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--accent-light);
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .one-thing h3 {
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 16px;
+    background: linear-gradient(180deg, #fff 0%, #a5b4fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .one-thing p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    max-width: 620px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  .q-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 32px 1fr auto;
+    gap: 14px;
+    align-items: start;
+  }
+  .q-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--surface3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent-light);
+    flex-shrink: 0;
+  }
+  .q-text { font-size: 14px; line-height: 1.6; }
+  .q-why { font-size: 12px; color: var(--text-muted); margin-top: 4px; line-height: 1.5; }
+  .q-pri {
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .qp-c { background: var(--red-bg); color: var(--red); }
+  .qp-h { background: var(--yellow-bg); color: var(--yellow); }
+  .qp-m { background: var(--blue-bg); color: var(--blue); }
+
+  .market-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .market-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+    text-align: center;
+  }
+  .m-val {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--cyan);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .m-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+  .m-detail {
+    font-size: 11px;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+
+  .content-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+    margin-bottom: 12px;
+  }
+  .content-card h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .content-card .cc-type {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent-light);
+    margin-bottom: 8px;
+  }
+  .content-card p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  .channel-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+  }
+  .channel-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+  }
+  .channel-card h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .channel-card p {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+  .channel-card .ch-pri {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .ch-high { background: var(--green-bg); color: var(--green-soft); }
+  .ch-med { background: var(--yellow-bg); color: var(--yellow); }
+
+  .risk-flag {
+    background: var(--surface);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 14px;
+    align-items: start;
+  }
+  .risk-flag.rf-red { border: 1px solid var(--red-border); }
+  .risk-flag.rf-yellow { border: 1px solid var(--yellow-border); }
+  .rf-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+  .rf-red-icon { background: var(--red-bg); }
+  .rf-yellow-icon { background: var(--yellow-bg); }
+  .rf-title { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+  .rf-text { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+  .rf-fix { font-size: 12px; color: var(--green-soft); margin-top: 6px; line-height: 1.5; }
+
+  .footer {
+    padding: 48px 0;
+    text-align: center;
+    position: relative;
+  }
+  .footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  }
+  .footer-brand { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
+  .footer-sub { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
+  .footer-disc {
+    font-size: 11px;
+    color: var(--text-muted);
+    max-width: 540px;
+    margin: 0 auto;
+    line-height: 1.6;
+    opacity: 0.5;
+  }
+
+  .pmf-callout {
+    background: linear-gradient(135deg, rgba(239,68,68,0.08) 0%, rgba(249,115,22,0.06) 100%);
+    border: 1px solid var(--red-border);
+    border-radius: 14px;
+    padding: 32px 36px;
+    margin-bottom: 20px;
+  }
+  .pmf-callout .pmf-quote {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--red);
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+  .pmf-callout p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  @media (max-width: 768px) {
+    .page { padding: 0 20px; }
+    .hero h1 { font-size: 36px; }
+    .hero-stats { gap: 24px; }
+    .overview-grid, .two-col, .comp-grid, .channel-grid { grid-template-columns: 1fr; }
+    .road-grid { grid-template-columns: 1fr; }
+    .market-grid { grid-template-columns: 1fr; }
+    .score-block { flex-direction: column; text-align: center; }
+    .q-card { grid-template-columns: 28px 1fr; }
+    .q-pri { grid-column: 2; }
+    .one-thing { padding: 36px 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ════════════ HERO ════════════ -->
+<div class="hero">
+  <div class="hero-eyebrow">🧠 GrowthMind — Growth Diagnosis</div>
+  <h1>Revenue Boost</h1>
+  <p class="hero-tagline">A Shopify popup and cart recovery app with a genuinely interesting pay-per-message pricing model — launching into a market dominated by incumbents with 4,000+ reviews. The product is real. The distribution is not. And the fake testimonials need to go today.</p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-value" style="color:var(--orange)">42</div>
+      <div class="hero-stat-label">Demand Score</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-value" style="color:var(--orange)">CONDITIONAL</div>
+      <div class="hero-stat-label">Verdict</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-value cyan">0</div>
+      <div class="hero-stat-label">Active Users</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-value accent">32%</div>
+      <div class="hero-stat-label">Confidence</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ OVERVIEW ════════════ -->
+<div class="section">
+  <div class="section-num">01 — Company Profile</div>
+  <div class="section-title">What We Found</div>
+  <div class="section-desc">Everything below was researched automatically from public sources — Shopify App Store listing, Reddit posts, website analysis, and market data. 18 AI agents, zero manual input.</div>
+  
+  <div class="overview-grid">
+    <div class="overview-card full">
+      <div class="ov-label">Product</div>
+      <div class="ov-value">Shopify app for popups (spin wheels, scratch cards, exit-intent) + multi-channel cart recovery (SMS, Email, WhatsApp, Push notifications). 40+ templates. A/B testing. Social proof. Free shipping bar. Countdown timers. OTP verification. Identity reconciliation. Pay-per-message pricing model — not per contact stored.</div>
+    </div>
+    <div class="overview-card">
+      <div class="ov-label">Stage</div>
+      <div class="ov-value">Just Launched / Zero Users</div>
+      <div class="ov-value small" style="margin-top:4px;">Launched Dec 5, 2025 on Shopify App Store. 0 reviews, 0 ratings. $0 revenue.</div>
+    </div>
+    <div class="overview-card">
+      <div class="ov-label">Founded</div>
+      <div class="ov-value">~September 2025 · 3 months build time</div>
+    </div>
+    <div class="overview-card">
+      <div class="ov-label">Pricing</div>
+      <div class="ov-value">Pay per message sent · Free plan (3K views/mo)</div>
+      <div class="ov-value small" style="margin-top:4px;">Paid tiers with 14-day free trial. Usage-based billing every 30 days in USD.</div>
+    </div>
+    <div class="overview-card">
+      <div class="ov-label">Location</div>
+      <div class="ov-value">Belgium · Solo Founder · BCDI SNC</div>
+    </div>
+    <div class="overview-card full">
+      <div class="ov-label">Critical Finding</div>
+      <div class="ov-value small" style="color:var(--red)">Website claims "Loved by 15,000+ Merchants" with fabricated testimonials (Sarah Mitchell, James Chen, Emily Rodriguez, Michael Brooks). The app has zero actual users. This is an existential credibility risk that must be fixed immediately.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ FOUNDER ════════════ -->
+<div class="section">
+  <div class="section-num">02 — Founding Team</div>
+  <div class="section-title">Who's Building This</div>
+  <div class="section-desc">Auto-researched from Reddit, Shopify App Store, and company registration data.</div>
+  
+  <div class="founder">
+    <div class="f-avatar">RB</div>
+    <div>
+      <div class="f-name">u/Ok-Thing8238</div>
+      <div class="f-role">Solo Founder & Builder</div>
+      <div class="f-bio">Technical solo founder who built the entire Shopify app in 3 months. Belgium-based. First-time app founder. Self-aware about over-building ("Classic mistake"). Honest and vulnerable on Reddit ("No idea if the pricing angle resonates or if I'm solving a problem nobody cares about"). Strong technical skills — the app's feature set rivals products built by entire teams over years. No visible e-commerce industry connections or marketing experience.</div>
+      <div class="f-tags">
+        <span class="f-tag">Solo Founder</span>
+        <span class="f-tag">Technical Builder</span>
+        <span class="f-tag">Belgium</span>
+        <span class="f-tag">First-Time Founder</span>
+        <span class="f-tag">Bootstrapped</span>
+        <span class="f-tag">r/Entrepreneur</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ PMF SIGNAL ════════════ -->
+<div class="section">
+  <div class="section-num">03 — The Trust Crisis You Must Fix Today</div>
+  <div class="section-title">"15,000+ Merchants" With Zero Users</div>
+  
+  <div class="pmf-callout">
+    <div class="pmf-quote">"Loved by 15,000+ Merchants" — with named testimonials from people who don't exist.</div>
+    <p>Your website features fabricated testimonials from "Sarah Mitchell, Founder, Luxe Boutique" and "James Chen, Marketing Lead, TechGear Pro." These people and companies don't exist. You have zero actual users. Shopify merchants are savvy — they Google reviewer names. One merchant discovering this will leave a 1-star review that says "fake testimonials, don't trust this app." That single review will define your product forever. Meanwhile, your Reddit persona is honest and relatable. The contradiction between your website (fabricated confidence) and your Reddit posts (genuine vulnerability) is jarring. Your Reddit voice is the one that will win. Use it everywhere.</p>
+  </div>
+</div>
+
+<!-- ════════════ MARKET ════════════ -->
+<div class="section">
+  <div class="section-num">04 — Market Intelligence</div>
+  <div class="section-title">The Landscape</div>
+  <div class="section-desc">You're entering one of the most competitive categories in the Shopify App Store. The market is real, but the incumbents are formidable.</div>
+  
+  <div class="market-grid">
+    <div class="market-card">
+      <div class="m-val">4.8M+</div>
+      <div class="m-label">Shopify Stores</div>
+      <div class="m-detail">$8.88B Shopify revenue (2024), growing 26% YoY</div>
+    </div>
+    <div class="market-card">
+      <div class="m-val">~70%</div>
+      <div class="m-label">Cart Abandonment Rate</div>
+      <div class="m-detail">Industry average. ~15% recovery rate via email alone.</div>
+    </div>
+    <div class="market-card">
+      <div class="m-val">$260B+</div>
+      <div class="m-label">Abandoned Cart Value</div>
+      <div class="m-detail">Massive problem. Merchants actively search for solutions.</div>
+    </div>
+  </div>
+  
+  <div class="overview-card full" style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:22px;margin-top:0;">
+    <div class="ov-label">The Cold Start Problem</div>
+    <div class="ov-value small">
+      The Shopify App Store is a <strong style="color:var(--red)">reviews-driven marketplace</strong>. 60-70% of installs come from App Store search, and ranking is driven by reviews, install velocity, and ratings. With 0 reviews, Revenue Boost is completely invisible in search results. The cold start loop: can't rank without reviews → can't get reviews without installs → can't get installs without ranking. <strong style="color:var(--orange)">Breaking this loop is the entire game right now.</strong> Every strategy must be evaluated through one lens: "Does this generate an install that could become a review?"
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ DEMAND SCORE ════════════ -->
+<div class="section">
+  <div class="section-num">05 — Demand Scorecard</div>
+  <div class="section-title">Where You Stand — Honestly</div>
+  <div class="section-desc">Six dimensions scored individually. Overall: 42/100. The product is strong. Everything else needs work.</div>
+  
+  <div class="score-block">
+    <div class="ring-wrap">
+      <svg viewBox="0 0 140 140">
+        <circle class="ring-track" cx="70" cy="70" r="60" />
+        <circle class="ring-fill" cx="70" cy="70" r="60" stroke="var(--orange)" stroke-dasharray="377" stroke-dashoffset="218" />
+      </svg>
+      <div class="ring-center">
+        <div class="ring-num" style="color:var(--orange)">42</div>
+        <div class="ring-label">/ 100</div>
+      </div>
+    </div>
+    <div class="score-text">
+      <h3>Good Product, No Distribution</h3>
+      <p>You've built a genuinely comprehensive product with a differentiated pricing model in a massive market. But with zero users, zero reviews, zero organic mentions, and fake testimonials on your website, the score is dragged down by distribution and trust. The market readiness is high (75/100) — merchants are actively searching for popup and cart recovery tools. But your competitive position (15/100) and distribution advantage (10/100) reflect the reality: nobody can find you. Fix the trust issue, break the cold start loop, and this score can climb fast.</p>
+      <div class="verdict-pill v-cond">⚠ Verdict: CONDITIONAL GO</div>
+    </div>
+  </div>
+  
+  <div class="dim-list">
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Market Readiness</span>
+        <span class="dim-score c-green">75</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-green" style="width:75%"></div></div>
+      <div class="dim-note">Cart abandonment is a $260B+ problem. Merchants actively search for solutions. WhatsApp recovery is a growing channel. 4.8M+ Shopify stores worldwide. The market is real and buyers exist.</div>
+    </div>
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Problem Severity</span>
+        <span class="dim-score c-yellow">65</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-yellow" style="width:65%"></div></div>
+      <div class="dim-note">Real pain — merchants waste money on inflated contact lists with per-contact pricing. But it's "annoying" rather than "hair-on-fire." Merchants have many existing options. Switching costs are low but so is urgency.</div>
+    </div>
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Execution Capacity</span>
+        <span class="dim-score c-red">30</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-red" style="width:30%"></div></div>
+      <div class="dim-note">Solo founder, likely part-time, built impressive product but distribution is the challenge. Over-built before validating. No evidence of marketing capability. Time and bandwidth unknown.</div>
+    </div>
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Founder-Market Fit</span>
+        <span class="dim-score c-red">25</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-red" style="width:25%"></div></div>
+      <div class="dim-note">Technical ability is strong. Zero visible e-commerce industry connections or marketing experience. No established audience. Building in relative isolation. Classic technical founder pattern — excellent builder, uncertain distributor.</div>
+    </div>
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Competitive Position</span>
+        <span class="dim-score c-red">15</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-red" style="width:15%"></div></div>
+      <div class="dim-note">0 reviews vs Privy's 4,191. No moat. Feature set is good but replicable. The per-message pricing model is genuinely differentiated, but completely unvalidated with real merchants.</div>
+    </div>
+    <div class="dim">
+      <div class="dim-top">
+        <span class="dim-name">Distribution Advantage</span>
+        <span class="dim-score c-red">10</span>
+      </div>
+      <div class="dim-bar"><div class="dim-bar-fill bg-red" style="width:10%"></div></div>
+      <div class="dim-note">Zero. Not recommended anywhere. Not ranked in App Store. Google Ads = 15 views. Reddit post was in r/Entrepreneur (founders, not merchants). No presence where merchants actually discover tools.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ THE ONE THING ════════════ -->
+<div class="section" style="padding-bottom:32px">
+  <div class="one-thing">
+    <div class="ot-label">⚡ The One Thing</div>
+    <h3>Remove the Fake Testimonials Today.<br>Then Get 10 Real Installs in 30 Days.</h3>
+    <p>Your website claims "Loved by 15,000+ Merchants" with fabricated reviews from fictional people. You have zero users. This is not a marketing problem — it's a credibility emergency. One savvy merchant Googling "Luxe Boutique Revenue Boost" and finding nothing will leave a 1-star review that defines your product forever. Remove every fake claim today. Replace with your honest Reddit voice: "Just launched. Built this because per-contact pricing is broken. Help me improve it." Then focus everything — every hour, every ounce of energy — on getting 10 real installs. Nothing else matters until the trust foundation is real.</p>
+  </div>
+</div>
+
+<!-- ════════════ FOUNDER MIRROR ════════════ -->
+<div class="section">
+  <div class="section-num">06 — Founder Mirror</div>
+  <div class="section-title">The Honest Truths</div>
+  <div class="section-desc">These are the insights you need to hear. Evidence-based, designed to challenge the assumptions that are holding you back. We're being direct because the product underneath genuinely has potential.</div>
+  
+  <div class="insight i-crit">
+    <div class="insight-head">
+      <span class="insight-title">Fake Testimonials Are an Existential Threat — Not a Marketing Shortcut</span>
+      <span class="insight-sev sev-c">Critical</span>
+    </div>
+    <div class="insight-body">"Loved by 15,000+ Merchants." "Sarah Mitchell, Founder, Luxe Boutique." "James Chen, Marketing Lead, TechGear Pro." These people don't exist. These companies don't exist. You have zero users. In the Shopify ecosystem, merchants talk to each other. They Google reviewer names. They check App Store reviews (you have 0). The gap between "15,000+ merchants" and reality is so extreme that discovery is inevitable. One 1-star review mentioning fake testimonials will poison every future prospect's first impression.</div>
+    <div class="insight-q">"Your Reddit post says 'No idea if it'll work.' Your website says '15,000+ merchants love it.' These two personas cannot coexist. The Reddit version is more trustworthy — and more compelling."</div>
+    <div class="insight-action"><strong>Action:</strong> Remove ALL fabricated testimonials and the "15,000+ Merchants" claim TODAY. Not tomorrow. Today. Replace with: "Just launched — be one of our first merchants and shape the product." Add your genuine Reddit story as the founder section. Honesty IS the brand for a new Shopify app.</div>
+    <div class="insight-bias">🧠 Social proof fabrication — trying to shortcut the trust-building process. Understandable impulse, catastrophic execution.</div>
+  </div>
+  
+  <div class="insight i-crit">
+    <div class="insight-head">
+      <span class="insight-title">You Over-Built by 10x — And You Know It</span>
+      <span class="insight-sev sev-c">Critical</span>
+    </div>
+    <div class="insight-body">Popups + spin wheels + scratch cards + 4-channel cart recovery + A/B testing + OTP verification + social proof + free shipping bar + countdown timers + identity reconciliation + Shopify Flow integration. This is the feature set of a 3-year-old product built by a team of 10. You built it solo in 3 months. You admitted on Reddit: "Classic mistake." You're right. Every feature is a maintenance burden with zero users to justify it. You don't know which features merchants actually want because you've never had a merchant use the product.</div>
+    <div class="insight-q">"Did you keep building because you were afraid to launch? Feature development feels productive. Marketing feels uncertain. But right now, your product is a Lamborghini in a garage with no road to drive it on."</div>
+    <div class="insight-action"><strong>Action:</strong> Freeze all feature development immediately. Every hour coding is an hour not spent getting installs. The product was ready at week 3. Now spend 100% of your time on distribution. You can always add features later when real merchants tell you what they actually need.</div>
+    <div class="insight-bias">🧠 Completion bias — the product felt "not ready" until every feature was done. It was ready months ago.</div>
+  </div>
+  
+  <div class="insight i-high">
+    <div class="insight-head">
+      <span class="insight-title">You're Marketing to the Wrong Audience</span>
+      <span class="insight-sev sev-h">High</span>
+    </div>
+    <div class="insight-body">Your only public outreach: r/Entrepreneur (founders sympathise, merchants are absent), Google Ads (15 views — statistically meaningless), and Twitter (into the void, in your own words). Shopify merchants — your actual customers — live in r/shopify (800K members), Shopify Community forums, Facebook groups (Shopify Entrepreneurs, Shopify Masters), and YouTube (watching app review videos). You haven't been to any of these places. You're spending marketing energy where your customers aren't.</div>
+    <div class="insight-action"><strong>Action:</strong> This week: create a Shopify Community forum account and answer 5 "what popup app should I use?" threads. Join r/shopify and genuinely participate. Stop Google Ads immediately — $0 budget, wrong channel. Go where merchants are asking for exactly what you've built.</div>
+  </div>
+
+  <div class="insight i-high">
+    <div class="insight-head">
+      <span class="insight-title">The Per-Message Model Is Interesting But Completely Unvalidated</span>
+      <span class="insight-sev sev-h">High</span>
+    </div>
+    <div class="insight-body">Pay-per-message vs per-contact is your best differentiator. It's a genuinely smart economic argument for stores with large lists and low message frequency. But you've never tested it with a single merchant. You don't know if merchants actually care about per-contact vs per-message pricing, if they'd switch tools to save on it, if they even understand the difference without explanation, or if they trust a new app enough to send messages through it. The model could be brilliant or irrelevant — and you won't know until 10 merchants tell you.</div>
+    <div class="insight-action"><strong>Action:</strong> Build a pricing comparison calculator on your website: "How much would you pay on Privy vs Revenue Boost?" Make the economic argument tangible. Then validate through direct conversations with your first installs.</div>
+    <div class="insight-bias">🧠 Solution bias — falling in love with the pricing model before validating that merchants share the problem framing</div>
+  </div>
+
+  <div class="insight i-med">
+    <div class="insight-head">
+      <span class="insight-title">Your Claims Need Evidence, Not Aspiration</span>
+      <span class="insight-sev sev-m">Medium</span>
+    </div>
+    <div class="insight-body">"60% lower bounce rate" — compared to what? Based on what data? You have zero users. "9% spin wheel conversion" — industry data supports this, but YOU haven't demonstrated it. "25% overall recovery rate" — ambitious; industry average is ~15% for email alone. "98% WhatsApp open rate" — this is an industry stat, not YOUR stat. Presenting industry benchmarks as your results is misleading and erodes the trust you're trying to build.</div>
+    <div class="insight-action"><strong>Action:</strong> Change from "our results" framing to "what's possible" framing. "Industry data shows WhatsApp messages achieve 98% open rates — Revenue Boost puts this channel to work for your store." Honest framing builds more trust than inflated claims.</div>
+  </div>
+</div>
+
+<!-- ════════════ BRIGHT SPOTS ════════════ -->
+<div class="section">
+  <div class="section-num">07 — What's Working</div>
+  <div class="section-title">The Things Worth Protecting</div>
+  <div class="section-desc">A 42/100 score doesn't mean nothing is right. These are genuine strengths — lean into them.</div>
+  
+  <div class="bright-spot">
+    <h4>✦ The Per-Message Pricing Model Is Genuinely Differentiated</h4>
+    <p>In a market where every competitor charges per contact stored, pay-per-message is a real economic advantage. Stores with 10,000 contacts who only message 2,000/month would save significantly. This aligns merchant cost with merchant revenue — you pay to recover, you earn from recovery. If validated, this becomes your entire positioning.</p>
+  </div>
+  <div class="bright-spot">
+    <h4>✦ The Feature Set Is Impressively Comprehensive</h4>
+    <p>Multi-channel cascade (Push → WhatsApp → Email), OTP verification to eliminate fake signups, indicator-first non-intrusive mode, 40+ templates, Shopify Flow integration — this rivals or exceeds products built by funded teams over years. The technical execution is clearly strong. The challenge isn't product — it's getting people to discover it.</p>
+  </div>
+  <div class="bright-spot">
+    <h4>✦ WhatsApp Recovery Is a Growing Wedge</h4>
+    <p>WhatsApp messages achieve 98% open rates vs email's 20%. In non-US markets (Europe, LATAM, India, SE Asia), WhatsApp is the dominant messaging channel. Your Belgium base gives you natural GDPR compliance positioning. Most US-based competitors are weaker on WhatsApp. This could be your niche entry point.</p>
+  </div>
+  <div class="bright-spot">
+    <h4>✦ Shopify's 0% Revenue Share on First $1M</h4>
+    <p>Shopify takes zero commission on your first $1M in app revenue. This means every dollar from merchants goes directly to you. Excellent unit economics for a bootstrapped solo founder — if you can get the installs.</p>
+  </div>
+</div>
+
+<!-- ════════════ SWOT ════════════ -->
+<div class="section">
+  <div class="section-num">08 — Strategic Analysis</div>
+  <div class="section-title">SWOT</div>
+  
+  <div class="two-col">
+    <div class="col-card green-dots">
+      <h4><span style="color:var(--green)">▲</span> Strengths</h4>
+      <ul>
+        <li>Pay-per-message pricing — genuinely differentiated in the market</li>
+        <li>Comprehensive feature set rivaling established competitors</li>
+        <li>Multi-channel recovery cascade (Push → WhatsApp → Email → SMS)</li>
+        <li>OTP verification — reduces fake signups, saves merchants money</li>
+        <li>Indicator-first non-intrusive popup mode — novel UX approach</li>
+        <li>Free plan with generous limits (3K views/mo) — low adoption friction</li>
+        <li>Strong technical execution — built by a clearly capable developer</li>
+      </ul>
+    </div>
+    <div class="col-card red-dots">
+      <h4><span style="color:var(--red)">▼</span> Weaknesses</h4>
+      <ul>
+        <li>Zero social proof — 0 reviews, 0 ratings, 0 users in a reviews-driven marketplace</li>
+        <li>Fake testimonials — active liability that could destroy credibility</li>
+        <li>Invisible in App Store search — can't compete with 300-4,000+ review competitors</li>
+        <li>Solo founder with no visible industry connections or marketing experience</li>
+        <li>Over-built product — too many features, no idea which merchants actually want</li>
+        <li>Pricing not clearly displayed on App Store listing</li>
+        <li>No "Built for Shopify" badge</li>
+      </ul>
+    </div>
+    <div class="col-card blue-dots">
+      <h4><span style="color:var(--blue)">◆</span> Opportunities</h4>
+      <ul>
+        <li>WhatsApp recovery growing fast — especially in EU, LATAM, India, SE Asia</li>
+        <li>Post-Privy price increases — merchants actively looking for alternatives</li>
+        <li>Competitor consolidation (PushOwl→Brevo, Privy→Attentive) creates gaps</li>
+        <li>"App fatigue" — merchants using 3-4 separate apps would consolidate to one</li>
+        <li>Belgium base = strong GDPR compliance positioning for EU merchants</li>
+        <li>Shopify ecosystem growing 26% YoY — rising tide</li>
+        <li>0% Shopify revenue share on first $1M — excellent unit economics</li>
+      </ul>
+    </div>
+    <div class="col-card yellow-dots">
+      <h4><span style="color:var(--yellow)">◆</span> Threats</h4>
+      <ul>
+        <li>Privy has 4,191 reviews — massive moat through social proof</li>
+        <li>Klaviyo IPO'd at $7.7B — full marketing automation platform</li>
+        <li>OptiMonk building AI-native popups — innovating faster</li>
+        <li>Shopify building more native marketing tools — platform risk</li>
+        <li>Network effects — established tools get recommended, new ones don't</li>
+        <li>Structural discovery problem — 0 reviews = invisible in search</li>
+        <li>Race to zero — some competitors offer generous free tiers</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ COMPETITORS ════════════ -->
+<div class="section">
+  <div class="section-num">09 — Competitive Landscape</div>
+  <div class="section-title">Know What You're Up Against</div>
+  <div class="section-desc">You're entering a market dominated by established players. Don't compete head-on. Find the gap — price-sensitive merchants frustrated with per-contact billing.</div>
+  
+  <div class="comp">
+    <div class="comp-head">
+      <span class="comp-name">vs. Privy</span>
+      <span class="comp-their">4,191 reviews · 4.5★ · Per-contact pricing · $24+/mo</span>
+    </div>
+    <div class="comp-counter">"Privy is the giant. Don't fight head-on. Position as the affordable alternative for merchants frustrated with per-contact pricing. A store with 10,000 contacts on Privy pays $100+/month. On Revenue Boost, if you only message 2,000, you pay for 2,000."</div>
+    <div class="comp-grid">
+      <div class="comp-cell comp-win"><div class="cc-label">You Win When</div><p>Price-sensitive merchants with large lists and low message frequency. The per-message model saves them real money. Especially stores doing $10K-$100K/mo who feel overcharged.</p></div>
+      <div class="comp-cell comp-lose"><div class="cc-label">You Lose When</div><p>Merchants want the safety of 4,191 reviews. At this stage, most merchants will choose Privy simply because it's proven. Trust beats features every time.</p></div>
+    </div>
+  </div>
+  
+  <div class="comp">
+    <div class="comp-head">
+      <span class="comp-name">vs. OptiMonk</span>
+      <span class="comp-their">440+ reviews · 4.7★ · AI-native popups · Free plan</span>
+    </div>
+    <div class="comp-counter">"OptiMonk is the innovator with AI-powered popup optimization. Strong on popups, weaker on multi-channel recovery. Your multi-channel cascade is the differentiator."</div>
+    <div class="comp-grid">
+      <div class="comp-cell comp-win"><div class="cc-label">You Win When</div><p>Merchant needs popup + multi-channel recovery in one app. OptiMonk builds great popups but can't recover carts via WhatsApp AND push AND SMS in a cascade.</p></div>
+      <div class="comp-cell comp-lose"><div class="cc-label">You Lose When</div><p>Merchant wants AI-optimized popups specifically. OptiMonk's AI features are more advanced and they have 440+ reviews of social proof.</p></div>
+    </div>
+  </div>
+  
+  <div class="comp">
+    <div class="comp-head">
+      <span class="comp-name">vs. Wisepops</span>
+      <span class="comp-their">304 reviews · 4.9★ · Highest satisfaction · $39+/mo</span>
+    </div>
+    <div class="comp-counter">"Wisepops has the highest satisfaction score in the category. They're premium-positioned. You can't beat them on quality — but you can beat them on value and multi-channel breadth."</div>
+    <div class="comp-grid">
+      <div class="comp-cell comp-win"><div class="cc-label">You Win When</div><p>Budget-conscious merchant who needs more than popups. Wisepops starts at $39/mo for pageview-based pricing. Revenue Boost offers popups + recovery for less.</p></div>
+      <div class="comp-cell comp-lose"><div class="cc-label">You Lose When</div><p>Merchant values clean UX and proven quality above all. Wisepops' 4.9 stars speak for themselves. You can't compete on satisfaction with 0 reviews.</p></div>
+    </div>
+  </div>
+  
+  <div class="comp">
+    <div class="comp-head">
+      <span class="comp-name">vs. Recart / PushOwl (Brevo)</span>
+      <span class="comp-their">~300-3,000+ reviews · SMS/Push specialists · Per-contact</span>
+    </div>
+    <div class="comp-counter">"Recart is SMS-only. PushOwl is push-only (and mid-merger with Brevo). Revenue Boost covers SMS + WhatsApp + Push + Email. One app instead of four. The merger confusion creates a switching opportunity."</div>
+    <div class="comp-grid">
+      <div class="comp-cell comp-win"><div class="cc-label">You Win When</div><p>Merchant is tired of paying for 3-4 separate apps. PushOwl/Brevo transition is confusing displaced users. Revenue Boost consolidates everything.</p></div>
+      <div class="comp-cell comp-lose"><div class="cc-label">You Lose When</div><p>Merchant wants a specialist tool with proven track record. Recart's hands-on service model builds loyalty you can't match as a solo founder.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ EXPERIMENTS ════════════ -->
+<div class="section">
+  <div class="section-num">10 — Growth Experiments</div>
+  <div class="section-title">8 Experiments to Break the Cold Start</div>
+  <div class="section-desc">Sequenced by impact. Experiment 1 is non-negotiable. Everything else follows from having a trustworthy foundation.</div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">1. The Testimonial Emergency — Remove ALL Fakes</span>
+      <span class="exp-pri p0">P0 · Do This Today</span>
+    </div>
+    <div class="exp-hyp">"Removing fake testimonials and replacing with honest 'just launched' messaging will prevent a trust catastrophe and establish authentic positioning."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>1 day</strong> <span>Effort:</span> <strong>2 hours</strong> <span>Budget:</span> <strong>$0</strong></div>
+    <div class="exp-success"><b>Success:</b> Honest website that builds trust instead of destroying it. Replace with: "Just launched. Help us improve — install free and share your feedback."</div>
+  </div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">2. Direct Merchant Outreach — 50 Reddit DMs</span>
+      <span class="exp-pri p0">P0 · This Week</span>
+    </div>
+    <div class="exp-hyp">"If we directly message 50 Shopify merchants who posted about popup/cart recovery frustrations on Reddit, 5-10 will try the free plan."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>14 days</strong> <span>Effort:</span> <strong>4 hrs/week</strong> <span>Budget:</span> <strong>$0</strong></div>
+    <div class="exp-success"><b>Success:</b> 5+ installs from direct outreach, 2+ providing feedback.</div>
+    <div class="exp-kill"><b>Kill signal:</b> 50 messages, 0 responses = messaging or positioning problem.</div>
+  </div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">3. Shopify Community Forum Engagement</span>
+      <span class="exp-pri p0">P0 · Start This Week</span>
+    </div>
+    <div class="exp-hyp">"Answering 'what popup app should I use?' questions in Shopify forums with genuine value will generate 3-5 installs per month."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>30 days</strong> <span>Effort:</span> <strong>3 hrs/week</strong> <span>Budget:</span> <strong>$0</strong></div>
+    <div class="exp-success"><b>Success:</b> 5+ installs from forum engagement. Be transparent: "I'm the developer — here's why I built this."</div>
+    <div class="exp-kill"><b>Kill signal:</b> 30 days of daily engagement, 0 merchants interested.</div>
+  </div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">4. Agency Partnership Sprint</span>
+      <span class="exp-pri p1">P1 · Week 2</span>
+    </div>
+    <div class="exp-hyp">"If we contact 20 Shopify agencies and offer free access + 20% revenue share, 2-3 will recommend Revenue Boost to clients."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>30 days</strong> <span>Effort:</span> <strong>3 hrs/week</strong> <span>Budget:</span> <strong>$0</strong></div>
+    <div class="exp-success"><b>Success:</b> 2+ agency partnerships, 5+ installs from referrals.</div>
+    <div class="exp-kill"><b>Kill signal:</b> 20 agencies contacted, 0 interested = positioning problem.</div>
+  </div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">5. "Privy Alternative" Comparison Page</span>
+      <span class="exp-pri p1">P1 · Week 2</span>
+    </div>
+    <div class="exp-hyp">"A detailed comparison page targeting 'Privy alternative' searches will capture merchants actively looking to switch from per-contact pricing."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>7 days to create, 60 days to measure</strong> <span>Effort:</span> <strong>4 hours</strong> <span>Budget:</span> <strong>$0</strong></div>
+    <div class="exp-success"><b>Success:</b> Page ranks for long-tail comparison terms, 10+ visits/month.</div>
+  </div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">6. Product Hunt Launch</span>
+      <span class="exp-pri p1">P1 · After 5+ Reviews</span>
+    </div>
+    <div class="exp-hyp">"A Product Hunt launch will generate 50-100 installs and 3-5 backlinks, accelerating the cold start breakthrough."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>1 day (after prep)</strong> <span>Effort:</span> <strong>8 hrs one-time</strong> <span>Budget:</span> <strong>$0</strong></div>
+    <div class="exp-success"><b>Success:</b> 50+ installs, 5+ App Store reviews from PH traffic.</div>
+  </div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">7. WhatsApp-First European Market Focus</span>
+      <span class="exp-pri p2">P2 · Month 2</span>
+    </div>
+    <div class="exp-hyp">"Positioning as THE WhatsApp cart recovery app for European Shopify stores will find a less crowded niche than the general popup market."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>60 days</strong> <span>Effort:</span> <strong>3 hrs/week</strong> <span>Budget:</span> <strong>$0</strong></div>
+    <div class="exp-success"><b>Success:</b> 10+ installs from WhatsApp-focused positioning.</div>
+    <div class="exp-kill"><b>Kill signal:</b> After 60 days, no traction from WhatsApp angle.</div>
+  </div>
+  
+  <div class="exp">
+    <div class="exp-head">
+      <span class="exp-name">8. Micro-Influencer App Reviews</span>
+      <span class="exp-pri p2">P2 · Month 2</span>
+    </div>
+    <div class="exp-hyp">"Free premium access to 10 Shopify YouTubers/bloggers who do app reviews will generate 3-5 review videos and 20+ installs."</div>
+    <div class="exp-row"><span>Duration:</span> <strong>45 days</strong> <span>Effort:</span> <strong>2 hrs/week</strong> <span>Budget:</span> <strong>$0</strong></div>
+    <div class="exp-success"><b>Success:</b> 3+ reviews published, 20+ installs attributed.</div>
+    <div class="exp-kill"><b>Kill signal:</b> 10 outreach, 0 willing to review.</div>
+  </div>
+</div>
+
+<!-- ════════════ STOP DOING ════════════ -->
+<div class="section">
+  <div class="section-num">11 — Stop Doing These Things</div>
+  <div class="section-title">The Anti-Experiments</div>
+  <div class="section-desc">Things that feel productive but would waste your limited time right now.</div>
+
+  <div class="anti-exp">
+    <h4>🚫 Don't build more features</h4>
+    <p>You have more features than most competitors who've been building for years. The product was ready at week 3 of your 3-month build. Every hour coding is an hour not spent getting installs. Freeze development. 100% distribution focus.</p>
+  </div>
+  <div class="anti-exp">
+    <h4>🚫 Don't spend money on Google Ads</h4>
+    <p>15 views. Zero social proof. No proven funnel. Paid ads right now are buying expensive bounces. Fix the trust foundation first. When you have 10+ reviews and a validated funnel, THEN test Shopify App Store ads — not Google Ads.</p>
+  </div>
+  <div class="anti-exp">
+    <h4>🚫 Don't post in r/Entrepreneur — post in r/shopify</h4>
+    <p>r/Entrepreneur has founders who sympathise with your journey but will never install your Shopify app. r/shopify has 800K+ actual merchants asking "what popup app should I use?" Go where your customers are, not where fellow founders pat you on the back.</p>
+  </div>
+  <div class="anti-exp">
+    <h4>🚫 Don't launch on Product Hunt with 0 reviews</h4>
+    <p>PH visitors will check your App Store listing. 0 reviews = instant credibility gap. Wait until you have 5+ genuine reviews so PH traffic sees social proof. A premature launch wastes your one shot.</p>
+  </div>
+  <div class="anti-exp">
+    <h4>🚫 Don't "prepare Reddit Ads"</h4>
+    <p>Shopify merchants don't discover apps through Reddit ads. They discover apps through peer recommendations, App Store search, and YouTube reviews. Redirect that budget and energy to Shopify Community engagement and direct outreach.</p>
+  </div>
+</div>
+
+<!-- ════════════ CONTENT STRATEGY ════════════ -->
+<div class="section">
+  <div class="section-num">12 — Content Strategy</div>
+  <div class="section-title">What to Create & Where to Post It</div>
+  <div class="section-desc">All content serves one goal: get the first 50 installs. No thought leadership. No brand building. Pure acquisition-focused content targeting merchants actively searching for solutions.</div>
+
+  <div class="content-card">
+    <div class="cc-type">P0 · Founder Story · 2 hours</div>
+    <h4>"Why I Built Revenue Boost" — The Honest Version</h4>
+    <p>Blog post + Reddit + LinkedIn. Honest, vulnerable: "I was frustrated paying $100/month for contacts I never messaged. So I built an app that charges per message sent." Use your genuine Reddit voice. This becomes your brand narrative. Share in r/shopify, Shopify Community, and relevant Facebook groups.</p>
+  </div>
+  <div class="content-card">
+    <div class="cc-type">P0 · Video Walkthrough · 1 hour</div>
+    <h4>3-Minute App Demo on YouTube/Loom</h4>
+    <p>Merchants need to SEE the product working before they'll install an app with 0 reviews. Show the popup builder, the recovery cascade, the pricing calculator. Screen recording with voiceover. Share the link in every outreach message.</p>
+  </div>
+  <div class="content-card">
+    <div class="cc-type">P1 · Interactive Tool · 4 hours</div>
+    <h4>Pricing Comparison Calculator</h4>
+    <p>"How much would you pay on Privy vs Revenue Boost?" Enter your contact count and message volume, see the difference. Makes the per-message advantage tangible and shareable. This is your #1 conversion tool.</p>
+  </div>
+  <div class="content-card">
+    <div class="cc-type">P1 · SEO Content · 2 hours each</div>
+    <h4>Comparison & Education Content</h4>
+    <p>"Best Shopify Popup Apps 2026" — honest comparison including Revenue Boost. "Privy Alternative for Shopify" — landing page capturing switching intent. "How to Reduce Cart Abandonment on Shopify" — educational content that naturally features your solution.</p>
+  </div>
+  <div class="content-card">
+    <div class="cc-type">P2 · Community Presence · 3 hrs/week</div>
+    <h4>Ongoing Forum & Reddit Engagement</h4>
+    <p>Weekly participation in r/shopify threads about popup/recovery tools. Detailed, helpful answers in Shopify Community forums. Lead with value, mention Revenue Boost naturally. Be transparent: "I'm the developer."</p>
+  </div>
+</div>
+
+<!-- ════════════ CHANNELS ════════════ -->
+<div class="section">
+  <div class="section-num">13 — Channel Recommendations</div>
+  <div class="section-title">Where Your Customers Actually Are</div>
+  <div class="section-desc">Shopify merchants discover apps through App Store search, peer recommendations, and community forums. Meet them there — not on Twitter or Google Ads.</div>
+
+  <div class="channel-grid">
+    <div class="channel-card">
+      <h4>🏪 Shopify App Store</h4>
+      <p>#1 discovery channel. 60-70% of installs come from search. Currently invisible with 0 reviews. Break the cold start with external traffic, then let organic ranking compound.</p>
+      <span class="ch-pri ch-high">Highest Priority</span>
+    </div>
+    <div class="channel-card">
+      <h4>💬 Shopify Community Forums</h4>
+      <p>Merchants actively ask "what popup app should I use?" Genuine answers from the developer build trust. Free, high-intent, and repeatable. Your #1 free acquisition channel.</p>
+      <span class="ch-pri ch-high">Highest Priority</span>
+    </div>
+    <div class="channel-card">
+      <h4>📱 r/shopify + r/ecommerce</h4>
+      <p>800K+ merchants in r/shopify. Answer "cart recovery" and "popup app" threads. Use your honest Reddit voice. Direct DMs to merchants who post about frustrations with current tools.</p>
+      <span class="ch-pri ch-high">Highest Priority</span>
+    </div>
+    <div class="channel-card">
+      <h4>🤝 Agency Partnerships</h4>
+      <p>Shopify agencies recommend tools to clients. One agency partnership = 10-50 installs. Offer free access + 20% revenue share. Low CAC, high LTV channel.</p>
+      <span class="ch-pri ch-high">Highest Priority</span>
+    </div>
+    <div class="channel-card">
+      <h4>👥 Facebook Groups</h4>
+      <p>Shopify Entrepreneurs, Shopify Masters — less technical, more "what worked for me" testimonial-driven. Good channel for social proof once you have real user stories.</p>
+      <span class="ch-pri ch-med">Medium Priority</span>
+    </div>
+    <div class="channel-card">
+      <h4>📺 YouTube App Reviews</h4>
+      <p>Shopify-focused channels (5K-50K subs) that review apps. Offer free premium access for honest reviews. 1 video = 20+ installs. Start outreach in Month 2 after initial traction.</p>
+      <span class="ch-pri ch-med">Medium Priority</span>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ ROADMAP ════════════ -->
+<div class="section">
+  <div class="section-num">14 — 90-Day Roadmap</div>
+  <div class="section-title">What to Do Next</div>
+  
+  <div class="road-grid">
+    <div class="road-card">
+      <div class="road-period">Days 1–30</div>
+      <div class="road-theme">Trust & First Users</div>
+      <ul>
+        <li>Remove ALL fake testimonials TODAY</li>
+        <li>Replace with honest "just launched" positioning</li>
+        <li>Direct outreach: 50 merchants on Reddit/forums</li>
+        <li>Daily Shopify Community engagement</li>
+        <li>Create "Privy Alternative" comparison page</li>
+        <li>Build pricing comparison calculator</li>
+        <li>Record 3-min video walkthrough</li>
+        <li>Target: 10 installs, 3 reviews</li>
+      </ul>
+    </div>
+    <div class="road-card">
+      <div class="road-period">Days 31–60</div>
+      <div class="road-theme">Social Proof & Scale</div>
+      <ul>
+        <li>Follow up every install for App Store reviews</li>
+        <li>Product Hunt launch (only if 5+ reviews)</li>
+        <li>Outreach to 5 Shopify YouTubers</li>
+        <li>"Why I Built Revenue Boost" founder story</li>
+        <li>Contact 10 Shopify agencies for partnerships</li>
+        <li>Test WhatsApp-first EU market positioning</li>
+        <li>Target: 30 installs, 10 reviews, 4.5+ stars</li>
+      </ul>
+    </div>
+    <div class="road-card">
+      <div class="road-period">Days 61–90</div>
+      <div class="road-theme">Double Down on What Works</div>
+      <ul>
+        <li>Scale the channel that produced installs</li>
+        <li>Apply for "Built for Shopify" badge</li>
+        <li>Launch Shopify App Store ads (if budget)</li>
+        <li>Formalize agency partner programme</li>
+        <li>First case study from a real merchant</li>
+        <li>Validate per-message pricing with 10+ merchants</li>
+        <li>Target: 50+ installs, 20+ reviews, first revenue</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ RISK FLAGS ════════════ -->
+<div class="section">
+  <div class="section-num">15 — Risk Flags</div>
+  <div class="section-title">What Could Sink This</div>
+  
+  <div class="risk-flag rf-red">
+    <div class="rf-icon rf-red-icon">🔴</div>
+    <div>
+      <div class="rf-title">Fake testimonials discovered by a merchant</div>
+      <div class="rf-text">One 1-star review saying "fake testimonials, don't trust this app" will define Revenue Boost forever. In a reviews-driven marketplace, your first review being negative about trust is game over.</div>
+      <div class="rf-fix">→ Fix: Remove ALL fabricated testimonials and claims today. Replace with honest positioning. This is non-negotiable.</div>
+    </div>
+  </div>
+  <div class="risk-flag rf-red">
+    <div class="rf-icon rf-red-icon">🔴</div>
+    <div>
+      <div class="rf-title">Structural cold start problem</div>
+      <div class="rf-text">0 reviews = invisible in App Store search. Can't get reviews without installs. Can't get installs without reviews. This loop kills most new Shopify apps.</div>
+      <div class="rf-fix">→ Fix: External traffic sources (Reddit, forums, agency partnerships) to bypass App Store search. Get to 10 installs through direct outreach, then let organic discovery compound.</div>
+    </div>
+  </div>
+  <div class="risk-flag rf-red">
+    <div class="rf-icon rf-red-icon">🔴</div>
+    <div>
+      <div class="rf-title">Per-message unit economics may be inverted</div>
+      <div class="rf-text">If you're paying $0.05/SMS via Twilio and charging $0.03/message, the model is upside-down. We don't know your infrastructure costs or pricing tiers.</div>
+      <div class="rf-fix">→ Fix: Model unit economics carefully before scaling. Ensure positive margin at all volume levels. The pricing model only works if you make money on every message sent.</div>
+    </div>
+  </div>
+  <div class="risk-flag rf-yellow">
+    <div class="rf-icon rf-yellow-icon">🟡</div>
+    <div>
+      <div class="rf-title">Established incumbents with massive moats</div>
+      <div class="rf-text">Privy (4,191 reviews), Klaviyo ($7.7B), OptiMonk (AI-native). These are well-funded, well-established products with network effects. Merchants recommend what they know.</div>
+      <div class="rf-fix">→ Fix: Don't compete head-on. Own the "per-message pricing alternative" niche. Target merchants frustrated with per-contact billing. Be the anti-Privy, not the better Privy.</div>
+    </div>
+  </div>
+  <div class="risk-flag rf-yellow">
+    <div class="rf-icon rf-yellow-icon">🟡</div>
+    <div>
+      <div class="rf-title">Solo founder capacity and bandwidth</div>
+      <div class="rf-text">Unknown if this is full-time or a side project. Distribution requires consistent daily effort — forum engagement, outreach, content creation. A part-time founder may not have the bandwidth.</div>
+      <div class="rf-fix">→ Fix: Commit to a minimum weekly outreach cadence (10 hrs/week). If part-time, prioritize ruthlessly: outreach > content > features. Never touch code until you have 50 installs.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ QUESTIONS ════════════ -->
+<div class="section">
+  <div class="section-num">16 — Unlock Questions</div>
+  <div class="section-title">15 Questions That Change Everything</div>
+  <div class="section-desc">Our confidence is 32% — unusually low. Your answers to these questions would dramatically sharpen every recommendation above. The fake testimonial questions are non-negotiable.</div>
+  
+  <div class="q-card">
+    <div class="q-num">1</div>
+    <div>
+      <div class="q-text">Have you onboarded even a single test store — even your own? What does the actual merchant experience look like end-to-end?</div>
+      <div class="q-why">We can't assess the product without knowing if anyone has actually used it. A live demo changes everything.</div>
+    </div>
+    <span class="q-pri qp-c">Critical</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">2</div>
+    <div>
+      <div class="q-text">The website testimonials — "Sarah Mitchell," "James Chen" — are these real merchants or placeholder content?</div>
+      <div class="q-why">This is the single most important question. If these are fake and you know they're fake, we need to understand the decision. If they're real, our entire analysis shifts.</div>
+    </div>
+    <span class="q-pri qp-c">Critical</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">3</div>
+    <div>
+      <div class="q-text">How much time per week are you spending on Revenue Boost — full-time or alongside other work?</div>
+      <div class="q-why">A 10hr/week side project gets a fundamentally different growth strategy than a full-time commitment.</div>
+    </div>
+    <span class="q-pri qp-c">Critical</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">4</div>
+    <div>
+      <div class="q-text">What's your messaging infrastructure? Twilio? WhatsApp Business API? What are your per-message costs?</div>
+      <div class="q-why">The "pay per message" model's viability depends entirely on your cost structure. If margins are negative, the model is broken.</div>
+    </div>
+    <span class="q-pri qp-c">Critical</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">5</div>
+    <div>
+      <div class="q-text">What's your monthly budget — hosting, messaging infrastructure, marketing? How many months of runway?</div>
+      <div class="q-why">Usage-based billing means YOU pay for message delivery. We need to model when volume becomes profitable vs when it bleeds cash.</div>
+    </div>
+    <span class="q-pri qp-c">Critical</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">6</div>
+    <div>
+      <div class="q-text">Why did you build so many features before launching? Was there a strategic reason, or was it scope creep?</div>
+      <div class="q-why">Understanding this helps us calibrate future build-vs-distribute recommendations and assess founder discipline.</div>
+    </div>
+    <span class="q-pri qp-h">High</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">7</div>
+    <div>
+      <div class="q-text">Have you applied for Shopify's "Built for Shopify" badge? Do you meet the technical requirements?</div>
+      <div class="q-why">This badge significantly impacts App Store visibility and merchant trust. If you're close, it should be priority #1.</div>
+    </div>
+    <span class="q-pri qp-h">High</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">8</div>
+    <div>
+      <div class="q-text">What made you choose the per-message pricing model? Did you validate this with merchants, or is it your hypothesis?</div>
+      <div class="q-why">If validated by merchant feedback, it's a real moat. If it's a guess, it needs testing before you build your entire positioning around it.</div>
+    </div>
+    <span class="q-pri qp-h">High</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">9</div>
+    <div>
+      <div class="q-text">What are your actual pricing tiers? The App Store listing doesn't show them clearly.</div>
+      <div class="q-why">We can't assess competitive pricing position without knowing your actual per-message rates vs competitors' per-contact rates.</div>
+    </div>
+    <span class="q-pri qp-h">High</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">10</div>
+    <div>
+      <div class="q-text">Have you contacted any Shopify agencies or partners about recommending Revenue Boost?</div>
+      <div class="q-why">Agency partnerships are the #1 growth lever for Shopify apps at your stage. One agency = 10-50 installs.</div>
+    </div>
+    <span class="q-pri qp-h">High</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">11</div>
+    <div>
+      <div class="q-text">What's your technical architecture? How does the app impact store speed? Can you prove "zero slowdown"?</div>
+      <div class="q-why">Store speed is a top merchant concern. If you can back this claim with data, it's a powerful differentiator.</div>
+    </div>
+    <span class="q-pri qp-m">Medium</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">12</div>
+    <div>
+      <div class="q-text">Who is BCDI SNC? Is this a company you own, or are there co-founders/partners?</div>
+      <div class="q-why">Understanding the entity structure clarifies decision-making speed, resources, and GDPR compliance capabilities.</div>
+    </div>
+    <span class="q-pri qp-m">Medium</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">13</div>
+    <div>
+      <div class="q-text">Do you have any analytics on website traffic — where are the Google Ads views coming from, what keywords?</div>
+      <div class="q-why">Even tiny traffic data reveals intent signals we can amplify.</div>
+    </div>
+    <span class="q-pri qp-m">Medium</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">14</div>
+    <div>
+      <div class="q-text">Are you aware of the competitive density? The "More apps like this" section shows apps with 63-440+ reviews.</div>
+      <div class="q-why">Understanding founder's competitive awareness helps calibrate strategic recommendations.</div>
+    </div>
+    <span class="q-pri qp-m">Medium</span>
+  </div>
+  
+  <div class="q-card">
+    <div class="q-num">15</div>
+    <div>
+      <div class="q-text">What's your plan for the next 90 days? What are you prioritizing?</div>
+      <div class="q-why">Alignment between our recommendations and your priorities determines whether any of this actually gets implemented.</div>
+    </div>
+    <span class="q-pri qp-m">Medium</span>
+  </div>
+</div>
+
+<!-- ════════════ FOOTER ════════════ -->
+<div class="footer">
+  <div class="footer-brand">🧠 GrowthMind.ai</div>
+  <div class="footer-sub">Diagnosed by GrowthMind.ai — 18 AI agents, one growth diagnosis</div>
+  <div class="footer-disc">This report was generated by GrowthMind's AI growth diagnosis system from publicly available data. Demand Score: 42/100 · Verdict: CONDITIONAL GO · Growth Readiness: 18/100 · Confidence: 32% (pre-interrogation). Answer the 15 questions above to unlock calibrated, specific recommendations. Report date: February 13, 2026.</div>
+</div>
+
+</div>
+</body>
+</html>
